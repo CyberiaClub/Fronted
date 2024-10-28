@@ -1,0 +1,198 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CyberiaStore.master.cs" Inherits="CyberiaStoreWA.CyberiaStore" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+     <meta name="viewport" content="width=device-width, initial-scale=1" 
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+
+    <title>Cyberiastore</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        /* Primary and Secondary Colors */
+        :root {
+            --primary-color: #00205B; /* PANTONE 281 C */
+            --secondary-color1: #A6C8E0; /* PANTONE 660 C */
+            --secondary-color2: #98AFC7; /* PANTONE 2132 C */
+            --secondary-color3: #A2AAAD; /* PANTONE 429 C */
+            --secondary-color4: #6C737A; /* PANTONE 430 C */
+        }
+        /* Font Styles */
+        body {
+            font-family: 'TT Norms', sans-serif;
+        }
+        .font-light {
+            font-weight: 300;
+        }
+        .font-regular {
+            font-weight: 400;
+        }
+        .font-bold {
+            font-weight: 700;
+        }
+        .font-extrabold {
+            font-weight: 800;
+        }
+        .navbar, .footer {
+            background-color: var(--primary-color);
+        }
+        .highlight-banner, .monthly-offers {
+            background-color: var(--secondary-color1);
+        }
+        .highlight-banner h2, .monthly-offers h3 {
+            color: var(--secondary-color2);
+        }
+        .category-icon, .featured-products-icon {
+            color: var(--secondary-color3);
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand font-bold" href="#">CYBERIASTORE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Marca de Alta Rotación</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Marca de Calidad</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ofertas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Nuevos Productos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Banner Section -->
+<section class="highlight-banner p-5 text-center">
+    <h2 class="font-extrabold">HASTA <span style="color: var(--primary-color);">30%</span> EN CALCULADORAS CASIO</h2>
+</section>
+
+<!-- Categories Section -->
+<section class="categories text-center my-5">
+    <div class="container">
+        <h3 class="font-bold">Categorías destacadas</h3>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <i class="bi bi-building category-icon" style="font-size: 2rem;"></i>
+                <p class="font-regular">Corte de precisión</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-brush category-icon" style="font-size: 2rem;"></i>
+                <p class="font-regular">Útiles de arte</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-graph-up category-icon" style="font-size: 2rem;"></i>
+                <p class="font-regular">Graphics</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Monthly Offers Section -->
+<section class="monthly-offers text-center p-5">
+    <h3 class="font-bold">Conoce nuestra liquidación del mes!</h3>
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <p class="font-regular">Regla de dibujo</p>
+            <p class="font-bold">S/ 10</p>
+        </div>
+        <div class="col-md-3">
+            <p class="font-regular">Regla de dibujo</p>
+            <p class="font-bold">S/ 10</p>
+        </div>
+        <div class="col-md-3">
+            <p class="font-regular">Regla de dibujo</p>
+            <p class="font-bold">S/ 10</p>
+        </div>
+        <div class="col-md-3">
+            <p class="font-regular">Regla de dibujo</p>
+            <p class="font-bold">S/ 10</p>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="featured-products text-center my-5">
+    <div class="container">
+        <h3 class="font-bold">Productos destacados</h3>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <p class="font-regular">Bloc de notas</p>
+            </div>
+            <div class="col-md-4">
+                <p class="font-regular">Pinturas - Cuarte</p>
+            </div>
+            <div class="col-md-4">
+                <p class="font-regular">Rotuladores - Marcadores</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- New Products Section -->
+<section class="new-products text-center my-5">
+    <div class="container">
+        <h3 class="font-bold">Nuevos productos</h3>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <p class="font-regular">Bloc de dibujo</p>
+            </div>
+            <div class="col-md-4">
+                <p class="font-regular">Libreta</p>
+            </div>
+            <div class="col-md-4">
+                <p class="font-regular">Tablero de dibujo</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brands Section -->
+<section class="brands text-center my-5">
+    <h3 class="font-bold">Marcas</h3>
+    <div class="d-flex justify-content-center mt-4">
+        <img src="brand1.png" alt="Staedtler" class="mx-2">
+        <img src="brand2.png" alt="X-Acto" class="mx-2">
+        <img src="brand3.png" alt="Caran d'Ache" class="mx-2">
+        <!-- Add other brands as needed -->
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer p-4 text-white text-center">
+    <p class="mb-0 font-light">© 2024 Cyberiastore. Todos los derechos reservados.</p>
+    <p class="font-light">Síguenos en:
+        <a href="#" class="text-white mx-1"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white mx-1"><i class="bi bi-instagram"></i></a>
+    </p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
