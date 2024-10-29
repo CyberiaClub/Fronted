@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SoftCyberiaAdmi.master.cs" Inherits="SoftCyberiaWA.SoftCyberiaAdmi" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- link -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Fonts/css/all.css" rel="stylesheet" />
+    <link href="Content/siteadmi.css" rel="stylesheet" />
+
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    <script src="Scripts/jquery-3.7.1.js"></script>
+
+    <title> 
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </title> 
+    
+</head>
+<body>
+    <!-- Contorno exterior - Negros sin sombra -->
+    <div class="sidebar">
+        <!-- Logo CYBERIA -->
+        <div class="text-center">
+            <img src="Images/cyberia-logo.png" alt="CYBERIA Logo" class="logo-cyberia">
+        </div>
+        <!-- Foto del usuario y nombre -->
+        <div class="text-center mt-4">
+            <img src="Images/admin-user.png" alt="Foto de usuario">
+            <h4>Matias Sulca</h4>
+            <p>Administrador</p>
+        </div>
+
+        <!-- Enlaces de navegación -->
+        <a href="#">Generar reporte</a>
+        <a href="#">Registrar nuevos proveedores</a>
+        <a href="#">Registrar nuevos productos</a>
+        <a href="#">Asignar roles</a>
+        <a href="#">Ver stock / sede</a>
+        <a href="#">Generar Kit</a>
+
+        <!-- Pie de la barra lateral -->
+        <div class="sidebar-footer">
+            <a href="#">Cerrar sesión</a>
+            <a href="#">Ajustes de seguridad</a>
+        </div>
+    </div>
+
+    <!-- Contenido de la pagina web -->
+    <div class="main-content">
+        <form runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿:root {
+    --primary-color: #00205B; /* PANTONE 281 C */
+    --sidebar-bg: #1D1A3D; /* Color de fondo del sidebar */
+    --text-light-color: #D8D8D8;
+    --text-white-color: #FFFFFF;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'TT Norms', sans-serif;
+    background-color: #F8F9FA;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--text-light-color);
+    position: fixed;
+    width: 250px;
+}
+
+    .sidebar img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .sidebar h4 {
+        color: var(--text-white-color);
+        margin-top: 10px;
+    }
+
+    .sidebar a {
+        color: var(--text-light-color);
+        display: block;
+        margin: 15px 0;
+        text-decoration: none;
+    }
+
+        .sidebar a:hover {
+            color: var(--text-white-color);
+        }
+
+/* Estilos para el contenido principal */
+.main-content {
+    margin-left: 270px;
+    padding: 40px;
+}
+
+    .main-content h2 {
+        font-weight: var(--font-extrabold);
+        text-align: center;
+    }
+
+/* Estilos para el pie de la barra lateral */
+.sidebar-footer {
+    bottom: 20px;
+    width: 100%;
+    color: var(--text-light-color);
+    text-align: center;
+}
+/* Estilos para la imagen del logo */
+.logo-cyberia {
+    width: 150px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene las proporciones originales */
+    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin distorsionarse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para darle más estilo */
+}
