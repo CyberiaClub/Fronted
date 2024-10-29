@@ -30,7 +30,7 @@
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" href="#">
-                <img src="Images/cyberia-logo.png" alt="CYBERIA Logo" style="height: 100px;">
+                <img src="Images/cyberia-logo.png" alt="CYBERIA Logo" style="height: 70px;">
             </a>
 
             <!-- Botón de colapso para móviles -->

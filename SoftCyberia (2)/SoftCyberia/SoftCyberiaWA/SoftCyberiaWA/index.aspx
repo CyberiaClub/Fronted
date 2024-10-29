@@ -22,12 +22,7 @@
                    <div class="carousel-caption d-none d-md-block">
                    </div>
                </div>
-               <!-- Slide 2 -->
-               <div class="carousel-item">
-                   <img src="Images/criolla.png" class="d-block w-100 carousel-img" alt="Banner 2">
-                   <div class="carousel-caption d-none d-md-block">
-                   </div>
-               </div>
+
                <!-- Slide 3 -->
                <div class="carousel-item">
                    <img src="Images/pucp.png" class="d-block w-100 carousel-img" alt="Banner 3">
