@@ -2,7 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Sedes
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
      <!-- Encabezado de la Página -->
     <div class="header text-center">
         <h2>Retiro en Tiendas</h2>

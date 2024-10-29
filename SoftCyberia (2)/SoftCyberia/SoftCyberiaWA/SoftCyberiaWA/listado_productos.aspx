@@ -1,9 +1,11 @@
 ﻿<%@ Page Title="Productos" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="listado_productos.aspx.cs" Inherits="SoftCyberiaWA.WebForm1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Productos
 </asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="container mt-5">
         <!-- Filtros -->
         <div class="row">
@@ -59,46 +61,59 @@
                 <div class="row">
                     <!-- Producto 1 -->
                     <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="/Images/lapiz.jpg" class="card-img-top" alt="Lápiz para dibujo Staedtler">
-                            <div class="card-body">
-                                <h6 class="card-title">Lápiz para dibujo profesional Staedtler x 24</h6>
-                                <p class="card-text">S/2.9</p>
+                        <!-- Enlace a la página de detalles que envuelve toda la tarjeta -->
+                        <a href="detalle_producto3.aspx" class="text-decoration-none">
+                            <div class="card">
+                                <img src="/Images/lapiz-grafito.jpg" class="card-img-top" alt="Lápiz grafito Staedtler">
+                                <div class="card-body">
+                                    <h6 class="card-title">Lápiz grafito Staedtler x 24</h6>
+                                    <p class="card-text">S/146.40</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
 
                     <!-- Producto 2 -->
                     <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="/Images/papeles.jpg" class="card-img-top" alt="Hojas A4">
-                            <div class="card-body">
-                                <h6 class="card-title">Hojas para impresión tamaño A47</h6>
-                                <p class="card-text">S/17.50</p>
+                        <!-- Enlace a la página de detalles que envuelve toda la tarjeta -->
+                        <a href="detalle_producto3.aspx" class="text-decoration-none">
+                            <div class="card">
+                                <img src="/Images/papeles.jpg" class="card-img-top" alt="Hojas A4">
+                                <div class="card-body">
+                                    <h6 class="card-title">Papel Adhesivo Blanco Brillante 180 G A4 100 Hojas</h6>
+                                    <p class="card-text">S/81.50</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>      
                     </div>
 
                     <!-- Producto 3 -->
                     <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="/Images/canva.jpg" class="card-img-top" alt="Canva Staedtler">
-                            <div class="card-body">
-                                <h6 class="card-title">Lienzo 50X60 Cm Conda</h6>
-                                <p class="card-text">S/50.70</p>
+                        <!-- Enlace a la página de detalles que envuelve toda la tarjeta -->
+                        <a href="detalle_producto2.aspx" class="text-decoration-none">
+                            <div class="card">
+                                <img src="/Images/canva.jpg" class="card-img-top" alt="Canva Staedtler">
+                                <div class="card-body">
+                                    <h6 class="card-title">Lienzo 50X60 Cm Conda</h6>
+                                    <p class="card-text">S/50.70</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
-                                        
+
                     <!-- Producto 4-->
                     <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="/Images/pinturas.jpg" class="card-img-top" alt="Studio Acrylics">
-                            <div class="card-body">
-                                <h6 class="card-title">Set de acrilicos  10X20 ml tubos</h6>
-                                <p class="card-text">S/36.70</p>
+                        <!-- Enlace a la página de detalles que envuelve toda la tarjeta -->
+                        <a href="detalle_producto.aspx" class="text-decoration-none">
+                            <div class="card">
+                                <img src="/Images/pinturas.jpg" class="card-img-top" alt="Studio Acrylics">
+                                <div class="card-body">
+                                    <h6 class="card-title">Set de acrilicos 10X20 ml tubos</h6>
+                                    <p class="card-text">S/36.70</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <!-- Añade más productos aquí de forma similar -->

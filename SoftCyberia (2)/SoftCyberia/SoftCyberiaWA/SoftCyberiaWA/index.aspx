@@ -2,8 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Cyberia - Home 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+<asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
 
     <!-- Banner Section -->
    <div>

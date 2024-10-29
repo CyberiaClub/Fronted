@@ -8,45 +8,6 @@
     --button-hover-color: #A6A6A6; /* Color de hover para botones */
 }
 
-/* Font Styles */
-body {
-    font-family: 'TT Norms', sans-serif;
-}
-
-.font-light {
-    font-weight: 300;
-}
-
-.font-regular {
-    font-weight: 400;
-}
-
-.font-bold {
-    font-weight: 700;
-}
-
-.font-extrabold {
-    font-weight: 800;
-}
-
-.navbar, .footer {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-/* Mejora en la barra de navegación */
-.navbar-nav .nav-item {
-    margin-left: 20px;
-}
-
-.navbar .nav-link {
-    color: white;
-}
-
-    .navbar .nav-link:hover {
-        color: var(--secondary-color1);
-    }
-
 /* Estilos para el formulario de inicio de sesión */
 .card {
     border-radius: 10px;

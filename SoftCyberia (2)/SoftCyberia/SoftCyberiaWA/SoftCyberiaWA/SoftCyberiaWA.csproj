@@ -95,14 +95,20 @@
     <Content Include="Content\Fonts\css\v4-shims.min.css" />
     <Content Include="Content\Fonts\css\v5-font-face.css" />
     <Content Include="Content\Fonts\css\v5-font-face.min.css" />
+    <Content Include="Content\sitedetprod.css" />
     <Content Include="Content\siteainiciosesion.css" />
     <Content Include="Content\siteadmi.css" />
     <Content Include="Content\site.css" />
+    <Content Include="detalle_producto.aspx" />
+    <Content Include="detalle_producto2.aspx" />
+    <Content Include="detalle_producto3.aspx" />
+    <Content Include="detalle_producto4.aspx" />
     <Content Include="Images\canva.jpg" />
     <Content Include="Images\criolla.png" />
     <Content Include="Images\cyberia-logo.png" />
     <Content Include="Images\faber.png" />
     <Content Include="Images\halloween.png" />
+    <Content Include="Images\lapiz-grafito.jpg" />
     <Content Include="Images\lapiz.jpg" />
     <Content Include="Images\papeles.jpg" />
     <Content Include="Images\pinturas.jpg" />
@@ -110,7 +116,7 @@
     <Content Include="Images\sharpie.png" />
     <Content Include="Images\stae.png" />
     <Content Include="Images\whatsapp.png" />
-    <Content Include="IndexInicioSesion.aspx" />
+    <Content Include="index_iniciosesion.aspx" />
     <Content Include="mantenimiento_iniciar_sesion.aspx" />
     <Content Include="Images\admin-user.png" />
     <Content Include="index.aspx" />
@@ -140,15 +146,42 @@
     <Content Include="Web.config" />
     <Content Include="SoftCyberia.Master" />
     <Content Include="SoftCyberiaAdmi.Master" />
-    <Content Include="SoftCyberiaInicioSesion.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IndexInicioSesion.aspx.cs">
-      <DependentUpon>IndexInicioSesion.aspx</DependentUpon>
+    <Compile Include="detalle_producto.aspx.cs">
+      <DependentUpon>detalle_producto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IndexInicioSesion.aspx.designer.cs">
-      <DependentUpon>IndexInicioSesion.aspx</DependentUpon>
+    <Compile Include="detalle_producto.aspx.designer.cs">
+      <DependentUpon>detalle_producto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_producto2.aspx.cs">
+      <DependentUpon>detalle_producto2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalle_producto2.aspx.designer.cs">
+      <DependentUpon>detalle_producto2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_producto3.aspx.cs">
+      <DependentUpon>detalle_producto3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalle_producto3.aspx.designer.cs">
+      <DependentUpon>detalle_producto3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_producto4.aspx.cs">
+      <DependentUpon>detalle_producto4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalle_producto4.aspx.designer.cs">
+      <DependentUpon>detalle_producto4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index_iniciosesion.aspx.cs">
+      <DependentUpon>index_iniciosesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index_iniciosesion.aspx.designer.cs">
+      <DependentUpon>index_iniciosesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="mantenimiento_iniciar_sesion.aspx.cs">
       <DependentUpon>mantenimiento_iniciar_sesion.aspx</DependentUpon>
@@ -185,13 +218,6 @@
     </Compile>
     <Compile Include="SoftCyberiaAdmi.Master.designer.cs">
       <DependentUpon>SoftCyberiaAdmi.Master</DependentUpon>
-    </Compile>
-    <Compile Include="SoftCyberiaInicioSesion.Master.cs">
-      <DependentUpon>SoftCyberiaInicioSesion.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SoftCyberiaInicioSesion.Master.designer.cs">
-      <DependentUpon>SoftCyberiaInicioSesion.Master</DependentUpon>
     </Compile>
     <Compile Include="listado_productos.aspx.cs">
       <DependentUpon>listado_productos.aspx</DependentUpon>

@@ -1,0 +1,97 @@
+﻿
+
+/* Estilos generales para la página del detalle del producto */
+.producto-detalle-container {
+    margin: 40px auto;
+    padding: 30px; /* Aumenté el padding para mayor separación interna */
+    max-width: 1200px;
+}
+
+/* Imagen fija con un tamaño específico */
+.producto-imagen img {
+    width: 100%;
+    max-width: 450px; /* Tamaño máximo más grande */
+    height: auto;
+    margin-right: 20px; /* Añadí margen para separar la imagen del contenido */
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    border: 1px solid #ddd; /* Borde suave */
+}
+
+/* Estilo para la etiqueta de disponibilidad en verde */
+.badge.disponible {
+    background-color: #28a745; /* Color verde */
+    color: white; /* Texto en blanco */
+    font-size: 1rem;
+    padding: 0.6em 1.2em; /* Aumentar el padding para mejor visibilidad */
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin-bottom: 15px; /* Mayor separación */
+    box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.2); /* Añadí sombra suave */
+}
+
+/* Estilo para el precio del producto */
+.precio {
+    color: #e74c3c; /* Color rojo */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilo para el SKU del producto */
+.sku {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón para añadir al carrito */
+button.btn {
+    padding: 12px 24px;
+    font-size: 1.3rem; /* Tamaño de la fuente más grande */
+    background-color: #343a40; /* Color oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+    button.btn:hover {
+        background-color: #555; /* Cambio de color al hacer hover */
+    }
+
+/* Estilo para los detalles del producto */
+.detalles-producto {
+    margin-top: 30px;
+}
+
+    .detalles-producto h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .detalles-producto ul {
+        padding-left: 20px;
+    }
+
+        .detalles-producto ul li {
+            list-style-type: disc;
+            margin-bottom: 5px;
+            font-size: 1.1rem; /* Tamaño más grande */
+            color: #333; /* Gris oscuro */
+        }
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .producto-imagen, .producto-detalles {
+        text-align: center;
+    }
+
+    .producto-detalles {
+        margin-top: 20px;
+        padding: 0 15px; /* Mejora para pantallas pequeñas */
+    }
+
+    .producto-imagen img {
+        max-width: 100%;
+        margin-right: 0; /* Elimina el margen en pantallas pequeñas */
+    }
+}
