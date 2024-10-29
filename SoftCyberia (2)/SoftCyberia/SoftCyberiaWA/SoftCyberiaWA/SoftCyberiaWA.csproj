@@ -138,6 +138,7 @@
     <Content Include="listado_productos.aspx" />
     <Content Include="listado_sedes.aspx" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\filtrar_listado_productos.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
