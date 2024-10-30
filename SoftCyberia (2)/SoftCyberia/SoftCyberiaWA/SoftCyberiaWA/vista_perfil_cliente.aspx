@@ -24,6 +24,12 @@
                 <input type="email" class="form-control text-center" id="email" value="vent1234@cyber.com" readonly>
             </div>
 
+            <!-- Campo del número de teléfono -->
+            <div class="mb-3">
+                <label for="phone" class="form-label">Número de Teléfono</label>
+                <input type="text" class="form-control text-center" id="phone" value="942921807" readonly>
+            </div>
+
             <!-- Botón de cierre de sesión -->
             <button type="button" class="btn btn-dark w-100 mb-3">Cerrar Sesión</button>
 
