@@ -140,6 +140,9 @@
     <Content Include="listado_sedes.aspx" />
     <Content Include="registrar_nuevos_proveedores.aspx" />
     <Content Include="registrar_nuevos_productos.aspx" />
+    <Content Include="asignar_roles.aspx" />
+    <Content Include="listado_stock.aspx" />
+    <Content Include="detalle_reporte.aspx" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\filtrar_listado_productos.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
@@ -250,6 +253,27 @@
     </Compile>
     <Compile Include="registrar_nuevos_productos.aspx.designer.cs">
       <DependentUpon>registrar_nuevos_productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="asignar_roles.aspx.cs">
+      <DependentUpon>asignar_roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="asignar_roles.aspx.designer.cs">
+      <DependentUpon>asignar_roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listado_stock.aspx.cs">
+      <DependentUpon>listado_stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listado_stock.aspx.designer.cs">
+      <DependentUpon>listado_stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_reporte.aspx.cs">
+      <DependentUpon>detalle_reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalle_reporte.aspx.designer.cs">
+      <DependentUpon>detalle_reporte.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -80,6 +80,10 @@
             <label for="sku">SKU:</label>
             <asp:TextBox ID="sku" runat="server" CssClass="form-control"></asp:TextBox>
 
+            <label for="marca">Marca del Producto:</label>
+            <asp:TextBox ID="marca" runat="server" CssClass="form-control"></asp:TextBox>
+
+            <!--tipo de producto-->
             <label for="category">Categoría:</label>
             <asp:DropDownList ID="category" runat="server" CssClass="form-control">
                 <asp:ListItem Text="Arte" Value="electronica"></asp:ListItem>
@@ -94,6 +98,13 @@
 
             <label for="provider">Proveedor:</label>
             <asp:TextBox ID="provider" runat="server" CssClass="form-control"></asp:TextBox>
+
+            <label for="unidades">Unidades:</label>
+            <asp:TextBox ID="unidades" runat="server" CssClass="form-control"></asp:TextBox>
+
+            
+            <label for="sede">Sede:</label>
+            <asp:TextBox ID="sede" runat="server" CssClass="form-control"></asp:TextBox>
 
             <label for="description">Descripción del Producto:</label>
             <asp:TextBox ID="description" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
