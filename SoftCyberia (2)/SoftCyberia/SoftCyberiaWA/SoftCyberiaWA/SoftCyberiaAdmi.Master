@@ -21,32 +21,58 @@
     
 </head>
 <body>
+        <!--Por si necesitan script o estilo-->
+    <asp:ContentPlaceHolder ID="cphStyle" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .sidebar-logo {
+            width: 100%; /* Ocupa el ancho completo del sidebar */
+            height: auto; /* Mantiene la proporción del logo */
+            padding: 10px; /* Opcional: espacio alrededor del logo */
+            object-fit: contain; /* Ajusta la imagen al espacio sin distorsionarla */
+        }
+    </style>
+
+
     <!-- Contorno exterior - Negros sin sombra -->
-    <div class="sidebar">
+    <div class="sidebar navbar-dark bg-dark">
         <!-- Logo CYBERIA -->
         <div class="text-center">
-            <img src="Images/cyberia-logo-adm.png" alt="CYBERIA Logo" >
+            <img src="Images/cyberia-admin.png"  class="sidebar-logo" >
         </div>
+
         <!-- Foto del usuario y nombre -->
-        <div class="text-center mt-4">
+        <div class="text-center mt-4 text-white text-center">
             <img src="Images/admin-user.png" alt="Foto de usuario">
             <h4>Matias Sulca</h4>
             <p>Administrador</p>
         </div>
 
         <!-- Enlaces de navegación -->
-        <a href="#">Generar reporte</a>
-        <a href="#">Registrar nuevos proveedores</a>
-        <a href="#">Registrar nuevos productos</a>
+        <a href="#">Generar reporte</a           
+        <p> </p>
+
+        <a href="registrar_nuevos_proveedores.aspx">Registrar nuevos proveedores</a>
+        <p> </p>
+
+        <a href="registrar_nuevos_productos.aspx">Registrar nuevos productos</a>
+        <p> </p>
+
         <a href="#">Asignar roles</a>
+        <p> </p>
+
         <a href="#">Ver stock / sede</a>
-        <a href="#">Generar Kit</a>
+        <p> </p>
 
         <!-- Pie de la barra lateral -->
-        <div class="sidebar-footer">
-            <a href="#">Cerrar sesión</a>
-            <a href="#">Ajustes de seguridad</a>
-        </div>
+
+        <footer class="footer p-4 text-white text-center">
+            <div class="sidebar-footer">
+                <a href="#">Cerrar sesión</a>
+            </div>
+        </footer>
+
+
     </div>
 
     <!-- Contenido de la pagina web -->
@@ -56,6 +82,8 @@
             </asp:ContentPlaceHolder>
         </form>
     </div>
+
+
     
 </body>
 </html>

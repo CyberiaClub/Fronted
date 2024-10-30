@@ -105,6 +105,7 @@
     <Content Include="detalle_producto4.aspx" />
     <Content Include="Images\canva.jpg" />
     <Content Include="Images\criolla.png" />
+    <Content Include="Images\cyberia-admin.png" />
     <Content Include="Images\cyberia-logo.png" />
     <Content Include="Images\faber.png" />
     <Content Include="Images\halloween.png" />
@@ -137,6 +138,8 @@
     <Content Include="Content\Fonts\webfonts\fa-v4compatibility.woff2" />
     <Content Include="listado_productos.aspx" />
     <Content Include="listado_sedes.aspx" />
+    <Content Include="registrar_nuevos_proveedores.aspx" />
+    <Content Include="registrar_nuevos_productos.aspx" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\filtrar_listado_productos.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
@@ -233,6 +236,20 @@
     </Compile>
     <Compile Include="listado_sedes.aspx.designer.cs">
       <DependentUpon>listado_sedes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrar_nuevos_proveedores.aspx.cs">
+      <DependentUpon>registrar_nuevos_proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrar_nuevos_proveedores.aspx.designer.cs">
+      <DependentUpon>registrar_nuevos_proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrar_nuevos_productos.aspx.cs">
+      <DependentUpon>registrar_nuevos_productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrar_nuevos_productos.aspx.designer.cs">
+      <DependentUpon>registrar_nuevos_productos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -26,7 +26,7 @@
 
                <!-- Slide 3 -->
                <div class="carousel-item">
-                   <img src="Images/pucp.png" class="d-block w-120 carousel-img" alt="Banner 3">
+                   <img src="Images/pucp.png" class="d-block w-100 carousel-img" alt="Banner 3">
                    <div class="carousel-caption d-none d-md-block">
                    </div>
                </div>
