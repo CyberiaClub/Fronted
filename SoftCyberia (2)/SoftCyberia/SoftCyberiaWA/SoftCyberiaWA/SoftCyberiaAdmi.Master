@@ -49,7 +49,7 @@
         </div>
 
         <!-- Enlaces de navegación -->
-        <a href="#">Generar reporte</a           
+        <a href="detalle_reporte.aspx">Generar reporte</a>           
         <p> </p>
 
         <a href="registrar_nuevos_proveedores.aspx">Registrar nuevos proveedores</a>
@@ -58,10 +58,10 @@
         <a href="registrar_nuevos_productos.aspx">Registrar nuevos productos</a>
         <p> </p>
 
-        <a href="#">Asignar roles</a>
+        <a href="asignar_roles.aspx">Asignar roles</a>
         <p> </p>
 
-        <a href="#">Ver stock / sede</a>
+        <a href="listado_stock.aspx">Ver stock / sede</a>
         <p> </p>
 
         <!-- Pie de la barra lateral -->

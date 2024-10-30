@@ -11,97 +11,88 @@ namespace SoftCyberiaWA
 {
 
 
-    public partial class WebForm4
+    public partial class WebForm5
     {
 
         /// <summary>
-        /// productName control.
+        /// tipo_documento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox productName;
+        protected global::System.Web.UI.WebControls.DropDownList tipo_documento;
 
         /// <summary>
-        /// sku control.
+        /// dni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sku;
+        protected global::System.Web.UI.WebControls.TextBox dni;
 
         /// <summary>
-        /// marca control.
+        /// btnProcesar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox marca;
+        protected global::System.Web.UI.WebControls.Button btnProcesar;
 
         /// <summary>
-        /// category control.
+        /// nombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList category;
+        protected global::System.Web.UI.WebControls.TextBox nombre;
 
         /// <summary>
-        /// price control.
+        /// correo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox price;
+        protected global::System.Web.UI.WebControls.TextBox correo;
 
         /// <summary>
-        /// provider control.
+        /// telefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox provider;
+        protected global::System.Web.UI.WebControls.TextBox telefono;
 
         /// <summary>
-        /// unidades control.
+        /// direccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox unidades;
+        protected global::System.Web.UI.WebControls.TextBox direccion;
 
         /// <summary>
-        /// sede control.
+        /// rol control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sede;
+        protected global::System.Web.UI.WebControls.DropDownList rol;
 
         /// <summary>
-        /// description control.
+        /// btnAsignar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox description;
-
-        /// <summary>
-        /// registerButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerButton;
+        protected global::System.Web.UI.WebControls.Button btnAsignar;
     }
 }
