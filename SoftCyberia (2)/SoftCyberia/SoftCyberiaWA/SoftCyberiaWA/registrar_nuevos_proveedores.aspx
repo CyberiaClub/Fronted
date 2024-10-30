@@ -107,7 +107,7 @@
             <p> </p>
             <p> </p>
 
-            <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="register-button" />
+            <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="register-button" OnClick="lbGuardar_Click"/>
         </div>
     </div>
 </asp:Content>

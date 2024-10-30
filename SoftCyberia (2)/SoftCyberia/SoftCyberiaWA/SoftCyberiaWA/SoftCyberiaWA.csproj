@@ -155,13 +155,11 @@
     <Content Include="Content\Fonts\webfonts\fa-v4compatibility.woff2" />
     <Content Include="listado_productos.aspx" />
     <Content Include="listado_sedes.aspx" />
-<<<<<<< Updated upstream
     <Content Include="registrar_nuevos_proveedores.aspx" />
     <Content Include="registrar_nuevos_productos.aspx" />
     <Content Include="asignar_roles.aspx" />
     <Content Include="listado_stock.aspx" />
     <Content Include="detalle_reporte.aspx" />
-=======
     <None Include="Connected Services\ServicioWS\AdministradorWS.wsdl" />
     <None Include="Connected Services\ServicioWS\BoletaWS.wsdl" />
     <None Include="Connected Services\ServicioWS\BoletaWS.xsd">
@@ -359,7 +357,6 @@
     <None Include="Connected Services\ServicioWS\VendedorWS.xsd">
       <SubType>Designer</SubType>
     </None>
->>>>>>> Stashed changes
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\validar_inicio_sesion.js" />
     <Content Include="Scripts\filtrar_listado_productos.js" />
