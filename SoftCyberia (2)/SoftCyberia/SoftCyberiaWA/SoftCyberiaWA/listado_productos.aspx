@@ -15,7 +15,7 @@
                 <!-- Rango de precios -->
                 <label for="priceRange">Precio: S/<span id="priceValue">0</span></label>
                 <input type="range" id="priceRange" min="0" max="300" class="form-range" oninput="applyFilters()">
-                
+
                 <!-- Categorías -->
                 <h6 class="mt-3">Categoría</h6>
                 <div class="form-check">
@@ -23,14 +23,17 @@
                     <label class="form-check-label" for="catArquitectura">Arquitectura</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Artes" id="catArtes" onchange="applyFilters()">
+                    <input class="form-check-input" type="checkbox" value="Arte" id="catArtes" onchange="applyFilters()">
                     <label class="form-check-label" for="catArtes">Artes</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Diseño" id="catDiseño" onchange="applyFilters()">
-                    <label class="form-check-label" for="catDiseño">Diseño</label>
+                    <input class="form-check-input" type="checkbox" value="Educación" id="catEducación" onchange="applyFilters()">
+                    <label class="form-check-label" for="catEducación">Educación</label>
                 </div>
-
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Oficina" id="catOficina" onchange="applyFilters()">
+                    <label class="form-check-label" for="catOficina">Oficina</label>
+                </div>
                 <!-- Marcas -->
                 <h6 class="mt-3">Marca</h6>
                 <div class="form-check">
@@ -65,7 +68,7 @@
                     </div>
 
                     <!-- Producto 2 -->
-                    <div class="col-md-4 mb-4" data-category="Artes" data-price="81.50">
+                    <div class="col-md-4 mb-4" data-category="Oficina" data-price="81.50">
                         <a href="detalle_producto3.aspx" class="text-decoration-none">
                             <div class="card">
                                 <img src="/Images/papeles.jpg" class="card-img-top" alt="Hojas A4">
@@ -91,7 +94,7 @@
                     </div>
 
                     <!-- Producto 4 -->
-                    <div class="col-md-4 mb-4" data-category="Diseño" data-price="36.70">
+                    <div class="col-md-4 mb-4" data-category="Arte" data-price="36.70">
                         <a href="detalle_producto.aspx" class="text-decoration-none">
                             <div class="card">
                                 <img src="/Images/pinturas.jpg" class="card-img-top" alt="Studio Acrylics">
@@ -106,6 +109,25 @@
             </div>
         </div>
     </div>
+    <script>
+        // Función para obtener el valor del parámetro desde la URL
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Al cargar la página, marcar el checkbox correspondiente
+        window.onload = function () {
+            const categoria = getParameterByName('categoria');
+            if (categoria) {
+                // Busca el checkbox de la categoría y lo marca
+                const checkbox = document.querySelector(`input[value="${categoria}"]`);
+                if (checkbox) {
+                    checkbox.checked = true;
+                }
+            }
+        };
+    </script>
     <script src="Scripts/filtrar_listado_productos.js"></script>
 
 </asp:Content>

@@ -60,40 +60,50 @@
                    <!-- Categoría: Arte -->
                    <div class="col-md-6 mb-4">
                        <div class="card border-0">
-                           <img src="Images/arte.png" class="card-img-top rounded-img mx-auto" alt="Arte">
-                           <div class="card-body">
-                               <h5 class="card-title  category-title font-regular">Arte</h5>
-                           </div>
+                           <a href="listado_productos.aspx?categoria=Arte" class="text-decoration-none">
+
+                               <img src="Images/arte.png" class="card-img-top rounded-img mx-auto" alt="Arte">
+                               <div class="card-body">
+                                   <h5 class="card-title category-title font-regular">Arte</h5>
+                               </div>
+
+                           </a>
                        </div>
                    </div>
 
                    <!-- Categoría: Arquitectura -->
                    <div class="col-md-6 mb-4">
                        <div class="card border-0">
-                           <img src="Images/arquitectura.png" class="card-img-top rounded-img mx-auto" alt="Arquitectura">
-                           <div class="card-body">
-                               <h5 class="card-title  category-title font-regular">Arquitectura</h5>
-                           </div>
+                           <a href="listado_productos.aspx?categoria=Arquitectura" class="text-decoration-none">
+                               <img src="Images/arquitectura.png" class="card-img-top rounded-img mx-auto" alt="Arquitectura">
+                               <div class="card-body">
+                                   <h5 class="card-title  category-title font-regular">Arquitectura</h5>
+                               </div>
+                           </a>
                        </div>
                    </div>
 
                    <!-- Categoría: Educación -->
                    <div class="col-md-6 mb-4">
                        <div class="card border-0">
-                           <img src="Images/educacion.jpg" class="card-img-top rounded-img mx-auto" alt="Educación">
-                           <div class="card-body">
-                               <h5 class="card-title  category-title font-regular">Educación</h5>
-                           </div>
+                           <a href="listado_productos.aspx?categoria=Educación" class="text-decoration-none">
+                               <img src="Images/educacion.jpg" class="card-img-top rounded-img mx-auto" alt="Educación">
+                               <div class="card-body">
+                                   <h5 class="card-title  category-title font-regular">Educación</h5>
+                               </div>
+                           </a>
                        </div>
                    </div>
 
                    <!-- Categoría: Oficina -->
                    <div class="col-md-6 mb-4">
                        <div class="card border-0">
-                           <img src="Images/oficina.jpg" class="card-img-top rounded-img mx-auto" alt="Oficina">
-                           <div class="card-body">
-                               <h5 class="card-title  category-title font-regular">Oficina</h5>
-                           </div>
+                           <a href="listado_productos.aspx?categoria=Oficina" class="text-decoration-none">
+                               <img src="Images/oficina.jpg" class="card-img-top rounded-img mx-auto" alt="Oficina">
+                               <div class="card-body">
+                                   <h5 class="card-title  category-title font-regular">Oficina</h5>
+                               </div>
+                           </a>
                        </div>
                    </div>
                </div>

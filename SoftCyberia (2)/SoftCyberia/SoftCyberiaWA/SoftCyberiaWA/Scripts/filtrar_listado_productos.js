@@ -1,34 +1,33 @@
-﻿// Archivo: filtros.js
-function filterProducts() {
-    const selectedCategories = [];
-
-    // Obtener todas las categorías seleccionadas
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    checkboxes.forEach(checkbox => {
-        selectedCategories.push(checkbox.value);
-    });
-
-    // Obtener todos los productos
-    const products = document.querySelectorAll('.col-md-4.mb-4');
-
-    // Mostrar u ocultar productos según la categoría seleccionada
-    products.forEach(product => {
-        const productCategory = product.getAttribute('data-category');
-        if (selectedCategories.length === 0 || selectedCategories.includes(productCategory)) {
-            product.style.display = 'block';  // Mostrar producto
-        } else {
-            product.style.display = 'none';  // Ocultar producto
-        }
-    });
+﻿// Función para obtener el valor del parámetro desde la URL
+function getParameterByName(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
 }
 
-// Añadir evento de cambio a los checkboxes
-document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', filterProducts);
-});
+// Al cargar la página, marcar el checkbox correspondiente y aplicar los filtros
+window.onload = function () {
+    const categoria = getParameterByName('categoria');
+    if (categoria) {
+        // Busca el checkbox de la categoría y lo marca
+        const checkbox = document.querySelector(`input[value="${categoria}"]`);
+        if (checkbox) {
+            checkbox.checked = true;
+        }
+    }
 
+    // Aplicamos los filtros automáticamente al cargar la página
+    applyFilters();
 
-// Cargamos los productos y aplicamos los filtros en una sola función
+    // Añadir el evento de cambio para los filtros de categoría y precio
+    document.querySelectorAll('.form-check-input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', applyFilters);
+    });
+
+    // Añadir evento de cambio para el filtro de precio
+    document.getElementById("priceRange").addEventListener('input', applyFilters);
+};
+
+// Función para aplicar los filtros de productos
 function applyFilters() {
     const selectedCategories = getSelectedCategories();
     const maxPrice = document.getElementById("priceRange").value;
@@ -59,8 +58,3 @@ function getSelectedCategories() {
     });
     return categories;
 }
-
-// Inicializar el filtro cuando cambie el precio o la categoría
-document.addEventListener('DOMContentLoaded', function () {
-    applyFilters(); // Aplicamos los filtros al cargar la página
-});
