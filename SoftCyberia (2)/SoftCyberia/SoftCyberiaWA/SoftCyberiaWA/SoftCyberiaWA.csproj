@@ -144,6 +144,7 @@
     <Content Include="listado_stock.aspx" />
     <Content Include="detalle_reporte.aspx" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\validar_inicio_sesion.js" />
     <Content Include="Scripts\filtrar_listado_productos.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />

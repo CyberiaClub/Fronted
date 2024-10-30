@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="index_iniciosesion.aspx.cs" Inherits="SoftCyberiaWA.index_iniciosesion" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
+    Iniciar Sesion
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
     <link href="Content/siteainiciosesion.css" rel="stylesheet" />
@@ -15,12 +16,16 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="text" class="form-control" id="email" placeholder="Ingrese su correo electrónico" />
+                <small id="emailError" style="color: red;"></small>
+                <!-- Espacio para el mensaje de error del email -->
             </div>
 
             <!-- Campo Password -->
             <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" />
+                <small id="passwordError" style="color: red;"></small>
+                <!-- Espacio para el mensaje de error de la contraseña -->
             </div>
 
             <!-- Recordar cuenta -->
@@ -30,7 +35,7 @@
             </div>
 
             <!-- Botón de inicio de sesión -->
-            <button type="submit" class="btn btn-dark w-100">Iniciar sesión</button>
+            <button type="button" class="btn btn-dark w-100" id="loginButton">Iniciar sesión</button>
 
             <!-- Registro -->
             <div class="text-center mt-3">
@@ -39,4 +44,5 @@
 
         </div>
     </div>
+    <script src="Scripts/validar_inicio_sesion.js"></script>
 </asp:Content>
