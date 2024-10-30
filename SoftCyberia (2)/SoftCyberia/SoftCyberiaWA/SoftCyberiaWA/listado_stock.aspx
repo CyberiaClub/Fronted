@@ -94,7 +94,7 @@
          </div>
 
          <!-- Panel derecho -->
-         <div class="col-md-4 d-flex flex-column justify-content-center align-items-center bg-light" style="border-radius: 0 15px 15px 0;">
+         <div class="col-md-2 d-flex flex-column justify-content-center align-items-center bg-light" style="border-radius: 0 15px 15px 0;">
             <asp:Button ID="Button1" runat="server" Text="Buscar" CssClass="btn btn-primary" />
          </div>
      </div>

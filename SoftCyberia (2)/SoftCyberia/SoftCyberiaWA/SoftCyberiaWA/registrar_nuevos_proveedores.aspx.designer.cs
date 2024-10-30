@@ -60,13 +60,13 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
-        /// paymentMethod control.
+        /// precioProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList paymentMethod;
+        protected global::System.Web.UI.WebControls.TextBox precioProducto;
 
         /// <summary>
         /// products control.
@@ -76,15 +76,6 @@ namespace SoftCyberiaWA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox products;
-
-        /// <summary>
-        /// precioProducto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox precioProducto;
 
         /// <summary>
         /// registerButton control.
