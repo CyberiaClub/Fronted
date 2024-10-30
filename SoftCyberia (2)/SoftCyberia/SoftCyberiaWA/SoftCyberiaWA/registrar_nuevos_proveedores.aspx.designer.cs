@@ -24,13 +24,22 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.TextBox providerRUC;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control nombreProveedor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox nombreProveedor;
+
+        /// <summary>
+        /// Control razonSocial.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox razonSocial;
 
         /// <summary>
         /// Control phone.
@@ -58,15 +67,6 @@ namespace SoftCyberiaWA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox address;
-
-        /// <summary>
-        /// Control precioProducto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox precioProducto;
 
         /// <summary>
         /// Control products.

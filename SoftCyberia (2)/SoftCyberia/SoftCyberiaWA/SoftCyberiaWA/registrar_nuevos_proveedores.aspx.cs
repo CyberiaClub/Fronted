@@ -20,8 +20,8 @@ namespace SoftCyberiaWA
         {
             proveedor proveedor = new proveedor();
             proveedor.ruc = providerRUC.Text;
-            proveedor.nombreContacto = TextBox1.Text;
-            proveedor.razonSocial = TextBox1.Text;
+            proveedor.nombreContacto = nombreProveedor.Text;
+            proveedor.razonSocial = razonSocial.Text;
             proveedor.correo = email.Text;
             proveedor.telefono = phone.Text;
             proveedor.direccion = address.Text;
@@ -29,4 +29,4 @@ namespace SoftCyberiaWA
             int resultado = daoProveedor.proveedor_insertar(proveedor.ruc, proveedor.nombreContacto, proveedor.razonSocial, proveedor.correo, proveedor.telefono, proveedor.direccion, proveedor.descripcion);
         }
     }
-}
+}   

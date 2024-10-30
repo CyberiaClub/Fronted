@@ -244,6 +244,9 @@
     <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca_buscarIdPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca_eliminarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -298,6 +301,9 @@
     <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor_buscarIdPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor_eliminarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -313,6 +319,9 @@
     <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.sede.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.sede_buscarIdPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.sede_insertarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -323,6 +332,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto_buscarIdPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto_eliminarResponse.datasource">

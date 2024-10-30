@@ -78,8 +78,10 @@
             <asp:TextBox ID="providerRUC" runat="server" CssClass="form-control"></asp:TextBox>
 
             <label for="providerName">Nombre del Proveedor:</label>
-            <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="nombreProveedor" runat="server" CssClass="form-control"></asp:TextBox>
 
+            <label for="providerName">Razón Social:</label>
+            <asp:TextBox ID="razonSocial" runat="server" CssClass="form-control"></asp:TextBox>
 
             <label for="phone">Teléfono:</label>
             <asp:TextBox ID="phone" runat="server" CssClass="form-control"></asp:TextBox>
@@ -89,11 +91,6 @@
 
             <label for="address">Dirección:</label>
             <asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
-
-            
-            <label for="precioProducto">Precio de Producto:</label>
-            <asp:TextBox ID="precioProducto" runat="server" CssClass="form-control"></asp:TextBox>
-            
 
             <label for="products">Descripción del Producto que Suministra:</label>
             <asp:TextBox ID="products" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
