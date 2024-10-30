@@ -17,7 +17,7 @@
 
 
     <title>
-        <asp:ContentPlaceHolder ID="cphTitulo" runat="server">
+        <asp:ContentPlaceHolder ID="head" runat="server">
         </asp:ContentPlaceHolder>
     </title>
 
@@ -46,18 +46,18 @@
                 <!-- Enlaces de navegación a la izquierda -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="listado_productos.aspx">Productos</a>
+                        <a class="nav-link text-white " href="listado_productos.aspx">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="listado_sedes.aspx">Sedes</a>
+                        <a class="nav-link text-white " href="listado_sedes.aspx">Sedes</a>
                     </li>
                 </ul>
 
                 <!-- Menú de usuario a la derecha -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-user"></i>Usuario
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user text-white"></i>Usuario
                     </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
                             <li><a class="dropdown-item" href="vista_perfil_cliente.aspx">Perfil</a></li>
@@ -70,7 +70,7 @@
                     <!-- Icono del carrito de compras -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="fa fa-shopping-cart"></i>
+                            <i class="fa fa-shopping-cart text-white"></i>
                         </a>
                     </li>
                 </ul>

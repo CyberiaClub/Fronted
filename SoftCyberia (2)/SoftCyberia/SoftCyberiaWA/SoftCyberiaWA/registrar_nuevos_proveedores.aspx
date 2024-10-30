@@ -90,19 +90,13 @@
             <label for="address">Dirección:</label>
             <asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
 
-
-            <label for="paymentMethod">Método de Pago:</label>
-            <asp:DropDownList ID="paymentMethod" runat="server" CssClass="form-control">
-                <asp:ListItem Text="Transferencia Bancaria" Value="transferencia"></asp:ListItem>
-                <asp:ListItem Text="Tarjeta de Debito" Value="tarjeta"></asp:ListItem>
-                <asp:ListItem Text="Efectivo" Value="efectivo"></asp:ListItem>
-            </asp:DropDownList>
-
-            <label for="products">Producto que Suministra:</label>
-            <asp:TextBox ID="products" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
             
             <label for="precioProducto">Precio de Producto:</label>
             <asp:TextBox ID="precioProducto" runat="server" CssClass="form-control"></asp:TextBox>
+            
+
+            <label for="products">Descripción del Producto que Suministra:</label>
+            <asp:TextBox ID="products" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
 
         </div>
 

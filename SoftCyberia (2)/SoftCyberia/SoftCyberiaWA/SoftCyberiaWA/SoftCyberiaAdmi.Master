@@ -24,6 +24,7 @@
         <!--Por si necesitan script o estilo-->
     <asp:ContentPlaceHolder ID="cphStyle" runat="server">
     </asp:ContentPlaceHolder>
+
     <style>
         .sidebar-logo {
             width: 100%; /* Ocupa el ancho completo del sidebar */
@@ -36,43 +37,55 @@
 
     <!-- Contorno exterior - Negros sin sombra -->
     <div class="sidebar navbar-dark bg-dark">
+
         <!-- Logo CYBERIA -->
         <div class="text-center">
-            <img src="Images/cyberia-admin.png"  class="sidebar-logo" >
+            <img src="Images/cyberia-logo.png"  style="width: 85px; height:auto;" >
         </div>
+
 
         <!-- Foto del usuario y nombre -->
         <div class="text-center mt-4 text-white text-center">
-            <img src="Images/admin-user.png" alt="Foto de usuario">
+            <img src="Images/admin-user.png" alt="Foto de usuario"  style="width: 160px; height:auto;">
             <h4>Matias Sulca</h4>
             <p>Administrador</p>
         </div>
 
         <!-- Enlaces de navegación -->
-        <a href="detalle_reporte.aspx">Generar reporte</a>           
+
+
+        <a href="registrar_nuevos_proveedores.aspx">Registrar nuevos Proveedores</a>
         <p> </p>
 
-        <a href="registrar_nuevos_proveedores.aspx">Registrar nuevos proveedores</a>
+        <a href="registrar_nuevos_productos.aspx">Registrar nuevos Productos</a>
         <p> </p>
 
-        <a href="registrar_nuevos_productos.aspx">Registrar nuevos productos</a>
+        <a href="asignar_roles.aspx">Asignar Rol</a>
         <p> </p>
 
-        <a href="asignar_roles.aspx">Asignar roles</a>
+        <a href="listado_stock.aspx">Ver Stock de Productos</a>
         <p> </p>
 
-        <a href="listado_stock.aspx">Ver stock / sede</a>
-        <p> </p>
+        <a href="detalle_reporte.aspx">Generar reporte</a>
+        <p></p>
 
         <!-- Pie de la barra lateral -->
+<<<<<<< Updated upstream
 
         <footer class="footer p-4 text-white text-center">
             <div class="sidebar-footer">
-                <a href="#">Cerrar sesión</a>
+                <button type="button" class="btn btn-secondary">Cerrar sesión</button>
+
             </div>
         </footer>
 
 
+=======
+        <div class="sidebar-footer">
+            <a href="/index.aspx">Cerrar sesión</a>
+            <a href="#">Ajustes de seguridad</a>
+        </div>
+>>>>>>> Stashed changes
     </div>
 
     <!-- Contenido de la pagina web -->
