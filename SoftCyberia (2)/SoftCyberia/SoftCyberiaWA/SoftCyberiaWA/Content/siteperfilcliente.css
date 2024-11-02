@@ -1,0 +1,106 @@
+﻿
+:root {
+    --primary-color: #00205B; /* PANTONE 281 C */
+    --secondary-color1: #A6C8E0; /* PANTONE 660 C */
+    --secondary-color2: #98AFC7; /* PANTONE 2132 C */
+    --secondary-color3: #A2AAAD; /* PANTONE 429 C */
+    --secondary-color4: #6C737A; /* PANTONE 430 C */ 
+}
+
+
+body {
+    font-family: 'TT Norms', sans-serif;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.navbar, .footer {
+    background-color: var(--primary-color);
+}
+
+.highlight-banner, .monthly-offers {
+    background-color: var(--secondary-color1);
+}
+
+    .highlight-banner h2, .monthly-offers h3 {
+        color: var(--secondary-color2);
+    }
+
+.category-icon, .featured-products-icon {
+    color: var(--secondary-color3);
+}
+
+/* Contenedor principal */
+.container {
+    min-height: 80vh;
+}
+
+/* Imagen de perfil circular */
+.profile-picture img {
+    width: 120px; /* Tamaño de la imagen */
+    height: 120px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Línea bajo el nombre */
+hr {
+    border-top: 2px solid black;
+}
+
+/* Card de la sesión */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Input del correo electrónico */
+.form-control {
+    background-color: #f8f9fa;
+    border: none;
+    color: #333;
+}
+
+/* Botón Cerrar Sesión */
+.btn-dark {
+    background-color: #333;
+    border: none;
+}
+
+    .btn-dark:hover {
+        background-color: #555;
+    }
+
+/* Botón Volver */
+.btn-secondary {
+    background-color: #ccc;
+    border: none;
+}
+
+    .btn-secondary:hover {
+        background-color:   #aaa;
+            
+    }
+

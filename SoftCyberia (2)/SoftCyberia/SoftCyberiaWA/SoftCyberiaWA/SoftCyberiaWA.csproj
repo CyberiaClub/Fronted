@@ -95,10 +95,15 @@
     <Content Include="Content\Fonts\css\v4-shims.min.css" />
     <Content Include="Content\Fonts\css\v5-font-face.css" />
     <Content Include="Content\Fonts\css\v5-font-face.min.css" />
+    <Content Include="Content\siteperfilcliente.css" />
+    <Content Include="Content\sitedethistorialcompras.css" />
+    <Content Include="Content\sitedetcarrocompras.css" />
     <Content Include="Content\sitedetprod.css" />
     <Content Include="Content\siteainiciosesion.css" />
     <Content Include="Content\siteadmi.css" />
     <Content Include="Content\site.css" />
+    <Content Include="detalle_carro_de_compras.aspx" />
+    <Content Include="detalle_historial_de_compras.aspx" />
     <Content Include="detalle_producto.aspx" />
     <Content Include="detalle_producto2.aspx" />
     <Content Include="detalle_producto3.aspx" />
@@ -151,11 +156,26 @@
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
     <Content Include="Images\mapa-tiendas.png" />
+    <Content Include="vista_perfil_cliente.aspx" />
     <Content Include="Web.config" />
     <Content Include="SoftCyberia.Master" />
     <Content Include="SoftCyberiaAdmi.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="detalle_carro_de_compras.aspx.cs">
+      <DependentUpon>detalle_carro_de_compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalle_carro_de_compras.aspx.designer.cs">
+      <DependentUpon>detalle_carro_de_compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_historial_de_compras.aspx.cs">
+      <DependentUpon>detalle_historial_de_compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalle_historial_de_compras.aspx.designer.cs">
+      <DependentUpon>detalle_historial_de_compras.aspx</DependentUpon>
+    </Compile>
     <Compile Include="detalle_producto.aspx.cs">
       <DependentUpon>detalle_producto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -275,6 +295,13 @@
     </Compile>
     <Compile Include="detalle_reporte.aspx.designer.cs">
       <DependentUpon>detalle_reporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vista_perfil_cliente.aspx.cs">
+      <DependentUpon>vista_perfil_cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vista_perfil_cliente.aspx.designer.cs">
+      <DependentUpon>vista_perfil_cliente.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
