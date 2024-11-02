@@ -17,7 +17,7 @@
 
 
     <title>
-        <asp:ContentPlaceHolder ID="head" runat="server">
+        <asp:ContentPlaceHolder ID="cphTitulo" runat="server">
         </asp:ContentPlaceHolder>
     </title>
 
@@ -33,7 +33,7 @@
         <div class="container-fluid">
             <!-- Logo -->
             <a href="index.aspx" class="navbar-brand" >
-                <img src="Images/cyberia-logo.png" alt="CYBERIA Logo" style="height: 100px;">
+                <img src="/Imagenes/cyberia-logo.png" alt="CYBERIA Logo" style="height: 100px;">
             </a>
 
             <!-- Botón de colapso para móviles -->

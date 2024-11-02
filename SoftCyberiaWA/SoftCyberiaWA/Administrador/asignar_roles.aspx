@@ -3,7 +3,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #E6E9EE;">
-        <div class="row" style="width: 90%; max-width: 1200px; border-radius: 15px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); background-color: #667892;">
             <!-- Formulario de asignación de roles -->
             <div class="col-md-8 p-5">
                 <h3 class="text-white text-center mb-4">Asignar Rol</h3>

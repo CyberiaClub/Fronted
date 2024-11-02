@@ -116,29 +116,29 @@
     <Content Include="Content\siteainiciosesion.css" />
     <Content Include="Content\siteadmi.css" />
     <Content Include="Content\site.css" />
-    <Content Include="detalle_producto.aspx" />
-    <Content Include="detalle_producto2.aspx" />
-    <Content Include="detalle_producto3.aspx" />
-    <Content Include="detalle_producto4.aspx" />
-    <Content Include="Images\canva.jpg" />
-    <Content Include="Images\criolla.png" />
-    <Content Include="Images\cyberia-admin.png" />
-    <Content Include="Images\cyberia-logo.png" />
-    <Content Include="Images\faber.png" />
-    <Content Include="Images\halloween.png" />
-    <Content Include="Images\lapiz-grafito.jpg" />
-    <Content Include="Images\lapiz.jpg" />
-    <Content Include="Images\papeles.jpg" />
-    <Content Include="Images\pinturas.jpg" />
-    <Content Include="Images\seles.png" />
-    <Content Include="Images\sharpie.png" />
-    <Content Include="Images\stae.png" />
-    <Content Include="Images\whatsapp.png" />
-    <Content Include="index_iniciosesion.aspx" />
-    <Content Include="mantenimiento_iniciar_sesion.aspx" />
-    <Content Include="Images\admin-user.png" />
-    <Content Include="index.aspx" />
-    <Content Include="IndexAdmi.aspx" />
+    <Content Include="Productos\detalle_producto.aspx" />
+    <Content Include="Productos\detalle_producto2.aspx" />
+    <Content Include="Productos\detalle_producto3.aspx" />
+    <Content Include="Productos\detalle_producto4.aspx" />
+    <Content Include="Imagenes\canva.jpg" />
+    <Content Include="Imagenes\criolla.png" />
+    <Content Include="Imagenes\cyberia-admin.png" />
+    <Content Include="Imagenes\cyberia-logo.png" />
+    <Content Include="Imagenes\faber.png" />
+    <Content Include="Imagenes\halloween.png" />
+    <Content Include="Imagenes\lapiz-grafito.jpg" />
+    <Content Include="Imagenes\lapiz.jpg" />
+    <Content Include="Imagenes\papeles.jpg" />
+    <Content Include="Imagenes\pinturas.jpg" />
+    <Content Include="Imagenes\seles.png" />
+    <Content Include="Imagenes\sharpie.png" />
+    <Content Include="Imagenes\stae.png" />
+    <Content Include="Imagenes\whatsapp.png" />
+    <Content Include="Cliente\index_iniciosesion.aspx" />
+    <Content Include="Cliente\mantenimiento_iniciar_sesion.aspx" />
+    <Content Include="Imagenes\admin-user.png" />
+    <Content Include="MainCyberia\index.aspx" />
+    <Content Include="Administrador\IndexAdmi.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -153,13 +153,13 @@
     <Content Include="Content\Fonts\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\Fonts\webfonts\fa-v4compatibility.ttf" />
     <Content Include="Content\Fonts\webfonts\fa-v4compatibility.woff2" />
-    <Content Include="listado_productos.aspx" />
-    <Content Include="listado_sedes.aspx" />
-    <Content Include="registrar_nuevos_proveedores.aspx" />
-    <Content Include="registrar_nuevos_productos.aspx" />
-    <Content Include="asignar_roles.aspx" />
-    <Content Include="listado_stock.aspx" />
-    <Content Include="detalle_reporte.aspx" />
+    <Content Include="Productos\listado_productos.aspx" />
+    <Content Include="MainCyberia\listado_sedes.aspx" />
+    <Content Include="Administrador\registrar_nuevos_proveedores.aspx" />
+    <Content Include="Administrador\registrar_nuevos_productos.aspx" />
+    <Content Include="Administrador\asignar_roles.aspx" />
+    <Content Include="Administrador\listado_stock.aspx" />
+    <Content Include="Administrador\detalle_reporte.aspx" />
     <None Include="Connected Services\ServicioWS\AdministradorWS.wsdl" />
     <None Include="Connected Services\ServicioWS\BoletaWS.wsdl" />
     <None Include="Connected Services\ServicioWS\BoletaWS.xsd">
@@ -376,8 +376,8 @@
     <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
-    <Content Include="Images\mapa-tiendas.png" />
-    <Content Include="vista_perfil_cliente.aspx" />
+    <Content Include="Imagenes\mapa-tiendas.png" />
+    <Content Include="Cliente\vista_perfil_cliente.aspx" />
     <Content Include="Web.config" />
     <Content Include="SoftCyberia.Master" />
     <Content Include="SoftCyberiaAdmi.Master" />
@@ -388,60 +388,60 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="detalle_producto.aspx.cs">
+    <Compile Include="Productos\detalle_producto.aspx.cs">
       <DependentUpon>detalle_producto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="detalle_producto.aspx.designer.cs">
+    <Compile Include="Productos\detalle_producto.aspx.designer.cs">
       <DependentUpon>detalle_producto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="detalle_producto2.aspx.cs">
+    <Compile Include="Productos\detalle_producto2.aspx.cs">
       <DependentUpon>detalle_producto2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="detalle_producto2.aspx.designer.cs">
+    <Compile Include="Productos\detalle_producto2.aspx.designer.cs">
       <DependentUpon>detalle_producto2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="detalle_producto3.aspx.cs">
+    <Compile Include="Productos\detalle_producto3.aspx.cs">
       <DependentUpon>detalle_producto3.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="detalle_producto3.aspx.designer.cs">
+    <Compile Include="Productos\detalle_producto3.aspx.designer.cs">
       <DependentUpon>detalle_producto3.aspx</DependentUpon>
     </Compile>
-    <Compile Include="detalle_producto4.aspx.cs">
+    <Compile Include="Productos\detalle_producto4.aspx.cs">
       <DependentUpon>detalle_producto4.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="detalle_producto4.aspx.designer.cs">
+    <Compile Include="Productos\detalle_producto4.aspx.designer.cs">
       <DependentUpon>detalle_producto4.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index_iniciosesion.aspx.cs">
+    <Compile Include="Cliente\index_iniciosesion.aspx.cs">
       <DependentUpon>index_iniciosesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index_iniciosesion.aspx.designer.cs">
+    <Compile Include="Cliente\index_iniciosesion.aspx.designer.cs">
       <DependentUpon>index_iniciosesion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mantenimiento_iniciar_sesion.aspx.cs">
+    <Compile Include="Cliente\mantenimiento_iniciar_sesion.aspx.cs">
       <DependentUpon>mantenimiento_iniciar_sesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="mantenimiento_iniciar_sesion.aspx.designer.cs">
+    <Compile Include="Cliente\mantenimiento_iniciar_sesion.aspx.designer.cs">
       <DependentUpon>mantenimiento_iniciar_sesion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
+    <Compile Include="MainCyberia\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
+    <Compile Include="MainCyberia\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IndexAdmi.aspx.cs">
+    <Compile Include="Administrador\IndexAdmi.aspx.cs">
       <DependentUpon>IndexAdmi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IndexAdmi.aspx.designer.cs">
+    <Compile Include="Administrador\IndexAdmi.aspx.designer.cs">
       <DependentUpon>IndexAdmi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -459,60 +459,60 @@
     <Compile Include="SoftCyberiaAdmi.Master.designer.cs">
       <DependentUpon>SoftCyberiaAdmi.Master</DependentUpon>
     </Compile>
-    <Compile Include="listado_productos.aspx.cs">
+    <Compile Include="Productos\listado_productos.aspx.cs">
       <DependentUpon>listado_productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="listado_productos.aspx.designer.cs">
+    <Compile Include="Productos\listado_productos.aspx.designer.cs">
       <DependentUpon>listado_productos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="listado_sedes.aspx.cs">
+    <Compile Include="MainCyberia\listado_sedes.aspx.cs">
       <DependentUpon>listado_sedes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="listado_sedes.aspx.designer.cs">
+    <Compile Include="MainCyberia\listado_sedes.aspx.designer.cs">
       <DependentUpon>listado_sedes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registrar_nuevos_proveedores.aspx.cs">
+    <Compile Include="Administrador\registrar_nuevos_proveedores.aspx.cs">
       <DependentUpon>registrar_nuevos_proveedores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="registrar_nuevos_proveedores.aspx.designer.cs">
+    <Compile Include="Administrador\registrar_nuevos_proveedores.aspx.designer.cs">
       <DependentUpon>registrar_nuevos_proveedores.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registrar_nuevos_productos.aspx.cs">
+    <Compile Include="Administrador\registrar_nuevos_productos.aspx.cs">
       <DependentUpon>registrar_nuevos_productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="registrar_nuevos_productos.aspx.designer.cs">
+    <Compile Include="Administrador\registrar_nuevos_productos.aspx.designer.cs">
       <DependentUpon>registrar_nuevos_productos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="asignar_roles.aspx.cs">
+    <Compile Include="Administrador\asignar_roles.aspx.cs">
       <DependentUpon>asignar_roles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="asignar_roles.aspx.designer.cs">
+    <Compile Include="Administrador\asignar_roles.aspx.designer.cs">
       <DependentUpon>asignar_roles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="listado_stock.aspx.cs">
+    <Compile Include="Administrador\listado_stock.aspx.cs">
       <DependentUpon>listado_stock.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="listado_stock.aspx.designer.cs">
+    <Compile Include="Administrador\listado_stock.aspx.designer.cs">
       <DependentUpon>listado_stock.aspx</DependentUpon>
     </Compile>
-    <Compile Include="detalle_reporte.aspx.cs">
+    <Compile Include="Administrador\detalle_reporte.aspx.cs">
       <DependentUpon>detalle_reporte.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="detalle_reporte.aspx.designer.cs">
+    <Compile Include="Administrador\detalle_reporte.aspx.designer.cs">
       <DependentUpon>detalle_reporte.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vista_perfil_cliente.aspx.cs">
+    <Compile Include="Cliente\vista_perfil_cliente.aspx.cs">
       <DependentUpon>vista_perfil_cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vista_perfil_cliente.aspx.designer.cs">
+    <Compile Include="Cliente\vista_perfil_cliente.aspx.designer.cs">
       <DependentUpon>vista_perfil_cliente.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
