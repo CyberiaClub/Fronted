@@ -79,6 +79,10 @@
         </footer>
 
 
+        <div class="sidebar-footer">
+            <a href="index.aspx">Cerrar sesión</a>
+            <a href="#">Ajustes de seguridad</a>
+        </div>
     </div>
 
     <!-- Contenido de la pagina web -->

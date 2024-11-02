@@ -80,8 +80,8 @@
             <label for="sku">SKU:</label>
             <asp:TextBox ID="sku" runat="server" CssClass="form-control"></asp:TextBox>
 
-            <label for="marca">Marca del Producto:</label>
-            <asp:TextBox ID="marca" runat="server" CssClass="form-control"></asp:TextBox>
+            <label for="marcaTxt">Marca del Producto:</label>
+            <asp:TextBox ID="marcaTxt" runat="server" CssClass="form-control"></asp:TextBox>
 
             <!--tipo de producto-->
             <label for="category">Categoría:</label>
@@ -96,15 +96,17 @@
             <label for="price">Precio de Venta:</label>
             <asp:TextBox ID="price" runat="server" CssClass="form-control"></asp:TextBox>
 
-            <label for="provider">Proveedor:</label>
-            <asp:TextBox ID="provider" runat="server" CssClass="form-control"></asp:TextBox>
+            <label for="providerPrice">Precio de Venta del Proveedor:</label>
+            <asp:TextBox ID="providerPrice" runat="server" CssClass="form-control"></asp:TextBox>    
+
+            <label for="providerTxt">Proveedor:</label>
+            <asp:TextBox ID="providerTxt" runat="server" CssClass="form-control"></asp:TextBox>
 
             <label for="unidades">Unidades:</label>
             <asp:TextBox ID="unidades" runat="server" CssClass="form-control"></asp:TextBox>
-
             
-            <label for="sede">Sede:</label>
-            <asp:TextBox ID="sede" runat="server" CssClass="form-control"></asp:TextBox>
+            <label for="sedeTxt">Sede:</label>
+            <asp:TextBox ID="sedeTxt" runat="server" CssClass="form-control"></asp:TextBox>
 
             <label for="description">Descripción del Producto:</label>
             <asp:TextBox ID="description" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
@@ -117,7 +119,7 @@
         <div class="info-section">
             <h2>Registro Nuevo Producto</h2>
             <img src="Images/producto.png" alt="Icono de seguridad" style="width: 160px;">
-            <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="register-button" />
+            <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="register-button" OnClick="lbGuardar_Click"/>
         </div>
     </div>
 </asp:Content>
