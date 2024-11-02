@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/PedidoWS?xsd=1" namespace="http://venta.servicios.cyberiastore.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="pedido_modificar">
-    <part name="parameters" element="tns:pedido_modificar" />
+  <message name="pedido_eliminar">
+    <part name="parameters" element="tns:pedido_eliminar" />
   </message>
-  <message name="pedido_modificarResponse">
-    <part name="parameters" element="tns:pedido_modificarResponse" />
+  <message name="pedido_eliminarResponse">
+    <part name="parameters" element="tns:pedido_eliminarResponse" />
   </message>
   <message name="pedido_insertar">
     <part name="parameters" element="tns:pedido_insertar" />
@@ -23,16 +23,16 @@
   <message name="pedido_listarResponse">
     <part name="parameters" element="tns:pedido_listarResponse" />
   </message>
-  <message name="pedido_eliminar">
-    <part name="parameters" element="tns:pedido_eliminar" />
+  <message name="pedido_modificar">
+    <part name="parameters" element="tns:pedido_modificar" />
   </message>
-  <message name="pedido_eliminarResponse">
-    <part name="parameters" element="tns:pedido_eliminarResponse" />
+  <message name="pedido_modificarResponse">
+    <part name="parameters" element="tns:pedido_modificarResponse" />
   </message>
   <portType name="PedidoWS">
-    <operation name="pedido_modificar">
-      <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_modificarRequest" message="tns:pedido_modificar" />
-      <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_modificarResponse" message="tns:pedido_modificarResponse" />
+    <operation name="pedido_eliminar">
+      <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_eliminarRequest" message="tns:pedido_eliminar" />
+      <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_eliminarResponse" message="tns:pedido_eliminarResponse" />
     </operation>
     <operation name="pedido_insertar">
       <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_insertarRequest" message="tns:pedido_insertar" />
@@ -42,14 +42,14 @@
       <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_listarRequest" message="tns:pedido_listar" />
       <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_listarResponse" message="tns:pedido_listarResponse" />
     </operation>
-    <operation name="pedido_eliminar">
-      <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_eliminarRequest" message="tns:pedido_eliminar" />
-      <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_eliminarResponse" message="tns:pedido_eliminarResponse" />
+    <operation name="pedido_modificar">
+      <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_modificarRequest" message="tns:pedido_modificar" />
+      <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/PedidoWS/pedido_modificarResponse" message="tns:pedido_modificarResponse" />
     </operation>
   </portType>
   <binding name="PedidoWSPortBinding" type="tns:PedidoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="pedido_modificar">
+    <operation name="pedido_eliminar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="pedido_eliminar">
+    <operation name="pedido_modificar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://inventario.servicios.cyberiastore.pucp.edu.pe/" targetNamespace="http://inventario.servicios.cyberiastore.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tipoProducto_buscarIdPorNombre" type="tns:tipoProducto_buscarIdPorNombre" />
+  <xs:element name="tipoProducto_buscarIdPorNombreResponse" type="tns:tipoProducto_buscarIdPorNombreResponse" />
   <xs:element name="tipoProducto_eliminar" type="tns:tipoProducto_eliminar" />
   <xs:element name="tipoProducto_eliminarResponse" type="tns:tipoProducto_eliminarResponse" />
   <xs:element name="tipoProducto_insertar" type="tns:tipoProducto_insertar" />
@@ -21,6 +23,17 @@
       <xs:element minOccurs="0" name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="idTipoProducto" type="xs:int" />
       <xs:element minOccurs="0" name="tipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoProducto_buscarIdPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TipoProducto" type="tns:tipoProducto" />
+      <xs:element minOccurs="0" name="abreConexion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoProducto_buscarIdPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="tipoProducto_insertar">

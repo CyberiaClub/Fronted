@@ -17,7 +17,11 @@
   <xs:complexType name="producto">
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idMarca" type="xs:int" />
       <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="idProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="idTipoProducto" type="xs:int" />
       <xs:element name="miembros">
         <xs:complexType>
           <xs:sequence>
@@ -34,6 +38,20 @@
       </xs:element>
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="precio" type="xs:double" />
+      <xs:element name="productoMiembros">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="tns:producto" />
+                  <xs:element minOccurs="0" name="value" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
       <xs:element minOccurs="0" name="sku" type="xs:string" />
       <xs:element minOccurs="0" name="unidad" type="xs:string" />
     </xs:sequence>
@@ -45,6 +63,11 @@
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="precio" type="xs:double" />
       <xs:element minOccurs="0" name="unidad" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="idMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="idProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="idTipoProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="precioProveedor" type="xs:double" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="producto_insertarResponse">

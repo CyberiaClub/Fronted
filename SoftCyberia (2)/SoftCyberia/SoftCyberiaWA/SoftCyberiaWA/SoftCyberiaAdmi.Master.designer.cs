@@ -24,20 +24,16 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
-<<<<<<< Updated upstream
-        /// cphStyle control.
+        /// Control cphStyle.
         /// </summary>
         /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphStyle;
 
         /// <summary>
-        /// ContentPlaceHolder2 control.
-=======
         /// Control ContentPlaceHolder2.
->>>>>>> Stashed changes
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.

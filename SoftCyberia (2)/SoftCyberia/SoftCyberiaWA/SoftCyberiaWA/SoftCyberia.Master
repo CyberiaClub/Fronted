@@ -17,7 +17,7 @@
 
 
     <title>
-        <asp:ContentPlaceHolder ID="head" runat="server">
+        <asp:ContentPlaceHolder ID="cphTitulo" runat="server">
         </asp:ContentPlaceHolder>
     </title>
 
@@ -61,7 +61,7 @@
                     </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
                             <li><a class="dropdown-item" href="vista_perfil_cliente.aspx">Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Historial de compras</a></li>
+                            <li><a class="dropdown-item" href="detalle_historial_de_compras.aspx">Historial de compras</a></li>
                             <li><a class="dropdown-item" href="index_iniciosesion.aspx">Iniciar sesion</a></li>
                             <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
                         </ul>
@@ -69,7 +69,7 @@
 
                     <!-- Icono del carrito de compras -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="detalle_carro_de_compras.aspx">
                             <i class="fa fa-shopping-cart text-white"></i>
                         </a>
                     </li>

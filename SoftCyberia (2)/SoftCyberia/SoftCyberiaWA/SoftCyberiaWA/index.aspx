@@ -1,7 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SoftCyberiaWA.index" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Cyberia - Home 
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">

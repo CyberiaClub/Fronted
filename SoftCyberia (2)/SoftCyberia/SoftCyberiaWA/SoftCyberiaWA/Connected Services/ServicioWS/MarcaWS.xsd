@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://inventario.servicios.cyberiastore.pucp.edu.pe/" targetNamespace="http://inventario.servicios.cyberiastore.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="marca_buscarIdPorNombre" type="tns:marca_buscarIdPorNombre" />
+  <xs:element name="marca_buscarIdPorNombreResponse" type="tns:marca_buscarIdPorNombreResponse" />
   <xs:element name="marca_eliminar" type="tns:marca_eliminar" />
   <xs:element name="marca_eliminarResponse" type="tns:marca_eliminarResponse" />
   <xs:element name="marca_insertar" type="tns:marca_insertar" />
@@ -30,6 +32,17 @@
   </xs:complexType>
   <xs:complexType name="marca_eliminarResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="marca_buscarIdPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Marca" type="tns:marca" />
+      <xs:element minOccurs="0" name="abreConexion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="marca_buscarIdPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="marca_insertar">
     <xs:sequence>

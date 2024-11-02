@@ -70,7 +70,6 @@
         <p></p>
 
         <!-- Pie de la barra lateral -->
-<<<<<<< Updated upstream
 
         <footer class="footer p-4 text-white text-center">
             <div class="sidebar-footer">
@@ -80,12 +79,10 @@
         </footer>
 
 
-=======
         <div class="sidebar-footer">
-            <a href="/index.aspx">Cerrar sesión</a>
+            <a href="index.aspx">Cerrar sesión</a>
             <a href="#">Ajustes de seguridad</a>
         </div>
->>>>>>> Stashed changes
     </div>
 
     <!-- Contenido de la pagina web -->

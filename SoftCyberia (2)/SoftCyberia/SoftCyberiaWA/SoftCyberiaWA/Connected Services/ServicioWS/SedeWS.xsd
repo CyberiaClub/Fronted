@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://inventario.servicios.cyberiastore.pucp.edu.pe/" targetNamespace="http://inventario.servicios.cyberiastore.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="sede_buscarIdPorNombre" type="tns:sede_buscarIdPorNombre" />
+  <xs:element name="sede_buscarIdPorNombreResponse" type="tns:sede_buscarIdPorNombreResponse" />
   <xs:element name="sede_insertar" type="tns:sede_insertar" />
   <xs:element name="sede_insertarResponse" type="tns:sede_insertarResponse" />
   <xs:element name="sede_listar" type="tns:sede_listar" />
@@ -39,6 +41,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="sede_insertarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sede_buscarIdPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Sede" type="tns:sede" />
+      <xs:element minOccurs="0" name="abreConexion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sede_buscarIdPorNombreResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>

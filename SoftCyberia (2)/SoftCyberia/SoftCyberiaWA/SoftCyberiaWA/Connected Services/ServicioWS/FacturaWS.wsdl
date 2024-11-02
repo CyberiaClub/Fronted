@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/FacturaWS?xsd=1" namespace="http://venta.servicios.cyberiastore.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="factura_listar">
-    <part name="parameters" element="tns:factura_listar" />
+  <message name="factura_eliminar">
+    <part name="parameters" element="tns:factura_eliminar" />
   </message>
-  <message name="factura_listarResponse">
-    <part name="parameters" element="tns:factura_listarResponse" />
+  <message name="factura_eliminarResponse">
+    <part name="parameters" element="tns:factura_eliminarResponse" />
   </message>
   <message name="factura_insertar">
     <part name="parameters" element="tns:factura_insertar" />
@@ -17,29 +17,29 @@
   <message name="factura_insertarResponse">
     <part name="parameters" element="tns:factura_insertarResponse" />
   </message>
-  <message name="factura_eliminar">
-    <part name="parameters" element="tns:factura_eliminar" />
+  <message name="factura_listar">
+    <part name="parameters" element="tns:factura_listar" />
   </message>
-  <message name="factura_eliminarResponse">
-    <part name="parameters" element="tns:factura_eliminarResponse" />
+  <message name="factura_listarResponse">
+    <part name="parameters" element="tns:factura_listarResponse" />
   </message>
   <portType name="FacturaWS">
-    <operation name="factura_listar">
-      <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_listarRequest" message="tns:factura_listar" />
-      <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_listarResponse" message="tns:factura_listarResponse" />
+    <operation name="factura_eliminar">
+      <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_eliminarRequest" message="tns:factura_eliminar" />
+      <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_eliminarResponse" message="tns:factura_eliminarResponse" />
     </operation>
     <operation name="factura_insertar">
       <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_insertarRequest" message="tns:factura_insertar" />
       <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_insertarResponse" message="tns:factura_insertarResponse" />
     </operation>
-    <operation name="factura_eliminar">
-      <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_eliminarRequest" message="tns:factura_eliminar" />
-      <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_eliminarResponse" message="tns:factura_eliminarResponse" />
+    <operation name="factura_listar">
+      <input wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_listarRequest" message="tns:factura_listar" />
+      <output wsam:Action="http://venta.servicios.cyberiastore.pucp.edu.pe/FacturaWS/factura_listarResponse" message="tns:factura_listarResponse" />
     </operation>
   </portType>
   <binding name="FacturaWSPortBinding" type="tns:FacturaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="factura_listar">
+    <operation name="factura_eliminar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -57,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="factura_eliminar">
+    <operation name="factura_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

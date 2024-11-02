@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://inventario.servicios.cyberiastore.pucp.edu.pe/" targetNamespace="http://inventario.servicios.cyberiastore.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="proveedor_buscarIdPorNombre" type="tns:proveedor_buscarIdPorNombre" />
+  <xs:element name="proveedor_buscarIdPorNombreResponse" type="tns:proveedor_buscarIdPorNombreResponse" />
   <xs:element name="proveedor_eliminar" type="tns:proveedor_eliminar" />
   <xs:element name="proveedor_eliminarResponse" type="tns:proveedor_eliminarResponse" />
   <xs:element name="proveedor_insertar" type="tns:proveedor_insertar" />
@@ -43,6 +45,17 @@
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="ruc" type="xs:string" />
       <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="proveedor_buscarIdPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Proveedor" type="tns:proveedor" />
+      <xs:element minOccurs="0" name="abreConexion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="proveedor_buscarIdPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="proveedor_modificar">

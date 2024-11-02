@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="vista_perfil_cliente.aspx.cs" Inherits="SoftCyberiaWA.vista_perfil_cliente" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Perfil
 </asp:Content>
@@ -37,4 +38,5 @@
             <button type="button" class="btn btn-secondary w-100">Volver</button>
         </div>
     </div>
+
 </asp:Content>
