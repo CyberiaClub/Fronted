@@ -3,7 +3,7 @@
     Perfil
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
-    <link href="Content/siteperfilcliente.css" rel="stylesheet" />
+    <link href="../Content/siteperfilcliente.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="container d-flex flex-column align-items-center mt-5">
@@ -13,7 +13,8 @@
 
         <!-- Imagen de perfil -->
         <div class="profile-picture mb-4">
-            <img src="Images/admin-user.png" alt="Profile" class="img-fluid rounded-circle">
+            <img src="../Imagenes/admin-user.png" alt="Profile" class="img-fluid rounded-circle">
+            
         </div>
 
         <!-- Formulario de cierre de sesión -->

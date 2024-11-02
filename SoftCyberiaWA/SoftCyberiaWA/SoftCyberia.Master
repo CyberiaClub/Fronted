@@ -7,6 +7,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!-- link -->
+
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/Fonts/css/all.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
@@ -32,7 +33,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <!-- Logo -->
-            <a href="index.aspx" class="navbar-brand" >
+
+            <a href="../MainCyberia/index.aspx" class="navbar-brand" >
                 <img src="/Imagenes/cyberia-logo.png" alt="CYBERIA Logo" style="height: 100px;">
             </a>
 
@@ -46,31 +48,31 @@
                 <!-- Enlaces de navegación a la izquierda -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white " href="listado_productos.aspx">Productos</a>
+                        <a class="nav-link text-white " href="../Productos/listado_productos.aspx">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white " href="listado_sedes.aspx">Sedes</a>
+                        <a class="nav-link text-white " href="../MainCyberia/listado_sedes.aspx">Sedes</a>
                     </li>
                 </ul>
 
                 <!-- Menú de usuario a la derecha -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-user text-white"></i>Usuario
-                    </a>
+                        <a class="nav-link dropdown-toggle" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-user"></i>Usuario
+                        </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
-                            <li><a class="dropdown-item" href="vista_perfil_cliente.aspx">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
                             <li><a class="dropdown-item" href="#">Historial de compras</a></li>
-                            <li><a class="dropdown-item" href="index_iniciosesion.aspx">Iniciar sesion</a></li>
+                            <li><a class="dropdown-item" href="#">Iniciar sesion</a></li>
                             <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
                         </ul>
                     </li>
 
                     <!-- Icono del carrito de compras -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa fa-shopping-cart text-white"></i>
+                        <a class="nav-link" href="../Cliente/detalle_carro_de_compras.aspx">
+                            <i class="fa fa-shopping-cart"></i>
                         </a>
                     </li>
                 </ul>

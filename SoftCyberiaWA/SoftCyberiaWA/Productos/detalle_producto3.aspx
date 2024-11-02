@@ -9,7 +9,7 @@
     <div class="row align-items-center producto-detalle-container">
         <!-- Imagen del producto -->
         <div class="col-md-6 producto-imagen">
-            <img src="/Images/papeles.jpg" alt="Hojas A4" class="img-fluid fixed-img">
+            <img src="/Imagenes/papeles.jpg" alt="Hojas A4" class="img-fluid fixed-img">
         </div>
 
         <!-- Detalles del producto -->

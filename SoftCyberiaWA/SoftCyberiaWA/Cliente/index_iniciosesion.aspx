@@ -4,7 +4,7 @@
     Iniciar Sesion
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
-    <link href="Content/siteainiciosesion.css" rel="stylesheet" />
+    <link href="../Content/siteainiciosesion.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <!-- Contenedor de inicio de sesión -->
@@ -44,5 +44,6 @@
 
         </div>
     </div>
+
     <script src="Scripts/validar_inicio_sesion.js"></script>
 </asp:Content>

@@ -111,11 +111,16 @@
     <Content Include="Content\Fonts\css\v4-shims.min.css" />
     <Content Include="Content\Fonts\css\v5-font-face.css" />
     <Content Include="Content\Fonts\css\v5-font-face.min.css" />
+    <Content Include="Content\sitedethistorialcompras.css" />
+    <Content Include="Content\sitedetcarrocompras.css" />
     <Content Include="Content\siteperfilcliente.css" />
     <Content Include="Content\sitedetprod.css" />
     <Content Include="Content\siteainiciosesion.css" />
     <Content Include="Content\siteadmi.css" />
     <Content Include="Content\site.css" />
+    <Content Include="Cliente\detalle_carro_de_compras.aspx" />
+    <Content Include="Cliente\detalle_historial_de_compras.aspx" />
+    <Content Include="Imagenes\empty-cart.png" />
     <Content Include="Productos\detalle_producto.aspx" />
     <Content Include="Productos\detalle_producto2.aspx" />
     <Content Include="Productos\detalle_producto3.aspx" />
@@ -387,6 +392,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\detalle_carro_de_compras.aspx.cs">
+      <DependentUpon>detalle_carro_de_compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\detalle_carro_de_compras.aspx.designer.cs">
+      <DependentUpon>detalle_carro_de_compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\detalle_historial_de_compras.aspx.cs">
+      <DependentUpon>detalle_historial_de_compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\detalle_historial_de_compras.aspx.designer.cs">
+      <DependentUpon>detalle_historial_de_compras.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos\detalle_producto.aspx.cs">
       <DependentUpon>detalle_producto.aspx</DependentUpon>

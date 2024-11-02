@@ -3,13 +3,13 @@
     Detalle - Set de acrilicos 10X20 ml
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
-    <link href="Content/sitedetprod.css" rel="stylesheet" />
+    <link href="/Content/sitedetprod.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="row align-items-center producto-detalle-container">
         <!-- Imagen del producto -->
         <div class="col-md-6 producto-imagen">
-            <img src="/Images/pinturas.jpg" alt="Set de acrílicos" class="img-fluid fixed-img">
+            <img src="/Imagenes/pinturas.jpg" alt="Set de acrílicos" class="img-fluid fixed-img">
         </div>
 
         <!-- Detalles del producto -->

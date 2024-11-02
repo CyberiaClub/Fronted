@@ -3,6 +3,7 @@
     Sedes
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
      <!-- Encabezado de la Página -->
@@ -13,7 +14,7 @@
 
     <!-- Mapa de Tiendas -->
     <div class="map-container text-center">
-        <img src="Images/mapa-tiendas.png" alt="Mapa de Tiendas ubicadas en la Universidad" style="max-width: 100%; height: auto;">
+        <img src="/Imagenes/mapa-tiendas.png" alt="Mapa de Tiendas ubicadas en la Universidad" style="max-width: 100%; height: auto;">
     </div>
 
     <!-- Lista de Tiendas -->
@@ -23,7 +24,7 @@
             <p>Dirigido a: Estudiantes, Administrativos, Docentes, Padres de Familia, Egresados, Empresas y organizaciones externas</p>
             <p><strong>LUN - DOM</strong><br>8 am - 10 pm</p>
             <div class="contact-info d-flex justify-content-between align-items-center">
-                <img src="Images/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
+                <img src="/Imagenes/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
             </div>
         </div>
 
@@ -32,7 +33,7 @@
             <p>Dirigido a: Estudiantes, Administrativos, Docentes, Padres de Familia, Egresados, Empresas y organizaciones externas</p>
             <p><strong>LUN - DOM</strong><br>8 am - 10 pm</p>
             <div class="contact-info d-flex justify-content-between align-items-center">
-                <img src="Images/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
+                <img src="/Imagenes/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
             </div>
         </div>
 
@@ -41,7 +42,7 @@
             <p>Dirigido a: Estudiantes, Administrativos, Docentes, Padres de Familia, Egresados, Empresas y organizaciones externas</p>
             <p><strong>LUN - DOM</strong><br>8 am - 10 pm</p>
             <div class="contact-info d-flex justify-content-between align-items-center">
-                <img src="Images/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
+                <img src="/Imagenes/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
             </div>
         </div>
 
@@ -50,7 +51,7 @@
             <p>Dirigido a: Estudiantes, Administrativos, Docentes, Padres de Familia, Egresados, Empresas y organizaciones externas</p>
             <p><strong>LUN - DOM</strong><br>8 am - 10 pm</p>
             <div class="contact-info d-flex justify-content-between align-items-center">
-                <img src="Images/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
+                <img src="/Imagenes/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
             </div>
         </div>
 
@@ -59,7 +60,7 @@
             <p>Dirigido a: Estudiantes, Administrativos, Docentes, Padres de Familia, Egresados, Empresas y organizaciones externas</p>
             <p><strong>LUN - DOM</strong><br>8 am - 10 pm</p>
             <div class="contact-info d-flex justify-content-between align-items-center">
-               <img src="Images/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
+               <img src="/Imagenes/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;"> <span>934843731</span>
             </div>
         </div>
     </div>
