@@ -7,23 +7,24 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
 
     <!-- Banner Section -->
-   <div>
+    <div>
 
-       <!--OFERTAS-->
-       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-           <div class="carousel-indicators">
-               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-           </div>
-           <div class="carousel-inner">
-               <!-- Slide 1 -->
-               <div class="carousel-item active">
-                   <img src="Images/halloween.png" class="d-block w-100 carousel-img" alt="Banner 1">
-                   <div class="carousel-caption d-none d-md-block">
-                   </div>
-               </div>
+        <!--OFERTAS-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="Images/halloween.png" class="d-block w-100 carousel-img" alt="Banner 1">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
 
+<<<<<<< Updated upstream
                <!-- Slide 3 -->
                <div class="carousel-item">
                    <img src="Images/pucp.png" class="d-block w-100 carousel-img" alt="Banner 3">
@@ -40,18 +41,37 @@
                <span class="visually-hidden">Siguiente</span>
            </button>
        </div>
+=======
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="Images/pucp.png" class="d-block w-120 carousel-img" alt="Banner 3">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+>>>>>>> Stashed changes
 
 
-       <!-- Estilos adicionales para la sección del banner -->
-       <style>
-           .carousel-caption {
-               background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-               padding: 20px;
-               border-radius: 10px;
-           }
-       </style>
+        <!-- Estilos adicionales para la sección del banner -->
+        <style>
+            .carousel-caption {
+                background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+                padding: 20px;
+                border-radius: 10px;
+            }
+        </style>
 
 
+<<<<<<< Updated upstream
        <!-- Categories Section -->
        <section class="categories text-center my-5">
            <div class="container">
@@ -109,22 +129,79 @@
                </div>
            </div>
        </section>
+=======
+        <!-- Categories Section -->
+        <section class="categories text-center my-5">
+            <div class="container">
+                <h3 class="font-bold category-title">Categorías destacadas</h3>
+                <div class="row mt-4">
+                    <!-- Categoría: Arte -->
+                    <div class="col-md-6 mb-4">
+                        <a href="listado_productos.aspx?categoria=arte" class="text-decoration-none">
+                            <div class="card border-0">
+                                <img src="Images/arte.png" class="card-img-top rounded-img mx-auto" alt="Arte">
+                                <div class="card-body">
+                                    <h5 class="card-title category-title font-regular">Arte</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-       <!-- CSS para hacer que las imágenes tengan el mismo tamaño y forma circular -->
-       <style>
-           .rounded-img {
-               width: 200px;
-               height: 200px;
-               object-fit: cover;
-               border-radius: 50%; /* Hace que la imagen sea circular */
-           }
+                    <!-- Categoría: Arquitectura -->
+                    <div class="col-md-6 mb-4">
+                        <a href="listado_productos.aspx?categoria=arquitectura" class="text-decoration-none">
+                            <div class="card border-0">
+                                <img src="Images/arquitectura.png" class="card-img-top rounded-img mx-auto" alt="Arquitectura">
+                                <div class="card-body">
+                                    <h5 class="card-title category-title font-regular">Arquitectura</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-           .category-title {
-               font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
-               font-weight: bold; /* Hace la fuente en negrita */
-               color: #333; /* Cambia el color de la fuente si es necesario */
-           }
-       </style>
+                    <!-- Categoría: Educación -->
+                    <div class="col-md-6 mb-4">
+                        <a href="listado_productos.aspx?categoria=educacion" class="text-decoration-none">
+                            <div class="card border-0">
+                                <img src="Images/educacion.jpg" class="card-img-top rounded-img mx-auto" alt="Educación">
+                                <div class="card-body">
+                                    <h5 class="card-title category-title font-regular">Educación</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Categoría: Oficina -->
+                    <div class="col-md-6 mb-4">
+                        <a href="listado_productos.aspx?categoria=oficina" class="text-decoration-none">
+                            <div class="card border-0">
+                                <img src="Images/oficina.jpg" class="card-img-top rounded-img mx-auto" alt="Oficina">
+                                <div class="card-body">
+                                    <h5 class="card-title category-title font-regular">Oficina</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+>>>>>>> Stashed changes
+
+        <!-- CSS para hacer que las imágenes tengan el mismo tamaño y forma circular -->
+        <style>
+            .rounded-img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 50%; /* Hace que la imagen sea circular */
+            }
+
+            .category-title {
+                font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+                font-weight: bold; /* Hace la fuente en negrita */
+                color: #333; /* Cambia el color de la fuente si es necesario */
+            }
+        </style>
 
 
 
@@ -151,12 +228,12 @@
             </div>
         </section>
 
-       <style>
-           .precisa-img {
-               width: 120px;
-               height: 70px;
-               object-fit: cover;
-           }
-                  </style>
-   </div>
+        <style>
+            .precisa-img {
+                width: 120px;
+                height: 70px;
+                object-fit: cover;
+            }
+        </style>
+    </div>
 </asp:Content>

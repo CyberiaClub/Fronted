@@ -7,6 +7,32 @@
     
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+    <script>
+        // Función para obtener el valor del parámetro de la URL
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Al cargar la página, marcamos el checkbox correspondiente
+        window.onload = function () {
+            const categoria = getParameterByName('categoria');
+            if (categoria) {
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    if (checkbox.value === categoria) {
+                        checkbox.checked = true;
+                    }
+                });
+            }
+        };
+
+        // Función para actualizar el valor del rango de precios
+        function updatePriceValue() {
+            const priceRange = document.getElementById("priceRange");
+            const priceValue = document.getElementById("priceValue");
+            priceValue.textContent = priceRange.value;
+        }
+</script>
     <div class="container mt-5">
         <!-- Filtros -->
         <div class="row">
@@ -109,6 +135,7 @@
             </div>
         </div>
     </div>
+<<<<<<< Updated upstream
     <script>
         // Función para obtener el valor del parámetro desde la URL
         function getParameterByName(name) {
@@ -128,6 +155,9 @@
             }
         };
     </script>
+=======
+    
+>>>>>>> Stashed changes
     <script src="Scripts/filtrar_listado_productos.js"></script>
 
 </asp:Content>
