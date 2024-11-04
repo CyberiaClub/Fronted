@@ -3,13 +3,15 @@
     Cyberia - Home 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
+     <link href="/Content/site.css" rel="stylesheet" />
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
 
     <!-- Banner Section -->
    <div>
 
-       <!--OFERTAS-->
+<!--OFERTAS-->
        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
            <div class="carousel-indicators">
                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -24,9 +26,16 @@
                    </div>
                </div>
 
+               <!-- Slide 2 -->
+               <div class="carousel-item">
+                   <img src="/Imagenes/pucp.png" class="d-block w-100 carousel-img" alt="Banner 2">
+                   <div class="carousel-caption d-none d-md-block">
+                   </div>
+               </div>
+
                <!-- Slide 3 -->
                <div class="carousel-item">
-                   <img src="/Imagenes/pucp.png" class="d-block w-100 carousel-img" alt="Banner 3">
+                   <img src="/Imagenes/navidad.png" class="d-block w-100 carousel-img" alt="Banner 3">
                    <div class="carousel-caption d-none d-md-block">
                    </div>
                </div>
@@ -40,16 +49,6 @@
                <span class="visually-hidden">Siguiente</span>
            </button>
        </div>
-
-
-       <!-- Estilos adicionales para la sección del banner -->
-       <style>
-           .carousel-caption {
-               background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-               padding: 20px;
-               border-radius: 10px;
-           }
-       </style>
 
 
        <!-- Categories Section -->
@@ -109,25 +108,6 @@
            </div>
        </section>
 
-       <!-- CSS para hacer que las imágenes tengan el mismo tamaño y forma circular -->
-       <style>
-           .rounded-img {
-               width: 200px;
-               height: 200px;
-               object-fit: cover;
-               border-radius: 50%; /* Hace que la imagen sea circular */
-           }
-
-           .category-title {
-               font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
-               font-weight: bold; /* Hace la fuente en negrita */
-               color: #333; /* Cambia el color de la fuente si es necesario */
-           }
-       </style>
-
-
-
-
         <!-- Brands Section -->
         <section class="brands text-center my-4">
             <h3 class="font-bold">Marcas</h3>
@@ -150,12 +130,5 @@
             </div>
         </section>
 
-       <style>
-           .precisa-img {
-               width: 120px;
-               height: 70px;
-               object-fit: cover;
-           }
-                  </style>
    </div>
 </asp:Content>

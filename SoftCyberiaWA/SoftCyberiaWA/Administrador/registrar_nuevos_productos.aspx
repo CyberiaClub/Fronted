@@ -1,73 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberiaAdmi.Master" AutoEventWireup="true" CodeBehind="registrar_nuevos_productos.aspx.cs" Inherits="SoftCyberiaWA.WebForm4" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphStyle" runat="server">
-    <!-- Estilos específicos para registrar nuevos productos -->
-    <style>
-        .form-container {
-            display: flex;
-            width: 800px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            background-color: #ffffff;
-            margin: 20px auto;
-        }
-
-        .form-section {
-            padding: 20px;
-            width: 60%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            background-color: #d3d8dc;
-            color: #333333;
-        }
-
-        .form-section label {
-            width: 45%;
-            font-weight: bold;
-            margin-top: 10px;
-            color: #667892;
-        }
-
-        .form-section input[type="text"],
-        .form-section input[type="number"],
-        .form-section select,
-        .form-section textarea {
-            width: 45%;
-            padding: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 0.9em;
-        }
-
-        .info-section {
-            width: 40%;
-            background-color: #e8ebed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            color: #667892;
-        }
-
-        .register-button {
-            width: 100%;
-            padding: 10px;
-            background-color: #004EA8;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-        }
-
-        .register-button:hover {
-            background-color: #003a7a;
-        }
-    </style>
+     <link href="../Content/siteadmi.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
@@ -118,7 +52,7 @@
         <!-- Sección de información -->
         <div class="info-section">
             <h2>Registro Nuevo Producto</h2>
-            <img src="Images/producto.png" alt="Icono de seguridad" style="width: 160px;">
+            <img src="/Imagenes/producto.png" alt="Icono de seguridad" style="width: 160px;">
             <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="register-button" OnClick="lbGuardar_Click"/>
         </div>
     </div>

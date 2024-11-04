@@ -1,74 +1,7 @@
 ﻿<%@ Page Title="Asignar Rol" Language="C#" MasterPageFile="~/SoftCyberiaAdmi.Master" AutoEventWireup="true" CodeBehind="listado_stock.aspx.cs" Inherits="SoftCyberiaWA.WebForm6" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
 
-        /* Body Styling */
-        body {
-            background-color: #667892; /* Background color for the page */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        /* Container */
-        .container {
-            width: 60%;
-            max-width: 800px;
-            background-color: #f3f3f3;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #004EA8; /* Primary color */
-        }
-
-        /* Form styling */
-        .form-group {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-size: 16px;
-            color: #333;
-        }
-
-        input[type="text"] {
-            width: 45%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #667892;
-            border-radius: 4px;
-        }
-
-        /* Button styling */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #004EA8; /* Button color */
-            color: #ffffff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #003b85;
-        }
-    </style>
-
-
+<asp:Content ID="Content1" ContentPlaceHolderID="cphStyle" runat="server">
+        <link href="../Content/siteadmi.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
@@ -100,5 +33,7 @@
      </div>
  </div>
 </asp:Content>
+
+
 
 
