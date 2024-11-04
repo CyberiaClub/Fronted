@@ -27,9 +27,10 @@
 
 <body>
     <!--Por si necesitan script o estilo-->
+
     <asp:ContentPlaceHolder ID="cphStyle" runat="server">
     </asp:ContentPlaceHolder>
-
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <!-- Logo -->
