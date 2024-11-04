@@ -3,8 +3,7 @@
     Cyberia - Home 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
-     <link href="/Content/site.css" rel="stylesheet" />
-
+   
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
 
