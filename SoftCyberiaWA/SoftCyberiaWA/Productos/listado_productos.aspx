@@ -12,6 +12,30 @@
         <div class="row">
             <div class="col-md-3">
                 <h5>Filtros</h5>
+
+                <!-- Sedes -->
+                <h6 class="mt-3">Sedes</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sede" value="BibliotecaCentral" id="sedeBibliotecaCentral" required onchange="applyFilters()">
+                    <label class="form-check-label" for="sedeBibliotecaCentral">Tienda Biblioteca Central</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sede" value="Sociales" id="sedeSociales" onchange="applyFilters()">
+                    <label class="form-check-label" for="sedeSociales">Tienda Sociales</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sede" value="Arquitectura" id="sedeArquitectura" onchange="applyFilters()">
+                    <label class="form-check-label" for="sedeArquitectura">Tienda Arquitectura</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sede" value="McGregor" id="sedeMcGregor" onchange="applyFilters()">
+                    <label class="form-check-label" for="sedeMcGregor">Tienda Mc Gregor</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sede" value="GeneralesCiencias" id="sedeGeneralesCiencias" onchange="applyFilters()">
+                    <label class="form-check-label" for="sedeGeneralesCiencias">Tiendas Generales Ciencias</label>
+                </div>
+
                 <!-- Rango de precios -->
                 <label for="priceRange">Precio: S/<span id="priceValue">0</span></label>
                 <input type="range" id="priceRange" min="0" max="300" class="form-range" oninput="applyFilters()">
