@@ -65,6 +65,6 @@
                 <asp:Button ID="btnAsignar" runat="server" Text="Asignar" CssClass="btn btn-primary mt-4" style="background-color: #004EA8; border-color: #004EA8;" />
             </div>
         </div>
-    </div>
+    
  
 </asp:Content>

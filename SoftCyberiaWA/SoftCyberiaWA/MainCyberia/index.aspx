@@ -3,6 +3,9 @@
     Cyberia - Home 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
+    <script src="../Scripts/jquery-3.7.1.js"></script>
+    <script src="../Scripts/bootstrap.bundle.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
 
