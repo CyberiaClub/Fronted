@@ -3,7 +3,7 @@
     Perfil
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
-    <link href="../Content/siteperfilcliente.css" rel="stylesheet" />
+    <link href="../Content/siteCliente.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="container d-flex flex-column align-items-center mt-5">

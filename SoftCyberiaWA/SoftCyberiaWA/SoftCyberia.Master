@@ -30,6 +30,7 @@
 <body>
     <!--Por si necesitan script o estilo-->
     <asp:ContentPlaceHolder ID="cphStyle" runat="server">
+         <link href="../Content/site.css" rel="stylesheet" />
     </asp:ContentPlaceHolder>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="Asignar Rol" Language="C#" MasterPageFile="~/SoftCyberiaAdmi.Master" AutoEventWireup="true" CodeBehind="asignar_roles.aspx.cs" Inherits="SoftCyberiaWA.WebForm5" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphStyle" runat="server">
+       <link href="../Content/siteadmi.css" rel="stylesheet" />
+</asp:Content>
 
-
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #E6E9EE;">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh; background-color: slategrey ;">
             <!-- Formulario de asignación de roles -->
             <div class="col-md-8 p-5">
                 <h3 class="text-white text-center mb-4">Asignar Rol</h3>
@@ -60,11 +62,10 @@
             <!-- Panel derecho -->
             <div class="col-md-4 d-flex flex-column justify-content-center align-items-center bg-light" style="border-radius: 0 15px 15px 0;">
                 <h4 class="font-weight-bold mb-4" style="color: #004EA8;">Asignar Rol</h4>
-                <img src="Images/rol.png" alt="Icono de seguridad" style="width: 160px; height: 160px;">
+                <img src="/Imagenes/rol.png" alt="Icono de seguridad" style="width: 160px; height: 160px;">
                 
                 <asp:Button ID="btnAsignar" runat="server" Text="Asignar" CssClass="btn btn-primary mt-4" style="background-color: #004EA8; border-color: #004EA8;" />
             </div>
         </div>
-    
- 
+
 </asp:Content>

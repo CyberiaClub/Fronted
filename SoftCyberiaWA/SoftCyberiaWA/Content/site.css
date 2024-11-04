@@ -43,3 +43,33 @@ body {
 .category-icon, .featured-products-icon {
     color: var(--secondary-color3);
 }
+
+
+//main
+
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.rounded-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+}
+
+.category-title {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Hace la fuente en negrita */
+    color: #333; /* Cambia el color de la fuente si es necesario */
+}
+
+.precisa-img {
+    width: 120px;
+    height: 70px;
+    object-fit: cover;
+}
+

@@ -23,16 +23,8 @@
 <body>
         <!--Por si necesitan script o estilo-->
     <asp:ContentPlaceHolder ID="cphStyle" runat="server">
+         <link href="../Content/siteadmi.css" rel="stylesheet" />
     </asp:ContentPlaceHolder>
-
-    <style>
-        .sidebar-logo {
-            width: 100%; /* Ocupa el ancho completo del sidebar */
-            height: auto; /* Mantiene la proporción del logo */
-            padding: 10px; /* Opcional: espacio alrededor del logo */
-            object-fit: contain; /* Ajusta la imagen al espacio sin distorsionarla */
-        }
-    </style>
 
 
     <!-- Contorno exterior - Negros sin sombra -->
@@ -40,13 +32,13 @@
 
         <!-- Logo CYBERIA -->
         <div class="text-center">
-            <img src="Images/cyberia-logo.png"  style="width: 85px; height:auto;" >
+            <img src="/Imagenes/cyberia-logo.png"  style="width: 85px; height:auto;" >
         </div>
 
 
         <!-- Foto del usuario y nombre -->
         <div class="text-center mt-4 text-white text-center">
-            <img src="Images/admin-user.png" alt="Foto de usuario"  style="width: 160px; height:auto;">
+            <img src="/Imagenes/admin-user.png" alt="Foto de usuario"  style="width: 160px; height:auto;">
             <h4>Matias Sulca</h4>
             <p>Administrador</p>
         </div>
