@@ -63,17 +63,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServicioWS\AdministradorWS.xsd">
+    <None Include="Connected Services\CyberiaStoreWS\AdministradorWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServicioWS\AlmaceneroWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\AlmaceneroWS.xsd">
+    <None Include="Connected Services\CyberiaStoreWS\AlmaceneroWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\AlmaceneroWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServicioWS\archivo.disco" />
-    <None Include="Connected Services\ServicioWS\configuration91.svcinfo" />
-    <None Include="Connected Services\ServicioWS\configuration.svcinfo" />
-    <None Include="Connected Services\ServicioWS\Reference.svcmap">
+    <None Include="Connected Services\CyberiaStoreWS\archivo.disco" />
+    <None Include="Connected Services\CyberiaStoreWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CyberiaStoreWS\configuration.svcinfo" />
+    <None Include="Connected Services\CyberiaStoreWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -159,221 +159,209 @@
     <Content Include="Administrador\asignar_roles.aspx" />
     <Content Include="Administrador\listado_stock.aspx" />
     <Content Include="Administrador\detalle_reporte.aspx" />
-    <None Include="Connected Services\ServicioWS\AdministradorWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\BoletaWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\BoletaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicioWS\FacturaWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\FacturaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicioWS\MarcaWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\MarcaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicioWS\OfertaWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\OfertaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicioWS\PedidoWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\PedidoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicioWS\ProductoWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\ProductoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicioWS\ProveedorWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\ProveedorWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicioWS\SedeWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\SedeWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.administrador.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.administrador_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.administrador_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.administrador_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.almacenero.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.almacenero_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.almacenero_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.almacenero_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.boleta.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.boleta_eliminarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.boleta_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.boleta_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.factura.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.factura_eliminarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.factura_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.factura_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca_buscarIdPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca_eliminarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.marca_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.oferta.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.oferta_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.oferta_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.oferta_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.pedido.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.pedido_eliminarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.pedido_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.pedido_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.pedido_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.producto2.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.producto_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.producto_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.producto_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor_buscarIdPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor_eliminarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.proveedor_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.sede.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.sede_buscarIdPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.sede_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.sede_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.sede_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto_buscarIdPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto_eliminarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.tipoProducto_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.vendedor.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.vendedor_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.vendedor_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWS\SoftCyberiaWA.ServicioWS.vendedor_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\ServicioWS\TipoProductoWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\TipoProductoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServicioWS\VendedorWS.wsdl" />
-    <None Include="Connected Services\ServicioWS\VendedorWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Connected Services\CyberiaStoreWS\AdministradorWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\BoletaWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\BoletaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaStoreWS\FacturaWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\FacturaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaStoreWS\MarcaWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\MarcaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaStoreWS\OfertaWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\OfertaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaStoreWS\PedidoWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\PedidoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaStoreWS\ProductoWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\ProductoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaStoreWS\ProveedorWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\ProveedorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaStoreWS\SedeWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\SedeWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.administrador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.administrador_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.administrador_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.administrador_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.almacenero.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.almacenero_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.almacenero_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.almacenero_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.boleta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.boleta_eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.boleta_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.boleta_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.factura.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.factura_eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.factura_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.factura_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.marca.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.marca_eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.marca_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.marca_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.oferta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.oferta_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.oferta_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.oferta_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.pedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.pedido_eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.pedido_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.pedido_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.pedido_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.producto1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.producto_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.producto_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.producto_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.proveedor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.proveedor_buscarIdPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.proveedor_eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.proveedor_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.proveedor_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.proveedor_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.sede.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.sede_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.sede_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.sede_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.tipoProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.tipoProducto_eliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.tipoProducto_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.tipoProducto_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.tipoProducto_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.vendedor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.vendedor_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.vendedor_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaStoreWS\SoftCyberiaWA.CyberiaStoreWS.vendedor_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CyberiaStoreWS\TipoProductoWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\TipoProductoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaStoreWS\VendedorWS.wsdl" />
+    <None Include="Connected Services\CyberiaStoreWS\VendedorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -388,11 +376,6 @@
     <Content Include="SoftCyberiaAdmi.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ServicioWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Cliente\detalle_carro_de_compras.aspx.cs">
       <DependentUpon>detalle_carro_de_compras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -406,6 +389,11 @@
     </Compile>
     <Compile Include="Cliente\detalle_historial_de_compras.aspx.designer.cs">
       <DependentUpon>detalle_historial_de_compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CyberiaStoreWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Productos\detalle_producto.aspx.cs">
       <DependentUpon>detalle_producto.aspx</DependentUpon>
@@ -572,7 +560,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServicioWS\" />
+    <WCFMetadataStorage Include="Connected Services\CyberiaStoreWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://trabajador.servicios.cyberiastore.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="AlmaceneroWS" targetNamespace="http://trabajador.servicios.cyberiastore.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/AlmaceneroWS?xsd=1" namespace="http://trabajador.servicios.cyberiastore.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="almacenero_listar">
+    <part name="parameters" element="tns:almacenero_listar" />
+  </message>
+  <message name="almacenero_listarResponse">
+    <part name="parameters" element="tns:almacenero_listarResponse" />
+  </message>
+  <message name="almacenero_modificar">
+    <part name="parameters" element="tns:almacenero_modificar" />
+  </message>
+  <message name="almacenero_modificarResponse">
+    <part name="parameters" element="tns:almacenero_modificarResponse" />
+  </message>
+  <message name="almacenero_insertar">
+    <part name="parameters" element="tns:almacenero_insertar" />
+  </message>
+  <message name="almacenero_insertarResponse">
+    <part name="parameters" element="tns:almacenero_insertarResponse" />
+  </message>
+  <portType name="AlmaceneroWS">
+    <operation name="almacenero_listar">
+      <input wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/AlmaceneroWS/almacenero_listarRequest" message="tns:almacenero_listar" />
+      <output wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/AlmaceneroWS/almacenero_listarResponse" message="tns:almacenero_listarResponse" />
+    </operation>
+    <operation name="almacenero_modificar">
+      <input wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/AlmaceneroWS/almacenero_modificarRequest" message="tns:almacenero_modificar" />
+      <output wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/AlmaceneroWS/almacenero_modificarResponse" message="tns:almacenero_modificarResponse" />
+    </operation>
+    <operation name="almacenero_insertar">
+      <input wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/AlmaceneroWS/almacenero_insertarRequest" message="tns:almacenero_insertar" />
+      <output wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/AlmaceneroWS/almacenero_insertarResponse" message="tns:almacenero_insertarResponse" />
+    </operation>
+  </portType>
+  <binding name="AlmaceneroWSPortBinding" type="tns:AlmaceneroWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="almacenero_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="almacenero_modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="almacenero_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="AlmaceneroWS">
+    <port name="AlmaceneroWSPort" binding="tns:AlmaceneroWSPortBinding">
+      <soap:address location="http://localhost:8080/CyberiaStoreWS_Servidor/AlmaceneroWS" />
+    </port>
+  </service>
+</definitions>
