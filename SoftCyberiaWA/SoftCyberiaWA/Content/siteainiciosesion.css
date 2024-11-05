@@ -1,0 +1,47 @@
+﻿/* Primary and Secondary Colors */
+:root {
+    --primary-color: #00205B; /* PANTONE 281 C */
+    --secondary-color1: #A6C8E0; /* PANTONE 660 C */
+    --secondary-color2: #98AFC7; /* PANTONE 2132 C */
+    --secondary-color3: #A2AAAD; /* PANTONE 429 C */
+    --secondary-color4: #6C737A; /* PANTONE 430 C */
+    --button-hover-color: #A6A6A6; /* Color de hover para botones */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-control::placeholder {
+    color: var(--secondary-color4); /* Color más suave para los placeholders */
+    opacity: 0.8;
+}
+
+.btn-dark {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+    .btn-dark:hover {
+        background-color: var(--button-hover-color);
+    }
+
+/* Enlace de registro */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+    a:hover {
+        color: var(--secondary-color1);
+        text-decoration: underline;
+    }
+
+/* Footer */
+.footer {
+    padding: 10px 0;
+    color: white;
+    font-size: 14px;
+}

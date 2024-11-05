@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SoftCyberiaAdmi.master.cs" Inherits="SoftCyberiaWA.SoftCyberiaAdmi" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- link -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Fonts/css/all.css" rel="stylesheet" />
+    <link href="Content/siteadmi.css" rel="stylesheet" />
+
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    <script src="Scripts/jquery-3.7.1.js"></script>
+
+    <title> 
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </title> 
+    
+</head>
+<body>
+        <!--Por si necesitan script o estilo-->
+    <asp:ContentPlaceHolder ID="cphStyle" runat="server">
+         <link href="../Content/siteadmi.css" rel="stylesheet" />
+    </asp:ContentPlaceHolder>
+
+
+    <!-- Contorno exterior - Negros sin sombra -->
+    <div class="sidebar navbar-dark bg-dark">
+
+        <!-- Logo CYBERIA -->
+        <div class="text-center">
+            <img src="/Imagenes/cyberia-logo.png"  style="width: 85px; height:auto;" >
+        </div>
+
+
+        <!-- Foto del usuario y nombre -->
+        <div class="text-center mt-4 text-white text-center">
+            <img src="/Imagenes/admin-user.png" alt="Foto de usuario"  style="width: 160px; height:auto;">
+            <h4>Matias Sulca</h4>
+            <p>Administrador</p>
+        </div>
+
+        <!-- Enlaces de navegación -->
+
+
+        <a href="registrar_nuevos_proveedores.aspx">Registrar nuevos Proveedores</a>
+        <p> </p>
+
+        <a href="registrar_nuevos_productos.aspx">Registrar nuevos Productos</a>
+        <p> </p>
+
+        <a href="asignar_roles.aspx">Asignar Rol</a>
+        <p> </p>
+
+        <a href="listado_stock.aspx">Ver Stock de Productos</a>
+        <p> </p>
+
+        <a href="detalle_reporte.aspx">Generar reporte</a>
+        <p></p>
+
+        <!-- Pie de la barra lateral -->
+
+        <footer class="footer p-4 text-white text-center">
+            <div class="sidebar-footer">
+                <button type="button" class="btn btn-secondary">Cerrar sesión</button>
+
+            </div>
+        </footer>
+
+
+        <div class="sidebar-footer">
+            <a href="index.aspx">Cerrar sesión</a>
+            <a href="#">Ajustes de seguridad</a>
+        </div>
+    </div>
+
+    <!-- Contenido de la pagina web -->
+    <div class="main-content">
+        <form runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+
+
+    
+</body>
+</html>

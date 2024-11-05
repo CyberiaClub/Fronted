@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://venta.servicios.cyberiastore.pucp.edu.pe/" targetNamespace="http://venta.servicios.cyberiastore.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="pedido_eliminar" type="tns:pedido_eliminar" />
+  <xs:element name="pedido_eliminarResponse" type="tns:pedido_eliminarResponse" />
+  <xs:element name="pedido_insertar" type="tns:pedido_insertar" />
+  <xs:element name="pedido_insertarResponse" type="tns:pedido_insertarResponse" />
+  <xs:element name="pedido_listar" type="tns:pedido_listar" />
+  <xs:element name="pedido_listarResponse" type="tns:pedido_listarResponse" />
+  <xs:element name="pedido_modificar" type="tns:pedido_modificar" />
+  <xs:element name="pedido_modificarResponse" type="tns:pedido_modificarResponse" />
+  <xs:complexType name="pedido_eliminar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedido_eliminarResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="pedido_insertar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="tns:estadoPedido" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="productos" type="tns:producto" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cantidades" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="idProveedor" type="xs:int" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="idTipoProducto" type="xs:int" />
+      <xs:element name="miembros">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="tns:producto" />
+                  <xs:element minOccurs="0" name="value" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="precio" type="xs:double" />
+      <xs:element name="productoMiembros">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="tns:producto" />
+                  <xs:element minOccurs="0" name="value" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="sku" type="xs:string" />
+      <xs:element minOccurs="0" name="unidad" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedido_insertarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedido_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="pedido_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cantidades" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="estadoPedido" type="tns:estadoPedido" />
+      <xs:element minOccurs="0" name="idPedido" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="precios" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="productos" nillable="true" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedido_modificar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="tns:estadoPedido" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="productos" type="tns:producto" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cantidades" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedido_modificarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="estadoPedido">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EN_PREPARACION" />
+      <xs:enumeration value="LISTO_PARA_RECOGER" />
+      <xs:enumeration value="ENTREGADO" />
+      <xs:enumeration value="CANCELADO" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
