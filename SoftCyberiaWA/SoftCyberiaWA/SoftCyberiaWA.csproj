@@ -151,6 +151,7 @@
     <Content Include="Content\Fonts\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\Fonts\webfonts\fa-v4compatibility.ttf" />
     <Content Include="Content\Fonts\webfonts\fa-v4compatibility.woff2" />
+    <Content Include="Productos\filtrar_listado_productos.js" />
     <Content Include="Productos\listado_productos.aspx" />
     <Content Include="MainCyberia\listado_sedes.aspx" />
     <Content Include="Administrador\registrar_nuevos_proveedores.aspx" />

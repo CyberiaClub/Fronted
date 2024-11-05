@@ -8,6 +8,45 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="container mt-5">
+
+        <!-- Pop-up de información de sedes -->
+        <div class="popup-overlay" id="popup" style="display: none;">
+            <div class="popup-content">
+                <h2 style="color: var(--primary-color);">Información de Sedes</h2>
+                <button class="popup-close" onclick="closePopup()">×</button>
+
+                <div class="sede-info">
+                    <h3 style="color: var(--secondary-color1);">Tienda Biblioteca Central</h3>
+                    <p>Ubicado cerca al pabellón Z</p>
+                    <p><strong>LUN - VIE:</strong> 8 am - 8 pm</p>
+                    <p>WhatsApp: 934843731</p>
+
+                    <h3 style="color: var(--secondary-color1);">Tienda Sociales</h3>
+                    <p>Ubicado en el pabellón J</p>
+                    <p><strong>LUN - VIE:</strong> 8 am - 8 pm</p>
+                    <p>WhatsApp: 934843731</p>
+
+                    <h3 style="color: var(--secondary-color1);">Tienda Arquitectura</h3>
+                    <p>Ubicado en el pabellón T</p>
+                    <p><strong>LUN - VIE:</strong> 8 am - 8 pm</p>
+                    <p>WhatsApp: 934843731</p>
+
+                    <h3 style="color: var(--secondary-color1);">Tienda Mc Gregor</h3>
+                    <p>Ubicado en el pabellón N</p>
+                    <p><strong>LUN - VIE:</strong> 8 am - 8 pm</p>
+                    <p>WhatsApp: 934843731</p>
+
+                    <h3 style="color: var(--secondary-color1);">Tiendas Generales Ciencias</h3>
+                    <p>Ubicado en el pabellón E</p>
+                    <p><strong>LUN - VIE:</strong> 8 am - 8 pm</p>
+                    <p>WhatsApp: 934843731</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <!-- Filtros -->
         <div class="row">
             <div class="col-md-3">
@@ -36,9 +75,14 @@
                     <label class="form-check-label" for="sedeGeneralesCiencias">Tiendas Generales Ciencias</label>
                 </div>
 
+
+
+
+
+
                 <!-- Rango de precios -->
-                <label for="priceRange">Precio: S/<span id="priceValue">0</span></label>
-                <input type="range" id="priceRange" min="0" max="300" class="form-range" oninput="applyFilters()">
+                <label for="priceRange">Precio: S/<span id="priceValue">500</span></label>
+                <input type="range" id="priceRange" min="0" max="500" value="500" class="form-range" oninput="applyFilters()">
 
                 <!-- Categorías -->
                 <h6 class="mt-3">Categoría</h6>
@@ -59,7 +103,10 @@
                     <label class="form-check-label" for="catOficina">Oficina</label>
                 </div>
                 <!-- Marcas -->
-                <h6 class="mt-3">Marca</h6>
+                <h6 class="mt-5 ">Marca</h6>
+                <p>Cargando Marcas...</p>
+
+
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="Faber-Castell" id="marcaFaber">
                     <label class="form-check-label" for="marcaFaber">Faber-Castell</label>
@@ -76,9 +123,12 @@
             </div>
 
             <!-- Listado de Productos -->
+
             <div class="col-md-9">
                 <div class="row" id="product-list">
-                    <!-- Producto 1 -->
+                    <p id="loading-message">Cargando productos...</p>
+                    
+                   <%-- <!-- Producto 1 -->
                     <div class="col-md-4 mb-4" data-category="Arquitectura" data-price="146.40">
                         <a href="detalle_producto3.aspx" class="text-decoration-none">
                             <div class="card">
@@ -129,29 +179,14 @@
                             </div>
                         </a>
                     </div>
+                    //-->--%>
+
+
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        // Función para obtener el valor del parámetro desde la URL
-        function getParameterByName(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
 
-        // Al cargar la página, marcar el checkbox correspondiente
-        window.onload = function () {
-            const categoria = getParameterByName('categoria');
-            if (categoria) {
-                // Busca el checkbox de la categoría y lo marca
-                const checkbox = document.querySelector(`input[value="${categoria}"]`);
-                if (checkbox) {
-                    checkbox.checked = true;
-                }
-            }
-        };
-    </script>
     <script src="/Scripts/filtrar_listado_productos.js"></script>
 
 </asp:Content>

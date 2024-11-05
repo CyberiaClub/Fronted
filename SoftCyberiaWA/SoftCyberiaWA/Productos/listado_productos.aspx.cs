@@ -24,6 +24,29 @@ namespace SoftCyberiaWA
             //aqui utiliza listar_productos de java
 
         }
+
+        public static List<string> ObtenerMarcas()
+        {
+            List<string> marcas = new List<string>();
+
+            string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionStringName"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+
+                //????????????????????????????????????????????????????????????
+                string query = "SELECT DISTINCT Marca FROM Productos";
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    marcas.Add(reader["Marca"].ToString());
+                }
+            }
+
+            return marcas;
+        }
     }
 
 }
