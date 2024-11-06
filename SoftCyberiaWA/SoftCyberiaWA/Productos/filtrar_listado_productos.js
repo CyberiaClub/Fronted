@@ -56,10 +56,27 @@ function mostrarProductos(productos) {
 
 // Aplicar filtros
 function aplicarFiltros() {
-    const sede = document.querySelector('input[name="sede"]:checked')?.value || '';
-    const categoria = document.querySelector('input[name="categoria"]:checked')?.value || '';
-    const marca = document.querySelector('input[name="marca"]:checked')?.value || '';
-    fetchProductos(sede, categoria, marca);
+    const sede = document.getElementById('filterSede').value;
+    const categoria = document.getElementById('filterCategoria').value;
+    const marca = document.getElementById('filterMarca').value;
+
+    const products = document.querySelectorAll('#productContainer .product-item');
+
+    products.forEach(product => {
+        const productSede = product.getAttribute('data-sede');
+        const productCategoria = product.getAttribute('data-category');
+        const productMarca = product.getAttribute('data-marca');
+
+        const sedeMatch = (sede === 'Todos' || productSede === sede);
+        const categoriaMatch = (categoria === 'Todos' || productCategoria === categoria);
+        const marcaMatch = (marca === 'Todos' || productMarca === marca);
+
+        if (sedeMatch && categoriaMatch && marcaMatch) {
+            product.style.display = '';
+        } else {
+            product.style.display = 'none';
+        }
+    });
 }
 
 // Agregar evento a los filtros

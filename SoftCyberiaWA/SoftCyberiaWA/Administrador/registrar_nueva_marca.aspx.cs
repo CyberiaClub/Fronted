@@ -24,33 +24,30 @@ namespace SoftCyberiaWA
         protected void registerButton_Click(object sender, EventArgs e)
         {
             marca marca = new marca();
+            marca.nombre = marcaTxt.Text;
 
+            // Convertir la imagen a base64 y asignarla a la marca
             if (uploadImage.HasFile)
             {
-                // Verificar que el archivo subido es PNG
-                string fileExtension = System.IO.Path.GetExtension(uploadImage.FileName).ToLower();
-                if (fileExtension == ".png")
+                using (System.IO.Stream imageStream = uploadImage.PostedFile.InputStream)
                 {
-                    // Guardar el archivo en el servidor
-                    string filePath = Server.MapPath("~/Imagenes/") + uploadImage.FileName;
-                    uploadImage.SaveAs(filePath);
-
-                    marca.nombre = marcaName.Text;
-
-                    this.daoMarca.marca_insertar(marca);
-                    // Lógica adicional para registrar el producto
+                    byte[] imageBytes = new byte[imageStream.Length];
+                    imageStream.Read(imageBytes, 0, (int)imageStream.Length);
+                    marca.imagen = Convert.ToBase64String(imageBytes); // Convertir a base64
                 }
-                else
-                {
+            }
 
-                }
+            // Verificar si la marca existe
+            int idMarca = daoMarca.marca_buscarIdPorNombre(marca, true);
+            if (idMarca == 0) // Si la marca no existe, insertarla
+            {
+                idMarca = daoMarca.marca_insertar(marca); // Insertar la nueva marca con nombre e imagen
             }
             else
             {
-                // Mostrar mensaje de error si no se seleccionó ningún archivo
-
+                // Actualizar la marca si ya existe (opcional)
+                daoMarca.marca_actualizarImagen(idMarca, marca.imagen);
             }
-
         }
     }
 }

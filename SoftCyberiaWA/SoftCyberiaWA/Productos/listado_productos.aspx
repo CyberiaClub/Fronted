@@ -125,9 +125,15 @@
             <!-- Listado de Productos -->
 
             <div class="col-md-9">
+
+
                 <div class="row" id="product-list">
                     <p id="loading-message">Cargando productos...</p>
                     
+                    <asp:Panel ID="productContainer" runat="server" CssClass="row">
+                <p id="loading-message">Cargando productos...</p>
+            </asp:Panel>
+
                     <!-- Producto 1 -->
                     <div class="col-md-4 mb-4" data-category="Arquitectura" data-price="146.40">
                         <a href="detalle_producto3.aspx" class="text-decoration-none">

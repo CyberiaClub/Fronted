@@ -12,11 +12,8 @@ namespace SoftCyberiaWA
 {
     public partial class WebForm4 : System.Web.UI.Page
     {
-        private ProductoWSClient daoProducto = new ProductoWSClient();
-        private SedeWSClient daoSede = new SedeWSClient();
-        private ProveedorWSClient daoProveedor = new ProveedorWSClient();
-        private TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();
-        private MarcaWSClient daoMarca = new MarcaWSClient();
+
+        private CategoriaWSClient daoMarca = new MarcaWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
