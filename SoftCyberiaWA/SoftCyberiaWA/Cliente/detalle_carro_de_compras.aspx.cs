@@ -19,5 +19,10 @@ namespace SoftCyberiaWA
             // Redirigir a la página del historial de compras
             Response.Redirect("detalle_historial_de_compras.aspx");
         }
+
+        protected void SeguirComprando_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("metodo_pago.aspx");
+        }
     }
 }

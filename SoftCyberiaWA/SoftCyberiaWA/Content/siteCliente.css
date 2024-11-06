@@ -13,11 +13,11 @@
 
 /* Botón de historial de compras */
 .btn-history {
-    background-color: #6f42c1; /* Color púrpura profesional */
+    background-color: #6f42c1;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 50px; /* Bordes redondeados para modernidad */
+    border-radius: 50px;
     font-size: 1rem;
     transition: background-color 0.3s ease;
 }
@@ -25,6 +25,47 @@
     .btn-history:hover {
         background-color: #563d7c; /* Color más oscuro al hacer hover */
     }
+
+/* Botón de seguir comprando */
+.btn-continue {
+    background-color: #28a745; /* Verde atractivo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+    .btn-continue:hover {
+        background-color: #218838;
+    }
+
+/* Estilo de los items del carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.cart-image {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.cart-product-details h6 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+
 
 /* Mensaje de carrito vacío */
 .cart-empty-message {

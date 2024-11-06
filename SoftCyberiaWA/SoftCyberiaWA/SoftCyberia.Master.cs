@@ -9,9 +9,18 @@ namespace SoftCyberiaWA
 {
     public partial class SoftCyberia : System.Web.UI.MasterPage
     {
+        public Label CartCountLabel
+        {
+            get { return cartCountLabel; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                // Inicializa el contador del carrito si ya tiene valores en la sesión
+                CartCountLabel.Text = Session["CartCount"] != null ? Session["CartCount"].ToString() : "0";
+            }
         }
     }
 }
