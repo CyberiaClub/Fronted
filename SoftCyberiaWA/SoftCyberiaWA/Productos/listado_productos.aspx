@@ -128,7 +128,7 @@
                 <div class="row" id="product-list">
                     <p id="loading-message">Cargando productos...</p>
                     
-                   <%-- <!-- Producto 1 -->
+                   <!-- Producto 1 -->
                     <div class="col-md-4 mb-4" data-category="Arquitectura" data-price="146.40">
                         <a href="detalle_producto3.aspx" class="text-decoration-none">
                             <div class="card">
@@ -179,7 +179,7 @@
                             </div>
                         </a>
                     </div>
-                    //-->--%>
+                    
 
 
                 </div>
@@ -187,6 +187,7 @@
         </div>
     </div>
 
+    
     <script src="/Scripts/filtrar_listado_productos.js"></script>
 
 </asp:Content>
