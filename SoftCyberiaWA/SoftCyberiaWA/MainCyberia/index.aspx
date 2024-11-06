@@ -51,9 +51,9 @@
 
 
        <!-- Categories Section -->
-       <section class="categories text-center my-5">
+       <section class="categories text-center my-5 ">
            <div class="container">
-               <h3 class="font-bold category-title">Categorías destacadas</h3>
+               <h3 class="font-bold category-title bg-primary bg-opacity-50" style="font-size: 3em;">Categorías destacadas</h3>
                <div class="row mt-4">
                    <!-- Categoría: Arte -->
                    <div class="col-md-6 mb-4">
@@ -109,7 +109,7 @@
 
         <!-- Brands Section -->
         <section class="brands text-center my-4">
-            <h3 class="font-bold">Marcas</h3>
+            <h3 class="font-bold bg-primary bg-opacity-50"  style="font-size: 3em;">Marcas</h3>
             <div class="container">
                 <div class="row justify-content-center mt-4">
                     <div class="col-6 col-md-3 mb-3">

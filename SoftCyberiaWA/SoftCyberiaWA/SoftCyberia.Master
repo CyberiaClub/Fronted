@@ -48,10 +48,10 @@
                 <!-- Enlaces de navegación a la izquierda -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white " href="../Productos/listado_productos.aspx">Productos</a>
+                        <a class="nav-link text-white " href="../Productos/listado_productos.aspx"  style="font-size: 1.5em;">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white " href="../MainCyberia/listado_sedes.aspx">Sedes</a>
+                        <a class="nav-link text-white " href="../MainCyberia/listado_sedes.aspx"  style="font-size: 1.5em;">Sedes</a>
                     </li>
                 </ul>
 

@@ -8,7 +8,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
      <!-- Encabezado de la Página -->
     <div class="header text-center" >
-        <h2  class="font-bold category-title bg-primary bg-opacity-50 " style="font-size: 2em;">Retiro en Tiendas</h2>
+        <h2  class="font-bold category-title bg-primary bg-opacity-50 " style="font-size: 3em;">Retiro en Tiendas</h2>
         <p>Compra online y retira en tienda</p>
     </div>
 

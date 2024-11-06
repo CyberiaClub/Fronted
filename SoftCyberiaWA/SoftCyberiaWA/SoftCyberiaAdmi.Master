@@ -47,16 +47,22 @@
 
 
         <a href="registrar_nuevos_proveedores.aspx">Registrar nuevos Proveedores</a>
-        <p> </p>
+        <p></p>
+
+        <a href="registrar_nueva_marca.aspx">Registrar nueva Marca</a>
+        <p></p>
+
+        <a href="registrar_nueva_categoria.aspx">Registrar nueva Categoría</a>
+        <p></p>
 
         <a href="registrar_nuevos_productos.aspx">Registrar nuevos Productos</a>
-        <p> </p>
+        <p></p>
 
         <a href="asignar_roles.aspx">Asignar Rol</a>
-        <p> </p>
+        <p></p>
 
         <a href="listado_stock.aspx">Ver Stock de Productos</a>
-        <p> </p>
+        <p></p>
 
         <a href="detalle_reporte.aspx">Generar reporte</a>
         <p></p>
@@ -72,7 +78,6 @@
 
 
         <div class="sidebar-footer">
-            <a href="index.aspx">Cerrar sesión</a>
             <a href="#">Ajustes de seguridad</a>
         </div>
     </div>

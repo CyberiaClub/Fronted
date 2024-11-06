@@ -11,7 +11,7 @@ namespace SoftCyberiaWA
 {
 
 
-    public partial class index
+    public partial class detalle_producto
     {
     }
 }

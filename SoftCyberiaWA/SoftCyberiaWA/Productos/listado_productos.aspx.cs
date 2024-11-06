@@ -25,6 +25,19 @@ namespace SoftCyberiaWA
 
         }
 
+        public IActionResult ObtenerProductos(string sede, string categoria, string marca)
+        {
+            // Inicializar el cliente del servicio conectado
+            var cliente = new ProductoServiceClient();
+
+            // Llamar al método del servicio conectado para obtener los productos
+            var productos = cliente.productos_listar_todos();
+
+            // Convertir la respuesta del servicio a JSON
+            return Json(productos);
+        }
+
+
         public static List<string> ObtenerMarcas()
         {
             List<string> marcas = new List<string>();

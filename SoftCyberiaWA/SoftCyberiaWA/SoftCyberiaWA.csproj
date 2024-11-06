@@ -77,6 +77,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Administrador\registrar_nueva_marca.aspx" />
+    <Content Include="Administrador\registrar_nueva_categoria.aspx" />
+    <Content Include="Cliente\boleta_pago.aspx" />
+    <Content Include="Cliente\metodo_pago.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -111,6 +115,7 @@
     <Content Include="Content\Fonts\css\v4-shims.min.css" />
     <Content Include="Content\Fonts\css\v5-font-face.css" />
     <Content Include="Content\Fonts\css\v5-font-face.min.css" />
+    <Content Include="Content\metodo_pago.css" />
     <Content Include="Content\siteCliente.css" />
     <Content Include="Content\siteProductos.css" />
     <Content Include="Content\siteainiciosesion.css" />
@@ -120,6 +125,10 @@
     <Content Include="Cliente\detalle_historial_de_compras.aspx" />
     <Content Include="Imagenes\empty-cart.png" />
     <Content Include="Imagenes\pucp.png" />
+    <Content Include="Productos\detalle_producto8.aspx" />
+    <Content Include="Productos\detalle_producto7.aspx" />
+    <Content Include="Productos\detalle_producto6.aspx" />
+    <Content Include="Productos\detalle_producto5.aspx" />
     <Content Include="Productos\detalle_producto.aspx" />
     <Content Include="Productos\detalle_producto2.aspx" />
     <Content Include="Productos\detalle_producto3.aspx" />
@@ -376,6 +385,34 @@
     <Content Include="SoftCyberiaAdmi.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\registrar_nueva_marca.aspx.cs">
+      <DependentUpon>registrar_nueva_marca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\registrar_nueva_marca.aspx.designer.cs">
+      <DependentUpon>registrar_nueva_marca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\registrar_nueva_categoria.aspx.cs">
+      <DependentUpon>registrar_nueva_categoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\registrar_nueva_categoria.aspx.designer.cs">
+      <DependentUpon>registrar_nueva_categoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\boleta_pago.aspx.cs">
+      <DependentUpon>boleta_pago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\boleta_pago.aspx.designer.cs">
+      <DependentUpon>boleta_pago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\metodo_pago.aspx.cs">
+      <DependentUpon>metodo_pago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\metodo_pago.aspx.designer.cs">
+      <DependentUpon>metodo_pago.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\detalle_carro_de_compras.aspx.cs">
       <DependentUpon>detalle_carro_de_compras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -394,6 +431,34 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\detalle_producto8.aspx.cs">
+      <DependentUpon>detalle_producto8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos\detalle_producto8.aspx.designer.cs">
+      <DependentUpon>detalle_producto8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\detalle_producto7.aspx.cs">
+      <DependentUpon>detalle_producto7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos\detalle_producto7.aspx.designer.cs">
+      <DependentUpon>detalle_producto7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\detalle_producto6.aspx.cs">
+      <DependentUpon>detalle_producto6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos\detalle_producto6.aspx.designer.cs">
+      <DependentUpon>detalle_producto6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\detalle_producto5.aspx.cs">
+      <DependentUpon>detalle_producto5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos\detalle_producto5.aspx.designer.cs">
+      <DependentUpon>detalle_producto5.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos\detalle_producto.aspx.cs">
       <DependentUpon>detalle_producto.aspx</DependentUpon>
