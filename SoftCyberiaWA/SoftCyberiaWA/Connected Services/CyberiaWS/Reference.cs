@@ -4868,6 +4868,17 @@ namespace SoftCyberiaWA.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_listarRequest", ReplyAction="CyberiaWS/ProductoWS/producto_listarResponse")]
         System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.producto_listarResponse> producto_listarAsync(SoftCyberiaWA.CyberiaWS.producto_listarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_insertar2Request", ReplyAction="CyberiaWS/ProductoWS/producto_insertar2Response")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(usuario))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(comprobanteDePago))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaWA.CyberiaWS.producto_insertar2Response producto_insertar2(SoftCyberiaWA.CyberiaWS.producto_insertar2Request request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_insertar2Request", ReplyAction="CyberiaWS/ProductoWS/producto_insertar2Response")]
+        System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.producto_insertar2Response> producto_insertar2Async(SoftCyberiaWA.CyberiaWS.producto_insertar2Request request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4970,6 +4981,47 @@ namespace SoftCyberiaWA.CyberiaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_insertar2", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class producto_insertar2Request {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaWA.CyberiaWS.producto producto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double precio;
+        
+        public producto_insertar2Request() {
+        }
+        
+        public producto_insertar2Request(SoftCyberiaWA.CyberiaWS.producto producto, double precio) {
+            this.producto = producto;
+            this.precio = precio;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_insertar2Response", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class producto_insertar2Response {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public producto_insertar2Response() {
+        }
+        
+        public producto_insertar2Response(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProductoWSChannel : SoftCyberiaWA.CyberiaWS.ProductoWS, System.ServiceModel.IClientChannel {
     }
@@ -5062,6 +5114,31 @@ namespace SoftCyberiaWA.CyberiaWS {
         public System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.producto_listarResponse> producto_listarAsync() {
             SoftCyberiaWA.CyberiaWS.producto_listarRequest inValue = new SoftCyberiaWA.CyberiaWS.producto_listarRequest();
             return ((SoftCyberiaWA.CyberiaWS.ProductoWS)(this)).producto_listarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaWA.CyberiaWS.producto_insertar2Response SoftCyberiaWA.CyberiaWS.ProductoWS.producto_insertar2(SoftCyberiaWA.CyberiaWS.producto_insertar2Request request) {
+            return base.Channel.producto_insertar2(request);
+        }
+        
+        public int producto_insertar2(SoftCyberiaWA.CyberiaWS.producto producto, double precio) {
+            SoftCyberiaWA.CyberiaWS.producto_insertar2Request inValue = new SoftCyberiaWA.CyberiaWS.producto_insertar2Request();
+            inValue.producto = producto;
+            inValue.precio = precio;
+            SoftCyberiaWA.CyberiaWS.producto_insertar2Response retVal = ((SoftCyberiaWA.CyberiaWS.ProductoWS)(this)).producto_insertar2(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.producto_insertar2Response> SoftCyberiaWA.CyberiaWS.ProductoWS.producto_insertar2Async(SoftCyberiaWA.CyberiaWS.producto_insertar2Request request) {
+            return base.Channel.producto_insertar2Async(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.producto_insertar2Response> producto_insertar2Async(SoftCyberiaWA.CyberiaWS.producto producto, double precio) {
+            SoftCyberiaWA.CyberiaWS.producto_insertar2Request inValue = new SoftCyberiaWA.CyberiaWS.producto_insertar2Request();
+            inValue.producto = producto;
+            inValue.precio = precio;
+            return ((SoftCyberiaWA.CyberiaWS.ProductoWS)(this)).producto_insertar2Async(inValue);
         }
     }
     

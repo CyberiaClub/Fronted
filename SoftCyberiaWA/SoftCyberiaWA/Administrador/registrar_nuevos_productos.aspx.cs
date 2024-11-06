@@ -34,14 +34,14 @@ namespace SoftCyberiaWA
             producto.precioProveedor = p;
             System.Console.WriteLine(producto.precio);
             producto.descripcion = description.Text;
-            //producto.idSede = 1;
-            //producto.idMarca = 1;
-            //producto.idProveedor = 1;
-            //producto.idTipo = 1;
-            
+            producto.idSede = 1;
+            producto.idMarca = 1;
+            producto.idProveedor = 1;
+            producto.idTipo = 1;
+
             //double precioVendedor = Convert.ToDouble(providerPrice.Text);
 
-            this.daoProducto.producto_insertar(producto);
+            this.daoProducto.producto_insertar2(producto, p);
 
         }
     }
