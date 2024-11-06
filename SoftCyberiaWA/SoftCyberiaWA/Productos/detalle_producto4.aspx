@@ -3,7 +3,7 @@
     Detalle - Lápiz grafito Staedtler x 24
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
-    <link href="Content/siteProductos.css" rel="stylesheet" />
+    <link href="../Content/siteProductos.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="row align-items-center producto-detalle-container">
@@ -26,9 +26,9 @@
             <!-- Selector de cantidad y botón para añadir al carrito -->
             <div class="cantidad-carrito my-3">
                 <label for="quantity" class="form-label">Cantidad</label>
-                <input type="number" id="quantity" class="form-control" value="1" style="width: 80px;">
+                <input type="number" id="quantity" class="form-control" value="1" min="1" style="width: 80px;">
             </div>
-            <button class="btn btn-dark btn-lg">Añadir a la cesta</button>
+            <button class="btn btn-dark btn-lg" onclick="addToCart()">Añadir a la cesta</button>
 
             <!-- Detalles adicionales del producto -->
             <div class="detalles-producto mt-4">
@@ -43,4 +43,25 @@
             </div>
         </div>
     </div>
+    <script runat="server">
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Cargar la cantidad del carrito de compras, si es necesario
+        }
+
+        // Método para añadir al carrito
+        protected void AddToCart(int quantity)
+        {
+            // Código para manejar la lógica de añadir al carrito aquí
+            // Actualizar la sesión, redireccionar, o lo que necesites
+        }
+    </script>
+
+    <script>
+        // JavaScript para manejar el botón de añadir al carrito
+        function addToCart() {
+            var quantity = document.getElementById("quantity").value;
+            __doPostBack("AddToCart", quantity);  // Esto simula un postback en ASP.NET
+        }
+    </script>
 </asp:Content>
