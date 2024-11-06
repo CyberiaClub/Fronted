@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="detalle_producto9.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="detalle_producto9.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Detalle - Libreta de Notas A5 con Tapa Dura
 </asp:Content>

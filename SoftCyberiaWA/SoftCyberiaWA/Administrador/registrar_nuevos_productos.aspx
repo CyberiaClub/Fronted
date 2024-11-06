@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberiaAdmi.Master" AutoEventWireup="true" CodeBehind="registrar_nuevos_productos.aspx.cs" Inherits="SoftCyberiaWA.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberiaAdmi.Master" AutoEventWireup="true" CodeBehind="registrar_nuevos_productos.aspx.cs" Inherits="SoftCyberiaWA.registrarNuevosProductos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphStyle" runat="server">
      <link href="../Content/siteadmi.css" rel="stylesheet" />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="CyberiaWS" targetNamespace="CyberiaWS" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="rol_listar" type="tns:rol_listar" />
+  <xs:element name="rol_listarResponse" type="tns:rol_listarResponse" />
+  <xs:complexType name="rol_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="rol_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:rol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rol">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idRol" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

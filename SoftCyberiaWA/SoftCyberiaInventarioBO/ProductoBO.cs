@@ -9,13 +9,11 @@ using System.Threading.Tasks;
 
 namespace SoftCyberiaInventarioBO
 {
-    internal class ProductoBO
+    internal class ProductoBO : BaseBO
     {
-        private productoWS _productoWS;
-        
-        public void test()
+        public int insertar(producto _producto)
         {
-            _productoWS = WsCliente.getProductoWS();
+            return this.WsProducto.producto_insertar(prod)
         }
     }
 }

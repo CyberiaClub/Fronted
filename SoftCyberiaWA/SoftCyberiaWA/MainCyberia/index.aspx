@@ -55,54 +55,56 @@
            <div class="container">
                <h3 class="font-bold category-title bg-primary bg-opacity-50" style="font-size: 3em;">Categorías destacadas</h3>
                <div class="row mt-4">
-                   <!-- Categoría: Arte -->
-                   <div class="col-md-6 mb-4">
-                       <div class="card border-0">
-                           <a href="../Productos/listado_productos.aspx?categoria=Arte" class="text-decoration-none"> 
-                               <img src="../Imagenes/arte.png" class="card-img-top rounded-img mx-auto" alt="Arte">
-                               <div class="card-body">
-                                   <h5 class="card-title category-title font-regular">Arte</h5>
-                               </div>
+                   <asp:Panel ID="categoriaPanel" runat="server" CssClass="row">
+                       <!-- Categoría: Arte -->
+                           <div class="col-md-6 mb-4">
+                               <div class="card border-0">
+                                   <a href="../Productos/listado_productos.aspx?categoria=Arte" class="text-decoration-none"> 
+                                       <img src="../Imagenes/arte.png" class="card-img-top rounded-img mx-auto" alt="Arte">
+                                       <div class="card-body">
+                                           <h5 class="card-title category-title font-regular">Arte</h5>
+                                       </div>
 
-                           </a>
-                       </div>
-                   </div>
-
-                   <!-- Categoría: Arquitectura -->
-                   <div class="col-md-6 mb-4">
-                       <div class="card border-0">
-                           <a href="../Productos/listado_productos.aspx?categoria=Arquitectura" class="text-decoration-none">
-                               <img src="../Imagenes/arquitectura.png" class="card-img-top rounded-img mx-auto" alt="Arquitectura">
-                               <div class="card-body">
-                                   <h5 class="card-title  category-title font-regular">Arquitectura</h5>
+                                   </a>
                                </div>
-                           </a>
+                           </div>
+                    
+                       <!-- Categoría: Arquitectura -->
+                       <div class="col-md-6 mb-4">
+                           <div class="card border-0">
+                               <a href="../Productos/listado_productos.aspx?categoria=Arquitectura" class="text-decoration-none">
+                                   <img src="../Imagenes/arquitectura.png" class="card-img-top rounded-img mx-auto" alt="Arquitectura">
+                                   <div class="card-body">
+                                       <h5 class="card-title  category-title font-regular">Arquitectura</h5>
+                                   </div>
+                               </a>
+                           </div>
                        </div>
-                   </div>
 
-                   <!-- Categoría: Educación -->
-                   <div class="col-md-6 mb-4">
-                       <div class="card border-0">
-                           <a href="../Productos/listado_productos.aspx?categoria=Educación" class="text-decoration-none">
-                               <img src="../Imagenes/educacion.jpg" class="card-img-top rounded-img mx-auto" alt="Educación">
-                               <div class="card-body">
-                                   <h5 class="card-title  category-title font-regular">Educación</h5>
-                               </div>
-                           </a>
+                       <!-- Categoría: Educación -->
+                       <div class="col-md-6 mb-4">
+                           <div class="card border-0">
+                               <a href="../Productos/listado_productos.aspx?categoria=Educación" class="text-decoration-none">
+                                   <img src="../Imagenes/educacion.jpg" class="card-img-top rounded-img mx-auto" alt="Educación">
+                                   <div class="card-body">
+                                       <h5 class="card-title  category-title font-regular">Educación</h5>
+                                   </div>
+                               </a>
+                           </div>
                        </div>
-                   </div>
 
-                   <!-- Categoría: Oficina -->
-                   <div class="col-md-6 mb-4">
-                       <div class="card border-0">
-                           <a href="../Productos/listado_productos.aspx?categoria=Oficina" class="text-decoration-none">
-                               <img src="../Imagenes/oficina.jpg" class="card-img-top rounded-img mx-auto" alt="Oficina">
-                               <div class="card-body">
-                                   <h5 class="card-title  category-title font-regular">Oficina</h5>
-                               </div>
-                           </a>
+                       <!-- Categoría: Oficina -->
+                       <div class="col-md-6 mb-4">
+                           <div class="card border-0">
+                               <a href="../Productos/listado_productos.aspx?categoria=Oficina" class="text-decoration-none">
+                                   <img src="../Imagenes/oficina.jpg" class="card-img-top rounded-img mx-auto" alt="Oficina">
+                                   <div class="card-body">
+                                       <h5 class="card-title  category-title font-regular">Oficina</h5>
+                                   </div>
+                               </a>
+                           </div>
                        </div>
-                   </div>
+                   </asp:Panel> 
                </div>
            </div>
        </section>
@@ -112,18 +114,20 @@
             <h3 class="font-bold bg-primary bg-opacity-50"  style="font-size: 3em;">Marcas</h3>
             <div class="container">
                 <div class="row justify-content-center mt-4">
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="/Imagenes/faber.png" alt="Faber" class="brand-img precisa-img">
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="/Imagenes/sharpie.png" alt="Sharpie" class="brand-img precisa-img">
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="/Imagenes/stae.png" alt="Staedtler" class="brand-img precisa-img">
-                    </div>
-                    <div class="col-6 col-md-3 mb-3">
-                        <img src="/Imagenes/seles.png" alt="Seles" class="brand-img precisa-img">
-                    </div>
+                    <asp:Panel ID="marcaContainer" runat="server" CssClass="row">
+                        <div class="col-6 col-md-3 mb-3">
+                            <img src="/Imagenes/faber.png" alt="Faber" class="brand-img precisa-img">
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <img src="/Imagenes/sharpie.png" alt="Sharpie" class="brand-img precisa-img">
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <img src="/Imagenes/stae.png" alt="Staedtler" class="brand-img precisa-img">
+                        </div>
+                        <div class="col-6 col-md-3 mb-3">
+                            <img src="/Imagenes/seles.png" alt="Seles" class="brand-img precisa-img">
+                        </div>
+                    </asp:Panel>
                     <!-- Puedes añadir más imágenes siguiendo la misma estructura -->
                 </div>
             </div>

@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/VendedorWS?xsd=1" namespace="http://trabajador.servicios.cyberiastore.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="vendedor_modificar">
-    <part name="parameters" element="tns:vendedor_modificar" />
-  </message>
-  <message name="vendedor_modificarResponse">
-    <part name="parameters" element="tns:vendedor_modificarResponse" />
-  </message>
   <message name="vendedor_insertar">
     <part name="parameters" element="tns:vendedor_insertar" />
   </message>
   <message name="vendedor_insertarResponse">
     <part name="parameters" element="tns:vendedor_insertarResponse" />
+  </message>
+  <message name="vendedor_modificar">
+    <part name="parameters" element="tns:vendedor_modificar" />
+  </message>
+  <message name="vendedor_modificarResponse">
+    <part name="parameters" element="tns:vendedor_modificarResponse" />
   </message>
   <message name="vendedor_listar">
     <part name="parameters" element="tns:vendedor_listar" />
@@ -24,13 +24,13 @@
     <part name="parameters" element="tns:vendedor_listarResponse" />
   </message>
   <portType name="VendedorWS">
-    <operation name="vendedor_modificar">
-      <input wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/VendedorWS/vendedor_modificarRequest" message="tns:vendedor_modificar" />
-      <output wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/VendedorWS/vendedor_modificarResponse" message="tns:vendedor_modificarResponse" />
-    </operation>
     <operation name="vendedor_insertar">
       <input wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/VendedorWS/vendedor_insertarRequest" message="tns:vendedor_insertar" />
       <output wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/VendedorWS/vendedor_insertarResponse" message="tns:vendedor_insertarResponse" />
+    </operation>
+    <operation name="vendedor_modificar">
+      <input wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/VendedorWS/vendedor_modificarRequest" message="tns:vendedor_modificar" />
+      <output wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/VendedorWS/vendedor_modificarResponse" message="tns:vendedor_modificarResponse" />
     </operation>
     <operation name="vendedor_listar">
       <input wsam:Action="http://trabajador.servicios.cyberiastore.pucp.edu.pe/VendedorWS/vendedor_listarRequest" message="tns:vendedor_listar" />
@@ -39,7 +39,7 @@
   </portType>
   <binding name="VendedorWSPortBinding" type="tns:VendedorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="vendedor_modificar">
+    <operation name="vendedor_insertar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -48,7 +48,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="vendedor_insertar">
+    <operation name="vendedor_modificar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

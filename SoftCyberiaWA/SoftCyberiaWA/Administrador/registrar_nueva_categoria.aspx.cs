@@ -1,5 +1,4 @@
-﻿using SoftCyberiaWA.CyberiaStoreWS;
-using SoftCyberiaWA.ServicioWS;
+﻿using SoftCyberiaWA.CyberiaWS;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,10 +9,10 @@ using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
-    public partial class WebForm4 : System.Web.UI.Page
+    public partial class registrarNuevaCategoria : System.Web.UI.Page
     {
 
-        private CategoriaWSClient daoMarca = new MarcaWSClient();
+        private TipoProductoWSClient daoTipoProducto= new TipoProductoWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +22,10 @@ namespace SoftCyberiaWA
 
         protected void registerButton_Click(object sender, EventArgs e)
         {
+            tipoProducto tipoProducto = new tipoProducto();
+            tipoProducto.tipo = categoriaName.Text;
 
+            daoTipoProducto.tipoProducto_insertar(tipoProducto);
 
         }
     }

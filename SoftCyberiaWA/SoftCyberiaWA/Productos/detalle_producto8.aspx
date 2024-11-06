@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="detalle_producto14.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="detalle_producto14.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Detalle - Pack de Cartulinas de Colores (10 unidades)
 </asp:Content>

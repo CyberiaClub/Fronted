@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
-    public partial class detalle_carro_de_compras : System.Web.UI.Page
+    public partial class boletaDePago : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

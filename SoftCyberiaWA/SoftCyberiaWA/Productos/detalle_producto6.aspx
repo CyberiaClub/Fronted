@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="detalle_producto10.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="detalle_producto10.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Detalle - Set de Lápices de Dibujo 12 Piezas
 </asp:Content>

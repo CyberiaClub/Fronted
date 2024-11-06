@@ -1,4 +1,4 @@
-﻿using SoftCyberiaWA.ServicioWS;
+﻿using SoftCyberiaWA.CyberiaWS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +26,7 @@ namespace SoftCyberiaWA
             proveedor.telefono = phone.Text;
             proveedor.direccion = address.Text;
             proveedor.descripcion = products.Text;
-            int resultado = daoProveedor.proveedor_insertar(proveedor.ruc, proveedor.nombreContacto, proveedor.razonSocial, proveedor.correo, proveedor.telefono, proveedor.direccion, proveedor.descripcion);
+            int resultado = daoProveedor.proveedor_insertar(proveedor);
         }
     }
 }   

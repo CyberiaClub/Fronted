@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="metodo_pago.aspx.cs" Inherits="SoftCyberiaWA.detalle_carro_de_compras" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="metodo_pago.aspx.cs" Inherits="SoftCyberiaWA.metodoDePago" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Método de Pago
 </asp:Content>

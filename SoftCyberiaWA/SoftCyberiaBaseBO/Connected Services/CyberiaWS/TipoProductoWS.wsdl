@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?xsd=1" namespace="http://inventario.servicios.cyberiastore.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="tipoProducto_listar">
+    <part name="parameters" element="tns:tipoProducto_listar" />
+  </message>
+  <message name="tipoProducto_listarResponse">
+    <part name="parameters" element="tns:tipoProducto_listarResponse" />
+  </message>
   <message name="tipoProducto_modificar">
     <part name="parameters" element="tns:tipoProducto_modificar" />
   </message>
@@ -17,12 +23,6 @@
   <message name="tipoProducto_insertarResponse">
     <part name="parameters" element="tns:tipoProducto_insertarResponse" />
   </message>
-  <message name="tipoProducto_listar">
-    <part name="parameters" element="tns:tipoProducto_listar" />
-  </message>
-  <message name="tipoProducto_listarResponse">
-    <part name="parameters" element="tns:tipoProducto_listarResponse" />
-  </message>
   <message name="tipoProducto_eliminar">
     <part name="parameters" element="tns:tipoProducto_eliminar" />
   </message>
@@ -30,6 +30,10 @@
     <part name="parameters" element="tns:tipoProducto_eliminarResponse" />
   </message>
   <portType name="TipoProductoWS">
+    <operation name="tipoProducto_listar">
+      <input wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_listarRequest" message="tns:tipoProducto_listar" />
+      <output wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_listarResponse" message="tns:tipoProducto_listarResponse" />
+    </operation>
     <operation name="tipoProducto_modificar">
       <input wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_modificarRequest" message="tns:tipoProducto_modificar" />
       <output wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_modificarResponse" message="tns:tipoProducto_modificarResponse" />
@@ -38,10 +42,6 @@
       <input wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_insertarRequest" message="tns:tipoProducto_insertar" />
       <output wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_insertarResponse" message="tns:tipoProducto_insertarResponse" />
     </operation>
-    <operation name="tipoProducto_listar">
-      <input wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_listarRequest" message="tns:tipoProducto_listar" />
-      <output wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_listarResponse" message="tns:tipoProducto_listarResponse" />
-    </operation>
     <operation name="tipoProducto_eliminar">
       <input wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_eliminarRequest" message="tns:tipoProducto_eliminar" />
       <output wsam:Action="http://inventario.servicios.cyberiastore.pucp.edu.pe/TipoProductoWS/tipoProducto_eliminarResponse" message="tns:tipoProducto_eliminarResponse" />
@@ -49,6 +49,15 @@
   </portType>
   <binding name="TipoProductoWSPortBinding" type="tns:TipoProductoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="tipoProducto_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="tipoProducto_modificar">
       <soap:operation soapAction="" />
       <input>
@@ -59,15 +68,6 @@
       </output>
     </operation>
     <operation name="tipoProducto_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="tipoProducto_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="detalle_producto12.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftCyberia.Master" AutoEventWireup="true" CodeBehind="detalle_producto12.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto7" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Detalle - Kit de Oficina Completo
 </asp:Content>
