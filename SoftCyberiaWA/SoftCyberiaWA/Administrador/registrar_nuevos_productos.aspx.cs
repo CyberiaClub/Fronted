@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.ServicioWS;
+﻿using SoftCyberiaWA.CyberiaStoreWS;
+using SoftCyberiaWA.ServicioWS;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

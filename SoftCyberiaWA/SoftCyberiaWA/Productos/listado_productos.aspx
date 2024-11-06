@@ -125,10 +125,16 @@
             <!-- Listado de Productos -->
 
             <div class="col-md-9">
+
+
                 <div class="row" id="product-list">
                     <p id="loading-message">Cargando productos...</p>
                     
-                   <!-- Producto 1 -->
+                    <asp:Panel ID="productContainer" runat="server" CssClass="row">
+                <p id="loading-message">Cargando productos...</p>
+            </asp:Panel>
+
+                    <!-- Producto 1 -->
                     <div class="col-md-4 mb-4" data-category="Arquitectura" data-price="146.40">
                         <a href="detalle_producto3.aspx" class="text-decoration-none">
                             <div class="card">
@@ -179,7 +185,60 @@
                             </div>
                         </a>
                     </div>
-                    
+
+
+
+                    <!-- Producto 9 -->
+                    <div class="col-md-4 mb-4" data-category="Oficina" data-price="18.50">
+                        <a href="detalle_producto5.aspx" class="text-decoration-none">
+                            <div class="card">
+                                <img src="/Imagenes/libreta.jpg" class="card-img-top" alt="Libreta de Notas">
+                                <div class="card-body">
+                                    <h6 class="card-title">Libreta de Notas A5 con Tapa Dura</h6>
+                                    <p class="card-text">S/18.50</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Producto 10 -->
+                    <div class="col-md-4 mb-4" data-category="Dibujo" data-price="45.00">
+                        <a href="detalle_producto6.aspx" class="text-decoration-none">
+                            <div class="card">
+                                <img src="/Imagenes/lapices_dibujo.jpg" class="card-img-top" alt="Set de Lápices de Dibujo">
+                                <div class="card-body">
+                                    <h6 class="card-title">Set de Lápices de Dibujo 12 Piezas</h6>
+                                    <p class="card-text">S/45.00</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Producto 12 -->
+                    <div class="col-md-4 mb-4" data-category="Oficina" data-price="32.40">
+                        <a href="detalle_producto7.aspx" class="text-decoration-none">
+                            <div class="card">
+                                <img src="/Imagenes/kit_escritorio.jpg" class="card-img-top" alt="Kit de Oficina">
+                                <div class="card-body">
+                                    <h6 class="card-title">Kit de Oficina Completo</h6>
+                                    <p class="card-text">S/32.40</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Producto 14 -->
+                    <div class="col-md-4 mb-4" data-category="Material de Arte" data-price="15.00">
+                        <a href="detalle_producto8.aspx" class="text-decoration-none">
+                            <div class="card">
+                                <img src="/Imagenes/cartulinas.jpg" class="card-img-top" alt="Pack de Cartulinas de Colores">
+                                <div class="card-body">
+                                    <h6 class="card-title">Pack de Cartulinas de Colores (10 unidades)</h6>
+                                    <p class="card-text">S/15.00</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
 
 
                 </div>
