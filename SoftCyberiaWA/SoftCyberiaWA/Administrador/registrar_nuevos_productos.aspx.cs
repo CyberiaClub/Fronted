@@ -26,14 +26,22 @@ namespace SoftCyberiaWA
         protected void lbGuardar_Click(object sender, EventArgs e)
         {
             producto producto = new producto();
+
             producto.nombre = productName.Text;
             producto.sku = sku.Text;
-            producto.precio = Convert.ToDouble(price.Text);
+            Double p = 2.0;
+            producto.precio = p;
+            producto.precioProveedor = p;
+            System.Console.WriteLine(producto.precio);
             producto.descripcion = description.Text;
+            //producto.idSede = 1;
+            //producto.idMarca = 1;
+            //producto.idProveedor = 1;
+            //producto.idTipo = 1;
             
-            double precioVendedor = Convert.ToDouble(providerPrice.Text);
+            //double precioVendedor = Convert.ToDouble(providerPrice.Text);
 
-            int resultado = daoProducto.producto_insertar(producto);
+            this.daoProducto.producto_insertar(producto);
 
         }
     }
