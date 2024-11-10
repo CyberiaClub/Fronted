@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/VendedorWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="vendedor_modificar">
-    <part name="parameters" element="tns:vendedor_modificar" />
+  <message name="vendedor_insertar">
+    <part name="parameters" element="tns:vendedor_insertar" />
   </message>
-  <message name="vendedor_modificarResponse">
-    <part name="parameters" element="tns:vendedor_modificarResponse" />
+  <message name="vendedor_insertarResponse">
+    <part name="parameters" element="tns:vendedor_insertarResponse" />
   </message>
   <message name="vendedor_listar">
     <part name="parameters" element="tns:vendedor_listar" />
@@ -17,29 +17,29 @@
   <message name="vendedor_listarResponse">
     <part name="parameters" element="tns:vendedor_listarResponse" />
   </message>
-  <message name="vendedor_insertar">
-    <part name="parameters" element="tns:vendedor_insertar" />
+  <message name="vendedor_modificar">
+    <part name="parameters" element="tns:vendedor_modificar" />
   </message>
-  <message name="vendedor_insertarResponse">
-    <part name="parameters" element="tns:vendedor_insertarResponse" />
+  <message name="vendedor_modificarResponse">
+    <part name="parameters" element="tns:vendedor_modificarResponse" />
   </message>
   <portType name="VendedorWS">
-    <operation name="vendedor_modificar">
-      <input wsam:Action="CyberiaWS/VendedorWS/vendedor_modificarRequest" message="tns:vendedor_modificar" />
-      <output wsam:Action="CyberiaWS/VendedorWS/vendedor_modificarResponse" message="tns:vendedor_modificarResponse" />
+    <operation name="vendedor_insertar">
+      <input wsam:Action="CyberiaWS/VendedorWS/vendedor_insertarRequest" message="tns:vendedor_insertar" />
+      <output wsam:Action="CyberiaWS/VendedorWS/vendedor_insertarResponse" message="tns:vendedor_insertarResponse" />
     </operation>
     <operation name="vendedor_listar">
       <input wsam:Action="CyberiaWS/VendedorWS/vendedor_listarRequest" message="tns:vendedor_listar" />
       <output wsam:Action="CyberiaWS/VendedorWS/vendedor_listarResponse" message="tns:vendedor_listarResponse" />
     </operation>
-    <operation name="vendedor_insertar">
-      <input wsam:Action="CyberiaWS/VendedorWS/vendedor_insertarRequest" message="tns:vendedor_insertar" />
-      <output wsam:Action="CyberiaWS/VendedorWS/vendedor_insertarResponse" message="tns:vendedor_insertarResponse" />
+    <operation name="vendedor_modificar">
+      <input wsam:Action="CyberiaWS/VendedorWS/vendedor_modificarRequest" message="tns:vendedor_modificar" />
+      <output wsam:Action="CyberiaWS/VendedorWS/vendedor_modificarResponse" message="tns:vendedor_modificarResponse" />
     </operation>
   </portType>
   <binding name="VendedorWSPortBinding" type="tns:VendedorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="vendedor_modificar">
+    <operation name="vendedor_insertar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -57,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="vendedor_insertar">
+    <operation name="vendedor_modificar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

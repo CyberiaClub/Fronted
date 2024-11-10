@@ -17,17 +17,17 @@
   <message name="pedido_modificarResponse">
     <part name="parameters" element="tns:pedido_modificarResponse" />
   </message>
-  <message name="pedido_eliminar">
-    <part name="parameters" element="tns:pedido_eliminar" />
-  </message>
-  <message name="pedido_eliminarResponse">
-    <part name="parameters" element="tns:pedido_eliminarResponse" />
-  </message>
   <message name="pedido_listar">
     <part name="parameters" element="tns:pedido_listar" />
   </message>
   <message name="pedido_listarResponse">
     <part name="parameters" element="tns:pedido_listarResponse" />
+  </message>
+  <message name="pedido_eliminar">
+    <part name="parameters" element="tns:pedido_eliminar" />
+  </message>
+  <message name="pedido_eliminarResponse">
+    <part name="parameters" element="tns:pedido_eliminarResponse" />
   </message>
   <portType name="PedidoWS">
     <operation name="pedido_insertar">
@@ -38,13 +38,13 @@
       <input wsam:Action="CyberiaWS/PedidoWS/pedido_modificarRequest" message="tns:pedido_modificar" />
       <output wsam:Action="CyberiaWS/PedidoWS/pedido_modificarResponse" message="tns:pedido_modificarResponse" />
     </operation>
-    <operation name="pedido_eliminar">
-      <input wsam:Action="CyberiaWS/PedidoWS/pedido_eliminarRequest" message="tns:pedido_eliminar" />
-      <output wsam:Action="CyberiaWS/PedidoWS/pedido_eliminarResponse" message="tns:pedido_eliminarResponse" />
-    </operation>
     <operation name="pedido_listar">
       <input wsam:Action="CyberiaWS/PedidoWS/pedido_listarRequest" message="tns:pedido_listar" />
       <output wsam:Action="CyberiaWS/PedidoWS/pedido_listarResponse" message="tns:pedido_listarResponse" />
+    </operation>
+    <operation name="pedido_eliminar">
+      <input wsam:Action="CyberiaWS/PedidoWS/pedido_eliminarRequest" message="tns:pedido_eliminar" />
+      <output wsam:Action="CyberiaWS/PedidoWS/pedido_eliminarResponse" message="tns:pedido_eliminarResponse" />
     </operation>
   </portType>
   <binding name="PedidoWSPortBinding" type="tns:PedidoWS">
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="pedido_eliminar">
+    <operation name="pedido_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="pedido_listar">
+    <operation name="pedido_eliminar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
