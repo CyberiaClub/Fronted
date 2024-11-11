@@ -19,7 +19,7 @@
 
     <!-- Lista de Tiendas -->
     <div class="store-list d-flex justify-content-center flex-wrap mt-4">
-        <a href="../Productos/listado_productos.aspx?sede=BibliotecaCentral" class="text-decoration-none  text-dark">
+        <a href="../Cliente/listado_productos.aspx?sede=BibliotecaCentral" class="text-decoration-none  text-dark">
             <div class="store border rounded p-3 m-2" style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <h5 class="font-regular">Tienda Biblioteca Central</h5>
                 <p>Ubicado cerca al pabellón Z</p>
@@ -32,7 +32,7 @@
             </div>
         </a>
 
-        <a href="../Productos/listado_productos.aspx?sede=Sociales" class="text-decoration-none  text-dark">
+        <a href="../Cliente/listado_productos.aspx?sede=Sociales" class="text-decoration-none  text-dark">
             <div class="store border rounded p-3 m-2" style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <h5>Tienda Sociales</h5>
                 <p>Ubicado en el pabellón J</p>
@@ -45,7 +45,7 @@
             </div>
         </a>
 
-        <a href="../Productos/listado_productos.aspx?sede=Arquitectura" class="text-decoration-none  text-dark">
+        <a href="../Cliente/listado_productos.aspx?sede=Arquitectura" class="text-decoration-none  text-dark">
             <div class="store border rounded p-3 m-2" style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <h5>Tienda Arquitectura</h5>
                 <p>Ubicado en el pabellón T</p>
@@ -58,7 +58,7 @@
             </div>
         </a>
 
-        <a href="../Productos/listado_productos.aspx?sede=McGregor" class="text-decoration-none  text-dark">
+        <a href="../Cliente/listado_productos.aspx?sede=McGregor" class="text-decoration-none  text-dark">
             <div class="store border rounded p-3 m-2" style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <h5>Tienda Mc Gregor</h5>
                 <p>Ubicado en el pabellón N</p>
@@ -71,7 +71,7 @@
             </div>
         </a>
 
-        <a href="../Productos/listado_productos.aspx?sede=GeneralesCiencias" class="text-decoration-none  text-dark">
+        <a href="../Cliente/listado_productos.aspx?sede=GeneralesCiencias" class="text-decoration-none  text-dark">
             <div class="store border rounded p-3 m-2" style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <h5>Tiendas Generales Ciencias</h5>
                 <p>Ubicado en el pabellón E</p>

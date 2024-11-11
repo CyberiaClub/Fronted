@@ -57,7 +57,7 @@
                        <!-- Categoría: Arte -->
                            <div class="col-md-6 mb-4">
                                <div class="card border-0">
-                                   <a href="../Productos/listado_productos.aspx?categoria=Arte" class="text-decoration-none"> 
+                                   <a href="../Cliente/listado_productos.aspx?categoria=Arte" class="text-decoration-none"> 
                                        <img src="../Imagenes/arte.png" class="card-img-top rounded-img mx-auto" alt="Arte">
                                        <div class="card-body">
                                            <h5 class="card-title category-title font-regular">Arte</h5>
@@ -70,7 +70,7 @@
                        <!-- Categoría: Arquitectura -->
                        <div class="col-md-6 mb-4">
                            <div class="card border-0">
-                               <a href="../Productos/listado_productos.aspx?categoria=Arquitectura" class="text-decoration-none">
+                               <a href="/Cliente/listado_productos.aspx?categoria=Arquitectura" class="text-decoration-none">
                                    <img src="../Imagenes/arquitectura.png" class="card-img-top rounded-img mx-auto" alt="Arquitectura">
                                    <div class="card-body">
                                        <h5 class="card-title  category-title font-regular">Arquitectura</h5>
@@ -82,7 +82,7 @@
                        <!-- Categoría: Educación -->
                        <div class="col-md-6 mb-4">
                            <div class="card border-0">
-                               <a href="../Productos/listado_productos.aspx?categoria=Educación" class="text-decoration-none">
+                               <a href="../Cliente/listado_productos.aspx?categoria=Educación" class="text-decoration-none">
                                    <img src="../Imagenes/educacion.jpg" class="card-img-top rounded-img mx-auto" alt="Educación">
                                    <div class="card-body">
                                        <h5 class="card-title  category-title font-regular">Educación</h5>
@@ -94,7 +94,7 @@
                        <!-- Categoría: Oficina -->
                        <div class="col-md-6 mb-4">
                            <div class="card border-0">
-                               <a href="../Productos/listado_productos.aspx?categoria=Oficina" class="text-decoration-none">
+                               <a href="../Cliente/listado_productos.aspx?categoria=Oficina" class="text-decoration-none">
                                    <img src="../Imagenes/oficina.jpg" class="card-img-top rounded-img mx-auto" alt="Oficina">
                                    <div class="card-body">
                                        <h5 class="card-title  category-title font-regular">Oficina</h5>
