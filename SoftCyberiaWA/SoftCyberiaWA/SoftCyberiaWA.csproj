@@ -346,6 +346,9 @@
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.producto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.producto_insertar2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.producto_insertarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
