@@ -7,29 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SoftCyberiaWA.Cliente
+namespace SoftCyberiaWA
 {
 
 
-    public partial class IndexCliente
+    public partial class detalle_carro_de_compras
     {
 
         /// <summary>
-        /// Control categoriaPanel.
+        /// Control btnHistorialCompras.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel categoriaPanel;
+        protected global::System.Web.UI.WebControls.Button btnHistorialCompras;
 
         /// <summary>
-        /// Control marcaContainer.
+        /// Control btnSeguirComprando.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel marcaContainer;
+        protected global::System.Web.UI.WebControls.Button btnSeguirComprando;
     }
 }

@@ -7,29 +7,20 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SoftCyberiaWA.Cliente
+namespace SoftCyberiaWA
 {
 
 
-    public partial class IndexCliente
+    public partial class listado_sedes
     {
 
         /// <summary>
-        /// Control categoriaPanel.
+        /// Control storeList.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel categoriaPanel;
-
-        /// <summary>
-        /// Control marcaContainer.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel marcaContainer;
+        protected global::System.Web.UI.WebControls.PlaceHolder storeList;
     }
 }

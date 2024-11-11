@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="CyberiaWS" targetNamespace="CyberiaWS" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="sede_insertar" type="tns:sede_insertar" />
+  <xs:element name="sede_insertarResponse" type="tns:sede_insertarResponse" />
+  <xs:element name="sede_listar" type="tns:sede_listar" />
+  <xs:element name="sede_listarResponse" type="tns:sede_listarResponse" />
+  <xs:element name="sede_modificar" type="tns:sede_modificar" />
+  <xs:element name="sede_modificarResponse" type="tns:sede_modificarResponse" />
+  <xs:complexType name="sede_modificar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sede" type="tns:sede" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="horarioApertura" type="tns:localTime" />
+      <xs:element minOccurs="0" name="horarioCierre" type="tns:localTime" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="localTime" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="sede_modificarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sede_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="sede_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sede" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sede_insertar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sede" type="tns:sede" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sede_insertarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
