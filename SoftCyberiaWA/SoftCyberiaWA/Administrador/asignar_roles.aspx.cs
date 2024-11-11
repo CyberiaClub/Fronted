@@ -13,5 +13,12 @@ namespace SoftCyberiaWA
         {
 
         }
+
+        protected void btnAsignar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

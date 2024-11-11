@@ -15,6 +15,15 @@ namespace SoftCyberiaWA
     {
 
         /// <summary>
+        /// lblTipoDocumento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTipoDocumento;
+
+        /// <summary>
         /// tipo_documento control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace SoftCyberiaWA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList tipo_documento;
+
+        /// <summary>
+        /// lblDocumento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDocumento;
 
         /// <summary>
         /// dni control.
@@ -33,13 +51,13 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.TextBox dni;
 
         /// <summary>
-        /// btnProcesar control.
+        /// lblNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProcesar;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
         /// nombre control.
@@ -51,6 +69,15 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.TextBox nombre;
 
         /// <summary>
+        /// lblCorreo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCorreo;
+
+        /// <summary>
         /// correo control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace SoftCyberiaWA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox correo;
+
+        /// <summary>
+        /// lblTelefono control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTelefono;
 
         /// <summary>
         /// telefono control.
@@ -69,6 +105,15 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.TextBox telefono;
 
         /// <summary>
+        /// lblDireccion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDireccion;
+
+        /// <summary>
         /// direccion control.
         /// </summary>
         /// <remarks>
@@ -76,6 +121,15 @@ namespace SoftCyberiaWA
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox direccion;
+
+        /// <summary>
+        /// lblRol control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRol;
 
         /// <summary>
         /// rol control.

@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/ClienteWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="cliente_modificar">
-    <part name="parameters" element="tns:cliente_modificar" />
-  </message>
-  <message name="cliente_modificarResponse">
-    <part name="parameters" element="tns:cliente_modificarResponse" />
-  </message>
   <message name="cliente_insertar">
     <part name="parameters" element="tns:cliente_insertar" />
   </message>
@@ -23,11 +17,13 @@
   <message name="cliente_listarResponse">
     <part name="parameters" element="tns:cliente_listarResponse" />
   </message>
+  <message name="cliente_modificar">
+    <part name="parameters" element="tns:cliente_modificar" />
+  </message>
+  <message name="cliente_modificarResponse">
+    <part name="parameters" element="tns:cliente_modificarResponse" />
+  </message>
   <portType name="ClienteWS">
-    <operation name="cliente_modificar">
-      <input wsam:Action="CyberiaWS/ClienteWS/cliente_modificarRequest" message="tns:cliente_modificar" />
-      <output wsam:Action="CyberiaWS/ClienteWS/cliente_modificarResponse" message="tns:cliente_modificarResponse" />
-    </operation>
     <operation name="cliente_insertar">
       <input wsam:Action="CyberiaWS/ClienteWS/cliente_insertarRequest" message="tns:cliente_insertar" />
       <output wsam:Action="CyberiaWS/ClienteWS/cliente_insertarResponse" message="tns:cliente_insertarResponse" />
@@ -36,18 +32,13 @@
       <input wsam:Action="CyberiaWS/ClienteWS/cliente_listarRequest" message="tns:cliente_listar" />
       <output wsam:Action="CyberiaWS/ClienteWS/cliente_listarResponse" message="tns:cliente_listarResponse" />
     </operation>
+    <operation name="cliente_modificar">
+      <input wsam:Action="CyberiaWS/ClienteWS/cliente_modificarRequest" message="tns:cliente_modificar" />
+      <output wsam:Action="CyberiaWS/ClienteWS/cliente_modificarResponse" message="tns:cliente_modificarResponse" />
+    </operation>
   </portType>
   <binding name="ClienteWSPortBinding" type="tns:ClienteWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="cliente_modificar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="cliente_insertar">
       <soap:operation soapAction="" />
       <input>
@@ -58,6 +49,15 @@
       </output>
     </operation>
     <operation name="cliente_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cliente_modificar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

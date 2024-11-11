@@ -19,9 +19,27 @@ namespace SoftCyberiaWA
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //para que la fecha de registro lo tome automatico del sistema
-            //registerDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            if (!IsPostBack)
+            {
+                CargarMarcas();
+                CargarCategoria();
+            }
         }
+
+        private void CargarCategoria()
+        {
+            List<string> marcas = listar_categorias(); // Llamar al método que obtiene las marcas
+            marcaName.DataSource = marcas; // Asignar la lista como fuente de datos
+            marcaName.DataBind(); // Llenar el DropDownList
+        }
+
+        private void CargarMarcas()
+        {
+            List<string> marcas = listar_marcas(); // Llamar al método que obtiene las marcas
+            marcaName.DataSource = marcas; // Asignar la lista como fuente de datos
+            marcaName.DataBind(); // Llenar el DropDownList
+        }
+
 
         protected void lbGuardar_Click(object sender, EventArgs e)
         {
@@ -44,5 +62,18 @@ namespace SoftCyberiaWA
             this.daoProducto.producto_insertar2(producto, p);
 
         }
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
 }

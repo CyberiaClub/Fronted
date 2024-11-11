@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="CyberiaWS" targetNamespace="CyberiaWS" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="producto_insertar" type="tns:producto_insertar" />
-  <xs:element name="producto_insertar2" type="tns:producto_insertar2" />
-  <xs:element name="producto_insertar2Response" type="tns:producto_insertar2Response" />
   <xs:element name="producto_insertarResponse" type="tns:producto_insertarResponse" />
   <xs:element name="producto_listar" type="tns:producto_listar" />
   <xs:element name="producto_listarResponse" type="tns:producto_listarResponse" />
   <xs:element name="producto_modificar" type="tns:producto_modificar" />
   <xs:element name="producto_modificarResponse" type="tns:producto_modificarResponse" />
-  <xs:complexType name="producto_insertar2">
+  <xs:complexType name="producto_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="producto_listarResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="producto" type="tns:producto" />
-      <xs:element minOccurs="0" name="precio" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="producto">
@@ -30,19 +30,6 @@
       <xs:element minOccurs="0" name="precioProveedor" type="xs:double" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="productosMiembros" nillable="true" type="tns:producto" />
       <xs:element minOccurs="0" name="sku" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="producto_insertar2Response">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="producto_listar">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="producto_listarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="producto_insertar">

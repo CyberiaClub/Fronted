@@ -11,30 +11,30 @@
   <message name="boleta_insertarResponse">
     <part name="parameters" element="tns:boleta_insertarResponse" />
   </message>
-  <message name="boleta_eliminar">
-    <part name="parameters" element="tns:boleta_eliminar" />
-  </message>
-  <message name="boleta_eliminarResponse">
-    <part name="parameters" element="tns:boleta_eliminarResponse" />
-  </message>
   <message name="boleta_listar">
     <part name="parameters" element="tns:boleta_listar" />
   </message>
   <message name="boleta_listarResponse">
     <part name="parameters" element="tns:boleta_listarResponse" />
   </message>
+  <message name="boleta_eliminar">
+    <part name="parameters" element="tns:boleta_eliminar" />
+  </message>
+  <message name="boleta_eliminarResponse">
+    <part name="parameters" element="tns:boleta_eliminarResponse" />
+  </message>
   <portType name="BoletaWS">
     <operation name="boleta_insertar">
       <input wsam:Action="CyberiaWS/BoletaWS/boleta_insertarRequest" message="tns:boleta_insertar" />
       <output wsam:Action="CyberiaWS/BoletaWS/boleta_insertarResponse" message="tns:boleta_insertarResponse" />
     </operation>
-    <operation name="boleta_eliminar">
-      <input wsam:Action="CyberiaWS/BoletaWS/boleta_eliminarRequest" message="tns:boleta_eliminar" />
-      <output wsam:Action="CyberiaWS/BoletaWS/boleta_eliminarResponse" message="tns:boleta_eliminarResponse" />
-    </operation>
     <operation name="boleta_listar">
       <input wsam:Action="CyberiaWS/BoletaWS/boleta_listarRequest" message="tns:boleta_listar" />
       <output wsam:Action="CyberiaWS/BoletaWS/boleta_listarResponse" message="tns:boleta_listarResponse" />
+    </operation>
+    <operation name="boleta_eliminar">
+      <input wsam:Action="CyberiaWS/BoletaWS/boleta_eliminarRequest" message="tns:boleta_eliminar" />
+      <output wsam:Action="CyberiaWS/BoletaWS/boleta_eliminarResponse" message="tns:boleta_eliminarResponse" />
     </operation>
   </portType>
   <binding name="BoletaWSPortBinding" type="tns:BoletaWS">
@@ -48,7 +48,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="boleta_eliminar">
+    <operation name="boleta_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -57,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="boleta_listar">
+    <operation name="boleta_eliminar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

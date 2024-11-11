@@ -37,11 +37,14 @@ body {
 /* Estilos para la barra lateral */
 .sidebar {
     background-color: var(--sidebar-bg);
-    min-height: 100vh;
-    padding: 20px;
     color: var(--text-light-color);
     position: fixed;
     width: 250px;
+    max-height: 100vh; /* Limita la altura a la altura de la ventana */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease; /* Transición suave para el colapso */
 }
 
     .sidebar img {
@@ -66,6 +69,18 @@ body {
             color: var(--text-white-color);
         }
 
+.sidebar-inner {
+    padding: 10px; /* Espaciado interno */
+}
+
+.sidebar-menu {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin márgenes */
+}
+
+
+
 /* Estilos para el contenido principal */
 .main-content {
     margin-left: 270px;
@@ -83,13 +98,6 @@ body {
     width: 100%;
     color: var(--text-light-color);
     text-align: center;
-}
-/* Estilos para la imagen del logo */
-.logo-cyberia {
-    width: 150px; /* Ajusta el tamaño según tus necesidades */
-    height: auto; /* Mantiene las proporciones originales */
-    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin distorsionarse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional para darle más estilo */
 }
 
 //LISTADO STOCK
@@ -290,5 +298,3 @@ input[type="text"] {
     .register-button:hover {
         background-color: #003a7a;
     }
-
-

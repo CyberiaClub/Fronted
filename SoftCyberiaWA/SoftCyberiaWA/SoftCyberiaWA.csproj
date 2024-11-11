@@ -153,6 +153,7 @@
     <Content Include="Cliente\detalle_carro_de_compras.aspx" />
     <Content Include="Cliente\detalle_historial_de_compras.aspx" />
     <Content Include="Imagenes\empty-cart.png" />
+    <Content Include="Imagenes\proveedor.png" />
     <Content Include="Imagenes\pucp.png" />
     <Content Include="Productos\detalle_producto8.aspx" />
     <Content Include="Productos\detalle_producto7.aspx" />
@@ -412,9 +413,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.vendedor_modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.producto_insertar2Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\CyberiaWS\TipoProductoWS.wsdl" />
