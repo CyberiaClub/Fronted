@@ -428,6 +428,8 @@
     <Content Include="Scripts\validar_inicio_sesion.js" />
     <Content Include="Vendedor\IndexVendedor.aspx" />
     <Content Include="Cliente\vista_perfil_cliente.aspx" />
+    <Content Include="Vendedor\listado_pedidos.aspx" />
+    <Content Include="Vendedor\listado_stock.aspx" />
     <Content Include="Web.config" />
     <Content Include="Vendedor\SoftCyberiaVendedor.Master" />
   </ItemGroup>
@@ -587,6 +589,20 @@
     </Compile>
     <Compile Include="Vendedor\IndexVendedor.aspx.designer.cs">
       <DependentUpon>IndexVendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\listado_pedidos.aspx.cs">
+      <DependentUpon>listado_pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\listado_pedidos.aspx.designer.cs">
+      <DependentUpon>listado_pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendedor\listado_stock.aspx.cs">
+      <DependentUpon>listado_stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendedor\listado_stock.aspx.designer.cs">
+      <DependentUpon>listado_stock.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vendedor\SoftCyberiaVendedor.Master.cs">
       <DependentUpon>SoftCyberiaVendedor.Master</DependentUpon>

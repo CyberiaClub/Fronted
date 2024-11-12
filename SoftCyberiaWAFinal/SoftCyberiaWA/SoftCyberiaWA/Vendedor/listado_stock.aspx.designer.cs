@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftCyberiaWA.Administrador
+namespace SoftCyberiaWA.Vendedor
 {
 
 
-    public partial class registrar_nuevos_proveedores
+    public partial class listado_stock
     {
 
         /// <summary>
@@ -24,93 +24,66 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.Label lblTitulo;
 
         /// <summary>
-        /// providerRUC control.
+        /// skuName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox providerRUC;
+        protected global::System.Web.UI.WebControls.TextBox skuName;
 
         /// <summary>
-        /// nombreProveedor control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombreProveedor;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// razonSocial control.
+        /// panelDetallesProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox razonSocial;
+        protected global::System.Web.UI.WebControls.Panel panelDetallesProducto;
 
         /// <summary>
-        /// phone control.
+        /// lblNombreProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox phone;
+        protected global::System.Web.UI.WebControls.Label lblNombreProducto;
 
         /// <summary>
-        /// email control.
+        /// lblDescripcionProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.Label lblDescripcionProducto;
 
         /// <summary>
-        /// address control.
+        /// lblPrecioProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox address;
+        protected global::System.Web.UI.WebControls.Label lblPrecioProducto;
 
         /// <summary>
-        /// products control.
+        /// gvInventarioSedes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox products;
-
-        /// <summary>
-        /// lbnuevoProveedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbnuevoProveedor;
-
-        /// <summary>
-        /// imgNuevoProveedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgNuevoProveedor;
-
-        /// <summary>
-        /// registerButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerButton;
+        protected global::System.Web.UI.WebControls.GridView gvInventarioSedes;
     }
 }

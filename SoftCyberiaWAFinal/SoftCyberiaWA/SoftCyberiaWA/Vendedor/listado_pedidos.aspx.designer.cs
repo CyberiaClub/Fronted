@@ -11,34 +11,43 @@ namespace SoftCyberiaWA.Vendedor
 {
 
 
-    public partial class SoftCyberiaVendedor
+    public partial class listado_pedidos
     {
 
         /// <summary>
-        /// head control.
+        /// panelPedidos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Panel panelPedidos;
 
         /// <summary>
-        /// cphStyle control.
+        /// gvPedidos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphStyle;
+        protected global::System.Web.UI.WebControls.GridView gvPedidos;
 
         /// <summary>
-        /// ContentPlaceHolder3 control.
+        /// panelDetallePedido control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
+        protected global::System.Web.UI.WebControls.Panel panelDetallePedido;
+
+        /// <summary>
+        /// gvDetalleProductos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvDetalleProductos;
     }
 }

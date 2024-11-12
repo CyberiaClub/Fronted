@@ -53,7 +53,7 @@
                     <div class="col-md-6 text-center d-flex flex-column align-items-center justify-content-center">
                         <asp:Label ID="lbnuevoProveedor" runat="server" Text="Nuevo Proveedor:" CssClass="fw-bold d-block mb-3"></asp:Label>
                         <asp:Image ID="imgNuevoProveedor" runat="server" CssClass="img-fluid img-thumbnail mb-3" ImageUrl="/Imagenes/proveedor.png" Height="250px" Width="250px" />
-                        <asp:FileUpload ID="fileUploadNuevoProveedor" CssClass="form-control mb-3 w-75" runat="server" />
+                        
                         <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="registerButton_Click" />
                     </div>
 
