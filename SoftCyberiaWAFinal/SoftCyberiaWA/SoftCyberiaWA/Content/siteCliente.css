@@ -227,3 +227,65 @@ hr {
     .btn-secondary:hover {
         background-color: #aaa;
     }
+
+    /*diseño cateogria del index 2x2*/
+/* Carrusel de categorías estilo 2x2 */
+.carousel-categories-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 700px; /* Ajusta el ancho máximo según el diseño */
+    margin: auto;
+}
+
+.carousel-categories {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo para el carrusel */
+    scroll-behavior: smooth;
+}
+
+.category-item {
+    flex: 0 0 50%; /* Tamaño de cada elemento para que se muestre en formato 2x2 */
+    max-width: 50%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+    .category-item img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%; /* Hace las imágenes redondas */
+    }
+
+/* Controles del carrusel (flechas) */
+.carousel-control-prev,
+.carousel-control-next {
+    background: none; /* Elimina el fondo del botón */
+    border: none; /* Elimina el borde del botón */
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Centra verticalmente el botón */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    color: #007bff; /* Color azul celeste para la flecha */
+    font-size: 2rem; /* Tamaño de la flecha */
+    z-index: 10; /* Asegura que las flechas estén por encima del contenido */
+}
+
+.carousel-control-prev {
+    left: -20px; /* Ajusta la posición de la flecha izquierda */
+}
+
+.carousel-control-next {
+    right: -20px; /* Ajusta la posición de la flecha derecha */
+}
+
+    /* Efecto hover para las flechas */
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        color: #0056b3; /* Cambia a un azul más oscuro al pasar el cursor */
+    }

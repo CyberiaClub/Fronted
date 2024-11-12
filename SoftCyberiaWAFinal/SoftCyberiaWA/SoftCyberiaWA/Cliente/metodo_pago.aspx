@@ -29,7 +29,11 @@
                <img src="/Imagenes/pagoefectivo-icon.png" alt="PagoEfectivo" />
                <span>PagoEfectivo</span>
            </div>
+           <!-- Botón Volver en la esquina inferior izquierda -->
+           <asp:Button ID="btnVolver" runat="server" CssClass="btn btn-secondary" Text="Volver" OnClick="btnVolver_Click" />
        </div>
+
+       
 
        <div class="payment-summary">
            <h3>Resumen de la compra</h3>
