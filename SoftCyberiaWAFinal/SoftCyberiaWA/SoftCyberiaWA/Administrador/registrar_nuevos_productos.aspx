@@ -44,7 +44,7 @@
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblProvider" runat="server" Text="Proveedor:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="providerTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:DropDownList ID="providerName" runat="server" CssClass="form-control"></asp:DropDownList>
                         </div>
 
                     </div>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblSede" runat="server" Text="Sede:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="sedeTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:DropDownList ID="sedeName" runat="server" CssClass="form-control"></asp:DropDownList>
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblDescription" runat="server" Text="Descripción del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
