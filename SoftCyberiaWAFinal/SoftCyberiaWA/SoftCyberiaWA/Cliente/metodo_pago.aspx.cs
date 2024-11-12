@@ -14,5 +14,9 @@ namespace SoftCyberiaWA
 
         }
 
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("detalle_carro_de_compras.aspx");
+        }
     }
 }

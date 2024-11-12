@@ -15,14 +15,11 @@ namespace SoftCyberiaWA
     public partial class listado_productos : System.Web.UI.Page
     {
         private ProductoWSClient daoProducto = new ProductoWSClient();
+        private TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //modo 1
-            //if (!IsPostBack)
-            //{
-            //    CargarProductos();
-            //}
+
 
             //modo 2
             //if (!IsPostBack)
@@ -35,6 +32,7 @@ namespace SoftCyberiaWA
 
             //    CargarProductos(idSede);
             //}
+            CargarTiposDeProductos();
             if (!IsPostBack)
             {
                 // Obtiene el parámetro de la sede desde la URL
@@ -49,10 +47,35 @@ namespace SoftCyberiaWA
                         $"    if (sedeCheckbox) sedeCheckbox.checked = true;" +
                         $"}});", true);
                 }
+                // Cargar tipos de productos en los filtros
+                
 
                 CargarProductos();
             }
 
+        }
+
+        private void CargarTiposDeProductos()
+        {
+            // Llama al método para obtener los tipos de productos desde el backend
+            tipoProducto[] tiposDeProductos = this.daoTipoProducto.tipoProducto_listar();
+
+            foreach (tipoProducto tipo in tiposDeProductos)
+            {
+                // Reemplazar espacios con guiones bajos en el nombre del tipo de producto para el valor del filtro
+                string tipoValue = tipo.tipo.Replace(" ", "_");
+
+                // Crear el contenedor HTML del filtro de tipo de producto
+                Literal tipoHtml = new Literal();
+                tipoHtml.Text = $@"
+        <div class='form-check'>
+            <input class='form-check-input' type='checkbox' name='categoria' value='{tipoValue}' id='tipo{tipo.idTipoProducto}' onchange='applyFilters()' data-categoria='{tipoValue}'>
+            <label class='form-check-label' for='tipo{tipo.idTipoProducto}'>{tipo.tipo}</label>
+        </div>";
+
+                // Agregar el HTML generado al contenedor de filtros en la página
+                filtrosTipoProducto.Controls.Add(tipoHtml);
+            }
         }
         //modo 1
         //private void CargarProductos()
@@ -104,7 +127,9 @@ namespace SoftCyberiaWA
                     <div class='col-md-4 mb-4' data-category='{prod.idTipo}' data-price='{prod.precio}'>
                         <a href='detalle_producto.aspx?id={prod.idProducto}' class='text-decoration-none'>
                             <div class='card'>
-                                <img src='{imageSrc}' class='card-img-top' alt='{prod.nombre}'>
+                                <div class='card-img-container'>
+                                    <img src='{imageSrc}' class='card-img-top' alt='{prod.nombre}'>
+                                </div>
                                 <div class='card-body'>
                                     <h6 class='card-title'>{prod.nombre}</h6>
                                     <p class='card-text'>S/{prod.precio:F2}</p>
