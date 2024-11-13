@@ -78,8 +78,10 @@
     <Content Include="Administrador\registrar_nueva_marca.aspx" />
     <Content Include="Administrador\registrar_nuevos_productos.aspx" />
     <Content Include="Administrador\registrar_nuevos_proveedores.aspx" />
+    <Content Include="Almacenero\indexAlmacenero.aspx" />
     <Content Include="Cliente\boleta_pago.aspx" />
     <Content Include="Cliente\IndexCliente.aspx" />
+    <Content Include="Almacenero\Almacenero.Master" />
     <None Include="Connected Services\CyberiaWS\AdministradorWS.wsdl" />
     <None Include="Connected Services\CyberiaWS\AdministradorWS.xsd">
       <SubType>Designer</SubType>
@@ -489,6 +491,20 @@
     </Compile>
     <Compile Include="Administrador\SoftCyberiaAdministrador.Master.designer.cs">
       <DependentUpon>SoftCyberiaAdministrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Almacenero\Almacenero.Master.cs">
+      <DependentUpon>Almacenero.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacenero\Almacenero.Master.designer.cs">
+      <DependentUpon>Almacenero.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Almacenero\indexAlmacenero.aspx.cs">
+      <DependentUpon>indexAlmacenero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacenero\indexAlmacenero.aspx.designer.cs">
+      <DependentUpon>indexAlmacenero.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cliente\boleta_pago.aspx.cs">
       <DependentUpon>boleta_pago.aspx</DependentUpon>
