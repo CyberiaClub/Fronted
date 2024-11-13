@@ -27,7 +27,7 @@
                         <div class="pb-3">
                             <asp:Label ID="lblDocumento" runat="server" Text="Número de documento de identidad:" CssClass="col-form-label fw-bold"></asp:Label>
                             <div class="d-flex">
-                                <asp:TextBox ID="dni" runat="server" CssClass="form-control mr-2"></asp:TextBox>
+                                <asp:TextBox ID="dni" runat="server" CssClass="form-control mr-2" AutoPostBack="True" OnTextChanged="dni_Ingresado"></asp:TextBox>
                             </div>
                         </div>
                         <div class="pb-3">
@@ -52,7 +52,6 @@
                                 <asp:ListItem Value="0">Seleccione un rol</asp:ListItem>
                                 <asp:ListItem Value="1">Vendedor</asp:ListItem>
                                 <asp:ListItem Value="2">Almacén</asp:ListItem>
-                                <asp:ListItem Value="3">Cliente</asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>

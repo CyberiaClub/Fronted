@@ -401,7 +401,7 @@
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.vendedor_modificarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.producto_buscar_cantidad_sedesResponse.datasource">
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.cliente_buscar_por_documentoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\CyberiaWS\TipoProductoWS.wsdl" />

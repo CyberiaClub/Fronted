@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/FacturaWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="factura_listar">
-    <part name="parameters" element="tns:factura_listar" />
-  </message>
-  <message name="factura_listarResponse">
-    <part name="parameters" element="tns:factura_listarResponse" />
-  </message>
   <message name="factura_insertar">
     <part name="parameters" element="tns:factura_insertar" />
   </message>
@@ -23,11 +17,13 @@
   <message name="factura_eliminarResponse">
     <part name="parameters" element="tns:factura_eliminarResponse" />
   </message>
+  <message name="factura_listar">
+    <part name="parameters" element="tns:factura_listar" />
+  </message>
+  <message name="factura_listarResponse">
+    <part name="parameters" element="tns:factura_listarResponse" />
+  </message>
   <portType name="FacturaWS">
-    <operation name="factura_listar">
-      <input wsam:Action="CyberiaWS/FacturaWS/factura_listarRequest" message="tns:factura_listar" />
-      <output wsam:Action="CyberiaWS/FacturaWS/factura_listarResponse" message="tns:factura_listarResponse" />
-    </operation>
     <operation name="factura_insertar">
       <input wsam:Action="CyberiaWS/FacturaWS/factura_insertarRequest" message="tns:factura_insertar" />
       <output wsam:Action="CyberiaWS/FacturaWS/factura_insertarResponse" message="tns:factura_insertarResponse" />
@@ -36,18 +32,13 @@
       <input wsam:Action="CyberiaWS/FacturaWS/factura_eliminarRequest" message="tns:factura_eliminar" />
       <output wsam:Action="CyberiaWS/FacturaWS/factura_eliminarResponse" message="tns:factura_eliminarResponse" />
     </operation>
+    <operation name="factura_listar">
+      <input wsam:Action="CyberiaWS/FacturaWS/factura_listarRequest" message="tns:factura_listar" />
+      <output wsam:Action="CyberiaWS/FacturaWS/factura_listarResponse" message="tns:factura_listarResponse" />
+    </operation>
   </portType>
   <binding name="FacturaWSPortBinding" type="tns:FacturaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="factura_listar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="factura_insertar">
       <soap:operation soapAction="" />
       <input>
@@ -58,6 +49,15 @@
       </output>
     </operation>
     <operation name="factura_eliminar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="factura_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

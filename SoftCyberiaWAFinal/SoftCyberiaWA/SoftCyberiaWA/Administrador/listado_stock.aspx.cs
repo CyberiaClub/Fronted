@@ -21,10 +21,9 @@ namespace SoftCyberiaWA.Administrador
         {
             string sku = SKU.Text.Trim();
             // falta validad el sku
-            producto[] productos = daoProducto.producto_buscar_cantidad_sedes(sku);
+            producto[] productos = daoProducto.producto_listar();
 
-            
-            if (productos != null && productos.Length > 0) 
+            if (productos != null && productos.Length > 0)
             {
                 gvInventarioSedes.DataSource = productos;
                 gvInventarioSedes.DataBind();
