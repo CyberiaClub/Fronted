@@ -1,4 +1,4 @@
-<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -79,6 +79,7 @@
     <Content Include="Administrador\registrar_nueva_marca.aspx" />
     <Content Include="Administrador\registrar_nuevos_productos.aspx" />
     <Content Include="Administrador\registrar_nuevos_proveedores.aspx" />
+    <Content Include="Administrador\registrar_produtco_compuesto.aspx" />
     <Content Include="Almacenero\indexAlmacenero.aspx" />
     <Content Include="Cliente\boleta_pago.aspx" />
     <Content Include="Cliente\IndexCliente.aspx" />
@@ -492,6 +493,13 @@
     </Compile>
     <Compile Include="Administrador\registrar_nuevos_proveedores.aspx.designer.cs">
       <DependentUpon>registrar_nuevos_proveedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\registrar_produtco_compuesto.aspx.cs">
+      <DependentUpon>registrar_produtco_compuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\registrar_produtco_compuesto.aspx.designer.cs">
+      <DependentUpon>registrar_produtco_compuesto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\SoftCyberiaAdministrador.Master.cs">
       <DependentUpon>SoftCyberiaAdministrador.Master</DependentUpon>
