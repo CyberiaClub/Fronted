@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrador\actualizar_stock.aspx" />
     <Content Include="Administrador\asignar_oferta.aspx" />
     <Content Include="Administrador\asignar_roles.aspx" />
     <Content Include="Administrador\detalle_reporte.aspx" />
@@ -81,6 +82,8 @@
     <Content Include="Administrador\registrar_nuevos_proveedores.aspx" />
     <Content Include="Administrador\registrar_produtco_compuesto.aspx" />
     <Content Include="Almacenero\indexAlmacenero.aspx" />
+    <Content Include="Almacenero\listado_pedidos.aspx" />
+    <Content Include="Almacenero\listado_stock.aspx" />
     <Content Include="Cliente\boleta_pago.aspx" />
     <Content Include="Cliente\IndexCliente.aspx" />
     <Content Include="Almacenero\Almacenero.Master" />
@@ -431,6 +434,13 @@
     <Content Include="Vendedor\SoftCyberiaVendedor.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\actualizar_stock.aspx.cs">
+      <DependentUpon>actualizar_stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\actualizar_stock.aspx.designer.cs">
+      <DependentUpon>actualizar_stock.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\asignar_oferta.aspx.cs">
       <DependentUpon>asignar_oferta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -521,6 +531,20 @@
     </Compile>
     <Compile Include="Almacenero\indexAlmacenero.aspx.designer.cs">
       <DependentUpon>indexAlmacenero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Almacenero\listado_pedidos.aspx.cs">
+      <DependentUpon>listado_pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacenero\listado_pedidos.aspx.designer.cs">
+      <DependentUpon>listado_pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Almacenero\listado_stock.aspx.cs">
+      <DependentUpon>listado_stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacenero\listado_stock.aspx.designer.cs">
+      <DependentUpon>listado_stock.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cliente\boleta_pago.aspx.cs">
       <DependentUpon>boleta_pago.aspx</DependentUpon>

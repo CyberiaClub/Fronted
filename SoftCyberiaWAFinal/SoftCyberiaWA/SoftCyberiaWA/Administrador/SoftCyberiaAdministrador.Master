@@ -61,11 +61,13 @@
 
                     <a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>
 
-                    <a href="asignar_roles.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Asignar Rol</a>
+                    <a href="actualizar_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Actualizar Stock</a>
 
                     <a href="asignar_oferta.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Asignar Oferta</a>
                     
                     <a href="registrar_produtco_compuesto.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Producto Compuesto</a>
+
+                     <a href="asignar_roles.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Asignar Rol</a>
 
                     <a href="detalle_reporte.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Generar reporte</a>
                 </li>
