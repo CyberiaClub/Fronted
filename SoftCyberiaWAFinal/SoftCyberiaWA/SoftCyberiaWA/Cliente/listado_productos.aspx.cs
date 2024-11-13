@@ -154,7 +154,7 @@ namespace SoftCyberiaWA
                                 <div class='card-body'>
                                     <h6 class='card-title'>{prod.nombre}</h6>
                                     <p class='card-text'>S/{prod.precio:F2}</p>
-                                    //<h6 class='card-title'>{prod.idSede}</h6>
+                                 
                                 </div>
                             </div>
                         </a>
