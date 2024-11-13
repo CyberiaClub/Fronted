@@ -33,7 +33,6 @@
       <xs:element minOccurs="0" name="idTipo" type="xs:int" />
       <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="nombreSede" type="xs:string" />
       <xs:element minOccurs="0" name="precio" type="xs:double" />
       <xs:element minOccurs="0" name="precioProveedor" type="xs:double" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="productosMiembros" nillable="true" type="tns:producto" />
@@ -43,14 +42,6 @@
   <xs:complexType name="pedido_eliminarResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="pedido_listar">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="pedido_listarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="pedido_insertar">
     <xs:sequence>
       <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
@@ -59,6 +50,14 @@
   <xs:complexType name="pedido_insertarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pedido_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="pedido_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pedido" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="pedido_modificar">

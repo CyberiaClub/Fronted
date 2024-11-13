@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="CyberiaWS" targetNamespace="CyberiaWS" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cliente_buscar_por_documento" type="tns:cliente_buscar_por_documento" />
+  <xs:element name="cliente_buscar_por_documentoResponse" type="tns:cliente_buscar_por_documentoResponse" />
   <xs:element name="cliente_insertar" type="tns:cliente_insertar" />
   <xs:element name="cliente_insertarResponse" type="tns:cliente_insertarResponse" />
   <xs:element name="cliente_listar" type="tns:cliente_listar" />
@@ -43,6 +45,16 @@
   <xs:complexType name="cliente_insertarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_buscar_por_documento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="documento" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_buscar_por_documentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="cliente_modificar">
