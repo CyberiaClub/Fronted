@@ -9,7 +9,6 @@
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/AlmaceneroWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/VendedorWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/ClienteWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/RolWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/BoletaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/FacturaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />

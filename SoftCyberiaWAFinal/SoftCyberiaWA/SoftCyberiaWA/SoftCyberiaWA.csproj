@@ -229,10 +229,6 @@
     <None Include="Connected Services\CyberiaWS\ProveedorWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CyberiaWS\RolWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\RolWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\CyberiaWS\SedeWS.wsdl" />
     <None Include="Connected Services\CyberiaWS\SedeWS.xsd">
       <SubType>Designer</SubType>
@@ -366,12 +362,6 @@
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.proveedor_modificarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.rol.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.rol_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.sede.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -409,6 +399,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.vendedor_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.producto_buscar_cantidad_sedesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\CyberiaWS\TipoProductoWS.wsdl" />
@@ -518,11 +511,6 @@
     <Compile Include="Cliente\SoftCyberiaCliente.Master.designer.cs">
       <DependentUpon>SoftCyberiaCliente.Master</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\CyberiaWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Cliente\detalle_carro_de_compras.aspx.cs">
       <DependentUpon>detalle_carro_de_compras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -550,6 +538,11 @@
     </Compile>
     <Compile Include="Cliente\detalle_producto2.aspx.designer.cs">
       <DependentUpon>detalle_producto2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CyberiaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

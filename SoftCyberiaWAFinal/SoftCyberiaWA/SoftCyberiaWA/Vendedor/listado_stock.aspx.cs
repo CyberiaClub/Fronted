@@ -10,7 +10,7 @@ namespace SoftCyberiaWA.Vendedor
 {
     public partial class listado_stock : System.Web.UI.Page
     {
-        private ProductoWS daoProducto = new ProductoWS();
+        private ProductoWSClient daoProducto = new ProductoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,25 +26,26 @@ namespace SoftCyberiaWA.Vendedor
 
             if (!string.IsNullOrEmpty(sku))
             {
-                // Buscar el producto por SKU
-                Producto producto = daoProducto.buscar_producto_sku(sku);
-
-                if (producto != null)
+                // Buscar el _producto por SKU
+                // falta implementar
+                //producto _producto = daoProducto.buscar_producto_sku(sku);
+                producto _producto = new producto();
+                if (_producto != null)
                 {
-                    // Mostrar detalles del producto
-                    lblNombreProducto.Text = producto.Sede;
-                    lblDescripcionProducto.Text = producto.Cantidad;
+                    // Mostrar detalles del _producto
+                    //lblNombreProducto.Text = _producto.Sede;
+                    //lblDescripcionProducto.Text = _producto.Cantidad;
 
                     // Cargar el inventario en el GridView
-                    gvInventarioSedes.DataSource = producto.InventarioPorSede;
+                    //gvInventarioSedes.DataSource = _producto.InventarioPorSede;
                     gvInventarioSedes.DataBind();
 
-                    // Hacer visible el panel de detalles del producto
+                    // Hacer visible el panel de detalles del _producto
                     panelDetallesProducto.Visible = true;
                 }
                 else
                 {
-                    // Ocultar el panel y mostrar mensaje si el producto no se encuentra
+                    // Ocultar el panel y mostrar mensaje si el _producto no se encuentra
                     panelDetallesProducto.Visible = false;
                     ScriptManager.RegisterStartupScript(this, GetType(), "alert", "alert('Producto no encontrado');", true);
                 }
