@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,10 +14,12 @@ namespace SoftCyberiaWA.Administrador
         private AlmaceneroWSClient daoAlmacenero = new AlmaceneroWSClient();
         private VendedorWSClient daoVendedor = new VendedorWSClient();
         private ClienteWSClient daoCliente = new ClienteWSClient();
+        private SedeWSClient daoSede = new SedeWSClient();
         private cliente _cliente = new cliente();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CargarSedes();
         }
 
         protected void dni_Ingresado(object sender, EventArgs e)
@@ -31,6 +34,14 @@ namespace SoftCyberiaWA.Administrador
             }
         }
 
+        private void CargarSedes()
+        {
+            sede.DataSource = daoSede.sede_listar();
+            sede.DataTextField = "nombre";
+            sede.DataValueField = "idSede";
+            sede.DataBind();
+        }
+
         protected void btnAsignar_Click(object sender, EventArgs e)
         {
 
@@ -39,11 +50,19 @@ namespace SoftCyberiaWA.Administrador
             if(rolSeleccionado == "Almacén")
             {
                 almacenero _almacenero = new almacenero();
-                
+                _almacenero.idUsuario = _cliente.idUsuario;
+                _almacenero.rol = CyberiaWS.rol.ALMACENERO;
+                _almacenero.sueldo = Convert.ToDouble(sueldo.Text);
+                _almacenero.idSede = Convert.ToInt32(sede.SelectedValue);
+
             }
             else if(rolSeleccionado == "Vendedor")
             {
-
+                vendedor _vendedor = new vendedor();
+                _vendedor.idUsuario = _cliente.idUsuario;
+                _vendedor.rol = CyberiaWS.rol.VENDEDOR;
+                _vendedor.sueldo = Convert.ToDouble(sueldo.Text);
+                _vendedor.idSede = Convert.ToInt32(sede.SelectedValue);
             }
             
         }
