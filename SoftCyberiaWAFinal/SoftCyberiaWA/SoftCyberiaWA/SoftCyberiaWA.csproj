@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -79,8 +79,10 @@
     <Content Include="Administrador\registrar_nueva_marca.aspx" />
     <Content Include="Administrador\registrar_nuevos_productos.aspx" />
     <Content Include="Administrador\registrar_nuevos_proveedores.aspx" />
+    <Content Include="Almacenero\indexAlmacenero.aspx" />
     <Content Include="Cliente\boleta_pago.aspx" />
     <Content Include="Cliente\IndexCliente.aspx" />
+    <Content Include="Almacenero\Almacenero.Master" />
     <None Include="Connected Services\CyberiaWS\AdministradorWS.wsdl" />
     <None Include="Connected Services\CyberiaWS\AdministradorWS.xsd">
       <SubType>Designer</SubType>
@@ -230,10 +232,6 @@
     <None Include="Connected Services\CyberiaWS\ProveedorWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CyberiaWS\RolWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\RolWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\CyberiaWS\SedeWS.wsdl" />
     <None Include="Connected Services\CyberiaWS\SedeWS.xsd">
       <SubType>Designer</SubType>
@@ -367,12 +365,6 @@
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.proveedor_modificarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.rol.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.rol_listarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.sede.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -410,6 +402,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.vendedor_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.producto_buscar_cantidad_sedesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\CyberiaWS\TipoProductoWS.wsdl" />
@@ -505,6 +500,20 @@
     <Compile Include="Administrador\SoftCyberiaAdministrador.Master.designer.cs">
       <DependentUpon>SoftCyberiaAdministrador.Master</DependentUpon>
     </Compile>
+    <Compile Include="Almacenero\Almacenero.Master.cs">
+      <DependentUpon>Almacenero.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacenero\Almacenero.Master.designer.cs">
+      <DependentUpon>Almacenero.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Almacenero\indexAlmacenero.aspx.cs">
+      <DependentUpon>indexAlmacenero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almacenero\indexAlmacenero.aspx.designer.cs">
+      <DependentUpon>indexAlmacenero.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\boleta_pago.aspx.cs">
       <DependentUpon>boleta_pago.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -525,11 +534,6 @@
     </Compile>
     <Compile Include="Cliente\SoftCyberiaCliente.Master.designer.cs">
       <DependentUpon>SoftCyberiaCliente.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\CyberiaWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Cliente\detalle_carro_de_compras.aspx.cs">
       <DependentUpon>detalle_carro_de_compras.aspx</DependentUpon>
@@ -558,6 +562,11 @@
     </Compile>
     <Compile Include="Cliente\detalle_producto2.aspx.designer.cs">
       <DependentUpon>detalle_producto2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CyberiaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

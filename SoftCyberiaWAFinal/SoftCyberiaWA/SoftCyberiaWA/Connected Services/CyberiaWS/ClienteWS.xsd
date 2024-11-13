@@ -34,6 +34,7 @@
       <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
       <xs:element minOccurs="0" name="nacionalidad" type="xs:string" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="tns:rol" />
       <xs:element name="sexo" type="xs:unsignedShort" />
       <xs:element minOccurs="0" name="telefono" type="xs:string" />
       <xs:element minOccurs="0" name="tipoDeDocumento" type="tns:tipoDocumento" />
@@ -62,6 +63,14 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="rol">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CLIENTE" />
+      <xs:enumeration value="ADMINISTRADOR" />
+      <xs:enumeration value="VENDEDOR" />
+      <xs:enumeration value="ALMACENERO" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="tipoDocumento">
     <xs:restriction base="xs:string">
       <xs:enumeration value="DNI" />

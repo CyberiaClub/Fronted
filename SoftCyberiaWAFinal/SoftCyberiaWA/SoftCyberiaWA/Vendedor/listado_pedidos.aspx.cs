@@ -10,7 +10,7 @@ namespace SoftCyberiaWA.Vendedor
 {
     public partial class listado_pedidos : System.Web.UI.Page
     {
-        private PedidoWS daoPedido = new PedidoWS();
+        private PedidoWSClient daoPedido = new PedidoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,7 +21,7 @@ namespace SoftCyberiaWA.Vendedor
 
         private void CargarPedidos()
         {
-            gvPedidos.DataSource = daoPedido.listar_pedidos();
+            gvPedidos.DataSource = daoPedido.pedido_listar();
             gvPedidos.DataBind();
         }
 
@@ -37,7 +37,7 @@ namespace SoftCyberiaWA.Vendedor
 
         private void CargarDetallePedido(string numeroPedido)
         {
-            gvDetalleProductos.DataSource = daoPedido.obtenerDetallePedido(numeroPedido);
+            //gvDetalleProductos.DataSource = daoPedido.obtenerDetallePedido(numeroPedido);
             gvDetalleProductos.DataBind();
             panelDetallePedido.Visible = true;
         }
@@ -51,7 +51,7 @@ namespace SoftCyberiaWA.Vendedor
             string nuevoEstado = ddl.SelectedValue;
 
             // Actualizar el estado del pedido
-            daoPedido.actualizarEstadoPedido(numeroPedido, nuevoEstado);
+            //daoPedido.actualizarEstadoPedido(numeroPedido, nuevoEstado);
 
             // Recargar la lista de pedidos para reflejar el cambio
             CargarPedidos();

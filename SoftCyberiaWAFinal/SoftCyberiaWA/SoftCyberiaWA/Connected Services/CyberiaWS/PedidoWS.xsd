@@ -26,7 +26,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="cantidad" type="xs:int" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaInsercion" type="xs:dateTime" />
       <xs:element minOccurs="0" name="idMarca" type="xs:int" />
       <xs:element minOccurs="0" name="idProducto" type="xs:int" />
       <xs:element minOccurs="0" name="idProveedor" type="xs:int" />
@@ -34,6 +33,7 @@
       <xs:element minOccurs="0" name="idTipo" type="xs:int" />
       <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreSede" type="xs:string" />
       <xs:element minOccurs="0" name="precio" type="xs:double" />
       <xs:element minOccurs="0" name="precioProveedor" type="xs:double" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="productosMiembros" nillable="true" type="tns:producto" />

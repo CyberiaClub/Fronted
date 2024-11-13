@@ -11,25 +11,23 @@
         <div class="card" style="width: 100%; max-width: 900px; color: midnightblue">
             <div class="card-header text-center" style="width: 900px">
                 <h2>
-                    <asp:Label ID="lblTitulo" runat="server" Text="Stock de Productos por Sede"></asp:Label>
+                    <!--El nombre puede cambiar, pero por mientras dejemoslo asi-->
+                    <asp:Label ID="lblTitulo" runat="server" Text="Stock de un Producto"></asp:Label>
                 </h2>
             </div>
-
-
-
             <div class="card-body align-content-xxl-center align-content-center" style="font: medium">
                 <div class="row">
 
                     <div class="col-md-6 ">
                         <div class="col-md-10">
-                            <label for="categoriaName">Buscar por SKU:</label>
-                            <input type="text" id="sku" name="sku" placeholder="Ingresa SKU">
+                            <asp:Label ID="lblSKU" runat="server" Text="SKU:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:TextBox ID="SKU" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
 
                     <div class="col-md-6 ">
                         <div class="col-md-10">
-                            <asp:Button ID="Button1" runat="server" Text="buscar" CssClass="btn btn-primary w-75 align-content-sm-center" OnClick="Button2_Click" />
+                            <asp:Button ID="Button1" runat="server" Text="buscar" CssClass="btn btn-primary w-75 align-content-sm-center" OnClick="SearchProductHeadquarters_Click" />
                         </div>
                     </div>
 
@@ -55,7 +53,6 @@
                     <Columns>
                         <asp:BoundField DataField="NombreSede" HeaderText="Nombre de la Sede" />
                         <asp:BoundField DataField="CantidadEnStock" HeaderText="Cantidad en Stock" />
-                        <asp:BoundField DataField="Estado" HeaderText="Estado" />
                     </Columns>
                 </asp:GridView>
             </asp:Panel>

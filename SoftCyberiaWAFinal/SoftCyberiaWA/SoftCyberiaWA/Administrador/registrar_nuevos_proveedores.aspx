@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_nuevos_proveedores.aspx.cs" Inherits="SoftCyberiaWA.Administrador.registrar_nuevos_proveedores" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Registrar Proveedores
 </asp:Content>
@@ -24,12 +25,12 @@
                             <asp:TextBox ID="providerRUC" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="mb-3">
-                            <label for="providerName">Nombre del Proveedor:</label>
-                            <asp:TextBox ID="nombreProveedor" runat="server" CssClass="form-control"></asp:TextBox>
+                            <label for="companyName">Razón Social:</label>
+                            <asp:TextBox ID="companyName" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="mb-3">
-                            <label for="razonSocial">Razón Social:</label>
-                            <asp:TextBox ID="razonSocial" runat="server" CssClass="form-control"></asp:TextBox>
+                            <label for="providerName">Nombre del Proveedor:</label>
+                            <asp:TextBox ID="providerName" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="mb-3">
                             <label for="phone">Teléfono:</label>
@@ -44,8 +45,8 @@
                             <asp:TextBox ID="address" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="mb-3">
-                            <label for="products">Descripción del Producto que Suministra:</label>
-                            <asp:TextBox ID="products" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
+                            <label for="description">Descripción del Producto que Suministra:</label>
+                            <asp:TextBox ID="description" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
 
@@ -53,8 +54,8 @@
                     <div class="col-md-6 text-center d-flex flex-column align-items-center justify-content-center">
                         <asp:Label ID="lbnuevoProveedor" runat="server" Text="Nuevo Proveedor:" CssClass="fw-bold d-block mb-3"></asp:Label>
                         <asp:Image ID="imgNuevoProveedor" runat="server" CssClass="img-fluid img-thumbnail mb-3" ImageUrl="/Imagenes/proveedor.png" Height="250px" Width="250px" />
-                        
-                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="registerButton_Click" />
+
+                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="providerButton_Click" />
                     </div>
 
 
