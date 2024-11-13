@@ -27,10 +27,13 @@
       <xs:element minOccurs="0" name="idTipo" type="xs:int" />
       <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreMarca" type="xs:string" />
       <xs:element minOccurs="0" name="nombreSede" type="xs:string" />
+      <xs:element minOccurs="0" name="nombreTipo" type="xs:string" />
       <xs:element minOccurs="0" name="precio" type="xs:double" />
       <xs:element minOccurs="0" name="precioProveedor" type="xs:double" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="productosMiembros" nillable="true" type="tns:producto" />
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="sku" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

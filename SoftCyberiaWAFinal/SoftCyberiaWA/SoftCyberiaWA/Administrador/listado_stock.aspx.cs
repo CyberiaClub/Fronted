@@ -19,22 +19,22 @@ namespace SoftCyberiaWA.Administrador
 
         protected void SearchProductHeadquarters_Click(object sender, EventArgs e)
         {
-            string sku = SKU.Text.Trim();
-            // falta validad el sku
-            producto[] productos = daoProducto.producto_buscar_cantidad_sedes(sku);
+            //string sku = SKU.Text.Trim();
+            //// falta validad el sku
+            //producto[] productos = daoProducto.producto_buscar_cantidad_sedes(sku);
 
             
-            if (productos != null && productos.Length > 0) 
-            {
-                gvInventarioSedes.DataSource = productos;
-                gvInventarioSedes.DataBind();
-                panelDetallesProducto.Visible = true;
-            }
-            else
-            {
-                panelDetallesProducto.Visible = false;
-                lblTitulo.Text = "Producto no encontrado";
-            }
+            //if (productos != null && productos.Length > 0) 
+            //{
+            //    gvInventarioSedes.DataSource = productos;
+            //    gvInventarioSedes.DataBind();
+            //    panelDetallesProducto.Visible = true;
+            //}
+            //else
+            //{
+            //    panelDetallesProducto.Visible = false;
+            //    lblTitulo.Text = "Producto no encontrado";
+            //}
         }
     }
 }

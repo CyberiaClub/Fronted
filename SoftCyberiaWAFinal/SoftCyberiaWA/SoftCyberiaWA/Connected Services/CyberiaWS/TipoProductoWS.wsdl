@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
+  <message name="tipoProducto_insertar">
+    <part name="parameters" element="tns:tipoProducto_insertar" />
+  </message>
+  <message name="tipoProducto_insertarResponse">
+    <part name="parameters" element="tns:tipoProducto_insertarResponse" />
+  </message>
   <message name="tipoProducto_modificar">
     <part name="parameters" element="tns:tipoProducto_modificar" />
   </message>
@@ -23,13 +29,11 @@
   <message name="tipoProducto_eliminarResponse">
     <part name="parameters" element="tns:tipoProducto_eliminarResponse" />
   </message>
-  <message name="tipoProducto_insertar">
-    <part name="parameters" element="tns:tipoProducto_insertar" />
-  </message>
-  <message name="tipoProducto_insertarResponse">
-    <part name="parameters" element="tns:tipoProducto_insertarResponse" />
-  </message>
   <portType name="TipoProductoWS">
+    <operation name="tipoProducto_insertar">
+      <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_insertarRequest" message="tns:tipoProducto_insertar" />
+      <output wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_insertarResponse" message="tns:tipoProducto_insertarResponse" />
+    </operation>
     <operation name="tipoProducto_modificar">
       <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_modificarRequest" message="tns:tipoProducto_modificar" />
       <output wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_modificarResponse" message="tns:tipoProducto_modificarResponse" />
@@ -42,13 +46,18 @@
       <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_eliminarRequest" message="tns:tipoProducto_eliminar" />
       <output wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_eliminarResponse" message="tns:tipoProducto_eliminarResponse" />
     </operation>
-    <operation name="tipoProducto_insertar">
-      <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_insertarRequest" message="tns:tipoProducto_insertar" />
-      <output wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_insertarResponse" message="tns:tipoProducto_insertarResponse" />
-    </operation>
   </portType>
   <binding name="TipoProductoWSPortBinding" type="tns:TipoProductoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="tipoProducto_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="tipoProducto_modificar">
       <soap:operation soapAction="" />
       <input>
@@ -68,15 +77,6 @@
       </output>
     </operation>
     <operation name="tipoProducto_eliminar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="tipoProducto_insertar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

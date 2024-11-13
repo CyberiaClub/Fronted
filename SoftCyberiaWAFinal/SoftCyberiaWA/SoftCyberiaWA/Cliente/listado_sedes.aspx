@@ -19,7 +19,7 @@
 
     <!-- Lista de Tiendas -->
     <div class="store-list d-flex justify-content-center flex-wrap mt-4">
-        <a href="../Cliente/listado_productos.aspx?sede=BibliotecaCentral" class="text-decoration-none  text-dark">
+        <%--<a href="../Cliente/listado_productos.aspx?sede=BibliotecaCentral" class="text-decoration-none  text-dark">
             <div class="store border rounded p-3 m-2" style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                 <h5 class="font-regular">Tienda Biblioteca Central</h5>
                 <p>Ubicado cerca al pabellón Z</p>
@@ -82,7 +82,7 @@
                     <span>934843731</span>
                 </div>
             </div>
-        </a>
+        </a>--%>
     </div>
     <div class="store-list d-flex justify-content-center flex-wrap mt-4">
         <asp:PlaceHolder ID="storeList" runat="server"></asp:PlaceHolder>

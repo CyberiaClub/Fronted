@@ -15,6 +15,15 @@ namespace SoftCyberiaWA
     {
 
         /// <summary>
+        /// Control filtrosSedes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel filtrosSedes;
+
+        /// <summary>
         /// Control filtrosTipoProducto.
         /// </summary>
         /// <remarks>
