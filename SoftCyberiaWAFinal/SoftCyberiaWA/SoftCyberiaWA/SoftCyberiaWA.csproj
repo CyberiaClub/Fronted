@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administrador\asignar_oferta.aspx" />
     <Content Include="Administrador\asignar_roles.aspx" />
     <Content Include="Administrador\detalle_reporte.aspx" />
     <Content Include="Administrador\IndexAdministrador.aspx" />
@@ -434,6 +435,13 @@
     <Content Include="Vendedor\SoftCyberiaVendedor.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\asignar_oferta.aspx.cs">
+      <DependentUpon>asignar_oferta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\asignar_oferta.aspx.designer.cs">
+      <DependentUpon>asignar_oferta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\asignar_roles.aspx.cs">
       <DependentUpon>asignar_roles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
