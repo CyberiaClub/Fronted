@@ -75,6 +75,9 @@
     <Content Include="Administrador\asignar_roles.aspx" />
     <Content Include="Administrador\detalle_reporte.aspx" />
     <Content Include="Administrador\IndexAdministrador.aspx" />
+    <Content Include="Administrador\listado_pedidos.aspx" />
+    <Content Include="Administrador\listado_pedidos_almacen.aspx" />
+    <Content Include="Administrador\listado_pedidos_vendedor.aspx" />
     <Content Include="Administrador\listado_stock.aspx" />
     <Content Include="Administrador\registrar_nueva_categoria.aspx" />
     <Content Include="Administrador\registrar_nueva_marca.aspx" />
@@ -468,6 +471,27 @@
     </Compile>
     <Compile Include="Administrador\IndexAdministrador.aspx.designer.cs">
       <DependentUpon>IndexAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\listado_pedidos.aspx.cs">
+      <DependentUpon>listado_pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\listado_pedidos.aspx.designer.cs">
+      <DependentUpon>listado_pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\listado_pedidos_almacen.aspx.cs">
+      <DependentUpon>listado_pedidos_almacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\listado_pedidos_almacen.aspx.designer.cs">
+      <DependentUpon>listado_pedidos_almacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\listado_pedidos_vendedor.aspx.cs">
+      <DependentUpon>listado_pedidos_vendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\listado_pedidos_vendedor.aspx.designer.cs">
+      <DependentUpon>listado_pedidos_vendedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administrador\listado_stock.aspx.cs">
       <DependentUpon>listado_stock.aspx</DependentUpon>

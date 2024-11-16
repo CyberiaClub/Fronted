@@ -87,6 +87,24 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.TextBox fechaFin;
 
         /// <summary>
+        /// lblImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImage;
+
+        /// <summary>
+        /// fileUploadProductImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileUploadProductImage;
+
+        /// <summary>
         /// btnAsignarOferta control.
         /// </summary>
         /// <remarks>

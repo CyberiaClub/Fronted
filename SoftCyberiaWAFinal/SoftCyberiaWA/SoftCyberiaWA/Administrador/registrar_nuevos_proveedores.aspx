@@ -7,20 +7,17 @@
     <link href="../Content/siteadmi.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="d-flex justify-content-center align-items-center vh-200" style="color: slategrey">
-        <div class="card" style="width: 100%; max-width: 1100px; color: midnightblue">
-            <div class="card-header text-center" style="width: 1100px">
-                <h2>
-                    <asp:Label ID="lblTitulo" runat="server" Text="Registrar nuevos Proveedores"></asp:Label>
-                </h2>
+
+    <div class="d-flex justify-content-center align-items-center vh-200">
+        <div class="card" style="width: 100%; max-width: 800px; color: midnightblue">
+            <div class="card-header text-center" style="width: 800px">
+                <h2>Registrar nuevo proveedor</h2>
             </div>
 
-            <!-- Sección de formulario e imagen dentro de la tarjeta -->
-            <div class="card-body align-content-xxl-center" style="font: medium">
+            <div class="card-body pb-2">
                 <div class="row">
-                    <!-- Columna de información del proveedor -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
+                    <div class="col-md-8">
+                        <div class="pb-3">
                             <label for="providerRUC">RUC del Proveedor:</label>
                             <asp:TextBox ID="providerRUC" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
@@ -50,18 +47,14 @@
                         </div>
                     </div>
 
-                    <!-- Columna de imagen y botón -->
-                    <div class="col-md-6 text-center d-flex flex-column align-items-center justify-content-center">
+                    <div class="col-md-4 d-flex flex-column align-items-center justify-content-center bg-light" style="border-radius: 0 15px 15px 0;">
                         <asp:Label ID="lbnuevoProveedor" runat="server" Text="Nuevo Proveedor:" CssClass="fw-bold d-block mb-3"></asp:Label>
                         <asp:Image ID="imgNuevoProveedor" runat="server" CssClass="img-fluid img-thumbnail mb-3" ImageUrl="/Imagenes/proveedor.png" Height="250px" Width="250px" />
 
                         <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="providerButton_Click" />
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
-
 </asp:Content>
