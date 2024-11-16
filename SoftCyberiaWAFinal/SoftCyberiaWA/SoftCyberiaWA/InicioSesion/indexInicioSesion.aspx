@@ -1,11 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="index_iniciosesion.aspx.cs" Inherits="SoftCyberiaWA.index_iniciosesion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InicioSesion/InicioSesion.Master" AutoEventWireup="true" CodeBehind="indexInicioSesion.aspx.cs" Inherits="SoftCyberiaWA.InicioSesion.indexInicioSesion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    Iniciar Sesion
+    Iniciar Sesión
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
     <link href="../Content/siteainiciosesion.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+    <div>
+        <h1 class="p-5 text-black-50 text-center" style="font-size: 50px;">Bienvenido a Cyberia!</h1>
+        <img src="/Imagenes/cyberia-logo.png" alt="CYBERIA Logo" style="height: 200px; display: block; margin-left: auto; margin-right: auto;">
+    </div>
     <!-- Contenedor de inicio de sesión -->
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
         <div class="card p-4" style="width: 100%; max-width: 400px;">
@@ -44,7 +48,8 @@
         </div>
     </div>
 
-    
-    <script src="../Scripts/validar_inicio_sesion.js"></script>
-</asp:Content>
 
+    <script src="../Scripts/validar_inicio_sesion.js"></script>
+
+
+</asp:Content>
