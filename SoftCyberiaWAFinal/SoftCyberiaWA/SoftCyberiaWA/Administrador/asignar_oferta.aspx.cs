@@ -16,6 +16,22 @@ namespace SoftCyberiaWA.Administrador
 
         protected void btnAsignarOferta_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //metodo
+
+                // Mostrar el mensaje de éxito
+                successMessage.Text = "Oferta asignada correctamente.";
+                successMessage.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores (opcional)
+                successMessage.Text = $"Error al registrar el producto: {ex.Message}";
+                successMessage.CssClass = "text-danger";
+                successMessage.Visible = true;
+            }
+        
 
         }
     }

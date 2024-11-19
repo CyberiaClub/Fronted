@@ -102,6 +102,7 @@
             <!-- Botón de registro -->
             <button type="button" class="btn btn-dark w-100" id="registerButton">Registrar</button>
 
+
             <!-- Iniciar Sesión -->
             <div class="text-center mt-3">
                 <a href="indexInicioSesion.aspx">¿Ya tienes cuenta? Inicia sesión</a>

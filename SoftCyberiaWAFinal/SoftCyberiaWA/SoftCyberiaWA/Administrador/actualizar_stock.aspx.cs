@@ -13,5 +13,26 @@ namespace SoftCyberiaWA.Administrador
         {
 
         }
+
+        protected void btnActualizarStock_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                //metodo para actualizar stock
+
+                // Mostrar el mensaje de éxito
+                successMessage.Text = "Stock Actualizado correctamente.";
+                successMessage.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores (opcional)
+                successMessage.Text = $"Error al actualizar el stock: {ex.Message}";
+                successMessage.CssClass = "text-danger";
+                successMessage.Visible = true;
+            }
+        }
+        
     }
 }

@@ -35,8 +35,11 @@
                 <!-- Botón para finalizar la creación del kit -->
                 <div class="row mt-4">
                     <div class="col-md-12 text-center">
-                        <asp:Button ID="btnActualizarStock" runat="server" Text="Actualizar Stock" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" />
+                        <asp:Button ID="btnActualizarStock" runat="server" Text="Actualizar Stock" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnActualizarStock_Click" />
+                        <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
+
+
                 </div>
             </div>
         </div>

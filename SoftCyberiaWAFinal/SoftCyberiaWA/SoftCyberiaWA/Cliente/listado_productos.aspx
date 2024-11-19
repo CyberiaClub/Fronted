@@ -134,7 +134,9 @@
 
                         <asp:Panel ID="productContainer" runat="server" CssClass="row">
                             <p id="loading-message">Cargando productos...</p>
-                            <div class="col-md-4 mb-4" data-sede="BibliotecaCentral" data-category="Arquitectura" data-price="146.40">
+
+
+                            <%--<div class="col-md-4 mb-4" data-sede="BibliotecaCentral" data-category="Arquitectura" data-price="146.40">
                                 <a href="detalle_producto2.aspx" class="text-decoration-none">
                                     <div class="card">
                                         <div class="card-img-container">
@@ -303,7 +305,9 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </div>--%>
+
+
                 </div>
             </div>
         </div>

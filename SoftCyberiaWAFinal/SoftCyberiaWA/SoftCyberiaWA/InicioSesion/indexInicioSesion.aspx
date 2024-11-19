@@ -17,16 +17,18 @@
 
             <!-- Campo Email -->
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" placeholder="Ingrese su correo electrónico" />
+                <label for="personaCorreo">Ingrese su correo electrónico:</label>
+                <asp:TextBox ID="personaCorreo" runat="server" CssClass="form-control"></asp:TextBox>
+
+
                 <small id="emailError" style="color: red;"></small>
                 <!-- Espacio para el mensaje de error del email -->
             </div>
 
             <!-- Campo Password -->
             <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" />
+                <label for="personaContrasena">Ingrese su contraseña:</label>
+                <asp:TextBox ID="personaContrasena" runat="server" CssClass="form-control"></asp:TextBox>
                 <small id="passwordError" style="color: red;"></small>
                 <!-- Espacio para el mensaje de error de la contraseña -->
             </div>
@@ -38,7 +40,7 @@
             </div>
 
             <!-- Botón de inicio de sesión -->
-            <button type="button" class="btn btn-dark w-100" id="loginButton">Iniciar sesión</button>
+            <asp:Button ID="loginButton" runat="server" Text="Iniciar sesión" CssClass="btn btn-dark w-100" OnClick="loginButton_Click" />
 
             <!-- Registro -->
             <div class="text-center mt-3">

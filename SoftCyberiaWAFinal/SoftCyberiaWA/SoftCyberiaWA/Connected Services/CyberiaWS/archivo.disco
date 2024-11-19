@@ -5,12 +5,6 @@
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/ProveedorWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/SedeWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/AdministradorWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/AlmaceneroWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/VendedorWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/ClienteWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/BoletaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/FacturaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/PedidoWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
 </discovery>

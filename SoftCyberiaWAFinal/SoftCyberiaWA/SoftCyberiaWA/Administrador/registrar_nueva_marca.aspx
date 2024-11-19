@@ -34,7 +34,8 @@
                     </div>
                     <div class="mb-3">
                        
-                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-50 align-content-xl-center"  />
+                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-50 align-content-xl-center" OnClick="registerButton_Click" />
+                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
 
 

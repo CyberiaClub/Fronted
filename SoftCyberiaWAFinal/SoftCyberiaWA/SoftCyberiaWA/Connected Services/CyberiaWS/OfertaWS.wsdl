@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="oferta_listar">
-    <part name="parameters" element="tns:oferta_listar" />
+  <message name="oferta_insertar">
+    <part name="parameters" element="tns:oferta_insertar" />
   </message>
-  <message name="oferta_listarResponse">
-    <part name="parameters" element="tns:oferta_listarResponse" />
+  <message name="oferta_insertarResponse">
+    <part name="parameters" element="tns:oferta_insertarResponse" />
   </message>
   <message name="oferta_modificar">
     <part name="parameters" element="tns:oferta_modificar" />
@@ -17,29 +17,29 @@
   <message name="oferta_modificarResponse">
     <part name="parameters" element="tns:oferta_modificarResponse" />
   </message>
-  <message name="oferta_insertar">
-    <part name="parameters" element="tns:oferta_insertar" />
+  <message name="oferta_listar">
+    <part name="parameters" element="tns:oferta_listar" />
   </message>
-  <message name="oferta_insertarResponse">
-    <part name="parameters" element="tns:oferta_insertarResponse" />
+  <message name="oferta_listarResponse">
+    <part name="parameters" element="tns:oferta_listarResponse" />
   </message>
   <portType name="OfertaWS">
-    <operation name="oferta_listar">
-      <input wsam:Action="CyberiaWS/OfertaWS/oferta_listarRequest" message="tns:oferta_listar" />
-      <output wsam:Action="CyberiaWS/OfertaWS/oferta_listarResponse" message="tns:oferta_listarResponse" />
+    <operation name="oferta_insertar">
+      <input wsam:Action="CyberiaWS/OfertaWS/oferta_insertarRequest" message="tns:oferta_insertar" />
+      <output wsam:Action="CyberiaWS/OfertaWS/oferta_insertarResponse" message="tns:oferta_insertarResponse" />
     </operation>
     <operation name="oferta_modificar">
       <input wsam:Action="CyberiaWS/OfertaWS/oferta_modificarRequest" message="tns:oferta_modificar" />
       <output wsam:Action="CyberiaWS/OfertaWS/oferta_modificarResponse" message="tns:oferta_modificarResponse" />
     </operation>
-    <operation name="oferta_insertar">
-      <input wsam:Action="CyberiaWS/OfertaWS/oferta_insertarRequest" message="tns:oferta_insertar" />
-      <output wsam:Action="CyberiaWS/OfertaWS/oferta_insertarResponse" message="tns:oferta_insertarResponse" />
+    <operation name="oferta_listar">
+      <input wsam:Action="CyberiaWS/OfertaWS/oferta_listarRequest" message="tns:oferta_listar" />
+      <output wsam:Action="CyberiaWS/OfertaWS/oferta_listarResponse" message="tns:oferta_listarResponse" />
     </operation>
   </portType>
   <binding name="OfertaWSPortBinding" type="tns:OfertaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="oferta_listar">
+    <operation name="oferta_insertar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -57,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="oferta_insertar">
+    <operation name="oferta_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

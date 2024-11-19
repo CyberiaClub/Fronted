@@ -51,27 +51,30 @@
             <ul class="mynav nav nav-pills flex-column mb-auto">
                 <li class="nav-item mb-0">
 
+                    <div id="menuContainer">
 
-                    <p class="p-1 font-bold">Administrador</p>
-                    <a href="registrar_nuevos_proveedores.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Registrar nuevos Proveedores</a>
-                    <a href="registrar_nueva_marca.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Registrar nueva Marca</a>
-                    <a href="registrar_nueva_categoria.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Registrar nueva Categoría</a>
-                    <a href="registrar_nuevos_productos.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Registrar nuevos Productos</a>
-                    <a href="actualizar_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Actualizar Stock</a>
-                    <a href="asignar_oferta.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Asignar Oferta</a>
-                    <a href="registrar_produtco_compuesto.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Producto Compuesto</a>
-                    <a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>
-                    <a href="asignar_roles.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Asignar Rol</a>
-                    <a href="detalle_reporte.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Generar reporte</a>
-                    <!-- <a href="listado_pedidos.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Generar reporte</a>-->
+<%--                        <p class="p-1 font-bold">Administrador</p>
+                        <a href="registrar_nuevos_proveedores.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Registrar nuevos Proveedores</a>
+                        <a href="registrar_nueva_marca.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Registrar nueva Marca</a>
+                        <a href="registrar_nueva_categoria.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Registrar nueva Categoría</a>
+                        <a href="registrar_nuevos_productos.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Registrar nuevos Productos</a>
+                        <a href="actualizar_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Actualizar Stock</a>
+                        <a href="asignar_oferta.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Asignar Oferta</a>
+                        <a href="registrar_produtco_compuesto.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Producto Compuesto</a>
+                        <a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>
+                        <a href="asignar_roles.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Asignar Rol</a>
+                        <a href="detalle_reporte.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Generar reporte</a>
+                        <!-- <a href="listado_pedidos.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Generar reporte</a>-->
 
-                    <p class="p-1 font-bold">Vendedor</p>
-                    <a href="listado_pedidos_vendedor.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a>
-                    <!--<a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>-->
-                    
-                    <p class="p-1 font-bold">Almacén</p>
-                    <a href="listado_pedidos_almacen.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a>
-                    <!--<a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>-->
+                        <p class="p-1 font-bold">Vendedor</p>
+                        <a href="listado_pedidos_vendedor.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a>
+                        <!--<a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>-->
+
+                        <p class="p-1 font-bold">Almacén</p>
+                        <a href="listado_pedidos_almacen.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a>
+                        <!--<a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>----%>>
+
+                    </div>
 
                 </li>
             </ul>

@@ -93,7 +93,9 @@
                 <!-- Botón para finalizar la creación del kit -->
                 <div class="row mt-4">
                     <div class="col-md-12 text-center">
-                        <asp:Button ID="btnCrearKit" runat="server" Text="Crear Kit" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" />
+                        <asp:Button ID="btnCrearKit" runat="server" Text="Crear Kit" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnCrearKit_Click"/>
+                         <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="providerButton_Click" />
+                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
                 </div>
 

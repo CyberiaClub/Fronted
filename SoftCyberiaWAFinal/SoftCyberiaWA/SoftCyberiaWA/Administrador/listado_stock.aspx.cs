@@ -33,7 +33,15 @@ namespace SoftCyberiaWA.Administrador
             {
                 panelDetallesProducto.Visible = false;
                 lblTitulo.Text = "Producto no encontrado";
+
             }
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        
+
         }
     }
 }

@@ -16,6 +16,23 @@ namespace SoftCyberiaWA.Administrador
 
         protected void registerButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //metodo registrar categoria
+
+
+
+                // Mostrar el mensaje de éxito
+                successMessage.Text = "Categoría registrada correctamente.";
+                successMessage.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores (opcional)
+                successMessage.Text = $"Error al registrar la categoría: {ex.Message}";
+                successMessage.CssClass = "text-danger";
+                successMessage.Visible = true;
+            }
 
         }
     }

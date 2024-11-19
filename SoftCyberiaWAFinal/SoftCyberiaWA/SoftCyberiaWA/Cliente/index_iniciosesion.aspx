@@ -34,7 +34,8 @@
             </div>
 
             <!-- Botón de inicio de sesión -->
-            <button type="button" class="btn btn-dark w-100" id="loginButton">Iniciar sesión</button>
+            <asp:Button ID="loginButton" runat="server" Text="Iniciar sesión" CssClass="btn btn-dark w-100" OnClick="loginButton_Click" />
+
 
             <!-- Registro -->
             <div class="text-center mt-3">

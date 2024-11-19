@@ -51,6 +51,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.Button btnBuscar;
 
         /// <summary>
+        /// successMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label successMessage;
+
+        /// <summary>
         /// panelDetallesProducto control.
         /// </summary>
         /// <remarks>
