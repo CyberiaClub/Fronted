@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
-    
+
     public partial class detalle_producto : System.Web.UI.Page
     {
         private ProductoWSClient daoProducto = new ProductoWSClient(); // Cliente del servicio web
@@ -79,6 +79,10 @@ namespace SoftCyberiaWA
 
         protected void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
+            // Lógica para añadir el producto al carrito
+            int cantidadSeleccionada = int.TryParse(quantity.Value, out int cantidad) ? cantidad : 1;
+
+            // Ejemplo de redirección después de agregar al carrito
             Response.Redirect("detalle_carro_de_compras.aspx");
         }
     }
