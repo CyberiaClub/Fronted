@@ -69,12 +69,13 @@
   </xs:complexType>
   <xs:complexType name="producto_buscar_cantidad_sedes">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="sku" type="xs:string" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="producto_buscar_cantidad_sedesResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+      <xs:element minOccurs="0" name="return" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="producto_listar">

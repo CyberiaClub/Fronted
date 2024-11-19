@@ -33,11 +33,7 @@
                 <!-- Espacio para el mensaje de error de la contraseña -->
             </div>
 
-            <!-- Recordar cuenta -->
-            <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="rememberMe">
-                <label class="form-check-label" for="rememberMe">Recordar cuenta</label>
-            </div>
+
 
             <!-- Botón de inicio de sesión -->
             <asp:Button ID="loginButton" runat="server" Text="Iniciar sesión" CssClass="btn btn-dark w-100" OnClick="loginButton_Click" />

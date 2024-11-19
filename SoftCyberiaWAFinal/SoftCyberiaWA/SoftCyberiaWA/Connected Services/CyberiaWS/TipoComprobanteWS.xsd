@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="CyberiaWS" targetNamespace="CyberiaWS" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tipo_comprobante_listar" type="tns:tipo_comprobante_listar" />
+  <xs:element name="tipo_comprobante_listarResponse" type="tns:tipo_comprobante_listarResponse" />
+  <xs:complexType name="tipo_comprobante_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="tipo_comprobante_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoComprobante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idTipoComprobante" type="xs:int" />
+      <xs:element minOccurs="0" name="secuencial" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoComprobante" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
