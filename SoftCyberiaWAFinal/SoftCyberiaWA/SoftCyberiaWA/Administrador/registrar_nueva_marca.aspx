@@ -33,8 +33,8 @@
                         <asp:FileUpload ID="fileUploadNuevaMarca" CssClass="form-control mb-3 w-75" runat="server" />
                     </div>
                     <div class="mb-3">
-                        <label for="marcaName">Nombre de la Marca:</label>
-                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75"  />
+                       
+                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-50 align-content-xl-center"  />
                     </div>
 
 

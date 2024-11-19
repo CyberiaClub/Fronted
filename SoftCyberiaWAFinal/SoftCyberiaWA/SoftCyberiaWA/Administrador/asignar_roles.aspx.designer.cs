@@ -141,6 +141,42 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.DropDownList rol;
 
         /// <summary>
+        /// Control lblSueldo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSueldo;
+
+        /// <summary>
+        /// Control sueldo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox sueldo;
+
+        /// <summary>
+        /// Control lblSede.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSede;
+
+        /// <summary>
+        /// Control sede.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList sede;
+
+        /// <summary>
         /// Control btnAsignar.
         /// </summary>
         /// <remarks>

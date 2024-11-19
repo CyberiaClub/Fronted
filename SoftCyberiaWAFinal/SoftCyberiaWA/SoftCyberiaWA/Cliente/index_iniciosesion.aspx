@@ -38,7 +38,7 @@
 
             <!-- Registro -->
             <div class="text-center mt-3">
-                <a href="#">¿No tienes cuenta? Regístrate</a>
+                <a href="registro_usuario.aspx">¿No tienes cuenta? Regístrate</a>
             </div>
 
         </div>

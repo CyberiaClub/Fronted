@@ -39,7 +39,11 @@
                     <!-- Columna de botón de asignación -->
                     <div class="col-md-4 d-flex flex-column align-items-center justify-content-center bg-light" style="border-radius: 0 15px 15px 0;">
                         <h4 class="font-weight-bold mb-4" style="color: #004EA8;">Asignar Oferta</h4>
+
+                        <asp:Label ID="lblImage" runat="server" Text="Imagen del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
                         <img src="/Imagenes/oferta.png" alt="Icono de oferta" class="img-fluid img-thumbnail mb-3" style="width: 160px;">
+                        <asp:FileUpload ID="fileUploadProductImage" CssClass="form-control mb-2" runat="server" />
+
                         <asp:Button ID="btnAsignarOferta" runat="server" Text="Asignar Oferta" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnAsignarOferta_Click" />
                     </div>
                 </div>

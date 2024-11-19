@@ -13,5 +13,15 @@ namespace SoftCyberiaWA.Administrador
         {
 
         }
+
+        protected void btnAsignarPrdocuto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnAsignarOferta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
