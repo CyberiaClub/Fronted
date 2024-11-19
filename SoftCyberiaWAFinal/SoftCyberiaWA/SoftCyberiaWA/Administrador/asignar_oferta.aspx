@@ -24,7 +24,7 @@
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblPorcentajeOferta" runat="server" Text="Porcentaje de Oferta:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="porcentajeOferta" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox ID="porcentajeOferta" runat="server" MinimumValue="0" Min="0" Max="100" CssClass="form-control" TextMode="Number"></asp:TextBox>
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblFechaInicio" runat="server" Text="Fecha de Inicio de la Oferta:" CssClass="col-form-label fw-bold"></asp:Label>

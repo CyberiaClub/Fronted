@@ -20,6 +20,9 @@ namespace SoftCyberiaWA.Administrador
         protected void SearchProductHeadquarters_Click(object sender, EventArgs e)
         {
             //string sku = SKU.Text.Trim();
+
+            //string sku = skuName.Text.Trim();
+
             //// falta validad el sku
             //producto[] productos = daoProducto.producto_buscar_cantidad_sedes(sku);
 

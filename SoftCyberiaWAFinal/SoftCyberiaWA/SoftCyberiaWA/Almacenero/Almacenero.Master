@@ -4,17 +4,75 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- link -->
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/Fonts/css/all.css" rel="stylesheet" />
+    <link href="/Content/siteadmi.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.bundle.js"></script>
+    <script src="Scripts/jquery-3.7.1.js"></script>
+
+    <title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+    <!--Por si necesitan script o estilo-->
+    <asp:ContentPlaceHolder ID="cphStyle" runat="server">
+        <link href="../Content/siteadmi.css" rel="stylesheet" />
+    </asp:ContentPlaceHolder>
+
+
+    <div class="container-fluid d-flex p-2 h-100">
+
+        <!-- Contorno exterior - Negros sin sombra -->
+        <div class="sidebar navbar-expand-lg navbar-dark bg-dark flex-column d-flex flex-column flex-shrink-0 offcanvas-md offcanvas-start">
+
+            <!-- Logo CYBERIA -->
+            <div class="text-center">
+                <img src="/Imagenes/cyberia-logo.png" style="width: 85px; height: auto;">
+            </div>
+
+            <!-- Foto del usuario y nombre -->
+            <div class="text-center mt-4 text-white text-center">
+                <img src="/Imagenes/admin-user.png" alt="Foto de usuario" style="width: 160px; height: auto;">
+                <h4>Dylan Martines</h4>
+                <p>Almacenero</p>
+            </div>
+
+            <hr>
+            <ul class="mynav nav nav-pills flex-column mb-auto">
+                <li class="nav-item mb-0">
+
+                    <a href="listado_pedidos.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a>
+
+                    <a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>
+
+                </li>
+            </ul>
+            <hr>
+
+            <div class="sidebar-footer d-flex">
+                <footer class="footer p-4 text-white text-center">
+                    <div class="sidebar-footer">
+                        <button type="button" class="btn btn-secondary">Cerrar sesión</button>
+                    </div>
+                </footer>
+            </div>
+
         </div>
-    </form>
+
+        <!-- Contenido de la pagina web DERECHA-->
+        <div class="main-content">
+            <form runat="server">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
