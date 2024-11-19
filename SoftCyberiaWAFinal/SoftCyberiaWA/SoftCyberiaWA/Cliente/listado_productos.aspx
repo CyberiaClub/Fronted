@@ -53,7 +53,8 @@
 
                 <!-- Sedes -->
                 <h6 class="mt-3">Sedes</h6>
-                <div class="form-check">
+                <asp:Panel ID="filtrosSedes" runat="server">
+                <%--<div class="form-check">
                     <input class="form-check-input" type="checkbox" name="sede" value="BibliotecaCentral" id="sedeBibliotecaCentral" onclick="selectOnlyOne(this)" data-sede="BibliotecaCentral">
                     <label class="form-check-label" for="sedeBibliotecaCentral">Tienda Biblioteca Central</label>
                 </div>
@@ -73,8 +74,8 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="sede" value="GeneralesCiencias" id="sedeGeneralesCiencias" onclick="selectOnlyOne(this)" data-sede="GeneralesCiencias">
                     <label class="form-check-label" for="sedeGeneralesCiencias">Tiendas Generales Ciencias</label>
-                </div>
-
+                </div>--%>
+                </asp:Panel>
 
 
                 <!-- Rango de precios -->
@@ -136,21 +137,7 @@
                             <p id="loading-message">Cargando productos...</p>
 
 
-                            <%--<div class="col-md-4 mb-4" data-sede="BibliotecaCentral" data-category="Arquitectura" data-price="146.40">
-                                <a href="detalle_producto2.aspx" class="text-decoration-none">
-                                    <div class="card">
-                                        <div class="card-img-container">
-                                            <img src="/Imagenes/lapiz-grafito.jpg" class="card-img-top" alt="Lápiz grafito Staedtler">
-                                        </div>
-                                        <div class="card-body">
-                                            <h6 class="card-title">Lápiz grafito Staedtler x 24</h6>
-                                            <p class="card-text">S/146.40</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- Producto 2 -->
+                            <!-- Producto 2 sede=Tienda_Sociales&idSede=2-->
                             <div class="col-md-4 mb-4" data-sede="Sociales" data-category="Oficina" data-price="81.50">
                                 <a href="detalle_producto2.aspx" class="text-decoration-none">
                                     <div class="card">
