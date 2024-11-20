@@ -23,8 +23,6 @@ namespace SoftCyberiaWA.Administrador
             {
                 CargarMarcas();
                 CargarCategoria();
-                CargarProveedores();
-                CargarSedes();
             }
 
         }
@@ -45,22 +43,6 @@ namespace SoftCyberiaWA.Administrador
             marcaName.DataBind(); // Llenar el DropDownList
         }
 
-        private void CargarProveedores()
-        {
-            providerName.DataSource = daoProveedor.proveedor_listar();
-            providerName.DataTextField = "razonSocial";
-            providerName.DataValueField = "idProveedor";
-            providerName.DataBind(); // Llenar el DropDownList
-        }
-
-        private void CargarSedes()
-        {
-            sedeName.DataSource = daoSede.sede_listar();
-            sedeName.DataTextField = "nombre";
-            sedeName.DataValueField = "idSede";
-            sedeName.DataBind(); // Llenar el DropDownList
-        }
-
         protected void registerButton_Click(object sender, EventArgs e)
         {
             producto producto = new producto();
@@ -69,17 +51,13 @@ namespace SoftCyberiaWA.Administrador
             producto.sku = sku.Text;
             producto.precio = Convert.ToDouble(price.Text);
             producto.precioSpecified = true;
-            producto.precioProveedor = Convert.ToDouble(providerPrice.Text);
             producto.precioProveedorSpecified = true;
             producto.descripcion = description.Text;
-            producto.idSede = Int32.Parse(sedeName.SelectedValue);
             producto.idSedeSpecified = true;
-            producto.idMarca = Int32.Parse(marcaName.SelectedValue);
-            producto.idMarcaSpecified = true;
-            producto.idProveedor = Int32.Parse(providerName.SelectedValue);
-            producto.idProveedorSpecified = true;
-            producto.idTipo = Int32.Parse(categoriaName.SelectedValue);
-            producto.idTipoSpecified = true;
+            producto.marca.idMarca = Int32.Parse(marcaName.SelectedValue);
+            producto.marca.idMarcaSpecified = true;
+            producto.tipoProducto.idTipoProducto = Int32.Parse(categoriaName.SelectedValue);
+            producto.tipoProducto.idTipoProductoSpecified = true;
             producto.cantidad = 0;
             producto.cantidadSpecified = true;
 

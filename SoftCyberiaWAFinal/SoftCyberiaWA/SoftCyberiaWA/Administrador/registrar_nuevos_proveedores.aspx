@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="pb-3">
-                            <label for="providerRUC">RUC del Proveedor:</label>
+                            <label for="providDerRUC">RUC del Proveedor:</label>
                             <asp:TextBox ID="providerRUC" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="mb-3">

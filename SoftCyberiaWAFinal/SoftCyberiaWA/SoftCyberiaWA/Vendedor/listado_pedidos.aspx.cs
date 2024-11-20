@@ -10,7 +10,7 @@ namespace SoftCyberiaWA.Vendedor
 {
     public partial class listado_pedidos : System.Web.UI.Page
     {
-        private PedidoWSClient daoPedido = new PedidoWSClient();
+        //private PedidoWSClient daoPedido = new PedidoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,8 +21,8 @@ namespace SoftCyberiaWA.Vendedor
 
         private void CargarPedidos()
         {
-            gvPedidos.DataSource = daoPedido.pedido_listar();
-            gvPedidos.DataBind();
+            //gvPedidos.DataSource = daoPedido.pedido_listar();
+            //gvPedidos.DataBind();
         }
 
         protected void gvPedidos_SelectedIndexChanged(object sender, EventArgs e)

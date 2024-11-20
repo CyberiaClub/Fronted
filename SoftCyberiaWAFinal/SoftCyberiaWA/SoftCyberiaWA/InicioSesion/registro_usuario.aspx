@@ -1,111 +1,127 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InicioSesion/InicioSesion.Master" AutoEventWireup="true" CodeBehind="registro_usuario.aspx.cs" Inherits="SoftCyberiaWA.InicioSesion.registro_usuario" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Registro Usuario
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
-     <link href="../Content/siteainiciosesion.css" rel="stylesheet" />
+    <link href="../Content/siteainiciosesion.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-
-    <!-- Contenedor de registro -->
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-        <div class="card p-4" style="width: 100%; max-width: 500px;">
-            <h3 class="text-center">Registro de Usuario</h3>
-
-            <!-- Campo Documento -->
-            <div class="mb-3">
-                <label for="documento" class="form-label">Documento</label>
-                <input type="text" class="form-control" id="documento" placeholder="Ingrese su número de documento" maxlength="15" />
+    <div class="d-flex justify-content-center align-items-center vh-200" style="color: slategrey">
+        <div class="card" style="width: 100%; max-width: 1100px; color: midnightblue">
+            <div class="card-header text-center" style="width: 1100px">
+                <h2>Registro de Usuario</h2>
             </div>
+            <div class="card-body pb-2">
+                <div class="row">
+                    <!-- Contenedor de registro -->
+                    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+                        <div class="card p-4" style="width: 100%; max-width: 400px;">
+                            <h3 class="text-center">Iniciar Sesión</h3>
 
-            <!-- Campo Teléfono -->
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="text" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono" maxlength="13" />
-            </div>
+                            <!-- Campo Tipo de Documento -->
+                            <div class="pb-3">
+                                <asp:Label ID="lblpersonaTipoDocumento" runat="server" Text="Tipo de Documento:" CssClass="col-form-label fw-bold"></asp:Label>
+                                <asp:DropDownList ID="personaTipoDocumento" runat="server" CssClass="form-control">
+                                    <asp:ListItem Value="0">Seleccione el Tipo de Documento</asp:ListItem>
+                                    <asp:ListItem Value="1">DNI</asp:ListItem>
+                                    <asp:ListItem Value="2">Pasaporte</asp:ListItem>
+                                    <asp:ListItem Value="3">Carnet de Extranjeria</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
+                            <!-- Campo Documento -->
+                            <div class="pb-3">
+                                <label for="personaDocumento">Documento de Identidad:</label>
+                                <asp:TextBox ID="personaDocumento" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
 
-            <!-- Campo Nombre -->
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" maxlength="100" />
-            </div>
+                            <!-- Campo Teléfono -->
+                            <div class="pb-3">
+                                <label for="personaTelefono">Telefono:</label>
+                                <asp:TextBox ID="personaTelefono" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
 
-            <!-- Campo Apellido Paterno -->
-            <div class="mb-3">
-                <label for="apellidoPaterno" class="form-label">Apellido Paterno</label>
-                <input type="text" class="form-control" id="apellidoPaterno" placeholder="Ingrese su apellido paterno" maxlength="100" />
-            </div>
+                            <!-- Campo Nombre -->
+                            <div class="pb-3">
+                                <label for="personaNombre">Nombre:</label>
+                                <asp:TextBox ID="personaNombre" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
 
-            <!-- Campo Apellido Materno -->
-            <div class="mb-3">
-                <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
-                <input type="text" class="form-control" id="apellidoMaterno" placeholder="Ingrese su apellido materno" maxlength="100" />
-            </div>
+                            <!-- Campo Primer Apellido -->
+                            <div class="pb-3">
+                                <label for="personaPrimerAp">Primer Apellido:</label>
+                                <asp:TextBox ID="personaPrimerAp" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
 
-            <!-- Campo Fecha de Nacimiento -->
-            <div class="mb-3">
-                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
-                <input type="date" class="form-control" id="fechaNacimiento" />
-            </div>
+                            <!-- Campo Segundo Apellido -->
+                            <div class="pb-3">
+                                <label for="personaSegundoAp">Segundo Apellido:</label>
+                                <asp:TextBox ID="personaSegundoAp" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
 
-            <!-- Campo Sexo -->
-            <div class="mb-3">
-                <label for="sexo" class="form-label">Sexo</label>
-                <select class="form-select" id="sexo">
-                    <option value="" disabled selected>Seleccione su sexo</option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
-                </select>
-            </div>
+                            <!-- Campo Fecha de Nacimiento -->
+                            <div class="pb-3">
+                                <label for="personaFechaNac">Fecha de Nacimiento:</label>
+                                <input id="personaFechaNac" runat="server" type="date" class="form-control" />
+                            </div>
 
-            <!-- Campo Correo -->
-            <div class="mb-3">
-                <label for="correo" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico" maxlength="120" />
-            </div>
+                            <!-- Campo Sexo -->
+                            <div class="pb-3">
+                                <asp:Label ID="lblpersonaSexo" runat="server" Text="Sexo:" CssClass="col-form-label fw-bold"></asp:Label>
+                                <asp:DropDownList ID="personaSexo" runat="server" CssClass="form-control">
+                                    <asp:ListItem Value="0">Seleccione su sexo</asp:ListItem>
+                                    <asp:ListItem Value="1">Masculino</asp:ListItem>
+                                    <asp:ListItem Value="2">Femenino</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
 
-            <!-- Campo Dirección -->
-            <div class="mb-3">
-                <label for="direccion" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección" maxlength="120" />
-            </div>
+                            <!-- Campo Dirección -->
+                            <div class="pb-3">
+                                <label for="personaDireccion">Dirección:</label>
+                                <asp:TextBox ID="personaDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
 
-            <!-- Campo Nacionalidad -->
-            <div class="mb-3">
-                <label for="nacionalidad" class="form-label">Nacionalidad</label>
-                <input type="text" class="form-control" id="nacionalidad" placeholder="Ingrese su nacionalidad" maxlength="30" />
-            </div>
+                            <!-- Campo Nacionalidad -->
+                            <div class="pb-3">
+                                <label for="personaNacionalidad">Nacionalidad:</label>
+                                <asp:TextBox ID="personaNacionalidad" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
 
-            <!-- Campo Tipo de Documento -->
-            <div class="mb-3">
-                <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
-                <select class="form-select" id="tipoDocumento">
-                    <option value="" disabled selected>Seleccione su tipo de documento</option>
-                    <option value="DNI">DNI</option>
-                    <option value="Pasaporte">Pasaporte</option>
-                    <option value="Carnet de extranjería">Carnet de extranjería</option>
-                </select>
-            </div>
+                            <%--<!-- Campo Correo -->
+                            <div class="pb-3">
+                                <label for="personaCorreo">Correo:</label>
+                                <asp:TextBox ID="personaCorreo" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>--%>
 
-            <!-- Campo Contraseña -->
-            <div class="mb-3">
-                <label for="contrasena" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contrasena" placeholder="Cree una contraseña" maxlength="128" />
-            </div>
 
-            <!-- Confirmar Contraseña -->
-            <div class="mb-3">
-                <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="confirmarContrasena" placeholder="Confirme su contraseña" maxlength="128" />
-            </div>
+                            <div class="form-group">
+                                <label for="personaCorreo">Correo Electrónico</label>
+                                <input type="email" class="form-control" ID="personaCorreo" aria-describedby="emailHelp" placeholder="Ingrese su correo" runat="server">
+                                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo con nadie.</small>
+                            </div>
 
-            <!-- Botón de registro -->
-            <button type="button" class="btn btn-dark w-100" id="registerButton">Registrar</button>
+                            <div class="form-group">
+                                <label for="personaContraseña">Contraseña</label>
+                                <input type="password" class="form-control" id="personaContraseña" placeholder="Contraseña" runat="server">
+                            </div>
 
-            <!-- Iniciar Sesión -->
-            <div class="text-center mt-3">
-                <a href="indexInicioSesion.aspx">¿Ya tienes cuenta? Inicia sesión</a>
+                            <div class="form-group">
+                                <label for="personaConfirmarContraseña">Contraseña</label>
+                                <input type="password" class="form-control" id="personaConfirmarContraseña" placeholder="Confirme su contraseña" runat="server">
+                            </div>
+                            <!-- Botón de registro -->
+                            <div class="form-group">
+                                <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="onClickRegistrarPersona" />
+                            </div>
+                            <!-- Iniciar Sesión -->
+                            <div class="text-center mt-3">
+                                <a href="indexInicioSesion.aspx">¿Ya tienes cuenta? Inicia sesión</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </asp:Content>
