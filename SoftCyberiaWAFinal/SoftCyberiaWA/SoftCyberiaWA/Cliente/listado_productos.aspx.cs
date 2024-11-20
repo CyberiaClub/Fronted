@@ -29,6 +29,7 @@ namespace SoftCyberiaWA
 
                 //del metodo 2 
                 int? _idsede = null;
+                int idsede2 = _idsede ?? 1;//por defecto sede 1
 
                 // Si hay una sede en la URL, genera un script para seleccionar el checkbox de esa sede
                 if (!string.IsNullOrEmpty(sedeSeleccionada))
@@ -38,13 +39,16 @@ namespace SoftCyberiaWA
                         $"    var sedeCheckbox = document.getElementById('sede{sedeSeleccionada}');" +
                         $"    if (sedeCheckbox) sedeCheckbox.checked = true;" +
                         $"}});", true);
-                    _idsede = int.Parse(Request.QueryString["idSede"]);
+                    //_idsede = int.Parse(Request.QueryString["idSede"]);
+                    _idsede = int.Parse(Request.QueryString["idsede"] ?? "0");
+                    idsede2 = _idsede ?? 1;
                 }
                 // Cargar tipos de productos en los filtros
 
-                //del metodo 2
-                CargarProductos2(_idsede);
+                //del metodo 2 borrador no funciona, 1 sin pasar filtro de sede, 3 pasa el filtro
+                //CargarProductos2(_idsede);
                 //CargarProductos();
+                CargarProductos0(idsede2);
             }
 
         }
@@ -77,6 +81,7 @@ namespace SoftCyberiaWA
             // Llama al método para obtener los tipos de productos desde el backend
             tipoProducto[] tiposDeProductos = this.daoTipoProducto.tipoProducto_listar();
 
+
             foreach (tipoProducto tipo in tiposDeProductos)
             {
                 // Reemplazar espacios con guiones bajos en el nombre del tipo de producto para el valor del filtro
@@ -94,7 +99,7 @@ namespace SoftCyberiaWA
                 filtrosTipoProducto.Controls.Add(tipoHtml);
             }
         }
-        
+
         private void CargarProductos()
         {
             // Llama al método para obtener los productos desde el backend
@@ -109,63 +114,140 @@ namespace SoftCyberiaWA
                 // Crea el contenedor HTML del producto
                 Literal productHtml = new Literal();
                 productHtml.Text = $@"
-
                     <div class='col-md-4 mb-4' data-category='{prod.tipoProducto.idTipoProducto}' data-price='{prod.precio}'>
-                        <a href='detalle_producto.aspx?idprod={prod.idProducto}' class='text-decoration-none'>
+                        <a href='detalle_producto.aspx?sku={prod.sku}&sede={prod.idSede}' class='text-decoration-none'>
                             <div class='card'>
                                 <div class='card-img-container'>
                                     <img src='{imageSrc}' class='card-img-top' alt='{prod.nombre}'>
                                 </div>
                                 <div class='card-body'>
                                     <h6 class='card-title'>{prod.nombre}</h6>
+                                    
+                                    <h6 class='card-title'>{prod.idSede}</h6>
+                                    <h6 class='card-title'>{prod.idProducto}</h6>
+                                    <h6 class='card-title'>{prod.sku}</h6>
                                     <p class='card-text'>S/{prod.precio:F2}</p>
-                              
                                 </div>
                             </div>
                         </a>
                     </div>";
 
-                // Agrega el HTML generado al contenedor en la página                                                   //<h6 class='card-title'>{prod.idSede}</h6>
+                // Agrega el HTML generado al contenedor en la página
                 productContainer.Controls.Add(productHtml);
             }
         }
-
-        private void CargarProductos2(int? _idSede = null)
+        private void CargarProductos0(int _idSede )
         {
             // Llama al método para obtener los productos desde el backend
             producto[] productos = this.daoProducto.producto_listar();
             // Recorre la lista de productos y genera el HTML para cada uno
             foreach (producto prod in productos)
             {
-                if(prod.idSede == 0)  
-                { //if(prod.idSede == _idSede) { // si es !0 no sale productos de la bd    si idSede==0 si muestra los productos de la bd
-                  // Convierte el arreglo de bytes de la imagen a una cadena en Base64
-                    string base64Image = Convert.ToBase64String(prod.imagen);
+                // Convierte el arreglo de bytes de la imagen a una cadena en Base64
+                string base64Image = Convert.ToBase64String(prod.imagen);
                 string imageSrc = $"data:image/jpeg;base64,{base64Image}";
+                producto productoSedeSeleccionada = daoProducto.producto_buscar_sku(prod.sku, _idSede);//permite acceder a la cantidad
 
                 // Crea el contenedor HTML del producto
                 Literal productHtml = new Literal();
                 productHtml.Text = $@"
-                    <div class='col-md-4 mb-4' data-category='{prod.tipoProducto}' data-price='{prod.precio}'>
-                        <a href='detalle_producto.aspx?idprod={prod.idProducto}' class='text-decoration-none'>
+                    <div class='col-md-4 mb-4' data-sede='{prod.idSede}' data-category='{prod.tipoProducto.tipo}' data-price='{prod.precio}'>
+                        <a href='detalle_producto.aspx?sku={prod.sku}&sede={_idSede}' class='text-decoration-none'>
                             <div class='card'>
                                 <div class='card-img-container'>
                                     <img src='{imageSrc}' class='card-img-top' alt='{prod.nombre}'>
                                 </div>
                                 <div class='card-body'>
                                     <h6 class='card-title'>{prod.nombre}</h6>
+                                    <h6 class='card-title'>stock : {productoSedeSeleccionada.cantidad}</h6>
+                                    <h6 class='card-title'>idprod: {prod.idProducto}</h6>
+                                    <h6 class='card-title'>idsede: {_idSede}</h6>
+                                    <h6 class='card-title'>sku: {prod.sku}</h6>
                                     <p class='card-text'>S/{prod.precio:F2}</p>
-                                 
                                 </div>
                             </div>
                         </a>
                     </div>";
 
-                // Agrega el HTML generado al contenedor en la página                                                   //<h6 class='card-title'>{prod.idSede}</h6>
+                // Agrega el HTML generado al contenedor en la página
                 productContainer.Controls.Add(productHtml);
-                }
             }
         }
+        //private void CargarProductos3(int? _idSede = null)
+        //{
+        //    //Llama al método para obtener los productos desde el backend
+        //    producto[] productos = this.daoProducto.producto_listar();
+        //    // Recorre la lista de productos y genera el HTML para cada uno
+        //    foreach (producto prod in productos)
+        //    {
+        //        if (prod.idSede == _idSede)
+        //        { //if(prod.idSede == _idSede) { // si es !0 no sale productos de la bd    si idSede==0 si muestra los productos de la bd
+        //          // Convierte el arreglo de bytes de la imagen a una cadena en Base64
+        //            producto productoSedeSeleccionada = daoProducto.producto_buscar_sku(prod.sku, prod.idSede);//permite acceder a la cantidad
+
+        //            string base64Image = Convert.ToBase64String(prod.imagen);
+        //            string imageSrc = $"data:image/jpeg;base64,{base64Image}";
+
+        //            // Crea el contenedor HTML del producto
+        //            Literal productHtml = new Literal();
+        //            productHtml.Text = $@"
+        //                <div class='col-md-4 mb-4' data-category='{prod.tipoProducto.tipo}' data-price='{prod.precio}'>
+        //                    <a href='detalle_producto.aspx?sku={prod.sku}&sede={prod.idSede}' class='text-decoration-none'>
+        //                        <div class='card'>
+        //                            <div class='card-img-container'>
+        //                                <img src='{imageSrc}' class='card-img-top' alt='{productoSedeSeleccionada.nombre}'>
+        //                            </div>
+        //                            <div class='card-body'>
+        //                                <h6 class='card-title'>{prod.nombre}</h6>
+        //                                <h6 class='card-title'>{productoSedeSeleccionada.cantidad}</h6>
+        //                                <p class='card-text'>S/{prod.precio:F2}</p>
+
+        //                            </div>
+        //                        </div>
+        //                    </a>
+        //                </div>";
+
+        //            // Agrega el HTML generado al contenedor en la página                                                   //<h6 class='card-title'>{prod.idSede}</h6>
+        //            productContainer.Controls.Add(productHtml);
+        //        }
+        //    }
+        //}
+        //private void CargarProductos2(int? _idSede = null)
+        //{// pasar funcion buscar sku
+        //    // Llama al método para obtener los productos desde el backend
+        //    producto[] productos = this.daoProducto.producto_listar();
+        //    // Recorre la lista de productos y genera el HTML para cada uno
+        //    foreach (producto prod in productos)
+        //    {
+        //        if(prod.idSede == 0)  
+        //        { //if(prod.idSede == _idSede) { // si es !0 no sale productos de la bd    si idSede==0 si muestra los productos de la bd
+        //          // Convierte el arreglo de bytes de la imagen a una cadena en Base64
+        //            string base64Image = Convert.ToBase64String(prod.imagen);
+        //        string imageSrc = $"data:image/jpeg;base64,{base64Image}";
+
+        //        // Crea el contenedor HTML del producto
+        //        Literal productHtml = new Literal();
+        //        productHtml.Text = $@"
+        //            <div class='col-md-4 mb-4' data-category='{prod.tipoProducto.idTipoProducto}' data-price='{prod.precio}'>
+        //                <a href='detalle_producto.aspx?idprod={prod.idProducto}' class='text-decoration-none'>
+        //                    <div class='card'>
+        //                        <div class='card-img-container'>
+        //                            <img src='{imageSrc}' class='card-img-top' alt='{prod.nombre}'>
+        //                        </div>
+        //                        <div class='card-body'>
+        //                            <h6 class='card-title'>{prod.nombre}</h6>
+        //                            <p class='card-text'>S/{prod.precio:F2}</p>
+
+        //                        </div>
+        //                    </div>
+        //                </a>
+        //            </div>";
+
+        //        // Agrega el HTML generado al contenedor en la página                                                   //<h6 class='card-title'>{prod.idSede}</h6>
+        //        productContainer.Controls.Add(productHtml);
+        //        }
+        //    }
+        //}
 
 
         public string convertirBindingListAJSON(BindingList<producto> bindingList)

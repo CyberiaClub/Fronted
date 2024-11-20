@@ -51,6 +51,15 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.Label lblSkuProducto;
 
         /// <summary>
+        /// Control lblStockProducto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStockProducto;
+
+        /// <summary>
         /// Control quantity.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace SoftCyberiaWA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAgregarCarrito;
+
+        /// <summary>
+        /// Control lblMensajeError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensajeError;
 
         /// <summary>
         /// Control lblDescripcionProducto.

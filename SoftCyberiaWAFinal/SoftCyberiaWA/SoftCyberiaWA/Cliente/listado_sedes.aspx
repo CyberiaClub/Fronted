@@ -20,23 +20,23 @@
 
     <!-- Lista de Tiendas usando Repeater -->
     <div class="store-list d-flex justify-content-center flex-wrap mt-4">
-        <asp:Repeater ID="repeaterSedes" runat="server">
-            <ItemTemplate>
-                <a href='<%# Eval("LinkUrl") %>' class="text-decoration-none text-dark">
-                    <div class="store border rounded p-3 m-2" style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <h5><%# Eval("Nombre") %></h5>
-                        <p><%# Eval("Descripcion") %></p>
-                        <p><strong>LUN - VIE</strong><br>
-                            <%# Eval("HorarioApertura") %> - <%# Eval("HorarioCierre") %></p>
-                        <div class="contact-info d-flex justify-content-between align-items-center">
-                            <img src="/Imagenes/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;">
-                            <span><%# Eval("Telefono") %></span>
-                        </div>
+    <asp:Repeater ID="repeaterSedes" runat="server">
+        <ItemTemplate>
+            <a href='<%# Eval("LinkUrl") %>' class="text-decoration-none text-dark">
+                <div class="store border rounded p-3 m-2" style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h5><%# Eval("Nombre") %></h5>
+                    <p><%# Eval("Descripcion") %></p>
+                    <p><strong>LUN - VIE</strong><br>
+                        <%# Eval("HorarioApertura", "{0:HH:mm}") %> - <%# Eval("HorarioCierre", "{0:HH:mm}") %></p>
+                    <div class="contact-info d-flex justify-content-between align-items-center">
+                        <img src="/Imagenes/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;">
+                        <span><%# Eval("Telefono") %></span>
                     </div>
-                </a>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
+                </div>
+            </a>
+        </ItemTemplate>
+    </asp:Repeater>
+</div>
 
     <div class="store-list d-flex justify-content-center flex-wrap mt-4">
         <asp:PlaceHolder ID="storeList" runat="server"></asp:PlaceHolder>

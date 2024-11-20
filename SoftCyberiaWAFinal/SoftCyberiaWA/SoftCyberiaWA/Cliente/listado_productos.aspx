@@ -85,24 +85,6 @@
                 <!-- Categorías -->
                 <h6 class="mt-3">Categoría</h6>
                 <asp:Panel ID="filtrosTipoProducto" runat="server" CssClass="overflow-auto p-2" style="max-height: 200px;">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="categoria" value="Arquitectura" id="catArquitectura" onchange="applyFilters()" data-categoria="Arquitectura">
-                        <label class="form-check-label" for="catArquitectura">Arquitectura</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="categoria" value="Arte" id="catArtes" onchange="applyFilters()" data-categoria="Arte">
-                        <label class="form-check-label" for="catArtes">Artes</label>
-                    </div>
-
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="categoria" value="Educación" id="catEducación" onchange="applyFilters()" data-categoria="Educación">
-                        <label class="form-check-label" for="catEducación">Educación</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="categoria" value="Oficina" id="catOficina" onchange="applyFilters()" data-categoria="Oficina">
-                        <label class="form-check-label" for="catOficina">Oficina</label>
-                    </div>
                 </asp:Panel>
                 <!-- Marcas -->
                 <h6 class="mt-5 ">Marca</h6>

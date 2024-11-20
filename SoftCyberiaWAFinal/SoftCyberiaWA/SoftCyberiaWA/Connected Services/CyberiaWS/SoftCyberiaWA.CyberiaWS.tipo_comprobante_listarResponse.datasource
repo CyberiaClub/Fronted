@@ -5,11 +5,14 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<<<<<<<< HEAD:SoftCyberiaWAFinal/SoftCyberiaWA/SoftCyberiaWA/Connected Services/CyberiaWS/SoftCyberiaWA.CyberiaWS.tipo_comprobante_listarResponse.datasource
+
 <GenericObjectDataSource DisplayName="tipo_comprobante_listarResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <TypeInfo>SoftCyberiaWA.CyberiaWS.tipo_comprobante_listarResponse, Connected Services.CyberiaWS.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
-========
+
+<GenericObjectDataSource DisplayName="comprobante_pago_insertarResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>SoftCyberiaWA.CyberiaWS.comprobante_pago_insertarResponse, Connected Services.CyberiaWS.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+
 <GenericObjectDataSource DisplayName="persona_verificar_correoResponse" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <TypeInfo>SoftCyberiaWA.CyberiaWS.persona_verificar_correoResponse, Connected Services.CyberiaWS.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
->>>>>>>> b0683cac5232deed688373211a55e7924a87f499:SoftCyberiaWAFinal/SoftCyberiaWA/SoftCyberiaWA/Connected Services/CyberiaWS/SoftCyberiaWA.CyberiaWS.persona_verificar_correoResponse.datasource
+
 </GenericObjectDataSource>
