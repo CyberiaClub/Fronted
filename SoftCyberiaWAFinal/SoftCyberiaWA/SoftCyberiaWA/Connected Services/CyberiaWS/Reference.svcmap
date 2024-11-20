@@ -27,11 +27,13 @@
     <MetadataFile FileName="ProductoWS.wsdl" MetadataType="Wsdl" ID="ebacc616-5815-44e4-b6e1-00b32e6d58be" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProductoWS?wsdl" />
     <MetadataFile FileName="ProveedorWS.wsdl" MetadataType="Wsdl" ID="96238b88-28d3-473d-ba0f-d55f6532e3d4" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProveedorWS?wsdl" />
     <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="72d0c202-e811-4ea1-8316-914a23dba24d" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/archivo.disco" />
+    <MetadataFile FileName="ComprobantePagoWS.wsdl" MetadataType="Wsdl" ID="88b13a29-cb73-41cc-a9c5-44af81ec98bc" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ComprobantePagoWS?wsdl" />
     <MetadataFile FileName="TipoProductoWS.wsdl" MetadataType="Wsdl" ID="221e2dad-2960-41f3-addc-5ef7c11829b7" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?wsdl" />
     <MetadataFile FileName="TipoComprobanteWS1.xsd" MetadataType="Schema" ID="7d0ceda5-4f61-4d44-aac3-fea3384d5d94" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoComprobanteWS?xsd=1" />
     <MetadataFile FileName="PersonaWS1.wsdl" MetadataType="Wsdl" ID="38db9d16-37a6-435a-ac6e-1a8065c970a5" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?wsdl" />
     <MetadataFile FileName="TipoPersonaWS1.wsdl" MetadataType="Wsdl" ID="8eadc524-3444-4cb0-a21b-aeee70911963" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoPersonaWS?wsdl" />
     <MetadataFile FileName="TipoProductoWS.xsd" MetadataType="Schema" ID="abe64e98-c41d-4a1c-a187-aa5918f6bb86" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?xsd=1" />
+    <MetadataFile FileName="ComprobantePagoWS.xsd" MetadataType="Schema" ID="4c5a6823-33be-419a-a92b-0eaf63f9d135" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ComprobantePagoWS?xsd=1" />
     <MetadataFile FileName="PersonaWS1.xsd" MetadataType="Schema" ID="c39a34ce-5d59-4217-adf6-d5a407adb956" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?xsd=1" />
     <MetadataFile FileName="SedeWS.wsdl" MetadataType="Wsdl" ID="0cab235e-65a5-4051-9937-0d5ea334edaf" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/SedeWS?wsdl" />
     <MetadataFile FileName="ProductoWS.xsd" MetadataType="Schema" ID="5194f912-b662-4821-a183-7c6e27b6e5c0" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProductoWS?xsd=1" />

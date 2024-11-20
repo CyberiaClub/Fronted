@@ -8,5 +8,6 @@
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/TipoPersonaWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/ComprobantePagoWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:8080/CyberiaStoreWS_Servidor/TipoComprobanteWS?wsdl" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
 </discovery>

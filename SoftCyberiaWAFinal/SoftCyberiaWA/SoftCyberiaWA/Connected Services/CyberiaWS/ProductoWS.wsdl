@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/ProductoWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="producto_insertar2">
-    <part name="parameters" element="tns:producto_insertar2" />
+  <message name="producto_buscar_cantidad_sedes">
+    <part name="parameters" element="tns:producto_buscar_cantidad_sedes" />
   </message>
-  <message name="producto_insertar2Response">
-    <part name="parameters" element="tns:producto_insertar2Response" />
-  </message>
-  <message name="producto_insertar">
-    <part name="parameters" element="tns:producto_insertar" />
-  </message>
-  <message name="producto_insertarResponse">
-    <part name="parameters" element="tns:producto_insertarResponse" />
+  <message name="producto_buscar_cantidad_sedesResponse">
+    <part name="parameters" element="tns:producto_buscar_cantidad_sedesResponse" />
   </message>
   <message name="producto_modificar">
     <part name="parameters" element="tns:producto_modificar" />
@@ -23,52 +17,49 @@
   <message name="producto_modificarResponse">
     <part name="parameters" element="tns:producto_modificarResponse" />
   </message>
+  <message name="producto_insertar">
+    <part name="parameters" element="tns:producto_insertar" />
+  </message>
+  <message name="producto_insertarResponse">
+    <part name="parameters" element="tns:producto_insertarResponse" />
+  </message>
   <message name="producto_listar">
     <part name="parameters" element="tns:producto_listar" />
   </message>
   <message name="producto_listarResponse">
     <part name="parameters" element="tns:producto_listarResponse" />
   </message>
-  <message name="producto_buscar_cantidad_sedes">
-    <part name="parameters" element="tns:producto_buscar_cantidad_sedes" />
+  <message name="producto_insertar2">
+    <part name="parameters" element="tns:producto_insertar2" />
   </message>
-  <message name="producto_buscar_cantidad_sedesResponse">
-    <part name="parameters" element="tns:producto_buscar_cantidad_sedesResponse" />
+  <message name="producto_insertar2Response">
+    <part name="parameters" element="tns:producto_insertar2Response" />
   </message>
   <portType name="ProductoWS">
-    <operation name="producto_insertar2">
-      <input wsam:Action="CyberiaWS/ProductoWS/producto_insertar2Request" message="tns:producto_insertar2" />
-      <output wsam:Action="CyberiaWS/ProductoWS/producto_insertar2Response" message="tns:producto_insertar2Response" />
-    </operation>
-    <operation name="producto_insertar">
-      <input wsam:Action="CyberiaWS/ProductoWS/producto_insertarRequest" message="tns:producto_insertar" />
-      <output wsam:Action="CyberiaWS/ProductoWS/producto_insertarResponse" message="tns:producto_insertarResponse" />
+    <operation name="producto_buscar_cantidad_sedes">
+      <input wsam:Action="CyberiaWS/ProductoWS/producto_buscar_cantidad_sedesRequest" message="tns:producto_buscar_cantidad_sedes" />
+      <output wsam:Action="CyberiaWS/ProductoWS/producto_buscar_cantidad_sedesResponse" message="tns:producto_buscar_cantidad_sedesResponse" />
     </operation>
     <operation name="producto_modificar">
       <input wsam:Action="CyberiaWS/ProductoWS/producto_modificarRequest" message="tns:producto_modificar" />
       <output wsam:Action="CyberiaWS/ProductoWS/producto_modificarResponse" message="tns:producto_modificarResponse" />
     </operation>
+    <operation name="producto_insertar">
+      <input wsam:Action="CyberiaWS/ProductoWS/producto_insertarRequest" message="tns:producto_insertar" />
+      <output wsam:Action="CyberiaWS/ProductoWS/producto_insertarResponse" message="tns:producto_insertarResponse" />
+    </operation>
     <operation name="producto_listar">
       <input wsam:Action="CyberiaWS/ProductoWS/producto_listarRequest" message="tns:producto_listar" />
       <output wsam:Action="CyberiaWS/ProductoWS/producto_listarResponse" message="tns:producto_listarResponse" />
     </operation>
-    <operation name="producto_buscar_cantidad_sedes">
-      <input wsam:Action="CyberiaWS/ProductoWS/producto_buscar_cantidad_sedesRequest" message="tns:producto_buscar_cantidad_sedes" />
-      <output wsam:Action="CyberiaWS/ProductoWS/producto_buscar_cantidad_sedesResponse" message="tns:producto_buscar_cantidad_sedesResponse" />
+    <operation name="producto_insertar2">
+      <input wsam:Action="CyberiaWS/ProductoWS/producto_insertar2Request" message="tns:producto_insertar2" />
+      <output wsam:Action="CyberiaWS/ProductoWS/producto_insertar2Response" message="tns:producto_insertar2Response" />
     </operation>
   </portType>
   <binding name="ProductoWSPortBinding" type="tns:ProductoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="producto_insertar2">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="producto_insertar">
+    <operation name="producto_buscar_cantidad_sedes">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,6 +77,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="producto_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="producto_listar">
       <soap:operation soapAction="" />
       <input>
@@ -95,7 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="producto_buscar_cantidad_sedes">
+    <operation name="producto_insertar2">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

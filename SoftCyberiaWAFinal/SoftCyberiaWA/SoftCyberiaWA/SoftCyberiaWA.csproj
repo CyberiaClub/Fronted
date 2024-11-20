@@ -91,6 +91,10 @@
     <Content Include="Cliente\IndexCliente.aspx" />
     <Content Include="Almacenero\Almacenero.Master" />
     <None Include="Connected Services\CyberiaWS\archivo.disco" />
+    <None Include="Connected Services\CyberiaWS\ComprobantePagoWS.wsdl" />
+    <None Include="Connected Services\CyberiaWS\ComprobantePagoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CyberiaWS\configuration91.svcinfo" />
     <None Include="Connected Services\CyberiaWS\configuration.svcinfo" />
     <None Include="Connected Services\CyberiaWS\PersonaWS1.wsdl" />
@@ -424,6 +428,24 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.tipo_comprobante_listarResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.persona_loguearseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.comprobantePago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.comprobante_pago_insertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.comprobante_pago_listarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.comprobante_pago_listar_clienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.comprobante_pago_obtener_por_idResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\CyberiaWS\TipoComprobanteWS1.wsdl" />

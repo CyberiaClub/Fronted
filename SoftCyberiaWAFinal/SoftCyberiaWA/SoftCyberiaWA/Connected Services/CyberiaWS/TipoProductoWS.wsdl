@@ -11,6 +11,12 @@
   <message name="tipoProducto_eliminarResponse">
     <part name="parameters" element="tns:tipoProducto_eliminarResponse" />
   </message>
+  <message name="tipoProducto_listar">
+    <part name="parameters" element="tns:tipoProducto_listar" />
+  </message>
+  <message name="tipoProducto_listarResponse">
+    <part name="parameters" element="tns:tipoProducto_listarResponse" />
+  </message>
   <message name="tipoProducto_insertar">
     <part name="parameters" element="tns:tipoProducto_insertar" />
   </message>
@@ -23,16 +29,14 @@
   <message name="tipoProducto_modificarResponse">
     <part name="parameters" element="tns:tipoProducto_modificarResponse" />
   </message>
-  <message name="tipoProducto_listar">
-    <part name="parameters" element="tns:tipoProducto_listar" />
-  </message>
-  <message name="tipoProducto_listarResponse">
-    <part name="parameters" element="tns:tipoProducto_listarResponse" />
-  </message>
   <portType name="TipoProductoWS">
     <operation name="tipoProducto_eliminar">
       <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_eliminarRequest" message="tns:tipoProducto_eliminar" />
       <output wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_eliminarResponse" message="tns:tipoProducto_eliminarResponse" />
+    </operation>
+    <operation name="tipoProducto_listar">
+      <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_listarRequest" message="tns:tipoProducto_listar" />
+      <output wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_listarResponse" message="tns:tipoProducto_listarResponse" />
     </operation>
     <operation name="tipoProducto_insertar">
       <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_insertarRequest" message="tns:tipoProducto_insertar" />
@@ -41,10 +45,6 @@
     <operation name="tipoProducto_modificar">
       <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_modificarRequest" message="tns:tipoProducto_modificar" />
       <output wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_modificarResponse" message="tns:tipoProducto_modificarResponse" />
-    </operation>
-    <operation name="tipoProducto_listar">
-      <input wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_listarRequest" message="tns:tipoProducto_listar" />
-      <output wsam:Action="CyberiaWS/TipoProductoWS/tipoProducto_listarResponse" message="tns:tipoProducto_listarResponse" />
     </operation>
   </portType>
   <binding name="TipoProductoWSPortBinding" type="tns:TipoProductoWS">
@@ -58,6 +58,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="tipoProducto_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="tipoProducto_insertar">
       <soap:operation soapAction="" />
       <input>
@@ -68,15 +77,6 @@
       </output>
     </operation>
     <operation name="tipoProducto_modificar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="tipoProducto_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
