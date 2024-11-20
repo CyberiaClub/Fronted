@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftCyberiaWA.CyberiaWS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class registrar_nueva_categoria : System.Web.UI.Page
     {
+        private TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,6 +21,16 @@ namespace SoftCyberiaWA.Administrador
             try
             {
                 //metodo registrar categoria
+                tipoProducto _tipoProducto = new tipoProducto();
+                _tipoProducto.tipo = categoriaName.Text.Trim();
+                byte[] imagenBytes;
+                using (var binaryReader = new System.IO.BinaryReader(fileUploadNuevaCategoria.PostedFile.InputStream))
+                {
+                    imagenBytes = binaryReader.ReadBytes(fileUploadNuevaCategoria.PostedFile.ContentLength);
+                }
+                _tipoProducto.imagen = imagenBytes;
+
+                this.daoTipoProducto.tipoProducto_insertar(_tipoProducto);
 
 
 

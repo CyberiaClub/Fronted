@@ -110,7 +110,7 @@ namespace SoftCyberiaWA
                 Literal productHtml = new Literal();
                 productHtml.Text = $@"
 
-                    <div class='col-md-4 mb-4' data-category='{prod.idTipo}' data-price='{prod.precio}'>
+                    <div class='col-md-4 mb-4' data-category='{prod.tipoProducto}' data-price='{prod.precio}'>
                         <a href='detalle_producto.aspx?idprod={prod.idProducto}' class='text-decoration-none'>
                             <div class='card'>
                                 <div class='card-img-container'>
@@ -146,7 +146,7 @@ namespace SoftCyberiaWA
                 // Crea el contenedor HTML del producto
                 Literal productHtml = new Literal();
                 productHtml.Text = $@"
-                    <div class='col-md-4 mb-4' data-category='{prod.idTipo}' data-price='{prod.precio}'>
+                    <div class='col-md-4 mb-4' data-category='{prod.tipoProducto}' data-price='{prod.precio}'>
                         <a href='detalle_producto.aspx?idprod={prod.idProducto}' class='text-decoration-none'>
                             <div class='card'>
                                 <div class='card-img-container'>

@@ -11,6 +11,7 @@ namespace SoftCyberiaWA.Administrador
     public partial class registrar_nuevos_productos : System.Web.UI.Page
     {
 
+
         private SedeWSClient daoSede = new SedeWSClient();
         private ProveedorWSClient daoProveedor = new ProveedorWSClient();
         private TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();

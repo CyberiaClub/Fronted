@@ -35,9 +35,9 @@ namespace SoftCyberiaWA
                 {
                     Nombre = sede.nombre,
                     Descripcion = sede.descripcion,
-                    HorarioApertura = sede.horarioApertura.ToString("HH:mm"), // Asegúrate de que horarioApertura sea DateTime
-                    HorarioCierre = sede.horarioCierre.ToString("HH:mm"),     // Asegúrate de que horarioCierre sea DateTime
-                    Telefono = sede.telefono,
+                    //HorarioApertura = sede.horarioApertura.ToString("HH:mm"), // Asegúrate de que horarioApertura sea DateTime
+                    //HorarioCierre = sede.horarioCierre.ToString("HH:mm"),     // Asegúrate de que horarioCierre sea DateTime
+                    //Telefono = sede.telefono,
                     LinkUrl = $"../Cliente/listado_productos.aspx?sede={sede.nombre.Replace(" ", "_")}&idSede={sede.idSede}"
                 });
             }

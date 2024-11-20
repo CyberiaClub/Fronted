@@ -29,7 +29,8 @@ namespace SoftCyberiaWA.Administrador
                 _proveedor.correo = email.Text.Trim();
                 _proveedor.direccion = address.Text.Trim();
                 _proveedor.descripcion = description.Text.Trim();
-                daoProveedor.proveedor_insertar(_proveedor);
+
+                this.daoProveedor.proveedor_insertar(_proveedor);
 
                 // Mostrar el mensaje de éxito
                 successMessage.Text = "Producto registrado correctamente.";

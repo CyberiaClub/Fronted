@@ -17,7 +17,7 @@ namespace SoftCyberiaWA.Administrador
         //private ClienteWSClient daoCliente = new ClienteWSClient();
         private SedeWSClient daoSede = new SedeWSClient();
         //private cliente _cliente = new cliente();
-        private PersonaWSClient daoPersona = new PersonaWSClient();
+        //private PersonaWSClient daoPersona = new PersonaWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarSedes();
