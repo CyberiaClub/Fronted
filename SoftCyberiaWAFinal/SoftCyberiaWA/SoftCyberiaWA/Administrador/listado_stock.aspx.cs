@@ -12,9 +12,10 @@ namespace SoftCyberiaWA.Administrador
     public partial class listado_stock : System.Web.UI.Page
     {
         ProductoWSClient daoProducto = new ProductoWSClient();
+        SedeWSClient daoSede = new SedeWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            CargarSedes();
         }
 
         protected void SearchProductHeadquarters_Click(object sender, EventArgs e)
@@ -39,11 +40,16 @@ namespace SoftCyberiaWA.Administrador
 
             //}
         }
-
+        private void CargarSedes()
+        {
+            sedeName.DataSource = daoSede.sede_listar();
+            sedeName.DataTextField = "nombre";
+            sedeName.DataValueField = "idSede";
+            sedeName.DataBind(); // Llenar el DropDownList
+        }
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-
-        
+            
 
         }
     }
