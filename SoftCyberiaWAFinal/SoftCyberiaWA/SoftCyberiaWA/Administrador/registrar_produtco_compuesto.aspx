@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_produtco_compuesto.aspx.cs" Inherits="SoftCyberiaWA.Administrador.registrar_produtco_compuesto" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Producto Compuesto
 </asp:Content>
@@ -16,28 +17,28 @@
                     <!-- Columna de información de la oferta -->
                     <div class="col-md-8">
                         <div class="pb-3">
-                            <asp:Label ID="lblProductName" runat="server" Text="Nombre del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="productName" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:Label ID="lblproductoNombre" runat="server" Text="Nombre del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:TextBox ID="productoNombre" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="pb-3">
-                            <asp:Label ID="lblSKU" runat="server" Text="SKU:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="sku" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:Label ID="lblproductoSku" runat="server" Text="SKU:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:TextBox ID="productoSku" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="pb-3">
-                            <asp:Label ID="lblPrice" runat="server" Text="Precio de Venta:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="price" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:Label ID="lblproductoPrecio" runat="server" Text="Precio de Venta:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:TextBox ID="productoPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="pb-3  col-md-6">
+                            <asp:Label ID="lblproductoMarca" runat="server" Text="Marca del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:DropDownList ID="productoMarca" runat="server" AutoPostBack="true" CssClass="form-select"></asp:DropDownList>
+                        </div>
+                        <div class="pb-3  col-md-6">
+                            <asp:Label ID="lblproductoTipoProducto" runat="server" Text="Categoría del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:DropDownList ID="productoTipoProducto" runat="server" AutoPostBack="true" CssClass="form-select"></asp:DropDownList>
                         </div>
                         <div class="pb-3">
-                            <asp:Label ID="lblUnidades" runat="server" Text="Unidades:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="unidades" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
-                        <div class="pb-3">
-                            <asp:Label ID="lblSede" runat="server" Text="Sede:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:DropDownList ID="sedeName" runat="server" CssClass="form-control"></asp:DropDownList>
-                        </div>
-                        <div class="pb-3">
-                            <asp:Label ID="lblDescription" runat="server" Text="Descripción del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="description" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
+                            <asp:Label ID="lblproductoDescripcion" runat="server" Text="Descripción del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:TextBox ID="productoDescripcion" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
 
@@ -49,12 +50,12 @@
                         <img src="/Imagenes/oferta.png" alt="Icono de oferta" class="img-fluid img-thumbnail mb-3" style="width: 160px;">
                         <asp:FileUpload ID="fileUploadProductImage" CssClass="form-control mb-2" runat="server" />
 
-                        <asp:Button ID="btnAsignarOferta" runat="server" Text="Asignar Imagen" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;"  />
+                        <asp:Button ID="btnAsignarOferta" runat="server" Text="Asignar Imagen" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;" />
                     </div>
                 </div>
 
                 <!-- Sección para agregar productos al kit -->
-                <p> </p>
+                <p></p>
                 <div class="col-md-13">
                     <h5 class="font-weight-bold text-center card-header font-bold" style="color: #004EA8;">Agregar Productos al Kit</h5>
                     <div class="row">
@@ -62,10 +63,13 @@
                             <asp:Label ID="lblSearchSKU" runat="server" Text="Buscar Producto por SKU:" CssClass="col-form-label fw-bold"></asp:Label>
                             <div class="d-flex">
                                 <asp:TextBox ID="searchSKU" runat="server" CssClass="form-control mr-20"></asp:TextBox>
-                                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20" Style="background-color: #004EA8; border-color: #004EA8;" />
-                                <asp:Label ID="lblCantidadProducto" runat="server" Text="Cantidad:" CssClass="col-form-label fw-bold align-self-center mx-2"></asp:Label>
-                                <asp:TextBox ID="cantidadProducto" runat="server" CssClass="form-control mr-2" TextMode="Number" Style="width: 80px;"></asp:TextBox>
-                                <asp:Button ID="btnAgregarProducto" runat="server" Text="Agregar Producto" CssClass="btn btn-success" />
+
+                                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="BuscarProducto_Click" />
+
+                                <asp:Label ID="lblproductoCantidad" runat="server" Text="Cantidad:" CssClass="col-form-label fw-bold align-self-center mx-2"></asp:Label>
+                                <asp:TextBox ID="productoCantidad" runat="server" CssClass="form-control mr-2" TextMode="Number" Style="width: 80px;"></asp:TextBox>
+
+                                <asp:Button ID="btnAgregarProducto" runat="server" Text="Agregar Producto" CssClass="btn btn-success" OnClick="AgregarProducto_Click" />
                             </div>
                         </div>
                     </div>
@@ -93,7 +97,9 @@
                 <!-- Botón para finalizar la creación del kit -->
                 <div class="row mt-4">
                     <div class="col-md-12 text-center">
-                        <asp:Button ID="btnCrearKit" runat="server" Text="Crear Kit" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" />
+                        <asp:Button ID="btnCrearKit" runat="server" Text="Crear Kit" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnCrearKit_Click"/>
+                         <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="providerButton_Click" />
+                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
                 </div>
 

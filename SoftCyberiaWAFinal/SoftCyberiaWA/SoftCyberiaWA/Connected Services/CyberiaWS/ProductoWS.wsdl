@@ -123,6 +123,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="producto_aumentar_stock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="producto_buscar_sku">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
   </binding>
   <service name="ProductoWS">
     <port name="ProductoWSPort" binding="tns:ProductoWSPortBinding">

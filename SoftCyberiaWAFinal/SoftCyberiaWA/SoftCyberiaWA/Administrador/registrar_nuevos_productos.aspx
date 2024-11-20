@@ -16,7 +16,7 @@
             <div class="card-body pb-2">
                 <div class="row">
                     <!-- Columna de información del producto -->
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <div class="pb-3">
                             <asp:Label ID="lblProductName" runat="server" Text="Nombre del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:TextBox ID="productName" runat="server" CssClass="form-control"></asp:TextBox>
@@ -37,10 +37,6 @@
                         <div class="pb-3">
                             <asp:Label ID="lblPrice" runat="server" Text="Precio de Venta:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:TextBox ID="price" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
-                        <div class="pb-3">
-                            <asp:Label ID="lblProviderPrice" runat="server" Text="Precio de Venta del Proveedor:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="providerPrice" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblProvider" runat="server" Text="Proveedor:" CssClass="col-form-label fw-bold"></asp:Label>
@@ -73,6 +69,7 @@
             </div>
             <div class="card-footer text-center">
                 <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary" OnClick="registerButton_Click" />
+                <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
             </div>
         </div>
     </div>

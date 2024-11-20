@@ -117,19 +117,7 @@
 
                         <asp:Panel ID="productContainer" runat="server" CssClass="row">
                             <p id="loading-message">Cargando productos...</p>
-                            <div class="col-md-4 mb-4" data-sede="Sociales" data-category="Arquitectura" data-price="146.40">
-                                <a href="detalle_producto2.aspx" class="text-decoration-none">
-                                    <div class="card">
-                                        <div class="card-img-container">
-                                            <img src="/Imagenes/lapiz-grafito.jpg" class="card-img-top" alt="Lápiz grafito Staedtler">
-                                        </div>
-                                        <div class="card-body">
-                                            <h6 class="card-title">Lápiz grafito Staedtler x 24</h6>
-                                            <p class="card-text">S/146.40</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+
 
                             <!-- Producto 2 sede=Tienda_Sociales&idSede=2-->
                             <div class="col-md-4 mb-4" data-sede="Sociales" data-category="Oficina" data-price="81.50">
@@ -286,7 +274,9 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
+                    </div>--%>
+
+
                 </div>
             </div>
         </div>

@@ -92,8 +92,16 @@
     <Content Include="Almacenero\Almacenero.Master" />
     <Content Include="Cliente\registro_usuario.aspx" />
     <None Include="Connected Services\CyberiaWS\archivo.disco" />
+    <None Include="Connected Services\CyberiaWS\ComprobantePagoWS.wsdl" />
+    <None Include="Connected Services\CyberiaWS\ComprobantePagoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CyberiaWS\configuration91.svcinfo" />
     <None Include="Connected Services\CyberiaWS\configuration.svcinfo" />
+    <None Include="Connected Services\CyberiaWS\PersonaWS1.wsdl" />
+    <None Include="Connected Services\CyberiaWS\PersonaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CyberiaWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -182,11 +190,11 @@
     <Content Include="Imagenes\stae.png" />
     <Content Include="Imagenes\whatsapp.png" />
     <Content Include="Cliente\listado_sedes.aspx" />
-    <Content Include="Cliente\index_iniciosesion.aspx" />
     <Content Include="Cliente\metodo_pago.aspx" />
     <Content Include="Cliente\listado_productos.aspx" />
     <Content Include="InicioSesion\indexInicioSesion.aspx" />
     <Content Include="InicioSesion\registro_usuario.aspx" />
+    <Content Include="InicioSesion\verificacion_usuario.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -320,6 +328,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.sede_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.tipoPersona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.tipopersona_listarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.tipoProducto.datasource">
@@ -596,13 +610,6 @@
     <Compile Include="Cliente\listado_sedes.aspx.designer.cs">
       <DependentUpon>listado_sedes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cliente\index_iniciosesion.aspx.cs">
-      <DependentUpon>index_iniciosesion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cliente\index_iniciosesion.aspx.designer.cs">
-      <DependentUpon>index_iniciosesion.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Cliente\metodo_pago.aspx.cs">
       <DependentUpon>metodo_pago.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -637,6 +644,13 @@
     </Compile>
     <Compile Include="InicioSesion\registro_usuario.aspx.designer.cs">
       <DependentUpon>registro_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioSesion\verificacion_usuario.aspx.cs">
+      <DependentUpon>verificacion_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioSesion\verificacion_usuario.aspx.designer.cs">
+      <DependentUpon>verificacion_usuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vendedor\IndexVendedor.aspx.cs">

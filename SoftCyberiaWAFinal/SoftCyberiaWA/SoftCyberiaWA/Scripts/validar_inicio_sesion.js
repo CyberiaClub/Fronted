@@ -33,3 +33,41 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
 }
+
+function autenticarUsuario(email, password) {
+    // Enviar datos al servidor mediante fetch
+    fetch("/autenticarUsuario.aspx", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.tipoUsuario) {
+                redirigirPorTipoUsuario(data.tipoUsuario);
+            } else {
+                // Manejo de error
+                document.getElementById("passwordError").textContent = "Credenciales incorrectas.";
+            }
+        })
+        .catch(error => console.error("Error:", error));
+}
+
+// Función para redirigir según el tipo de usuario
+function redirigirPorTipoUsuario(tipoUsuario) {
+    switch (tipoUsuario) {
+        case "cliente":
+            window.location.href = "/SoftCyberiaCliente.Master";
+            break;
+        case "administrador":
+        case "vendedor":
+        case "almacen":
+            window.location.href = "/SoftCyberiaAdministrador.Master";
+            break;
+        case "falta_verificar":
+            window.location.href = "/verificar_correo.aspx";
+            break;
+        default:
+            alert("Tipo de usuario no reconocido.");
+    }
+}

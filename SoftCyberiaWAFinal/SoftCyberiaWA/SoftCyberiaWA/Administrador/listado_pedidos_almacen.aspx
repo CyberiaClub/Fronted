@@ -8,15 +8,16 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <asp:Panel ID="panelPedidos" runat="server">
-        <asp:GridView ID="gvPedidos" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="gvPedidos_SelectedIndexChanged">
+        <asp:GridView ID="gvPedidos" runat="server" CssClass="table table-hover table-responsive table-striped" AutoGenerateColumns="false"  OnRowDataBound="gvPedidos_RowDataBound">
             <columns>
                 <asp:BoundField DataField="NumeroPedido" HeaderText="Número de Pedido" />
                 <asp:BoundField DataField="FechaCreacion" HeaderText="Fecha de Creación" DataFormatString="{0:dd/MM/yyyy}" />
+                <asp:BoundField DataField="Estado" HeaderText="EstadoHidden"/>
                 <asp:TemplateField HeaderText="Estado">
                     <itemtemplate>
                         <asp:DropDownList ID="ddlEstado" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlEstado_SelectedIndexChanged">
-                            <asp:ListItem Value="En preparación" Text="En preparación" />
-                            <asp:ListItem Value="Listo para Recoger" Text="Listo para Recoger" />
+                            <asp:ListItem Value="EN_PREPARACION" Text="En preparación" />
+                            <asp:ListItem Value="LISTO_PARA_RECOGER" Text="Listo para Recoger" />
 
                         </asp:DropDownList>
                     </itemtemplate>

@@ -45,6 +45,7 @@
                         <asp:FileUpload ID="fileUploadProductImage" CssClass="form-control mb-2" runat="server" />
 
                         <asp:Button ID="btnAsignarOferta" runat="server" Text="Asignar Oferta" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnAsignarOferta_Click" />
+                        <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
                 </div>
             </div>

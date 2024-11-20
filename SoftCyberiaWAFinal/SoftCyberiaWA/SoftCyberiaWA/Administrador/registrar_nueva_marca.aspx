@@ -25,16 +25,24 @@
                             <asp:TextBox ID="marcaName" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
-
+                    <div>
+                        <div class="pb-3">
+                            <asp:Label ID="lblProvider" runat="server" Text="Proveedor:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:DropDownList ID="providerName" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </div>
+                    </div>
                     <!-- Columna de imagen y botón -->
                     <div class="col-md-6 text-center d-flex flex-column align-items-center justify-content-center align-content-center">
                         <asp:Label ID="lbnuevaMarca" runat="server" Text="Nueva Marca:" CssClass="fw-bold d-block mb-3"></asp:Label>
                         <asp:Image ID="imgNuevaMarca" runat="server" CssClass="img-fluid img-thumbnail mb-3" ImageUrl="/Imagenes/marca.png" Height="250px" Width="250px" />
                         <asp:FileUpload ID="fileUploadNuevaMarca" CssClass="form-control mb-3 w-75" runat="server" />
                     </div>
+
+
                     <div class="mb-3">
                        
-                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-50 align-content-xl-center"  />
+                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-50 align-content-xl-center" OnClick="registerButton_Click" />
+                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
 
 

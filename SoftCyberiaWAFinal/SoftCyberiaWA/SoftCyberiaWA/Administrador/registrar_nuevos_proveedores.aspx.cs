@@ -18,16 +18,31 @@ namespace SoftCyberiaWA.Administrador
 
         protected void providerButton_Click(object sender, EventArgs e)
         {
-            proveedor _proveedor = new proveedor();
-            _proveedor.ruc = providerRUC.Text.Trim();
-            // falta validacion de RUC, por el momento puede poner cualquier cosa
-            _proveedor.nombreContacto = providerName.Text.Trim();
-            _proveedor.razonSocial = companyName.Text.Trim();
-            _proveedor.telefono = phone.Text.Trim();
-            _proveedor.correo = email.Text.Trim();
-            _proveedor.direccion = address.Text.Trim();
-            _proveedor.descripcion = description.Text.Trim();
-            daoProveedor.proveedor_insertar(_proveedor);
+            try
+            {
+                proveedor _proveedor = new proveedor();
+                _proveedor.ruc = providerRUC.Text.Trim();
+                _proveedor.nombreContacto = providerName.Text.Trim();
+                _proveedor.razonSocial = companyName.Text.Trim();
+                _proveedor.telefono = phone.Text.Trim();
+                _proveedor.correo = email.Text.Trim();
+                _proveedor.direccion = address.Text.Trim();
+                _proveedor.descripcion = description.Text.Trim();
+
+                this.daoProveedor.proveedor_insertar(_proveedor);
+
+                // Mostrar el mensaje de éxito
+                successMessage.Text = "Producto registrado correctamente.";
+                successMessage.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores (opcional)
+                successMessage.Text = $"Error al registrar el producto: {ex.Message}";
+                successMessage.CssClass = "text-danger";
+                successMessage.Visible = true;
+            }
+
         }
     }
 }
