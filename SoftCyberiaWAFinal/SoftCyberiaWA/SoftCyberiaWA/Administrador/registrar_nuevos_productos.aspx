@@ -38,23 +38,11 @@
                             <asp:Label ID="lblPrice" runat="server" Text="Precio de Venta:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:TextBox ID="price" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <div class="pb-3">
-                            <asp:Label ID="lblProvider" runat="server" Text="Proveedor:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:DropDownList ID="providerName" runat="server" CssClass="form-control"></asp:DropDownList>
-                        </div>
 
                     </div>
 
                     <!-- Columna de proveedor e imagen -->
                     <div class="col-md-6">
-                        <div class="pb-3">
-                            <asp:Label ID="lblUnidades" runat="server" Text="Unidades:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="unidades" runat="server" CssClass="form-control"></asp:TextBox>
-                        </div>
-                        <div class="pb-3">
-                            <asp:Label ID="lblSede" runat="server" Text="Sede:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:DropDownList ID="sedeName" runat="server" CssClass="form-control"></asp:DropDownList>
-                        </div>
                         <div class="pb-3">
                             <asp:Label ID="lblDescription" runat="server" Text="Descripción del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:TextBox ID="description" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>

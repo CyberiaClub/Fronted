@@ -25,7 +25,7 @@ namespace SoftCyberiaWA.Administrador
                 this._producto = daoProducto.producto_buscar_sku(productoSku.Text.ToString(), 1);
                 if (this._producto != null)
                 {
-                    nombreProducto.Text = this._producto.nombre;
+                    nombreProducto.Text = this._producto.idProducto.ToString();
                     descripcionProducto.Text = this._producto.descripcion;
                     stockActual.Text = this._producto.cantidad.ToString();
                 }
@@ -39,7 +39,7 @@ namespace SoftCyberiaWA.Administrador
 
         protected void onClickActualizarStock(object sender, EventArgs e)
         {
-            daoProducto.producto_aumentar_stock(this._producto.idProducto, 1, Convert.ToInt32(cantidadProducto.Text));
+            daoProducto.producto_aumentar_stock(Convert.ToInt32(this._producto.idProducto), 1, Convert.ToInt32(cantidadProducto.Text));
             this.buscarProducto();
         }
     }

@@ -16,7 +16,14 @@ namespace SoftCyberiaWA.InicioSesion
         {
             
             string token = Request.QueryString["token"];
-            daoPersona.persona_verificar_correo(token);
+            if (daoPersona.persona_verificar_correo(token) == -1)
+            {
+                verificacionMensaje.InnerText = "Hubo un error durante la verificación de su cuenta.";
+            }
+            else
+            {
+                verificacionMensaje.InnerText = "Se verificó la cuenta con éxito. Puede cerrar esta ventana.";
+            }
         }
     }
 }

@@ -28,41 +28,53 @@
                                     <asp:ListItem Value="2">Pasaporte</asp:ListItem>
                                     <asp:ListItem Value="3">Carnet de Extranjeria</asp:ListItem>
                                 </asp:DropDownList>
+                                <small id="tipoDocumentoMensaje" class="form-text text-bg-danger" runat="server"></small>
                             </div>
                             <!-- Campo Documento -->
                             <div class="pb-3">
                                 <label for="personaDocumento">Documento de Identidad:</label>
                                 <asp:TextBox ID="personaDocumento" runat="server" CssClass="form-control"></asp:TextBox>
+                                <small id="documentoMensaje" class="form-text text-bg-danger" runat="server"></small>
+                            
                             </div>
 
                             <!-- Campo Teléfono -->
                             <div class="pb-3">
                                 <label for="personaTelefono">Telefono:</label>
                                 <asp:TextBox ID="personaTelefono" runat="server" CssClass="form-control"></asp:TextBox>
+                                <small id="telefonoMensaje" class="form-text text-bg-danger" runat="server"></small>
+                            
                             </div>
 
                             <!-- Campo Nombre -->
                             <div class="pb-3">
                                 <label for="personaNombre">Nombre:</label>
                                 <asp:TextBox ID="personaNombre" runat="server" CssClass="form-control"></asp:TextBox>
+                                <small id="nombreMensaje" class="form-text text-bg-danger" runat="server"></small>
+                            
                             </div>
 
                             <!-- Campo Primer Apellido -->
                             <div class="pb-3">
                                 <label for="personaPrimerAp">Primer Apellido:</label>
                                 <asp:TextBox ID="personaPrimerAp" runat="server" CssClass="form-control"></asp:TextBox>
-                            </div>
+                                <small id="primerApMensaje" class="form-text text-bg-danger" runat="server"></small>
+                       
+                                </div>
 
                             <!-- Campo Segundo Apellido -->
                             <div class="pb-3">
                                 <label for="personaSegundoAp">Segundo Apellido:</label>
                                 <asp:TextBox ID="personaSegundoAp" runat="server" CssClass="form-control"></asp:TextBox>
+                                <small id="segundoApMensaje" class="form-text text-bg-danger" runat="server"></small>
+                            
                             </div>
 
                             <!-- Campo Fecha de Nacimiento -->
                             <div class="pb-3">
                                 <label for="personaFechaNac">Fecha de Nacimiento:</label>
                                 <input id="personaFechaNac" runat="server" type="date" class="form-control" />
+                                <small id="fechaNacMensaje" class="form-text text-bg-danger" runat="server"></small>
                             </div>
 
                             <!-- Campo Sexo -->
@@ -73,41 +85,39 @@
                                     <asp:ListItem Value="1">Masculino</asp:ListItem>
                                     <asp:ListItem Value="2">Femenino</asp:ListItem>
                                 </asp:DropDownList>
+                                <small id="sexoMensaje" class="form-text text-bg-danger" runat="server"></small>
                             </div>
 
                             <!-- Campo Dirección -->
                             <div class="pb-3">
                                 <label for="personaDireccion">Dirección:</label>
                                 <asp:TextBox ID="personaDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                                <small id="direccionMensaje" class="form-text text-bg-danger" runat="server"></small>
                             </div>
 
                             <!-- Campo Nacionalidad -->
                             <div class="pb-3">
                                 <label for="personaNacionalidad">Nacionalidad:</label>
                                 <asp:TextBox ID="personaNacionalidad" runat="server" CssClass="form-control"></asp:TextBox>
+                                <small id="nacionalidadMensaje" class="form-text text-bg-danger" runat="server"></small>
                             </div>
-
-                            <%--<!-- Campo Correo -->
-                            <div class="pb-3">
-                                <label for="personaCorreo">Correo:</label>
-                                <asp:TextBox ID="personaCorreo" runat="server" CssClass="form-control"></asp:TextBox>
-                            </div>--%>
-
 
                             <div class="form-group">
                                 <label for="personaCorreo">Correo Electrónico</label>
                                 <input type="email" class="form-control" ID="personaCorreo" aria-describedby="emailHelp" placeholder="Ingrese su correo" runat="server">
-                                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo con nadie.</small>
+                                <small id="correoMensaje" class="form-text text-bg-danger" runat="server"></small>
                             </div>
 
                             <div class="form-group">
                                 <label for="personaContraseña">Contraseña</label>
                                 <input type="password" class="form-control" id="personaContraseña" placeholder="Contraseña" runat="server">
+                                <small id="contraseñaMensaje" class="form-text text-bg-danger" runat="server"></small>
                             </div>
 
                             <div class="form-group">
-                                <label for="personaConfirmarContraseña">Contraseña</label>
+                                <label for="personaConfirmarContraseña">Confirmar Contraseña</label>
                                 <input type="password" class="form-control" id="personaConfirmarContraseña" placeholder="Confirme su contraseña" runat="server">
+                                <small id="confirmarContraseñaMensaje" class="form-text text-bg-danger" runat="server"></small>                            
                             </div>
                             <!-- Botón de registro -->
                             <div class="form-group">

@@ -401,8 +401,16 @@
     <Content Include="Connected Services\CyberiaWS\SoftCyberiaWA.CyberiaWS.comprobante_pago_obtener_por_idResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\CyberiaWS\TipoComprobanteWS.wsdl" />
+    <None Include="Connected Services\CyberiaWS\TipoComprobanteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\CyberiaWS\TipoComprobanteWS1.wsdl" />
     <None Include="Connected Services\CyberiaWS\TipoComprobanteWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CyberiaWS\TipoPersonaWS.wsdl" />
+    <None Include="Connected Services\CyberiaWS\TipoPersonaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CyberiaWS\TipoPersonaWS1.wsdl" />
@@ -575,13 +583,6 @@
     </Compile>
     <Compile Include="Cliente\IndexCliente.aspx.designer.cs">
       <DependentUpon>IndexCliente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Cliente\registro_usuario.aspx.cs">
-      <DependentUpon>registro_usuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cliente\registro_usuario.aspx.designer.cs">
-      <DependentUpon>registro_usuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cliente\SoftCyberiaCliente.Master.cs">
       <DependentUpon>SoftCyberiaCliente.Master</DependentUpon>

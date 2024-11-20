@@ -33,6 +33,15 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.WebControls.DropDownList personaTipoDocumento;
 
         /// <summary>
+        /// Control tipoDocumentoMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tipoDocumentoMensaje;
+
+        /// <summary>
         /// Control personaDocumento.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace SoftCyberiaWA.InicioSesion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox personaDocumento;
+
+        /// <summary>
+        /// Control documentoMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl documentoMensaje;
 
         /// <summary>
         /// Control personaTelefono.
@@ -51,6 +69,15 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.WebControls.TextBox personaTelefono;
 
         /// <summary>
+        /// Control telefonoMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl telefonoMensaje;
+
+        /// <summary>
         /// Control personaNombre.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace SoftCyberiaWA.InicioSesion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox personaNombre;
+
+        /// <summary>
+        /// Control nombreMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nombreMensaje;
 
         /// <summary>
         /// Control personaPrimerAp.
@@ -69,6 +105,15 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.WebControls.TextBox personaPrimerAp;
 
         /// <summary>
+        /// Control primerApMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl primerApMensaje;
+
+        /// <summary>
         /// Control personaSegundoAp.
         /// </summary>
         /// <remarks>
@@ -78,6 +123,15 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.WebControls.TextBox personaSegundoAp;
 
         /// <summary>
+        /// Control segundoApMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl segundoApMensaje;
+
+        /// <summary>
         /// Control personaFechaNac.
         /// </summary>
         /// <remarks>
@@ -85,6 +139,15 @@ namespace SoftCyberiaWA.InicioSesion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl personaFechaNac;
+
+        /// <summary>
+        /// Control fechaNacMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fechaNacMensaje;
 
         /// <summary>
         /// Control lblpersonaSexo.
@@ -105,6 +168,15 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.WebControls.DropDownList personaSexo;
 
         /// <summary>
+        /// Control sexoMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sexoMensaje;
+
+        /// <summary>
         /// Control personaDireccion.
         /// </summary>
         /// <remarks>
@@ -112,6 +184,15 @@ namespace SoftCyberiaWA.InicioSesion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox personaDireccion;
+
+        /// <summary>
+        /// Control direccionMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl direccionMensaje;
 
         /// <summary>
         /// Control personaNacionalidad.
@@ -123,6 +204,15 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.WebControls.TextBox personaNacionalidad;
 
         /// <summary>
+        /// Control nacionalidadMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl nacionalidadMensaje;
+
+        /// <summary>
         /// Control personaCorreo.
         /// </summary>
         /// <remarks>
@@ -130,6 +220,15 @@ namespace SoftCyberiaWA.InicioSesion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl personaCorreo;
+
+        /// <summary>
+        /// Control correoMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl correoMensaje;
 
         /// <summary>
         /// Control personaContraseña.
@@ -141,6 +240,15 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword personaContraseña;
 
         /// <summary>
+        /// Control contraseñaMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contraseñaMensaje;
+
+        /// <summary>
         /// Control personaConfirmarContraseña.
         /// </summary>
         /// <remarks>
@@ -148,6 +256,15 @@ namespace SoftCyberiaWA.InicioSesion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword personaConfirmarContraseña;
+
+        /// <summary>
+        /// Control confirmarContraseñaMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl confirmarContraseñaMensaje;
 
         /// <summary>
         /// Control registerButton.

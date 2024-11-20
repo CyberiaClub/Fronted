@@ -46,89 +46,43 @@ namespace SoftCyberiaWA.Administrador
 
         protected void registerButton_Click(object sender, EventArgs e)
         {
-            producto producto = new producto();
+            producto _producto = new producto();
 
-            producto.nombre = productName.Text;
-            producto.sku = sku.Text;
-            producto.precio = Convert.ToDouble(price.Text);
-            producto.precioSpecified = true;
-            producto.precioProveedorSpecified = true;
-            producto.descripcion = description.Text;
-            producto.idSedeSpecified = true;
-            producto.marca.idMarca = Int32.Parse(marcaName.SelectedValue);
-            producto.marca.idMarcaSpecified = true;
-            producto.tipoProducto.idTipoProducto = Int32.Parse(categoriaName.SelectedValue);
-            producto.tipoProducto.idTipoProductoSpecified = true;
-            producto.cantidad = 0;
-            producto.cantidadSpecified = true;
+            _producto.nombre = productName.Text;
+            _producto.sku = sku.Text;
+            _producto.precio = Convert.ToDouble(price.Text);
+            _producto.precioSpecified = true;
+            _producto.precioProveedorSpecified = true;
+            _producto.descripcion = description.Text;
+            _producto.idSede = 1;
+            _producto.idSedeSpecified = true;
+            marca _marca = new marca();
+            _marca.idMarca = marcaName.SelectedIndex;
+            _marca.idMarcaSpecified = true;
+            tipoProducto _tipoProducto = new tipoProducto();
+            _tipoProducto.idTipoProducto = categoriaName.SelectedIndex;
+            _tipoProducto.idTipoProductoSpecified = true;
+            _producto.marca = _marca;
+            _producto.tipoProducto = _tipoProducto;
+            _producto.tipoProducto.idTipoProductoSpecified = true;
+            _producto.cantidad = 0;
+            _producto.cantidadSpecified = true;
 
             if (fileUploadProductImage.HasFile)
             {
-
-            
-                producto producto = new producto();
-
-                producto.nombre = productName.Text;
-                producto.sku = sku.Text;
-                producto.precio = Convert.ToDouble(price.Text);
-                producto.precioSpecified = true;
-                producto.precioProveedor = Convert.ToDouble(providerPrice.Text);
-                producto.precioProveedorSpecified = true;
-                producto.descripcion = description.Text;
-                producto.idSede = Int32.Parse(sedeName.SelectedValue);
-                producto.idSedeSpecified = true;
-                //producto.idMarca = Int32.Parse(marcaName.SelectedValue);
-                //producto.idMarcaSpecified = true;
-                //producto.idProveedor = Int32.Parse(providerName.SelectedValue);
-                //producto.idProveedorSpecified = true;
-                //producto.idTipo = Int32.Parse(categoriaName.SelectedValue);
-                //producto.idTipoSpecified = true;
-                producto.cantidad = 0;
-                producto.cantidadSpecified = true;
-
-                if (fileUploadProductImage.HasFile)
+                using (System.IO.Stream imageStream = fileUploadProductImage.PostedFile.InputStream)
                 {
-                    using (System.IO.Stream imageStream = fileUploadProductImage.PostedFile.InputStream)
-                    {
-                        byte[] imageBytes = new byte[imageStream.Length];
-                        imageStream.Read(imageBytes, 0, (int)imageStream.Length);
-                        producto.imagen = imageBytes; // Convertir a base64
-                    }
+                    byte[] imageBytes = new byte[imageStream.Length];
+                    imageStream.Read(imageBytes, 0, (int)imageStream.Length);
+                    _producto.imagen = imageBytes; // Convertir a base64
                 }
-
-                this.daoProducto.producto_insertar(producto);
-
-                     // Mostrar el mensaje de éxito
-                    successMessage.Text = "Producto registrado correctamente.";
-                    successMessage.Visible = true;
             }
-            catch (Exception ex)
-            {
-                // Manejar errores (opcional)
-                successMessage.Text = $"Error al registrar el producto: {ex.Message}";
-                successMessage.CssClass = "text-danger";
-                successMessage.Visible = true;
-            }
+
+            this.daoProducto.producto_insertar(_producto);
+
+            // Mostrar el mensaje de éxito
+            successMessage.Text = "Producto registrado correctamente.";
+            successMessage.Visible = true;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
