@@ -81,5 +81,28 @@ namespace SoftCyberiaWA.Administrador
 
             daoProducto.producto_insertar(_producto);
         }
+
+        protected void btnCrearKit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                //metodo para registrar producto compuesto
+
+
+                // Mostrar el mensaje de éxito
+                successMessage.Text = "Producto Compuesto registrado correctamente.";
+                successMessage.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores (opcional)
+                successMessage.Text = $"Error al registrar el producto compuesto: {ex.Message}";
+                successMessage.CssClass = "text-danger";
+                successMessage.Visible = true;
+            }
+        
+
+        }
     }
 }

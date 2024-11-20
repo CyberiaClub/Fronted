@@ -7,39 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftCyberiaWA
+namespace SoftCyberiaWA.Administrador
 {
 
 
-    public partial class listado_productos
+    public partial class SoftCyberiaAdministrador
     {
 
         /// <summary>
-        /// filtrosTipoProducto control.
-        /// Control filtrosSedes.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel filtrosSedes;
-
-        /// <summary>
-        /// Control filtrosTipoProducto.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel filtrosTipoProducto;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
-        /// productContainer control.
+        /// cphStyle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel productContainer;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphStyle;
+
+        /// <summary>
+        /// ContentPlaceHolder1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaWA.Almacenero;
+using SoftCyberiaWA.CyberiaWS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace SoftCyberiaWA.Administrador
         //private ClienteWSClient daoCliente = new ClienteWSClient();
         private SedeWSClient daoSede = new SedeWSClient();
         //private cliente _cliente = new cliente();
-
+        //private PersonaWSClient daoPersona = new PersonaWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarSedes();

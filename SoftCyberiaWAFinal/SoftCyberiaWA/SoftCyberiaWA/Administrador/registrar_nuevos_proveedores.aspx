@@ -52,6 +52,8 @@
                         <asp:Image ID="imgNuevoProveedor" runat="server" CssClass="img-fluid img-thumbnail mb-3" ImageUrl="/Imagenes/proveedor.png" Height="250px" Width="250px" />
 
                         <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="providerButton_Click" />
+                        <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
+
                     </div>
                 </div>
             </div>
