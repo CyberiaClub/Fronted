@@ -42,16 +42,23 @@ namespace SoftCyberiaWA.Administrador
                 {
                     imagenBytes = binaryReader.ReadBytes(fileUploadNuevaMarca.PostedFile.ContentLength);
                 }
-
-                // Asignar el arreglo de bytes a la propiedad de imagen
                 _marca.imagen = imagenBytes;
 
                 proveedor _proveedor_marca = new proveedor();
-                _proveedor_marca.idProveedor= Int32.Parse(providerName.SelectedValue);
-                _marca.proveedor = _proveedor_marca;
 
-                this.daoMarca.marca_insertar(_marca);
+                if (!string.IsNullOrEmpty(providerName.SelectedValue))
+                {
+                    _proveedor_marca.idProveedor = Int32.Parse(providerName.SelectedValue);
+                    _proveedor_marca.idProveedorSpecified = true;
+                    _marca.proveedor = _proveedor_marca;
 
+                    this.daoMarca.marca_insertar(_marca);
+                }
+                else
+                {
+                    // Manejar el caso donde no se selecciona un proveedor
+                    throw new Exception("Debe seleccionar un proveedor válido.");
+                }
 
                 // Mostrar el mensaje de éxito
                 successMessage.Text = "Marca registrada correctamente.";

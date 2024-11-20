@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/ProveedorWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="proveedor_eliminar">
-    <part name="parameters" element="tns:proveedor_eliminar" />
+  <message name="proveedor_modificar">
+    <part name="parameters" element="tns:proveedor_modificar" />
   </message>
-  <message name="proveedor_eliminarResponse">
-    <part name="parameters" element="tns:proveedor_eliminarResponse" />
+  <message name="proveedor_modificarResponse">
+    <part name="parameters" element="tns:proveedor_modificarResponse" />
   </message>
   <message name="proveedor_insertar">
     <part name="parameters" element="tns:proveedor_insertar" />
@@ -23,16 +23,16 @@
   <message name="proveedor_listarResponse">
     <part name="parameters" element="tns:proveedor_listarResponse" />
   </message>
-  <message name="proveedor_modificar">
-    <part name="parameters" element="tns:proveedor_modificar" />
+  <message name="proveedor_eliminar">
+    <part name="parameters" element="tns:proveedor_eliminar" />
   </message>
-  <message name="proveedor_modificarResponse">
-    <part name="parameters" element="tns:proveedor_modificarResponse" />
+  <message name="proveedor_eliminarResponse">
+    <part name="parameters" element="tns:proveedor_eliminarResponse" />
   </message>
   <portType name="ProveedorWS">
-    <operation name="proveedor_eliminar">
-      <input wsam:Action="CyberiaWS/ProveedorWS/proveedor_eliminarRequest" message="tns:proveedor_eliminar" />
-      <output wsam:Action="CyberiaWS/ProveedorWS/proveedor_eliminarResponse" message="tns:proveedor_eliminarResponse" />
+    <operation name="proveedor_modificar">
+      <input wsam:Action="CyberiaWS/ProveedorWS/proveedor_modificarRequest" message="tns:proveedor_modificar" />
+      <output wsam:Action="CyberiaWS/ProveedorWS/proveedor_modificarResponse" message="tns:proveedor_modificarResponse" />
     </operation>
     <operation name="proveedor_insertar">
       <input wsam:Action="CyberiaWS/ProveedorWS/proveedor_insertarRequest" message="tns:proveedor_insertar" />
@@ -42,14 +42,14 @@
       <input wsam:Action="CyberiaWS/ProveedorWS/proveedor_listarRequest" message="tns:proveedor_listar" />
       <output wsam:Action="CyberiaWS/ProveedorWS/proveedor_listarResponse" message="tns:proveedor_listarResponse" />
     </operation>
-    <operation name="proveedor_modificar">
-      <input wsam:Action="CyberiaWS/ProveedorWS/proveedor_modificarRequest" message="tns:proveedor_modificar" />
-      <output wsam:Action="CyberiaWS/ProveedorWS/proveedor_modificarResponse" message="tns:proveedor_modificarResponse" />
+    <operation name="proveedor_eliminar">
+      <input wsam:Action="CyberiaWS/ProveedorWS/proveedor_eliminarRequest" message="tns:proveedor_eliminar" />
+      <output wsam:Action="CyberiaWS/ProveedorWS/proveedor_eliminarResponse" message="tns:proveedor_eliminarResponse" />
     </operation>
   </portType>
   <binding name="ProveedorWSPortBinding" type="tns:ProveedorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="proveedor_eliminar">
+    <operation name="proveedor_modificar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="proveedor_modificar">
+    <operation name="proveedor_eliminar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -42,6 +42,24 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.TextBox searchSKU;
 
         /// <summary>
+        /// lblSede control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSede;
+
+        /// <summary>
+        /// sedeName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList sedeName;
+
+        /// <summary>
         /// btnBuscar control.
         /// </summary>
         /// <remarks>

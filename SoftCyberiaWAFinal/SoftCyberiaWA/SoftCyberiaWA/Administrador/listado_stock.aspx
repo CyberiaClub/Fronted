@@ -26,8 +26,13 @@
                                 <div class="d-flex">
                                     <asp:TextBox ID="searchSKU" runat="server" CssClass="form-control mr-20"></asp:TextBox>
                                     <p></p>
-                                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20" Style="background-color: #004EA8; border-color: #004EA8;"  OnClick="btnBuscar_Click"/>
-                                     <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
+                                    <div class="pb-3">
+                                        <asp:Label ID="lblSede" runat="server" Text="Sede:" CssClass="col-form-label fw-bold"></asp:Label>
+                                        <asp:DropDownList ID="sedeName" runat="server" CssClass="form-control"></asp:DropDownList>
+                                    </div>
+
+                                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnBuscar_Click" />
+                                    <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                                 </div>
 
                             </div>

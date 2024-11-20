@@ -22,7 +22,6 @@ namespace SoftCyberiaWA.Administrador
             {
                 proveedor _proveedor = new proveedor();
                 _proveedor.ruc = providerRUC.Text.Trim();
-                // falta validacion de RUC, por el momento puede poner cualquier cosa
                 _proveedor.nombreContacto = providerName.Text.Trim();
                 _proveedor.razonSocial = companyName.Text.Trim();
                 _proveedor.telefono = phone.Text.Trim();
