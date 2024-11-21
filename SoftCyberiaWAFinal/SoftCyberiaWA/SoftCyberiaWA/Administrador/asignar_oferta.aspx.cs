@@ -154,8 +154,48 @@ namespace SoftCyberiaWA.Administrador
         protected void btnAsignarOferta_Click(object sender, EventArgs e)
         {
             oferta _oferta = new oferta();
-            DateTime fechaDeInicio = new DateTime();
-            DateTime fechaDeFin = new DateTime();
+
+            if (Validar())
+            {
+                byte[] imagenBytes;
+                using (var binaryReader = new System.IO.BinaryReader(fileUploadProductImage.PostedFile.InputStream))
+                {
+                    imagenBytes = binaryReader.ReadBytes(fileUploadProductImage.PostedFile.ContentLength);
+                }
+
+                _oferta.fechaDeInicio = DateTime.Parse(fechaInicio.Text.Trim()); ;
+                _oferta.fechaDeInicioSpecified = true;
+                _oferta.fechaDeFin = DateTime.Parse(fechaFin.Text.Trim()); ;
+                _oferta.fechaDeFinSpecified = true;
+                _oferta.imagen = imagenBytes;
+                _oferta.productos = ObtenerProductosOferta();
+
+                this.daoOferta.oferta_insertar(_oferta);
+
+                successMessage.Text = "Oferta asignada correctamente.";
+                successMessage.Visible = true;
+            }
+        }
+
+        protected producto[] ObtenerProductosOferta()
+        {
+            producto[] _productos = new producto[100];
+            producto _productoOferta = new producto();
+            int cont = 0;
+            foreach(GridViewRow fila in gridProductosOferta.Rows)
+            {
+                _productoOferta = new producto();
+                _productoOferta.idProducto = Convert.ToInt32(fila.Cells[0].Text);
+                _productoOferta.oferta = Convert.ToDouble(fila.Cells[3].Text);
+                _productos[cont] = _productoOferta;
+                cont++;
+            }
+
+            return null;
+        }
+
+        protected Boolean Validar()
+        {
             Boolean valido = true;
 
             if (fechaInicio.Text == "")
@@ -174,12 +214,13 @@ namespace SoftCyberiaWA.Administrador
             else
                 fechaFinMensaje.Visible = false;
 
-            if(fechaInicio.Text.Trim() != "" && fechaFin.Text.Trim() != "")
+            if (fechaInicio.Text.Trim() != "" && fechaFin.Text.Trim() != "")
             {
-                fechaDeInicio = DateTime.Parse(fechaInicio.Text.Trim());
-                fechaDeFin = DateTime.Parse(fechaFin.Text.Trim());
-                
-                if(fechaDeInicio > fechaDeFin) {
+                DateTime fechaDeInicio = DateTime.Parse(fechaInicio.Text.Trim());
+                DateTime fechaDeFin = DateTime.Parse(fechaFin.Text.Trim());
+
+                if (fechaDeInicio > fechaDeFin)
+                {
                     fechaFinMensaje.InnerText = "La fecha fin no puede ser menor a la fecha de inicio";
                     fechaFinMensaje.Visible = true;
                     valido = false;
@@ -188,45 +229,12 @@ namespace SoftCyberiaWA.Administrador
                     fechaFinMensaje.Visible = false;
             }
 
-            if(gridProductosOferta.Rows.Count == 0)
+            if (gridProductosOferta.Rows.Count == 0)
             {
                 valido = false;
             }
 
-            if (valido)
-            {
-                byte[] imagenBytes;
-                using (var binaryReader = new System.IO.BinaryReader(fileUploadProductImage.PostedFile.InputStream))
-                {
-                    imagenBytes = binaryReader.ReadBytes(fileUploadProductImage.PostedFile.ContentLength);
-                }
-
-                _oferta.fechaDeInicio = fechaDeInicio;
-                _oferta.fechaDeInicioSpecified = true;
-                _oferta.fechaDeFin = fechaDeFin;
-                _oferta.fechaDeFinSpecified = true;
-                _oferta.imagen = imagenBytes;
-                _oferta.productos = ObtenerProductosOferta();
-
-                this.daoOferta.oferta_insertar(_oferta);
-
-                successMessage.Text = "Oferta asignada correctamente.";
-                successMessage.Visible = true;
-            }
-        }
-
-        protected producto[] ObtenerProductosOferta()
-        {
-            producto[] _productos;
-            producto _productoOferta = new producto();
-
-            foreach(GridViewRow fila in gridProductosOferta.Rows)
-            {
-                _productoOferta.idProducto = Convert.ToInt32(fila.Cells[0].Text);
-                _productoOferta.oferta = Convert.ToDouble(fila.Cells[3].Text);
-            }
-
-            return null;
+            return valido;
         }
     }
 }
