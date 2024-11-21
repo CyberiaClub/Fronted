@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/SedeWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="sede_modificar">
-    <part name="parameters" element="tns:sede_modificar" />
-  </message>
-  <message name="sede_modificarResponse">
-    <part name="parameters" element="tns:sede_modificarResponse" />
-  </message>
   <message name="sede_listar">
     <part name="parameters" element="tns:sede_listar" />
   </message>
   <message name="sede_listarResponse">
     <part name="parameters" element="tns:sede_listarResponse" />
+  </message>
+  <message name="sede_modificar">
+    <part name="parameters" element="tns:sede_modificar" />
+  </message>
+  <message name="sede_modificarResponse">
+    <part name="parameters" element="tns:sede_modificarResponse" />
   </message>
   <message name="sede_insertar">
     <part name="parameters" element="tns:sede_insertar" />
@@ -23,33 +23,23 @@
   <message name="sede_insertarResponse">
     <part name="parameters" element="tns:sede_insertarResponse" />
   </message>
-  <message name="sede_listar">
-    <part name="parameters" element="tns:sede_listar" />
-  </message>
-  <message name="sede_listarResponse">
-    <part name="parameters" element="tns:sede_listarResponse" />
-  </message>
   <portType name="SedeWS">
-    <operation name="sede_modificar">
-      <input wsam:Action="CyberiaWS/SedeWS/sede_modificarRequest" message="tns:sede_modificar" />
-      <output wsam:Action="CyberiaWS/SedeWS/sede_modificarResponse" message="tns:sede_modificarResponse" />
-    </operation>
     <operation name="sede_listar">
       <input wsam:Action="CyberiaWS/SedeWS/sede_listarRequest" message="tns:sede_listar" />
       <output wsam:Action="CyberiaWS/SedeWS/sede_listarResponse" message="tns:sede_listarResponse" />
+    </operation>
+    <operation name="sede_modificar">
+      <input wsam:Action="CyberiaWS/SedeWS/sede_modificarRequest" message="tns:sede_modificar" />
+      <output wsam:Action="CyberiaWS/SedeWS/sede_modificarResponse" message="tns:sede_modificarResponse" />
     </operation>
     <operation name="sede_insertar">
       <input wsam:Action="CyberiaWS/SedeWS/sede_insertarRequest" message="tns:sede_insertar" />
       <output wsam:Action="CyberiaWS/SedeWS/sede_insertarResponse" message="tns:sede_insertarResponse" />
     </operation>
-    <operation name="sede_listar">
-      <input wsam:Action="CyberiaWS/SedeWS/sede_listarRequest" message="tns:sede_listar" />
-      <output wsam:Action="CyberiaWS/SedeWS/sede_listarResponse" message="tns:sede_listarResponse" />
-    </operation>
   </portType>
   <binding name="SedeWSPortBinding" type="tns:SedeWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="sede_modificar">
+    <operation name="sede_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -35,7 +35,6 @@
                                 <label for="personaDocumento">Documento de Identidad:</label>
                                 <asp:TextBox ID="personaDocumento" runat="server" CssClass="form-control"></asp:TextBox>
                                 <small id="documentoMensaje" class="form-text text-bg-danger" runat="server"></small>
-                            
                             </div>
 
                             <!-- Campo Teléfono -->

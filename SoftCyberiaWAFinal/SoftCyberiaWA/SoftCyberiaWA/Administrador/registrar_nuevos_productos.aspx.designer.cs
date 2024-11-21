@@ -105,6 +105,24 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.TextBox price;
 
         /// <summary>
+        /// Control lblproductoPrecio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblproductoPrecio;
+
+        /// <summary>
+        /// Control productoPrecio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox productoPrecio;
+
+        /// <summary>
         /// Control lblDescription.
         /// </summary>
         /// <remarks>

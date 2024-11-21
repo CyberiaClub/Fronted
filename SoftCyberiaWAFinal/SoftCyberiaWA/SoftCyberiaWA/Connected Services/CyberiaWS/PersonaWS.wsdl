@@ -11,17 +11,17 @@
   <message name="persona_insertarResponse">
     <part name="parameters" element="tns:persona_insertarResponse" />
   </message>
-  <message name="persona_loguearse">
-    <part name="parameters" element="tns:persona_loguearse" />
-  </message>
-  <message name="persona_loguearseResponse">
-    <part name="parameters" element="tns:persona_loguearseResponse" />
-  </message>
   <message name="persona_modificar">
     <part name="parameters" element="tns:persona_modificar" />
   </message>
   <message name="persona_modificarResponse">
     <part name="parameters" element="tns:persona_modificarResponse" />
+  </message>
+  <message name="persona_loguearse">
+    <part name="parameters" element="tns:persona_loguearse" />
+  </message>
+  <message name="persona_loguearseResponse">
+    <part name="parameters" element="tns:persona_loguearseResponse" />
   </message>
   <message name="persona_buscar_por_documento">
     <part name="parameters" element="tns:persona_buscar_por_documento" />
@@ -46,13 +46,13 @@
       <input wsam:Action="CyberiaWS/PersonaWS/persona_insertarRequest" message="tns:persona_insertar" />
       <output wsam:Action="CyberiaWS/PersonaWS/persona_insertarResponse" message="tns:persona_insertarResponse" />
     </operation>
-    <operation name="persona_loguearse">
-      <input wsam:Action="CyberiaWS/PersonaWS/persona_loguearseRequest" message="tns:persona_loguearse" />
-      <output wsam:Action="CyberiaWS/PersonaWS/persona_loguearseResponse" message="tns:persona_loguearseResponse" />
-    </operation>
     <operation name="persona_modificar">
       <input wsam:Action="CyberiaWS/PersonaWS/persona_modificarRequest" message="tns:persona_modificar" />
       <output wsam:Action="CyberiaWS/PersonaWS/persona_modificarResponse" message="tns:persona_modificarResponse" />
+    </operation>
+    <operation name="persona_loguearse">
+      <input wsam:Action="CyberiaWS/PersonaWS/persona_loguearseRequest" message="tns:persona_loguearse" />
+      <output wsam:Action="CyberiaWS/PersonaWS/persona_loguearseResponse" message="tns:persona_loguearseResponse" />
     </operation>
     <operation name="persona_buscar_por_documento">
       <input wsam:Action="CyberiaWS/PersonaWS/persona_buscar_por_documentoRequest" message="tns:persona_buscar_por_documento" />
@@ -78,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="persona_loguearse">
+    <operation name="persona_modificar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -87,7 +87,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="persona_modificar">
+    <operation name="persona_loguearse">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

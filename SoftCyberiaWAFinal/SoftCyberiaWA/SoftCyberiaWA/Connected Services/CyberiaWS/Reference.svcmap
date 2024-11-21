@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="8cfba901-f0b2-470d-8837-2b9b5de1e44f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="c707404c-9f32-4366-b23e-89c0943308c1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,27 +22,27 @@
     <MetadataSource Address="http://localhost:8080/CyberiaStoreWS_Servidor/archivo.disco" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MarcaWS.wsdl" MetadataType="Wsdl" ID="601f65a4-86dc-4943-ae08-861028c87334" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/MarcaWS?wsdl" />
-    <MetadataFile FileName="ProveedorWS.xsd" MetadataType="Schema" ID="375254dd-acb7-462e-b355-8748753aa333" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProveedorWS?xsd=1" />
-    <MetadataFile FileName="ProductoWS.wsdl" MetadataType="Wsdl" ID="ea2f359c-47a9-4bf5-a820-08817eb8ae93" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProductoWS?wsdl" />
-    <MetadataFile FileName="ProveedorWS.wsdl" MetadataType="Wsdl" ID="0d10c442-9ee1-4a13-b31a-77bf37dcd153" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProveedorWS?wsdl" />
-    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="251f9f8d-3e7e-45f8-8b5e-9723d424f7d9" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/archivo.disco" />
-    <MetadataFile FileName="ComprobantePagoWS.wsdl" MetadataType="Wsdl" ID="46910032-b30a-45e1-ab3c-3e983631830c" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ComprobantePagoWS?wsdl" />
-    <MetadataFile FileName="TipoProductoWS.wsdl" MetadataType="Wsdl" ID="321ee9bd-fd26-4d15-8e2f-87bfe09500e5" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?wsdl" />
-    <MetadataFile FileName="TipoComprobanteWS.xsd" MetadataType="Schema" ID="1de99a25-83b6-4ab1-9909-c9b3a14c5277" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoComprobanteWS?xsd=1" />
-    <MetadataFile FileName="PersonaWS.wsdl" MetadataType="Wsdl" ID="4d5f15c3-dfe1-4e17-a79c-6fdf149d0f8b" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?wsdl" />
-    <MetadataFile FileName="TipoPersonaWS.wsdl" MetadataType="Wsdl" ID="d5760a6a-1726-4d99-9ec3-112c82ff2a95" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoPersonaWS?wsdl" />
-    <MetadataFile FileName="TipoProductoWS.xsd" MetadataType="Schema" ID="ccf57dc0-7bc9-4bde-862c-a4279b7196b6" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?xsd=1" />
-    <MetadataFile FileName="ComprobantePagoWS.xsd" MetadataType="Schema" ID="f91d73c2-ce9f-4f23-a62f-cc28260801d6" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ComprobantePagoWS?xsd=1" />
-    <MetadataFile FileName="PersonaWS.xsd" MetadataType="Schema" ID="10612fba-12d5-4975-a1bb-878768c83c51" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?xsd=1" />
-    <MetadataFile FileName="SedeWS.wsdl" MetadataType="Wsdl" ID="fb58a910-11dd-4b26-a0ca-20f83c4eb592" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/SedeWS?wsdl" />
-    <MetadataFile FileName="ProductoWS.xsd" MetadataType="Schema" ID="e8017079-a571-4b38-9ecb-33f5861f244d" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProductoWS?xsd=1" />
-    <MetadataFile FileName="MarcaWS.xsd" MetadataType="Schema" ID="423cd6cd-ced6-4e85-96b7-406ad3d0d703" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/MarcaWS?xsd=1" />
-    <MetadataFile FileName="TipoComprobanteWS.wsdl" MetadataType="Wsdl" ID="506691c0-021e-40f7-9a52-7384711fed13" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoComprobanteWS?wsdl" />
-    <MetadataFile FileName="SedeWS.xsd" MetadataType="Schema" ID="b7cdb012-132d-4d6d-9a0e-3838fd11f6ca" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/SedeWS?xsd=1" />
-    <MetadataFile FileName="OfertaWS.wsdl" MetadataType="Wsdl" ID="b71be97b-d715-4ceb-a385-17c5ec37ab6f" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?wsdl" />
-    <MetadataFile FileName="TipoPersonaWS.xsd" MetadataType="Schema" ID="6ace4b5d-8700-4df1-8b32-65e3bf9b309b" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoPersonaWS?xsd=1" />
-    <MetadataFile FileName="OfertaWS.xsd" MetadataType="Schema" ID="5374def3-2afe-4411-8aad-7c7dfe3577f8" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?xsd=1" />
+    <MetadataFile FileName="MarcaWS.wsdl" MetadataType="Wsdl" ID="29118a4b-16e9-4ce7-ab97-07fb2459ba33" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/MarcaWS?wsdl" />
+    <MetadataFile FileName="ProveedorWS.xsd" MetadataType="Schema" ID="cbfdeda8-fb87-45bb-b051-593afb680ce2" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProveedorWS?xsd=1" />
+    <MetadataFile FileName="ProductoWS.wsdl" MetadataType="Wsdl" ID="db71746f-54ca-45da-bf7b-982b19b6e37c" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProductoWS?wsdl" />
+    <MetadataFile FileName="ProveedorWS.wsdl" MetadataType="Wsdl" ID="0758c879-d28d-4a22-ba3f-fd8923caecc5" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProveedorWS?wsdl" />
+    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="47630fa3-458b-4593-8c03-cd5d0a544c9f" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/archivo.disco" />
+    <MetadataFile FileName="ComprobantePagoWS.wsdl" MetadataType="Wsdl" ID="4e07ca9b-7183-461a-a55f-436cf637a755" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ComprobantePagoWS?wsdl" />
+    <MetadataFile FileName="TipoProductoWS.wsdl" MetadataType="Wsdl" ID="ed6437e6-1548-427f-b2c2-882a192e598b" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?wsdl" />
+    <MetadataFile FileName="TipoComprobanteWS.xsd" MetadataType="Schema" ID="cb0b019f-2725-4df9-a04f-875e2c9402a3" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoComprobanteWS?xsd=1" />
+    <MetadataFile FileName="PersonaWS.wsdl" MetadataType="Wsdl" ID="75c28a6f-09fe-4812-ac32-2900558441ac" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?wsdl" />
+    <MetadataFile FileName="TipoPersonaWS.wsdl" MetadataType="Wsdl" ID="62abb085-a54f-4527-a55e-44c7c129bd54" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoPersonaWS?wsdl" />
+    <MetadataFile FileName="TipoProductoWS.xsd" MetadataType="Schema" ID="0827e4e3-28ae-46c6-a757-f325487e031d" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoProductoWS?xsd=1" />
+    <MetadataFile FileName="ComprobantePagoWS.xsd" MetadataType="Schema" ID="9657664e-1dba-4f00-aa2c-266a1f2a0baa" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ComprobantePagoWS?xsd=1" />
+    <MetadataFile FileName="PersonaWS.xsd" MetadataType="Schema" ID="a015e7ec-195d-44f3-9592-cc68c98bb76a" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?xsd=1" />
+    <MetadataFile FileName="SedeWS.wsdl" MetadataType="Wsdl" ID="2c1b28db-794b-4270-902d-4b63333c7954" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/SedeWS?wsdl" />
+    <MetadataFile FileName="ProductoWS.xsd" MetadataType="Schema" ID="bb575cfa-b941-454b-a5af-5d679cc3a7e9" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ProductoWS?xsd=1" />
+    <MetadataFile FileName="MarcaWS.xsd" MetadataType="Schema" ID="63e367f3-a18f-4eb7-961e-60b74556a0f6" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/MarcaWS?xsd=1" />
+    <MetadataFile FileName="TipoComprobanteWS.wsdl" MetadataType="Wsdl" ID="14fc2c3c-67b2-42f8-8e76-02d2dee1c8b1" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoComprobanteWS?wsdl" />
+    <MetadataFile FileName="SedeWS.xsd" MetadataType="Schema" ID="ef5f8d90-b3bb-4960-b55c-b524b059df63" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/SedeWS?xsd=1" />
+    <MetadataFile FileName="OfertaWS.wsdl" MetadataType="Wsdl" ID="a16cc709-b5c3-4e4c-8c65-dec89bb38e75" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?wsdl" />
+    <MetadataFile FileName="TipoPersonaWS.xsd" MetadataType="Schema" ID="b2b91997-880f-4dcb-8750-fcacc98667f1" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/TipoPersonaWS?xsd=1" />
+    <MetadataFile FileName="OfertaWS.xsd" MetadataType="Schema" ID="b4e9dda3-05fc-497b-846c-f4c6e5b0e118" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
