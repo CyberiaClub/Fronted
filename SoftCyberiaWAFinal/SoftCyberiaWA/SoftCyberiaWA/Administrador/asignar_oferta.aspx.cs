@@ -154,26 +154,79 @@ namespace SoftCyberiaWA.Administrador
         protected void btnAsignarOferta_Click(object sender, EventArgs e)
         {
             oferta _oferta = new oferta();
-            //_oferta.porcentaje = Int32.Parse(porcentajeOferta.Text.Trim());
-            _oferta.porcentajeSpecified = true;
-            _oferta.fechaDeInicio = DateTime.Parse(fechaInicio.Text.Trim());
-            _oferta.fechaDeInicioSpecified = true;
-            _oferta.fechaDeFin = DateTime.Parse(fechaFin.Text.Trim());
-            _oferta.fechaDeFinSpecified = true;
+            DateTime fechaDeInicio = new DateTime();
+            DateTime fechaDeFin = new DateTime();
+            Boolean valido = true;
 
-            byte[] imagenBytes;
-            using (var binaryReader = new System.IO.BinaryReader(fileUploadProductImage.PostedFile.InputStream))
+            if (fechaInicio.Text == "")
             {
-                imagenBytes = binaryReader.ReadBytes(fileUploadProductImage.PostedFile.ContentLength);
+                fechaInicioMensaje.InnerText = "Ingrese una fecha de Inicio";
+                valido = false;
             }
-            _oferta.imagen = imagenBytes;
+            else
+                fechaInicioMensaje.Visible = false;
 
-            this.daoOferta.oferta_insertar(_oferta);
+            if (fechaFin.Text == "")
+            {
+                fechaFinMensaje.InnerText = "Ingrese una fecha de Fin";
+                valido = false;
+            }
+            else
+                fechaFinMensaje.Visible = false;
 
-            // Mostrar el mensaje de éxito
-            successMessage.Text = "Oferta asignada correctamente.";
-            successMessage.Visible = true;
+            if(fechaInicio.Text.Trim() != "" && fechaFin.Text.Trim() != "")
+            {
+                fechaDeInicio = DateTime.Parse(fechaInicio.Text.Trim());
+                fechaDeFin = DateTime.Parse(fechaFin.Text.Trim());
+                
+                if(fechaDeInicio > fechaDeFin) {
+                    fechaFinMensaje.InnerText = "La fecha fin no puede ser menor a la fecha de inicio";
+                    fechaFinMensaje.Visible = true;
+                    valido = false;
+                }
+                else
+                    fechaFinMensaje.Visible = false;
+            }
+
+            if(gridProductosOferta.Rows.Count == 0)
+            {
+                valido = false;
+            }
+
+            if (valido)
+            {
+                byte[] imagenBytes;
+                using (var binaryReader = new System.IO.BinaryReader(fileUploadProductImage.PostedFile.InputStream))
+                {
+                    imagenBytes = binaryReader.ReadBytes(fileUploadProductImage.PostedFile.ContentLength);
+                }
+
+                _oferta.fechaDeInicio = fechaDeInicio;
+                _oferta.fechaDeInicioSpecified = true;
+                _oferta.fechaDeFin = fechaDeFin;
+                _oferta.fechaDeFinSpecified = true;
+                _oferta.imagen = imagenBytes;
+                _oferta.productos = ObtenerProductosOferta();
+
+                this.daoOferta.oferta_insertar(_oferta);
+
+                successMessage.Text = "Oferta asignada correctamente.";
+                successMessage.Visible = true;
+            }
         }
 
+        protected producto[] ObtenerProductosOferta()
+        {
+            producto[] _productos;
+            producto _productoOferta = new producto();
+
+            foreach(GridViewRow fila in gridProductosOferta.Rows)
+            {
+                _productoOferta.idProducto = Convert.ToInt32(fila.Cells[0].Text);
+                _productoOferta.oferta = Convert.ToDouble(fila.Cells[3].Text);
+            }
+
+            return null;
+        }
     }
 }

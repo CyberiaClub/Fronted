@@ -23,10 +23,12 @@
                         <div class="pb-3">
                             <asp:Label ID="lblFechaInicio" runat="server" Text="Fecha de Inicio de la Oferta:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:TextBox ID="fechaInicio" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                            <small id="fechaInicioMensaje" class="form-text text-bg-danger" runat="server"></small>
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblFechaFin" runat="server" Text="Fecha de Fin de la Oferta:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:TextBox ID="fechaFin" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                            <small id="fechaFinMensaje" class="form-text text-bg-danger" runat="server"></small>
                         </div>
                     </div>
 

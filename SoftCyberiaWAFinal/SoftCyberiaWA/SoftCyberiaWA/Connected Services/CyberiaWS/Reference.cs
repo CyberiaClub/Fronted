@@ -516,6 +516,10 @@ namespace SoftCyberiaWA.CyberiaWS {
         
         private string nombreField;
         
+        private double ofertaField;
+        
+        private bool ofertaFieldSpecified;
+        
         private double precioField;
         
         private bool precioFieldSpecified;
@@ -652,6 +656,30 @@ namespace SoftCyberiaWA.CyberiaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public double oferta {
+            get {
+                return this.ofertaField;
+            }
+            set {
+                this.ofertaField = value;
+                this.RaisePropertyChanged("oferta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ofertaSpecified {
+            get {
+                return this.ofertaFieldSpecified;
+            }
+            set {
+                this.ofertaFieldSpecified = value;
+                this.RaisePropertyChanged("ofertaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public double precio {
             get {
                 return this.precioField;
@@ -675,7 +703,7 @@ namespace SoftCyberiaWA.CyberiaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public double precioProveedor {
             get {
                 return this.precioProveedorField;
@@ -699,7 +727,7 @@ namespace SoftCyberiaWA.CyberiaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("productosMiembros", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute("productosMiembros", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
         public producto[] productosMiembros {
             get {
                 return this.productosMiembrosField;
@@ -711,7 +739,7 @@ namespace SoftCyberiaWA.CyberiaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public string sku {
             get {
                 return this.skuField;
@@ -723,7 +751,7 @@ namespace SoftCyberiaWA.CyberiaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public tipoProducto tipoProducto {
             get {
                 return this.tipoProductoField;

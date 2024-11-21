@@ -33,6 +33,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.TextBox fechaInicio;
 
         /// <summary>
+        /// Control fechaInicioMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fechaInicioMensaje;
+
+        /// <summary>
         /// Control lblFechaFin.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace SoftCyberiaWA.Administrador
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox fechaFin;
+
+        /// <summary>
+        /// Control fechaFinMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fechaFinMensaje;
 
         /// <summary>
         /// Control lblImage.
