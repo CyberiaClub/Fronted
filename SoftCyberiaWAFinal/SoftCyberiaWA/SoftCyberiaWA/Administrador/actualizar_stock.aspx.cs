@@ -34,13 +34,40 @@ namespace SoftCyberiaWA.Administrador
 
         protected void onClickBuscar(object sender, EventArgs e)
         {
-            this.buscarProducto();
+            try
+            {
+                this.buscarProducto();
+                successMessage.Text = "Detalle del Producto buscado.";
+                successMessage.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                successMessage.Text = $"Error al buscar producto: {ex.Message}";
+                successMessage.CssClass = "text-danger";
+                successMessage.Visible = true;
+            }
+            
         }
 
         protected void onClickActualizarStock(object sender, EventArgs e)
         {
-            daoProducto.producto_aumentar_stock(Convert.ToInt32(this._producto.idProducto), 1, Convert.ToInt32(cantidadProducto.Text));
-            this.buscarProducto();
-        }
+            try
+            {
+
+
+                daoProducto.producto_aumentar_stock(Convert.ToInt32(this._producto.idProducto), 1, Convert.ToInt32(cantidadProducto.Text));
+                this.buscarProducto();
+
+
+                successActualizado.Text = "Stock Actualizado correctamente.";
+                successActualizado.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                successActualizado.Text = $"Error al actualizar stock: {ex.Message}";
+                successActualizado.CssClass = "text-danger";
+                successActualizado.Visible = true;
+            }
+}
     }
 }
