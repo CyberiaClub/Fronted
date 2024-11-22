@@ -6,7 +6,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection.Emit;
-using System.Text.Json;
+//using System.Text.Json;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -250,34 +250,34 @@ namespace SoftCyberiaWA
         //}
 
 
-        public string convertirBindingListAJSON(BindingList<producto> bindingList)
-        {
-            return JsonSerializer.Serialize(bindingList);
-        }
+        //public string convertirBindingListAJSON(BindingList<producto> bindingList)
+        //{
+        //    return JsonSerializer.Serialize(bindingList);
+        //}
 
 
-        public static List<string> ObtenerMarcas()
-        {
-            List<string> marcas = new List<string>();
+        //public static List<string> ObtenerMarcas()
+        //{
+        //    List<string> marcas = new List<string>();
 
-            string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionStringName"].ConnectionString;
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
+        //    string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionStringName"].ConnectionString;
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
 
-                //????????????????????????????????????????????????????????????
-                string query = "SELECT DISTINCT Marca FROM Productos";
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
+        //        //????????????????????????????????????????????????????????????
+        //        string query = "SELECT DISTINCT Marca FROM Productos";
+        //        SqlCommand command = new SqlCommand(query, connection);
+        //        connection.Open();
+        //        SqlDataReader reader = command.ExecuteReader();
 
-                while (reader.Read())
-                {
-                    marcas.Add(reader["Marca"].ToString());
-                }
-            }
+        //        while (reader.Read())
+        //        {
+        //            marcas.Add(reader["Marca"].ToString());
+        //        }
+        //    }
 
-            return marcas;
-        }
+        //    return marcas;
+        //}
     }
 
 }
