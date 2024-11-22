@@ -18,7 +18,10 @@ namespace SoftCyberiaWA.Administrador
         private ProductoWSClient daoProducto = new ProductoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                productoSKU.Text = "";
+            }
         }
 
         protected void sku_TextChange(object sender, EventArgs e)

@@ -33,6 +33,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.TextBox productoNombre;
 
         /// <summary>
+        /// Control productoNombreMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productoNombreMensaje;
+
+        /// <summary>
         /// Control lblproductoSku.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace SoftCyberiaWA.Administrador
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox productoSku;
+
+        /// <summary>
+        /// Control productoSkuMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productoSkuMensaje;
 
         /// <summary>
         /// Control lblproductoPrecio.
@@ -69,6 +87,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.TextBox productoPrecio;
 
         /// <summary>
+        /// Control ProductoPrecioMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProductoPrecioMensaje;
+
+        /// <summary>
         /// Control lblproductoMarca.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,15 @@ namespace SoftCyberiaWA.Administrador
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList productoMarca;
+
+        /// <summary>
+        /// Control productoMarcaMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productoMarcaMensaje;
 
         /// <summary>
         /// Control lblproductoTipoProducto.
@@ -105,6 +141,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.DropDownList productoTipoProducto;
 
         /// <summary>
+        /// Control ProductoTipoProductoMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProductoTipoProductoMensaje;
+
+        /// <summary>
         /// Control lblproductoDescripcion.
         /// </summary>
         /// <remarks>
@@ -123,6 +168,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.TextBox productoDescripcion;
 
         /// <summary>
+        /// Control productoDescripcionMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productoDescripcionMensaje;
+
+        /// <summary>
         /// Control lblImage.
         /// </summary>
         /// <remarks>
@@ -132,67 +186,49 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.Label lblImage;
 
         /// <summary>
-        /// Control fileUploadProductImage.
+        /// Control imagenProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fileUploadProductImage;
+        protected global::System.Web.UI.WebControls.FileUpload imagenProducto;
 
         /// <summary>
-        /// Control btnAsignarOferta.
+        /// Control productoImagenMensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAsignarOferta;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productoImagenMensaje;
 
         /// <summary>
-        /// Control lblSearchSKU.
+        /// Control lblproductoKitSKU.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSearchSKU;
+        protected global::System.Web.UI.WebControls.Label lblproductoKitSKU;
 
         /// <summary>
-        /// Control searchSKU.
+        /// Control productoKitSKU.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox searchSKU;
+        protected global::System.Web.UI.WebControls.TextBox productoKitSKU;
 
         /// <summary>
-        /// Control btnBuscar.
+        /// Control productoKitSKUMensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
-
-        /// <summary>
-        /// Control lblproductoCantidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblproductoCantidad;
-
-        /// <summary>
-        /// Control productoCantidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox productoCantidad;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl productoKitSKUMensaje;
 
         /// <summary>
         /// Control btnAgregarProducto.
@@ -204,6 +240,24 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.Button btnAgregarProducto;
 
         /// <summary>
+        /// Control prodBuscadoPlaceHolder.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder prodBuscadoPlaceHolder;
+
+        /// <summary>
+        /// Control gridViewProdBuscado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridViewProdBuscado;
+
+        /// <summary>
         /// Control gridProductosKit.
         /// </summary>
         /// <remarks>
@@ -213,22 +267,13 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.GridView gridProductosKit;
 
         /// <summary>
-        /// Control btnCrearKit.
+        /// Control btnRegistrarKit.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearKit;
-
-        /// <summary>
-        /// Control registerButton.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerButton;
+        protected global::System.Web.UI.WebControls.Button btnRegistrarKit;
 
         /// <summary>
         /// Control successMessage.

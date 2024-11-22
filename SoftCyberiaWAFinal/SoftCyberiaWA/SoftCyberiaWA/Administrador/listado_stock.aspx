@@ -17,57 +17,47 @@
                 </h2>
             </div>
             <div class="card-body align-content-xxl-center align-content-center" style="font: medium">
-                <div class="row">
+                <div class="row col-md-13 pb-7">
 
-                    <div class="col-md-13">
-                        <div class="row">
-                            <div class="pb-7">
-                                <asp:Label ID="lblSearchSKU" runat="server" Text="Buscar Producto por SKU:" CssClass="col-form-label fw-bold"></asp:Label>
-                                <div class="d-flex">
-                                    <asp:TextBox ID="searchSKU" runat="server" CssClass="form-control mr-20"></asp:TextBox>
-                                    <p></p>
-                                    <div class="pb-3">
-                                        <asp:Label ID="lblSede" runat="server" Text="Sede:" CssClass="col-form-label fw-bold"></asp:Label>
-                                        <asp:DropDownList ID="sedeName" runat="server" CssClass="form-control"></asp:DropDownList>
-                                    </div>
-
-                                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnBuscar_Click" />
-                                    <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
-                                </div>
-
-                            </div>
+                    <asp:Label ID="lblproductoSku" runat="server" Text="Buscar Producto por SKU:" CssClass="col-form-label fw-bold"></asp:Label>
+                    <div class="d-flex">
+                        <asp:TextBox ID="productoSku" runat="server" CssClass="form-control mr-20"></asp:TextBox>
+                        <small id="productoSkuMensaje" class="form-text text-danger" runat="server"></small>
+                        <p></p>
+                        <div class="pb-3">
+                            <asp:Label ID="lblsedeNombre" runat="server" Text="Sede:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:DropDownList ID="sedeNombre" runat="server" CssClass="form-control"></asp:DropDownList>
+                            <small id="sedeNombreMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
+
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnBuscar_Click" />
+                        <asp:Label ID="buscarMensaje" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
-
                 </div>
+                <asp:Panel ID="panelDetallesProducto" runat="server">
+                    <h3>Detalles del Producto</h3>
+                    <p>
+                        <strong>Nombre:</strong>
+                        <asp:Label ID="lblNombreProducto" runat="server"></asp:Label>
+                    </p>
+                    <p>
+                        <strong>Descripción:</strong>
+                        <asp:Label ID="lblDescripcionProducto" runat="server"></asp:Label>
+                    </p>
+                    <p><strong>Precio:</strong> S/<asp:Label ID="lblPrecioProducto" runat="server"></asp:Label></p>
 
+                    <!-- GridView para mostrar el inventario por sede -->
+                    <asp:GridView ID="gridStockProducto" runat="server" AutoGenerateColumns="false">
+                        <Columns>
+                            <asp:BoundField DataField="ID" HeaderText="Nro." />
+                            <asp:BoundField DataField="SKU" HeaderText="Sku" />
+                            <asp:BoundField DataField="NOMBRE" HeaderText="Nombre del producto" />
+                            <asp:BoundField DataField="DESCRIPCION" HeaderText="Descripcion" />
+                            <asp:BoundField DataField="STOCK" HeaderText="Cantidad en Stock" />
+                        </Columns>
+                    </asp:GridView>
+                </asp:Panel>
             </div>
         </div>
-
-
-        <!-- Panel para mostrar detalles del producto -->
-        <asp:Panel ID="panelDetallesProducto" runat="server" Visible="false">
-            <h3>Detalles del Producto</h3>
-            <p>
-                <strong>Nombre:</strong>
-                <asp:Label ID="lblNombreProducto" runat="server"></asp:Label>
-            </p>
-            <p>
-                <strong>Descripción:</strong>
-                <asp:Label ID="lblDescripcionProducto" runat="server"></asp:Label>
-            </p>
-            <p><strong>Precio:</strong> S/<asp:Label ID="lblPrecioProducto" runat="server"></asp:Label></p>
-
-            <!-- GridView para mostrar el inventario por sede -->
-            <asp:GridView ID="gvInventarioSedes" runat="server" AutoGenerateColumns="false">
-                <Columns>
-                    <asp:BoundField DataField="NombreSede" HeaderText="Nombre de la Sede" />
-                    <asp:BoundField DataField="CantidadEnStock" HeaderText="Cantidad en Stock" />
-                </Columns>
-            </asp:GridView>
-        </asp:Panel>
     </div>
-
-
-
 </asp:Content>

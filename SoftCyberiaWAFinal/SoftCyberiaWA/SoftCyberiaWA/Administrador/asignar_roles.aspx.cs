@@ -12,12 +12,10 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class asignar_roles : System.Web.UI.Page
     {
-        //private AlmaceneroWSClient daoAlmacenero = new AlmaceneroWSClient();
-        //private VendedorWSClient daoVendedor = new VendedorWSClient();
         private PersonaWSClient daoPersona = new PersonaWSClient();
         private SedeWSClient daoSede = new SedeWSClient();
         private persona _persona = new persona();
-        //private PersonaWSClient daoPersona = new PersonaWSClient();
+     
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarSedes();
@@ -48,23 +46,6 @@ namespace SoftCyberiaWA.Administrador
 
             string rolSeleccionado = rol.SelectedValue.ToString();
             
-            //if(rolSeleccionado == "Almacén")
-            //{
-            //    almacenero _almacenero = new almacenero();
-            //    _almacenero.idUsuario = _persona.idUsuario;
-            //    _almacenero.rol = CyberiaWS.rol.ALMACENERO;
-            //    _almacenero.sueldo = Convert.ToDouble(sueldo.Text);
-            //    _almacenero.idSede = Convert.ToInt32(sede.SelectedValue);
-
-            //}
-            //else if(rolSeleccionado == "Vendedor")
-            //{
-            //    vendedor _vendedor = new vendedor();
-            //    _vendedor.idUsuario = _persona.idUsuario;
-            //    _vendedor.rol = CyberiaWS.rol.VENDEDOR;
-            //    _vendedor.sueldo = Convert.ToDouble(sueldo.Text);
-            //    _vendedor.idSede = Convert.ToInt32(sede.SelectedValue);
-            //}
             
         }
     }
