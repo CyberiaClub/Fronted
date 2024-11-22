@@ -12,7 +12,6 @@ namespace SoftCyberiaWA.Administrador
     public partial class actualizar_stock : System.Web.UI.Page
     {
         ProductoWSClient daoProducto = new ProductoWSClient();
-        producto _producto = new producto();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,12 +21,13 @@ namespace SoftCyberiaWA.Administrador
         {
             if (productoSku.Text != "")
             {
-                this._producto = daoProducto.producto_buscar_sku(productoSku.Text.ToString(), 1);
-                if (this._producto != null)
+                producto _producto = daoProducto.producto_buscar_sku(productoSku.Text.ToString().Trim(), 1);
+                if (_producto != null)
                 {
-                    nombreProducto.Text = this._producto.idProducto.ToString();
-                    descripcionProducto.Text = this._producto.descripcion;
-                    stockActual.Text = this._producto.cantidad.ToString();
+                    Session["producto"] = _producto;
+                    nombreProducto.Text = _producto.nombre;
+                    descripcionProducto.Text = _producto.descripcion;
+                    stockActual.Text = _producto.cantidad.ToString();
                 }
             }
         }

@@ -31,7 +31,7 @@ namespace SoftCyberiaWA.Administrador
         private void CargarCategoria()
         {
             categoriaName.DataSource = daoTipoProducto.tipoProducto_listar();
-            categoriaName.DataTextField = "tipo";
+            categoriaName.DataTextField = "tipo";   
             categoriaName.DataValueField = "idTipoProducto";
             categoriaName.DataBind(); // Llenar el DropDownList
         }
@@ -57,10 +57,10 @@ namespace SoftCyberiaWA.Administrador
             _producto.idSede = 1;
             _producto.idSedeSpecified = true;
             marca _marca = new marca();
-            _marca.idMarca = marcaName.SelectedIndex;
+            _marca.idMarca = marcaName.SelectedIndex+1;
             _marca.idMarcaSpecified = true;
             tipoProducto _tipoProducto = new tipoProducto();
-            _tipoProducto.idTipoProducto = categoriaName.SelectedIndex;
+            _tipoProducto.idTipoProducto = categoriaName.SelectedIndex+1;
             _tipoProducto.idTipoProductoSpecified = true;
             _producto.marca = _marca;
             _producto.tipoProducto = _tipoProducto;

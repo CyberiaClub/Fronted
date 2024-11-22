@@ -101,7 +101,10 @@ namespace SoftCyberiaWA.Administrador
                 successMessage.CssClass = "text-danger";
                 successMessage.Visible = true;
             }
-        
+        }
+
+        protected void registerButton_Click(object sender, EventArgs e)
+        {
 
         }
     }

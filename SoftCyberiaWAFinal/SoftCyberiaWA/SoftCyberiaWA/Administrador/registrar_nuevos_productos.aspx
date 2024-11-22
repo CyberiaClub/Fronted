@@ -38,6 +38,10 @@
                             <asp:Label ID="lblPrice" runat="server" Text="Precio de Venta:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:TextBox ID="price" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
+                        <div class="pb-3">
+                            <asp:Label ID="lblproductoPrecio" runat="server" Text="Precio de Compra:" CssClass="col-form-label fw-bold"></asp:Label>
+                            <asp:TextBox ID="productoPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+                        </div>
 
                     </div>
 

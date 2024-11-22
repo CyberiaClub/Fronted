@@ -11,7 +11,6 @@ namespace SoftCyberiaWA.InicioSesion
     public partial class verificacion_usuario : System.Web.UI.Page
     {
         private PersonaWSClient daoPersona = new PersonaWSClient();
-        private String mensaje;
         protected void Page_Load(object sender, EventArgs e)
         {
             
