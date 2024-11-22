@@ -2909,6 +2909,15 @@ namespace SoftCyberiaWA.CyberiaWS {
     public interface ComprobantePagoWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarResponse comprobante_pago_modificar(SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarResponse> comprobante_pago_modificarAsync(SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listar_clienteRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_listar_clienteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -2943,6 +2952,42 @@ namespace SoftCyberiaWA.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarResponse")]
         System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.comprobante_pago_insertarResponse> comprobante_pago_insertarAsync(SoftCyberiaWA.CyberiaWS.comprobante_pago_insertarRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_modificar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class comprobante_pago_modificarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaWA.CyberiaWS.comprobantePago comprobante_pago;
+        
+        public comprobante_pago_modificarRequest() {
+        }
+        
+        public comprobante_pago_modificarRequest(SoftCyberiaWA.CyberiaWS.comprobantePago comprobante_pago) {
+            this.comprobante_pago = comprobante_pago;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_modificarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class comprobante_pago_modificarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public comprobante_pago_modificarResponse() {
+        }
+        
+        public comprobante_pago_modificarResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3106,6 +3151,29 @@ namespace SoftCyberiaWA.CyberiaWS {
         
         public ComprobantePagoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarResponse SoftCyberiaWA.CyberiaWS.ComprobantePagoWS.comprobante_pago_modificar(SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarRequest request) {
+            return base.Channel.comprobante_pago_modificar(request);
+        }
+        
+        public int comprobante_pago_modificar(SoftCyberiaWA.CyberiaWS.comprobantePago comprobante_pago) {
+            SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarRequest inValue = new SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarRequest();
+            inValue.comprobante_pago = comprobante_pago;
+            SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarResponse retVal = ((SoftCyberiaWA.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_modificar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarResponse> SoftCyberiaWA.CyberiaWS.ComprobantePagoWS.comprobante_pago_modificarAsync(SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarRequest request) {
+            return base.Channel.comprobante_pago_modificarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarResponse> comprobante_pago_modificarAsync(SoftCyberiaWA.CyberiaWS.comprobantePago comprobante_pago) {
+            SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarRequest inValue = new SoftCyberiaWA.CyberiaWS.comprobante_pago_modificarRequest();
+            inValue.comprobante_pago = comprobante_pago;
+            return ((SoftCyberiaWA.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_modificarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

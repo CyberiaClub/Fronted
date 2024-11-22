@@ -6,6 +6,8 @@
   <xs:element name="comprobante_pago_listarResponse" type="tns:comprobante_pago_listarResponse" />
   <xs:element name="comprobante_pago_listar_cliente" type="tns:comprobante_pago_listar_cliente" />
   <xs:element name="comprobante_pago_listar_clienteResponse" type="tns:comprobante_pago_listar_clienteResponse" />
+  <xs:element name="comprobante_pago_modificar" type="tns:comprobante_pago_modificar" />
+  <xs:element name="comprobante_pago_modificarResponse" type="tns:comprobante_pago_modificarResponse" />
   <xs:element name="comprobante_pago_obtener_por_id" type="tns:comprobante_pago_obtener_por_id" />
   <xs:element name="comprobante_pago_obtener_por_idResponse" type="tns:comprobante_pago_obtener_por_idResponse" />
   <xs:complexType name="comprobante_pago_obtener_por_id">
@@ -58,7 +60,6 @@
       <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="marca" type="tns:marca" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="oferta" type="xs:double" />
       <xs:element minOccurs="0" name="precio" type="xs:double" />
       <xs:element minOccurs="0" name="precioProveedor" type="xs:double" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="productosMiembros" nillable="true" type="tns:producto" />
@@ -125,6 +126,16 @@
       <xs:element minOccurs="0" name="idTipoComprobante" type="xs:int" />
       <xs:element minOccurs="0" name="secuencial" type="xs:string" />
       <xs:element minOccurs="0" name="tipoComprobante" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante_pago_modificar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comprobante_pago" type="tns:comprobantePago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante_pago_modificarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="comprobante_pago_insertar">

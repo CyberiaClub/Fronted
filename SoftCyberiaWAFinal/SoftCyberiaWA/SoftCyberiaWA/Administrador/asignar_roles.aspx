@@ -5,7 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphStyle" runat="server">
     <link href="../Content/siteadmi.css" rel="stylesheet" />
+    <script src="../Scripts\validacion_rol.js"></script>
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="d-flex justify-content-center align-items-center vh-200">
         <div class="card" style="width: 100%; max-width: 800px; color: midnightblue">

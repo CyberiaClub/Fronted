@@ -186,7 +186,7 @@ namespace SoftCyberiaWA.Administrador
             {
                 _productoOferta = new producto();
                 _productoOferta.idProducto = Convert.ToInt32(fila.Cells[0].Text);
-                _productoOferta.oferta = Convert.ToInt32(fila.Cells[3].Text);
+                //_productoOferta.oferta = Convert.ToInt32(fila.Cells[3].Text);
                 _productos[cont] = _productoOferta;
                 cont++;
             }
