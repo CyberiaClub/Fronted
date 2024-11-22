@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="CyberiaWS" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="OfertaWS" targetNamespace="CyberiaWS" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS?xsd=1" namespace="CyberiaWS" />
+    </xsd:schema>
+  </types>
+  <message name="oferta_listar">
+    <part name="parameters" element="tns:oferta_listar" />
+  </message>
+  <message name="oferta_listarResponse">
+    <part name="parameters" element="tns:oferta_listarResponse" />
+  </message>
+  <message name="oferta_modificar">
+    <part name="parameters" element="tns:oferta_modificar" />
+  </message>
+  <message name="oferta_modificarResponse">
+    <part name="parameters" element="tns:oferta_modificarResponse" />
+  </message>
+  <message name="oferta_insertar">
+    <part name="parameters" element="tns:oferta_insertar" />
+  </message>
+  <message name="oferta_insertarResponse">
+    <part name="parameters" element="tns:oferta_insertarResponse" />
+  </message>
+  <portType name="OfertaWS">
+    <operation name="oferta_listar">
+      <input wsam:Action="CyberiaWS/OfertaWS/oferta_listarRequest" message="tns:oferta_listar" />
+      <output wsam:Action="CyberiaWS/OfertaWS/oferta_listarResponse" message="tns:oferta_listarResponse" />
+    </operation>
+    <operation name="oferta_modificar">
+      <input wsam:Action="CyberiaWS/OfertaWS/oferta_modificarRequest" message="tns:oferta_modificar" />
+      <output wsam:Action="CyberiaWS/OfertaWS/oferta_modificarResponse" message="tns:oferta_modificarResponse" />
+    </operation>
+    <operation name="oferta_insertar">
+      <input wsam:Action="CyberiaWS/OfertaWS/oferta_insertarRequest" message="tns:oferta_insertar" />
+      <output wsam:Action="CyberiaWS/OfertaWS/oferta_insertarResponse" message="tns:oferta_insertarResponse" />
+    </operation>
+  </portType>
+  <binding name="OfertaWSPortBinding" type="tns:OfertaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="oferta_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="oferta_modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="oferta_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="OfertaWS">
+    <port name="OfertaWSPort" binding="tns:OfertaWSPortBinding">
+      <soap:address location="http://localhost:8080/CyberiaStoreWS_Servidor/OfertaWS" />
+    </port>
+  </service>
+</definitions>

@@ -46,8 +46,8 @@
         </div>
     </div>
 
-
+    <!--
     <script src="../Scripts/validar_inicio_sesion.js"></script>
-
+        -->
 
 </asp:Content>

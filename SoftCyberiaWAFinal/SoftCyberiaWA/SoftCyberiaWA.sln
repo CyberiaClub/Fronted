@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftCyberiaWA", "SoftCyberiaWA\SoftCyberiaWA.csproj", "{F980703C-F82E-47A2-947D-FC79A54B1071}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftCyberiaBaseBO", "SoftCyberiaBaseBO\SoftCyberiaBaseBO.csproj", "{19F79635-8311-4563-BA10-22C328D8B6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftCyberiaInventarioBO", "SoftCyberiaInventarioBO\SoftCyberiaInventarioBO.csproj", "{F16FC8DD-2504-4354-B3CC-A614A85A523F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F980703C-F82E-47A2-947D-FC79A54B1071}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F980703C-F82E-47A2-947D-FC79A54B1071}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F980703C-F82E-47A2-947D-FC79A54B1071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F79635-8311-4563-BA10-22C328D8B6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F79635-8311-4563-BA10-22C328D8B6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F79635-8311-4563-BA10-22C328D8B6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F79635-8311-4563-BA10-22C328D8B6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F16FC8DD-2504-4354-B3CC-A614A85A523F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16FC8DD-2504-4354-B3CC-A614A85A523F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16FC8DD-2504-4354-B3CC-A614A85A523F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16FC8DD-2504-4354-B3CC-A614A85A523F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
