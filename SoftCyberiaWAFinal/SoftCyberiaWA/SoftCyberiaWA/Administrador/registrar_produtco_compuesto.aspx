@@ -8,52 +8,60 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="d-flex justify-content-center align-items-center vh-200">
-        <div class="card" style="width: 100%; max-width: 800px; color: midnightblue">
+        <div class="card h-auto" style="width: 100%; max-width: 800px; color: midnightblue; border: 0.5px solid #c1bcb1; border-radius: 1px;">
             <div class="card-header text-center" style="width: 800px">
                 <h2>Crear Producto Compuesto (Kit)</h2>
             </div>
-            <div class="card-body pb-2">
-                <div class="row">
-                    <!-- Columna de información de la oferta -->
-                    <div class="col-md-8">
-                        <div class="pb-3">
+            <div class="card-body pb-2 col-13 d-flex">
+                <div class="d-flex col-13">
+                    <!-- Columna de información del producto    -->
+                    <div class="d-flex flex-column col-6">
+                        <div class="d-flex flex-column" ">
                             <asp:Label ID="lblproductoNombre" runat="server" Text="Nombre del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="productoNombre" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="productoNombre" runat="server" CssClass="form-control" Width="100%"></asp:TextBox>
                         </div>
-                        <div class="pb-3">
+                        <div class="d-flex flex-column">
                             <asp:Label ID="lblproductoSku" runat="server" Text="SKU:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="productoSku" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="productoSku" runat="server" CssClass="form-control" Width="100%"></asp:TextBox>
                         </div>
-                        <div class="pb-3">
+                        <div class="d-flex flex-column">
                             <asp:Label ID="lblproductoPrecio" runat="server" Text="Precio de Venta:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:TextBox ID="productoPrecio" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="productoPrecio" runat="server" CssClass="form-control" Width="45%" TextMode="Number"></asp:TextBox>
                         </div>
-                        <div class="pb-3  col-md-6">
+                        <div class="d-flex flex-column">
                             <asp:Label ID="lblproductoMarca" runat="server" Text="Marca del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:DropDownList ID="productoMarca" runat="server" AutoPostBack="true" CssClass="form-select"></asp:DropDownList>
                         </div>
-                        <div class="pb-3  col-md-6">
+                        <div class="d-flex flex-column">
                             <asp:Label ID="lblproductoTipoProducto" runat="server" Text="Categoría del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:DropDownList ID="productoTipoProducto" runat="server" AutoPostBack="true" CssClass="form-select"></asp:DropDownList>
                         </div>
-                        <div class="pb-3">
+                        <div class="d-flex flex-column">
                             <asp:Label ID="lblproductoDescripcion" runat="server" Text="Descripción del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:TextBox ID="productoDescripcion" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
 
                     <!-- Columna de botón de asignación -->
-                    <div class="col-md-4 d-flex flex-column align-items-center justify-content-center bg-light" style="border-radius: 0 15px 15px 0;">
+                    <div class="col-md-7 d-flex flex-column align-items-center bg-light h-auto" style="border-radius: 0 15px 15px 0; margin-left: 6.5%; margin-right: auto; width: auto;">
                         <h4 class="font-weight-bold mb-4 align-content-center" style="color: #004EA8;">Imagen Producto Compuesto</h4>
 
                         <asp:Label ID="lblImage" runat="server" Text="Imagen del Producto:" CssClass="col-form-label fw-bold"></asp:Label>
                         <img src="/Imagenes/oferta.png" alt="Icono de oferta" class="img-fluid img-thumbnail mb-3" style="width: 160px;">
-                        <asp:FileUpload ID="fileUploadProductImage" CssClass="form-control mb-2" runat="server" />
+                        <asp:FileUpload ID="fileUploadProductImage" CssClass="form-control mb-2" runat="server" Width="95%"/>
 
                         <asp:Button ID="btnAsignarOferta" runat="server" Text="Asignar Imagen" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;" />
                     </div>
                 </div>
-
+            </div>
+        </div>
+    </div>
+    <p>
+        <br>
+    </p>
+    <div class="d-flex justify-content-center align-items-center vh-200">
+        <div class="card h-auto" style="width: 100%; max-width: 800px; color: midnightblue; border: 0.5px solid #c1bcb1; border-radius: 1px;">
+            <div class="card-body pb-2">
                 <!-- Sección para agregar productos al kit -->
                 <p></p>
                 <div class="col-md-13">
@@ -97,15 +105,12 @@
                 <!-- Botón para finalizar la creación del kit -->
                 <div class="row mt-4">
                     <div class="col-md-12 text-center">
-                        <asp:Button ID="btnCrearKit" runat="server" Text="Crear Kit" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnCrearKit_Click"/>
-                         <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="providerButton_Click" />
-                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
+                        <asp:Button ID="btnCrearKit" runat="server" Text="Crear Kit" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnCrearKit_Click" />
+                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="registerButton_Click" />
+                        <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
 </asp:Content>

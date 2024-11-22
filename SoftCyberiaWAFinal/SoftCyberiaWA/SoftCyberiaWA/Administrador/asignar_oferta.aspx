@@ -32,7 +32,7 @@
                         </div>
                     </div>
 
-                    <!-- Columna de botón de asignación -->
+                    <!-- Columna de Ingreso de Imagen -->
                     <div class="col-7 d-flex flex-column align-items-center bg-light" style="border-radius: 0 15px 15px 0; margin-left: 20%; margin-right: auto; width: auto">
 
                         <h4 class="font-weight-bold" style="color: #004EA8;">Asignar Imagen</h4>
