@@ -1,6 +1,8 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaVentaBO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,7 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class listado_pedidos_vendedor : System.Web.UI.Page
     {
-        private ComprobantePagoWSClient daoComprobantePago = new ComprobantePagoWSClient();
+        private ComprobantePagoBO comprobantePagoBO;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -39,7 +41,7 @@ namespace SoftCyberiaWA.Administrador
 
         protected void llenarGVPedidos()
         {
-            comprobantePago[] comprobantes = daoComprobantePago.comprobante_pago_listar();
+            BindingList<comprobantePago> comprobantes = comprobantePagoBO.comprobante_pago_listar();
             DataTable gv = new DataTable();
 
             gv.Columns.AddRange(new DataColumn[]{

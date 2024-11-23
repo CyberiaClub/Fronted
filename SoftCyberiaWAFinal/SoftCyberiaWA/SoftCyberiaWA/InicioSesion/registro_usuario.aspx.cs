@@ -1,17 +1,18 @@
 ﻿using System;
-using SoftCyberiaWA.CyberiaWS;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
+using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaPersonaBO;
 
 namespace SoftCyberiaWA.InicioSesion
 {
     public partial class registro_usuario : System.Web.UI.Page
     {
-        private PersonaWSClient daopersona = new PersonaWSClient();
+        private PersonaBO personaBO;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -169,7 +170,7 @@ namespace SoftCyberiaWA.InicioSesion
                         break;
 
                 }
-                daopersona.persona_insertar(_persona);
+                personaBO.persona_insertar(_persona);
             }
 
         }

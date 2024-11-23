@@ -1,5 +1,4 @@
 ﻿using System;
-using SoftCyberiaWA.CyberiaWS;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,13 +8,17 @@ using System.Data;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaVentaBO;
+using SoftCyberiaInventarioBO;
+
 
 namespace SoftCyberiaWA.Administrador
 {
     public partial class asignar_oferta : System.Web.UI.Page
     {
-        private OfertaWSClient daoOferta = new OfertaWSClient();
-        private ProductoWSClient daoProducto = new ProductoWSClient();
+        private OfertaBO ofertaBO;
+        private ProductoBO productoBO;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -31,7 +34,7 @@ namespace SoftCyberiaWA.Administrador
                 gridViewProdBuscado.DataSource = null;
                 gridViewProdBuscado.DataBind();
 
-                producto _producto = daoProducto.producto_buscar_sku(productoSKU.Text.Trim(), 1);
+                producto _producto = productoBO.producto_buscar_sku(productoSKU.Text.Trim(), 1);
                 if (_producto != null)
                 {
                     productoSKUMensaje.Visible = false;
@@ -173,7 +176,7 @@ namespace SoftCyberiaWA.Administrador
                 _oferta.imagen = imagenBytes;
                 _oferta.productos = ObtenerProductosOferta();
 
-                this.daoOferta.oferta_insertar(_oferta);
+                this.ofertaBO.oferta_insertar(_oferta);
 
                 successMessage.Text = "Oferta asignada correctamente.";
                 successMessage.Visible = true;

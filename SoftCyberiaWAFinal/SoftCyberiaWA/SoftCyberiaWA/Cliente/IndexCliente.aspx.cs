@@ -1,6 +1,8 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,8 +12,8 @@ namespace SoftCyberiaWA.Cliente
 {
     public partial class IndexCliente : System.Web.UI.Page
     {
-        private MarcaWSClient daoMarca = new MarcaWSClient();
-        private TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();
+        private MarcaBO marcaBO;
+        private TipoProductoBO tipoProductoBO;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -24,7 +26,7 @@ namespace SoftCyberiaWA.Cliente
         private void CargarMarcas()
         {
             // Llama al método para obtener las marcas desde el backend
-            marca[] marcas = this.daoMarca.marca_listar();
+            BindingList<marca> marcas = this.marcaBO.marca_listar();
 
             // Recorre la lista de marcas y genera el HTML para cada una
             foreach (marca m in marcas)
@@ -66,7 +68,7 @@ namespace SoftCyberiaWA.Cliente
         //private void CargarTipoProductos()
         //{
         //    // Llama al método para obtener los tipoProductos desde el backend
-        //    tipoProducto[] tipoProductos = this.daoTipoProducto.tipoProducto_listar();
+        //    tipoProducto[] tipoProductos = this.tipoProductoBO.tipoProducto_listar();
 
         //    // Recorre la lista de tipoProductos y genera el HTML para cada uno
         //    foreach (tipoProducto tp in tipoProductos)
@@ -105,7 +107,7 @@ namespace SoftCyberiaWA.Cliente
         //}
         //private void CargarTipoProductos()
         //{
-        //    tipoProducto[] tipoProductos = this.daoTipoProducto.tipoProducto_listar();
+        //    tipoProducto[] tipoProductos = this.tipoProductoBO.tipoProducto_listar();
         //    int totalCategorias = tipoProductos.Length;
         //    int categoriasPorSlide = 4;
         //    int totalSlides = (int)Math.Ceiling((double)totalCategorias / categoriasPorSlide);
@@ -144,7 +146,7 @@ namespace SoftCyberiaWA.Cliente
         //}
         private void CargarTipoProductos()
         {
-            tipoProducto[] tipoProductos = this.daoTipoProducto.tipoProducto_listar();
+            BindingList<tipoProducto> tipoProductos = this.tipoProductoBO.tipoProducto_listar();
             int count = 0;
             bool isActive = true;
 

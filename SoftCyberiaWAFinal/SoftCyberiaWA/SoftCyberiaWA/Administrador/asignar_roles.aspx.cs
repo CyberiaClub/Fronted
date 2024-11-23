@@ -1,5 +1,6 @@
-﻿using SoftCyberiaWA.Almacenero;
-using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
+using SoftCyberiaPersonaBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +13,8 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class asignar_roles : System.Web.UI.Page
     {
-
-        private PersonaWSClient daoPersona = new PersonaWSClient();
-        private SedeWSClient daoSede = new SedeWSClient();
+        private PersonaBO personaBO;
+        private SedeBO sedeBO;
         private persona _persona = new persona();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +23,7 @@ namespace SoftCyberiaWA.Administrador
 
         protected void dni_Ingresado(object sender, EventArgs e)
         {
-            _persona = daoPersona.persona_buscar_por_documento(dni.Text.ToString());
+            _persona = personaBO.persona_buscar_por_documento(dni.Text.ToString());
             if (_persona != null)
             {
                 nombre.Text = _persona.nombre;
@@ -35,7 +35,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarSedes()
         {
-            sede.DataSource = daoSede.sede_listar();
+            sede.DataSource = sedeBO.sede_listar();
             sede.DataTextField = "nombre";
             sede.DataValueField = "idSede";
             sede.DataBind();
@@ -205,7 +205,7 @@ namespace SoftCyberiaWA.Administrador
             _persona.documento = dni.Text;
             _persona.tipoDeDocumento = (tipoDocumento)Enum.Parse(typeof(tipoDocumento), tipo_documento.SelectedValue);
 
-            this.daoPersona.persona_modificar(_persona);
+            this.personaBO.persona_modificar(_persona);
 
         }
     }

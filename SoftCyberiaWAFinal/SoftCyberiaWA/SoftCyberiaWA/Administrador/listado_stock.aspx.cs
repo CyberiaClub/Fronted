@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,8 +13,8 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class listado_stock : System.Web.UI.Page
     {
-        ProductoWSClient daoProducto = new ProductoWSClient();
-        SedeWSClient daoSede = new SedeWSClient();
+        private ProductoBO productoBO;
+        private SedeBO sedeBO;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

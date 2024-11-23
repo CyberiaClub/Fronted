@@ -1,6 +1,9 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
+using SoftCyberiaVentaBO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -11,9 +14,9 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class listado_pedidos : System.Web.UI.Page
     {
-        private ComprobantePagoWSClient daoComprobantePago = new ComprobantePagoWSClient();
-        private ProductoWSClient daoProducto = new ProductoWSClient();
-        private comprobantePago[] comprobantes;
+        private ComprobantePagoBO comprobantePagoBO;
+        private ProductoBO productoBO;
+        private BindingList<comprobantePago> comprobantes;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -41,7 +44,7 @@ namespace SoftCyberiaWA.Administrador
 
         protected void llenarGVPedidos()
         {
-            comprobantes = daoComprobantePago.comprobante_pago_listar();
+            comprobantes = comprobantePagoBO.comprobante_pago_listar();
             DataTable gv = new DataTable();
 
             gv.Columns.AddRange(new DataColumn[]{
@@ -100,7 +103,7 @@ namespace SoftCyberiaWA.Administrador
                 //foreach (var linea in pedidoSeleccionado.lineaPedido) // Suponiendo que lineaPedido es un array de "COMPROBANTE_PAGO_X_PRODUCTO"
                 //{
                 //    // Obtener la información del producto usando el ID del producto
-                //    producto _producto = daoProducto.producto_buscar_sku(linea.id_producto); // Método que consulta el producto por su ID
+                //    producto _producto = productoBO.producto_buscar_sku(linea.id_producto); // Método que consulta el producto por su ID
 
                 //    if (_producto != null)
                 //    {

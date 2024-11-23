@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,9 +16,9 @@ namespace SoftCyberiaWA
 {
     public partial class listado_productos : System.Web.UI.Page
     {
-        private ProductoWSClient daoProducto = new ProductoWSClient();
-        private TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();
-        private SedeWSClient daoSede = new SedeWSClient();
+        private ProductoBO productoBO;
+        private TipoProductoBO tipoProductoBO;
+        private SedeBO sedeBO;
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarSedes();
@@ -55,7 +56,7 @@ namespace SoftCyberiaWA
         private void CargarSedes()
         {
             // Llama al método para obtener los tipos de productos desde el backend
-            sede[] sedes = this.daoSede.sede_listar();
+            BindingList<sede> sedes = this.sedeBO.sede_listar();
             
             foreach (sede _sede in sedes)
             {
@@ -79,7 +80,7 @@ namespace SoftCyberiaWA
         private void CargarTiposDeProductos()
         {
             // Llama al método para obtener los tipos de productos desde el backend
-            tipoProducto[] tiposDeProductos = this.daoTipoProducto.tipoProducto_listar();
+            BindingList<tipoProducto> tiposDeProductos = this.tipoProductoBO.tipoProducto_listar();
 
 
             foreach (tipoProducto tipo in tiposDeProductos)
@@ -103,7 +104,7 @@ namespace SoftCyberiaWA
         private void CargarProductos()
         {
             // Llama al método para obtener los productos desde el backend
-            producto[] productos = this.daoProducto.producto_listar();
+            BindingList<producto> productos = this.productoBO.producto_listar();
             // Recorre la lista de productos y genera el HTML para cada uno
             foreach (producto prod in productos)
             {
@@ -139,14 +140,14 @@ namespace SoftCyberiaWA
         private void CargarProductos0(int _idSede )
         {
             // Llama al método para obtener los productos desde el backend
-            producto[] productos = this.daoProducto.producto_listar();
+            BindingList<producto> productos = this.productoBO.producto_listar();
             // Recorre la lista de productos y genera el HTML para cada uno
             foreach (producto prod in productos)
             {
                 // Convierte el arreglo de bytes de la imagen a una cadena en Base64
                 string base64Image = Convert.ToBase64String(prod.imagen);
                 string imageSrc = $"data:image/jpeg;base64,{base64Image}";
-                producto productoSedeSeleccionada = daoProducto.producto_buscar_sku(prod.sku, _idSede);//permite acceder a la cantidad
+                producto productoSedeSeleccionada = productoBO.producto_buscar_sku(prod.sku, _idSede);//permite acceder a la cantidad
 
                 // Crea el contenedor HTML del producto
                 Literal productHtml = new Literal();
@@ -176,14 +177,14 @@ namespace SoftCyberiaWA
         //private void CargarProductos3(int? _idSede = null)
         //{
         //    //Llama al método para obtener los productos desde el backend
-        //    producto[] productos = this.daoProducto.producto_listar();
+        //    producto[] productos = this.productoBO.producto_listar();
         //    // Recorre la lista de productos y genera el HTML para cada uno
         //    foreach (producto prod in productos)
         //    {
         //        if (prod.idSede == _idSede)
         //        { //if(prod.idSede == _idSede) { // si es !0 no sale productos de la bd    si idSede==0 si muestra los productos de la bd
         //          // Convierte el arreglo de bytes de la imagen a una cadena en Base64
-        //            producto productoSedeSeleccionada = daoProducto.producto_buscar_sku(prod.sku, prod.idSede);//permite acceder a la cantidad
+        //            producto productoSedeSeleccionada = productoBO.producto_buscar_sku(prod.sku, prod.idSede);//permite acceder a la cantidad
 
         //            string base64Image = Convert.ToBase64String(prod.imagen);
         //            string imageSrc = $"data:image/jpeg;base64,{base64Image}";
@@ -215,7 +216,7 @@ namespace SoftCyberiaWA
         //private void CargarProductos2(int? _idSede = null)
         //{// pasar funcion buscar sku
         //    // Llama al método para obtener los productos desde el backend
-        //    producto[] productos = this.daoProducto.producto_listar();
+        //    producto[] productos = this.productoBO.producto_listar();
         //    // Recorre la lista de productos y genera el HTML para cada uno
         //    foreach (producto prod in productos)
         //    {

@@ -1,4 +1,6 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
+using SoftCyberiaPersonaBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,7 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class registrar_nueva_categoria : System.Web.UI.Page
     {
-        private TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();
+        private TipoProductoBO tipoProductoBO;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -30,7 +32,7 @@ namespace SoftCyberiaWA.Administrador
                 }
                 _tipoProducto.imagen = imagenBytes;
 
-                this.daoTipoProducto.tipoProducto_insertar(_tipoProducto);
+                this.tipoProductoBO.tipoProducto_insertar(_tipoProducto);
 
 
 
