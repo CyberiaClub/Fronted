@@ -532,6 +532,24 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SoftCyberiaBaseBO\SoftCyberiaBaseBO.csproj">
+      <Project>{19f79635-8311-4563-ba10-22c328d8b6db}</Project>
+      <Name>SoftCyberiaBaseBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoftCyberiaInventarioBO\SoftCyberiaInventarioBO.csproj">
+      <Project>{f16fc8dd-2504-4354-b3cc-a614a85a523f}</Project>
+      <Name>SoftCyberiaInventarioBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoftCyberiaPersonaBO\SoftCyberiaPersonaBO.csproj">
+      <Project>{60686bd1-65ee-4d2b-8e0f-3698bbcf6eae}</Project>
+      <Name>SoftCyberiaPersonaBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoftCyberiaVentaBO\SoftCyberiaVentaBO.csproj">
+      <Project>{c1404205-f13a-4638-ba00-bb3827628389}</Project>
+      <Name>SoftCyberiaVentaBO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

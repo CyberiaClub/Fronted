@@ -1,6 +1,8 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,7 +12,7 @@ namespace SoftCyberiaWA
 {
     public partial class listado_sedes : System.Web.UI.Page
     {
-        private SedeWSClient daoSede = new SedeWSClient();
+        private SedeBO sedeBO;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +25,7 @@ namespace SoftCyberiaWA
         private void CargarSedes()
         {
             // Llama al método para obtener las sedes desde el servicio web
-            sede[] sedes = this.daoSede.sede_listar();
+            BindingList<sede> sedes = this.sedeBO.sede_listar();
 
             // Crear una lista para almacenar la información que se mostrará en el Repeater
             var listaSedes = new List<SedeInfo>();

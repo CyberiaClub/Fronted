@@ -1,6 +1,8 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
@@ -13,7 +15,7 @@ namespace SoftCyberiaWA
 
     //public partial class detalle_producto : System.Web.UI.Page
     //{
-    //    private ProductoWSClient daoProducto = new ProductoWSClient(); // Cliente del servicio web
+    //    private ProductoWSClient productoBO = new ProductoWSClient(); // Cliente del servicio web
 
     //    protected void Page_Load(object sender, EventArgs e)
     //    {
@@ -31,7 +33,7 @@ namespace SoftCyberiaWA
     //    private void CargarProducto(int idProducto)
     //    {
     //        // Llama al método para obtener los productos desde el backend
-    //        producto[] productos = this.daoProducto.producto_listar();
+    //        producto[] productos = this.productoBO.producto_listar();
 
     //        // Variable para verificar si se encontró el producto
     //        bool productoEncontrado = false;
@@ -90,7 +92,7 @@ namespace SoftCyberiaWA
 
     public partial class detalle_producto : System.Web.UI.Page
     {
-        private ProductoWSClient daoProducto = new ProductoWSClient();
+        private ProductoBO productoBO;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -109,7 +111,7 @@ namespace SoftCyberiaWA
         private void CargarProducto(string sku, int idSede)
         {
             // Llama al método para obtener los productos desde el backend
-            producto[] productos = this.daoProducto.producto_listar();
+            BindingList<producto> productos = this.productoBO.producto_listar();
 
             // Variable para verificar si se encontró el producto
             bool productoEncontrado = false;
@@ -121,7 +123,7 @@ namespace SoftCyberiaWA
                 //if (_prod.idProducto == idProducto)
                 //{
                 productoEncontrado = true; // Indicamos que encontramos el producto
-                producto productoSeleccionado = daoProducto.producto_buscar_sku(sku, idSede);
+                producto productoSeleccionado = productoBO.producto_buscar_sku(sku, idSede);
                 // Asigna la imagen del producto (debe estar en formato de bytes para el control Image)
                 if (_prod.imagen != null)
                 {
@@ -160,7 +162,7 @@ namespace SoftCyberiaWA
         
         protected void btnAgregarCarrito_Click(object sender, EventArgs e)
         {
-            producto[] productos = this.daoProducto.producto_listar();
+            BindingList<producto> productos = this.productoBO.producto_listar();
             string sku = Request.QueryString["sku"];
             int idSede = int.TryParse(Request.QueryString["sede"], out int sedeId) ? sedeId : 0;
 
@@ -176,7 +178,7 @@ namespace SoftCyberiaWA
             
             foreach (producto _prod in productos)
             {
-                producto productoSeleccionado = daoProducto.producto_buscar_sku(sku, idSede);
+                producto productoSeleccionado = productoBO.producto_buscar_sku(sku, idSede);
                 if (productoSeleccionado == null) return;
 
                 producto productoConCantidad = new producto
@@ -224,7 +226,7 @@ namespace SoftCyberiaWA
         private void CargarProducto0(string sku, int idSede)
         {
             // Llama al método buscar_sku con el SKU y el idSede
-            producto productoSeleccionado = daoProducto.producto_buscar_sku(sku, idSede);
+            producto productoSeleccionado = productoBO.producto_buscar_sku(sku, idSede);
             if (productoSeleccionado != null)
             {
                 lblNombreProducto.Text = productoSeleccionado.nombre;
@@ -262,7 +264,7 @@ namespace SoftCyberiaWA
             }
 
             // Llamar al método buscar_sku para obtener el producto
-            producto productoSeleccionado = daoProducto.producto_buscar_sku(sku, idSede);
+            producto productoSeleccionado = productoBO.producto_buscar_sku(sku, idSede);
             if (productoSeleccionado == null) return;
 
             // Obtener la cantidad seleccionada por el usuario

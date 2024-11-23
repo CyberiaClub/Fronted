@@ -45,6 +45,9 @@
     <Compile Include="ProductoBO.cs" />
     <Compile Include="MarcaBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorBO.cs" />
+    <Compile Include="SedeBO.cs" />
+    <Compile Include="TipoProductoBO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoftCyberiaBaseBO\SoftCyberiaBaseBO.csproj">

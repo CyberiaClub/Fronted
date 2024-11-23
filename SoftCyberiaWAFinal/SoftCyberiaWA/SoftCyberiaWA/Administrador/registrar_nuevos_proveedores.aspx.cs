@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class registrar_nuevos_proveedores : System.Web.UI.Page
     {
-        private ProveedorWSClient daoProveedor = new ProveedorWSClient();
+        private ProveedorBO proveedorBO;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -29,7 +30,7 @@ namespace SoftCyberiaWA.Administrador
                 _proveedor.direccion = address.Text.Trim();
                 _proveedor.descripcion = description.Text.Trim();
 
-                this.daoProveedor.proveedor_insertar(_proveedor);
+                this.proveedorBO.proveedor_insertar(_proveedor);
 
                 // Mostrar el mensaje de éxito
                 successMessage.Text = "Producto registrado correctamente.";

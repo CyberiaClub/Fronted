@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SoftCyberiaVentaBO
 {
-    internal class OfertaBO : BaseBO
+    public class OfertaBO : BaseBO
     {
         public int oferta_insertar(oferta _oferta)
         {

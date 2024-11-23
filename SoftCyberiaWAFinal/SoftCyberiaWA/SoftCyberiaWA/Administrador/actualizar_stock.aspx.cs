@@ -1,17 +1,17 @@
 ﻿using System;
-using SoftCyberiaWA.CyberiaWS;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 namespace SoftCyberiaWA.Administrador
 {
     public partial class actualizar_stock : System.Web.UI.Page
     {
-        ProductoWSClient daoProducto = new ProductoWSClient();
+        private ProductoBO productoBO;
         producto _producto= new producto();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,7 +22,7 @@ namespace SoftCyberiaWA.Administrador
         {
             if (productoSku.Text != "")
             {
-                producto _producto = daoProducto.producto_buscar_sku(productoSku.Text.ToString().Trim(), 1);
+                producto _producto = productoBO.producto_buscar_sku(productoSku.Text.ToString().Trim(), 1);
                 if (_producto != null)
                 {
                     Session["producto"] = _producto;
@@ -56,7 +56,7 @@ namespace SoftCyberiaWA.Administrador
             {
 
 
-                daoProducto.producto_aumentar_stock(Convert.ToInt32(this._producto.idProducto), 1, Convert.ToInt32(cantidadProducto.Text));
+                productoBO.producto_aumentar_stock(Convert.ToInt32(this._producto.idProducto), 1, Convert.ToInt32(cantidadProducto.Text));
                 this.buscarProducto();
 
 

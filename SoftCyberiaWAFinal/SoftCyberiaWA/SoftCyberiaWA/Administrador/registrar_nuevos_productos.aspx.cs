@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,11 @@ namespace SoftCyberiaWA.Administrador
     public partial class registrar_nuevos_productos : System.Web.UI.Page
     {
 
-
-        private SedeWSClient daoSede = new SedeWSClient();
-        private ProveedorWSClient daoProveedor = new ProveedorWSClient();
-        private TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();
-        private MarcaWSClient daoMarca = new MarcaWSClient();
-        private ProductoWSClient daoProducto = new ProductoWSClient();
+        private SedeBO sedeBO;
+        private ProveedorBO proveedorBO;
+        private TipoProductoBO tipoProductoBO;
+        private MarcaBO marcaBO;
+        private ProductoBO productoBO;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,7 +30,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarCategoria()
         {
-            categoriaName.DataSource = daoTipoProducto.tipoProducto_listar();
+            categoriaName.DataSource = tipoProductoBO.tipoProducto_listar();
             categoriaName.DataTextField = "tipo";   
             categoriaName.DataValueField = "idTipoProducto";
             categoriaName.DataBind(); // Llenar el DropDownList
@@ -38,7 +38,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarMarcas()
         {
-            marcaName.DataSource = daoMarca.marca_listar();
+            marcaName.DataSource = marcaBO.marca_listar();
             marcaName.DataTextField = "nombre";
             marcaName.DataValueField = "idMarca";
             marcaName.DataBind(); // Llenar el DropDownList
@@ -78,7 +78,7 @@ namespace SoftCyberiaWA.Administrador
                 }
             }
 
-            this.daoProducto.producto_insertar(_producto);
+            this.productoBO.producto_insertar(_producto);
 
             // Mostrar el mensaje de éxito
             successMessage.Text = "Producto registrado correctamente.";

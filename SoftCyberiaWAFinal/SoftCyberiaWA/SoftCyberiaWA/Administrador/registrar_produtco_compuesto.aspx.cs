@@ -1,22 +1,24 @@
 ﻿using System;
-using SoftCyberiaWA.CyberiaWS;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
+using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
+using System.ComponentModel;
 
 namespace SoftCyberiaWA.Administrador
 {
     public partial class registrar_produtco_compuesto : System.Web.UI.Page
     {
-        ProductoWSClient daoProducto = new ProductoWSClient();
-        TipoProductoWSClient daoTipoProducto = new TipoProductoWSClient();
-        MarcaWSClient daoMarca = new MarcaWSClient();
-        producto _producto = new producto();
-        producto _productoCompuesto = new producto();
-        producto[] _productosCompuestos;
+        private ProductoBO productoBO;
+        private TipoProductoBO tipoProductoBO;
+        private MarcaBO marcaBO;
+        private producto _producto = new producto();
+        private producto _productoCompuesto = new producto();
+        private BindingList<producto> _productosCompuestos;
 
 
         int cont = 0;
@@ -31,7 +33,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarCategoria()
         {
-            productoTipoProducto.DataSource = daoTipoProducto.tipoProducto_listar();
+            productoTipoProducto.DataSource = tipoProductoBO.tipoProducto_listar();
             productoTipoProducto.DataTextField = "tipo";
             productoTipoProducto.DataValueField = "idTipoProducto";
             productoTipoProducto.DataBind(); // Llenar el DropDownList
@@ -39,7 +41,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarMarcas()
         {
-            productoMarca.DataSource = daoMarca.marca_listar();
+            productoMarca.DataSource = marcaBO.marca_listar();
             productoMarca.DataTextField = "nombre";
             productoMarca.DataValueField = "idMarca";
             productoMarca.DataBind(); // Llenar el DropDownList
@@ -47,7 +49,7 @@ namespace SoftCyberiaWA.Administrador
 
         protected void BuscarProducto_Click(object sender, EventArgs e)
         {
-            _productoCompuesto = daoProducto.producto_buscar_sku(productoSku.Text,1);
+            _productoCompuesto = productoBO.producto_buscar_sku(productoSku.Text,1);
         }
 
         protected void AgregarProducto_Click(object sender, EventArgs e)
@@ -79,7 +81,7 @@ namespace SoftCyberiaWA.Administrador
                 }
             }
 
-            daoProducto.producto_insertar(_producto);
+            productoBO.producto_insertar(_producto);
         }
 
         protected void btnCrearKit_Click(object sender, EventArgs e)

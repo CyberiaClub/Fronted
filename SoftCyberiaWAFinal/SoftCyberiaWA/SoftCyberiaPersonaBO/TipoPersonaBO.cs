@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace SoftCyberiaPersonaBO
 {
-    internal class TipoPersonaBO : PersonaBO
+    public class TipoPersonaBO : PersonaBO
     {
         public BindingList<tipoPersona> tipopersona_listar()
         {
-            tipoPersona[] arreglo = this.WsTipoProducto.tipopersona_listar(); ;
+            tipoPersona[] arreglo = this.WsTipoPersona.tipopersona_listar(); ;
             return new BindingList<tipoPersona>(arreglo);
         }
     }

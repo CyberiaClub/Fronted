@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SoftCyberiaInventarioBO
 {
-    internal class SedeBO : BaseBO
+    public class SedeBO : BaseBO
     {
         public int sede_insertar(sede _sede)
         {

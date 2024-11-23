@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class registrar_nueva_marca : System.Web.UI.Page
     {
-        private MarcaWSClient daoMarca = new MarcaWSClient();
-        private ProveedorWSClient daoProveedor = new ProveedorWSClient();
+        private MarcaBO marcaBO;
+        private ProveedorBO proveedorBO;
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarProveedores();
@@ -21,7 +22,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarProveedores()
         {
-            providerName.DataSource = daoProveedor.proveedor_listar();
+            providerName.DataSource = proveedorBO.proveedor_listar();
             providerName.DataTextField = "razonSocial";
             providerName.DataValueField = "idProveedor";
             providerName.DataBind(); // Llenar el DropDownList
@@ -52,7 +53,7 @@ namespace SoftCyberiaWA.Administrador
                     _proveedor_marca.idProveedorSpecified = true;
                     _marca.proveedor = _proveedor_marca;
 
-                    this.daoMarca.marca_insertar(_marca);
+                    this.marcaBO.marca_insertar(_marca);
                 }
                 else
                 {

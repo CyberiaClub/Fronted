@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SoftCyberiaInventarioBO
 {
-    internal class TipoProductoBO : BaseBO
+    public class TipoProductoBO : BaseBO
     {
         public int tipoProducto_insertar(tipoProducto _tipoProducto)
         {

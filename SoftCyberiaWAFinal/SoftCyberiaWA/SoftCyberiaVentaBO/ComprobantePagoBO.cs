@@ -17,9 +17,9 @@ namespace SoftCyberiaVentaBO
             return new BindingList<comprobantePago>(arreglo);
         }
 
-        public BindingList<comprobantePago> comprobante_pago_listar_cliente()
+        public BindingList<comprobantePago> comprobante_pago_listar_cliente(int idCliente)
         {
-            comprobantePago[] arreglo = this.WsComprobantePago.comprobante_pago_listar_cliente();
+            comprobantePago[] arreglo = this.WsComprobantePago.comprobante_pago_listar_cliente(idCliente);
             return new BindingList<comprobantePago>(arreglo);
         }
         public comprobantePago comprobante_pago_obtener_por_id(int id_comprobante_pago)

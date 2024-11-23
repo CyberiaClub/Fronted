@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace SoftCyberiaWA.Vendedor
 {
     public partial class listado_stock : System.Web.UI.Page
     {
-        private ProductoWSClient daoProducto = new ProductoWSClient();
+        private ProductoBO productoBO;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -28,7 +29,7 @@ namespace SoftCyberiaWA.Vendedor
             {
                 // Buscar el _producto por SKU
                 // falta implementar
-                //producto _producto = daoProducto.buscar_producto_sku(sku);
+                //producto _producto = productoBO.buscar_producto_sku(sku);
                 producto _producto = new producto();
                 if (_producto != null)
                 {
