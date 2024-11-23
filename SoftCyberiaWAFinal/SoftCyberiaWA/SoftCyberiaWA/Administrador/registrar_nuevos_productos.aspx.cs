@@ -18,6 +18,14 @@ namespace SoftCyberiaWA.Administrador
         private MarcaBO marcaBO;
         private ProductoBO productoBO;
 
+        public registrar_nuevos_productos()
+        {
+            sedeBO = new SedeBO();
+            proveedorBO = new ProveedorBO();
+            tipoProductoBO = new TipoProductoBO();
+            marcaBO = new MarcaBO();
+            productoBO = new ProductoBO();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

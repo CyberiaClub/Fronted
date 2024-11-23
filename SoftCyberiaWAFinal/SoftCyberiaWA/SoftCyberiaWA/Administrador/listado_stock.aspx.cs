@@ -27,7 +27,7 @@ namespace SoftCyberiaWA.Administrador
         {
             if (Validar())
             {
-                producto _producto = daoProducto.producto_buscar_sku(productoSku.Text.Trim(), sedeNombre.SelectedIndex);
+                producto _producto = productoBO.producto_buscar_sku(productoSku.Text.Trim(), sedeNombre.SelectedIndex);
                 if(_producto != null)
                 {
                     productoSkuMensaje.Visible = false;
@@ -63,7 +63,7 @@ namespace SoftCyberiaWA.Administrador
         }
         private void CargarSedes()
         {
-            sedeNombre.DataSource = daoSede.sede_listar();
+            sedeNombre.DataSource = sedeBO.sede_listar();
             sedeNombre.DataTextField = "nombre";
             sedeNombre.DataValueField = "idSede";
             sedeNombre.DataBind();

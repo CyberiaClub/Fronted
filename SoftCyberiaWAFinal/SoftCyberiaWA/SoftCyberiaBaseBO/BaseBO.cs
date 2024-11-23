@@ -10,7 +10,7 @@ namespace SoftCyberiaBaseBO
     
     public class BaseBO
     {
-        // Servicios web de inventario
+    // Servicios web de inventario
     private CyberiaWS.MarcaWSClient wsMarca;
     private CyberiaWS.ProductoWSClient wsProducto;
     private CyberiaWS.ProveedorWSClient wsProveedor;
@@ -49,6 +49,4 @@ namespace SoftCyberiaBaseBO
         public OfertaWSClient WsOferta { get => wsOferta; set => wsOferta = value; }
         public TipoComprobanteWSClient WsTipoComprobante { get => wsTipoComprobante; set => wsTipoComprobante = value; }
     }
-
-    
 }

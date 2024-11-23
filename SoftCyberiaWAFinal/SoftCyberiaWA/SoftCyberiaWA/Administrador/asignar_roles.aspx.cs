@@ -16,6 +16,7 @@ namespace SoftCyberiaWA.Administrador
         private PersonaBO personaBO;
         private SedeBO sedeBO;
         private persona _persona = new persona();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarSedes();
@@ -35,6 +36,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarSedes()
         {
+            sedeBO = new SedeBO();
             sede.DataSource = sedeBO.sede_listar();
             sede.DataTextField = "nombre";
             sede.DataValueField = "idSede";
