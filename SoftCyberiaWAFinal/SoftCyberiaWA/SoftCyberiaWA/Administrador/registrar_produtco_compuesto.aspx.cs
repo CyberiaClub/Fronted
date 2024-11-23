@@ -56,7 +56,7 @@ namespace SoftCyberiaWA.Administrador
                 gridViewProdBuscado.DataSource = null;
                 gridViewProdBuscado.DataBind();
 
-                producto _producto = daoProducto.producto_buscar_sku(productoKitSKU.Text.Trim(), 1);
+                producto _producto = productoBO.producto_buscar_sku(productoKitSKU.Text.Trim(), 1);
                 if (_producto != null)
                 {
                     productoKitSKUMensaje.Visible = false;
