@@ -12,7 +12,7 @@ namespace SoftCyberiaWA.Administrador
     public partial class actualizar_stock : System.Web.UI.Page
     {
         ProductoWSClient daoProducto = new ProductoWSClient();
-        producto _producto= new producto();
+        producto _producto = new producto();
         protected void Page_Load(object sender, EventArgs e)
         {
 
