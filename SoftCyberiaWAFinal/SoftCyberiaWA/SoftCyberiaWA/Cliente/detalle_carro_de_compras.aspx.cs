@@ -1,4 +1,5 @@
-﻿using SoftCyberiaWA.CyberiaWS;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaVentaBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace SoftCyberiaWA
 
     public partial class detalle_carro_de_compras : Page
     {
-        private ComprobantePagoWSClient daoComprobantePago = new ComprobantePagoWSClient();
+        private ComprobantePagoBO comprobantePagoBO;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -78,7 +79,7 @@ namespace SoftCyberiaWA
 
 
         //    // Llama al método del servicio web para insertar el comprobante
-        //    int idComprobante = daoComprobantePago.comprobante_pago_insertar(comprobante);
+        //    int idComprobante = comprobantePagoBO.comprobante_pago_insertar(comprobante);
 
         //    // Limpiar el carrito después de la compra
         //    Session["Carrito"] = null;
@@ -108,7 +109,7 @@ namespace SoftCyberiaWA
             try
             {
                 // Llama al método del servicio web para insertar el comprobante
-                int idComprobante = daoComprobantePago.comprobante_pago_insertar(comprobante);
+                int idComprobante = comprobantePagoBO.comprobante_pago_insertar(comprobante);
 
                 // Limpiar el carrito después de la compra
                 Session["Carrito"] = null;
