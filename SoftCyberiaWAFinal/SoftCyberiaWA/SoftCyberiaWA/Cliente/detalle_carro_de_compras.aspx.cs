@@ -32,6 +32,10 @@ namespace SoftCyberiaWA
     {
         private ComprobantePagoBO comprobantePagoBO;
 
+        public detalle_carro_de_compras()
+        {
+            this.comprobantePagoBO = new ComprobantePagoBO();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

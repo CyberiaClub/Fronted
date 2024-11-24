@@ -195,13 +195,13 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl direccionMensaje;
 
         /// <summary>
-        /// Control personaNacionalidad.
+        /// Control nacionalidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox personaNacionalidad;
+        protected global::System.Web.UI.WebControls.TextBox nacionalidad;
 
         /// <summary>
         /// Control nacionalidadMensaje.

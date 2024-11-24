@@ -5,24 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/ComprobantePagoWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="comprobante_pago_insertar">
-    <part name="parameters" element="tns:comprobante_pago_insertar" />
-  </message>
-  <message name="comprobante_pago_insertarResponse">
-    <part name="parameters" element="tns:comprobante_pago_insertarResponse" />
-  </message>
-  <message name="comprobante_pago_listar">
-    <part name="parameters" element="tns:comprobante_pago_listar" />
-  </message>
-  <message name="comprobante_pago_listarResponse">
-    <part name="parameters" element="tns:comprobante_pago_listarResponse" />
-  </message>
-  <message name="comprobante_pago_modificar">
-    <part name="parameters" element="tns:comprobante_pago_modificar" />
-  </message>
-  <message name="comprobante_pago_modificarResponse">
-    <part name="parameters" element="tns:comprobante_pago_modificarResponse" />
-  </message>
   <message name="comprobante_pago_listar_cliente">
     <part name="parameters" element="tns:comprobante_pago_listar_cliente" />
   </message>
@@ -35,19 +17,25 @@
   <message name="comprobante_pago_obtener_por_idResponse">
     <part name="parameters" element="tns:comprobante_pago_obtener_por_idResponse" />
   </message>
+  <message name="comprobante_pago_insertar">
+    <part name="parameters" element="tns:comprobante_pago_insertar" />
+  </message>
+  <message name="comprobante_pago_insertarResponse">
+    <part name="parameters" element="tns:comprobante_pago_insertarResponse" />
+  </message>
+  <message name="comprobante_pago_modificar">
+    <part name="parameters" element="tns:comprobante_pago_modificar" />
+  </message>
+  <message name="comprobante_pago_modificarResponse">
+    <part name="parameters" element="tns:comprobante_pago_modificarResponse" />
+  </message>
+  <message name="comprobante_pago_listar">
+    <part name="parameters" element="tns:comprobante_pago_listar" />
+  </message>
+  <message name="comprobante_pago_listarResponse">
+    <part name="parameters" element="tns:comprobante_pago_listarResponse" />
+  </message>
   <portType name="ComprobantePagoWS">
-    <operation name="comprobante_pago_insertar">
-      <input wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarRequest" message="tns:comprobante_pago_insertar" />
-      <output wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarResponse" message="tns:comprobante_pago_insertarResponse" />
-    </operation>
-    <operation name="comprobante_pago_listar">
-      <input wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarRequest" message="tns:comprobante_pago_listar" />
-      <output wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarResponse" message="tns:comprobante_pago_listarResponse" />
-    </operation>
-    <operation name="comprobante_pago_modificar">
-      <input wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarRequest" message="tns:comprobante_pago_modificar" />
-      <output wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarResponse" message="tns:comprobante_pago_modificarResponse" />
-    </operation>
     <operation name="comprobante_pago_listar_cliente">
       <input wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listar_clienteRequest" message="tns:comprobante_pago_listar_cliente" />
       <output wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listar_clienteResponse" message="tns:comprobante_pago_listar_clienteResponse" />
@@ -56,10 +44,22 @@
       <input wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_obtener_por_idRequest" message="tns:comprobante_pago_obtener_por_id" />
       <output wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_obtener_por_idResponse" message="tns:comprobante_pago_obtener_por_idResponse" />
     </operation>
+    <operation name="comprobante_pago_insertar">
+      <input wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarRequest" message="tns:comprobante_pago_insertar" />
+      <output wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarResponse" message="tns:comprobante_pago_insertarResponse" />
+    </operation>
+    <operation name="comprobante_pago_modificar">
+      <input wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarRequest" message="tns:comprobante_pago_modificar" />
+      <output wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarResponse" message="tns:comprobante_pago_modificarResponse" />
+    </operation>
+    <operation name="comprobante_pago_listar">
+      <input wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarRequest" message="tns:comprobante_pago_listar" />
+      <output wsam:Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarResponse" message="tns:comprobante_pago_listarResponse" />
+    </operation>
   </portType>
   <binding name="ComprobantePagoWSPortBinding" type="tns:ComprobantePagoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="comprobante_pago_insertar">
+    <operation name="comprobante_pago_listar_cliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -68,7 +68,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="comprobante_pago_listar">
+    <operation name="comprobante_pago_obtener_por_id">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="comprobante_pago_insertar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,16 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="comprobante_pago_listar_cliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="comprobante_pago_obtener_por_id">
+    <operation name="comprobante_pago_listar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

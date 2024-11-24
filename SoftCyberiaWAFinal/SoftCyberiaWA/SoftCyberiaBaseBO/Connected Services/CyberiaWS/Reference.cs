@@ -15,15 +15,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="CyberiaWS", ConfigurationName="CyberiaWS.MarcaWS")]
     public interface MarcaWS {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/MarcaWS/marca_listarRequest", ReplyAction="CyberiaWS/MarcaWS/marca_listarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse marca_listar(SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/MarcaWS/marca_listarRequest", ReplyAction="CyberiaWS/MarcaWS/marca_listarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse> marca_listarAsync(SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest request);
-        
         // CODEGEN: El parámetro 'marca' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/MarcaWS/marca_eliminarRequest", ReplyAction="CyberiaWS/MarcaWS/marca_eliminarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -40,6 +31,15 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/MarcaWS/marca_insertarRequest", ReplyAction="CyberiaWS/MarcaWS/marca_insertarResponse")]
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.marca_insertarResponse> marca_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.marca_insertarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/MarcaWS/marca_listarRequest", ReplyAction="CyberiaWS/MarcaWS/marca_listarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse marca_listar(SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/MarcaWS/marca_listarRequest", ReplyAction="CyberiaWS/MarcaWS/marca_listarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse> marca_listarAsync(SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest request);
     }
     
     /// <remarks/>
@@ -1028,6 +1028,80 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="CyberiaWS")]
+    public partial class pagina : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int idPaginaField;
+        
+        private bool idPaginaFieldSpecified;
+        
+        private string nombreField;
+        
+        private string referenciaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idPagina {
+            get {
+                return this.idPaginaField;
+            }
+            set {
+                this.idPaginaField = value;
+                this.RaisePropertyChanged("idPagina");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idPaginaSpecified {
+            get {
+                return this.idPaginaFieldSpecified;
+            }
+            set {
+                this.idPaginaFieldSpecified = value;
+                this.RaisePropertyChanged("idPaginaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string referencia {
+            get {
+                return this.referenciaField;
+            }
+            set {
+                this.referenciaField = value;
+                this.RaisePropertyChanged("referencia");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="CyberiaWS")]
     public partial class tipoPersona : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int idTipoPersonaField;
@@ -1035,6 +1109,8 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         private bool idTipoPersonaFieldSpecified;
         
         private string nombreField;
+        
+        private pagina[] paginasField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1069,6 +1145,18 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             set {
                 this.nombreField = value;
                 this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("paginas", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public pagina[] paginas {
+            get {
+                return this.paginasField;
+            }
+            set {
+                this.paginasField = value;
+                this.RaisePropertyChanged("paginas");
             }
         }
         
@@ -2005,34 +2093,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="marca_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class marca_listarRequest {
-        
-        public marca_listarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="marca_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class marca_listarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.marca[] @return;
-        
-        public marca_listarResponse() {
-        }
-        
-        public marca_listarResponse(SoftCyberiaBaseBO.CyberiaWS.marca[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="marca_eliminar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
     public partial class marca_eliminarRequest {
         
@@ -2094,6 +2154,34 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="marca_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class marca_listarRequest {
+        
+        public marca_listarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="marca_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class marca_listarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.marca[] @return;
+        
+        public marca_listarResponse() {
+        }
+        
+        public marca_listarResponse(SoftCyberiaBaseBO.CyberiaWS.marca[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface MarcaWSChannel : SoftCyberiaBaseBO.CyberiaWS.MarcaWS, System.ServiceModel.IClientChannel {
     }
@@ -2119,27 +2207,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         public MarcaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse SoftCyberiaBaseBO.CyberiaWS.MarcaWS.marca_listar(SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest request) {
-            return base.Channel.marca_listar(request);
-        }
-        
-        public SoftCyberiaBaseBO.CyberiaWS.marca[] marca_listar() {
-            SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest();
-            SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.MarcaWS)(this)).marca_listar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse> SoftCyberiaBaseBO.CyberiaWS.MarcaWS.marca_listarAsync(SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest request) {
-            return base.Channel.marca_listarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse> marca_listarAsync() {
-            SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest();
-            return ((SoftCyberiaBaseBO.CyberiaWS.MarcaWS)(this)).marca_listarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2186,6 +2253,27 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             inValue.marca = marca;
             return ((SoftCyberiaBaseBO.CyberiaWS.MarcaWS)(this)).marca_insertarAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse SoftCyberiaBaseBO.CyberiaWS.MarcaWS.marca_listar(SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest request) {
+            return base.Channel.marca_listar(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.marca[] marca_listar() {
+            SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest();
+            SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.MarcaWS)(this)).marca_listar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse> SoftCyberiaBaseBO.CyberiaWS.MarcaWS.marca_listarAsync(SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest request) {
+            return base.Channel.marca_listarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.marca_listarResponse> marca_listarAsync() {
+            SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.marca_listarRequest();
+            return ((SoftCyberiaBaseBO.CyberiaWS.MarcaWS)(this)).marca_listarAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2202,15 +2290,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_modificarResponse> producto_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.producto_modificarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_listarRequest", ReplyAction="CyberiaWS/ProductoWS/producto_listarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.producto_listarResponse producto_listar(SoftCyberiaBaseBO.CyberiaWS.producto_listarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_listarRequest", ReplyAction="CyberiaWS/ProductoWS/producto_listarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_listarResponse> producto_listarAsync(SoftCyberiaBaseBO.CyberiaWS.producto_listarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_insertarRequest", ReplyAction="CyberiaWS/ProductoWS/producto_insertarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -2220,13 +2299,13 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse> producto_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_aumentar_stockRequest", ReplyAction="CyberiaWS/ProductoWS/producto_aumentar_stockResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_listarRequest", ReplyAction="CyberiaWS/ProductoWS/producto_listarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.producto_aumentar_stockResponse producto_aumentar_stock(SoftCyberiaBaseBO.CyberiaWS.producto_aumentar_stockRequest request);
+        SoftCyberiaBaseBO.CyberiaWS.producto_listarResponse producto_listar(SoftCyberiaBaseBO.CyberiaWS.producto_listarRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_aumentar_stockRequest", ReplyAction="CyberiaWS/ProductoWS/producto_aumentar_stockResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_aumentar_stockResponse> producto_aumentar_stockAsync(SoftCyberiaBaseBO.CyberiaWS.producto_aumentar_stockRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_listarRequest", ReplyAction="CyberiaWS/ProductoWS/producto_listarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_listarResponse> producto_listarAsync(SoftCyberiaBaseBO.CyberiaWS.producto_listarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_buscar_skuRequest", ReplyAction="CyberiaWS/ProductoWS/producto_buscar_skuResponse")]
@@ -2236,6 +2315,15 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_buscar_skuRequest", ReplyAction="CyberiaWS/ProductoWS/producto_buscar_skuResponse")]
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse> producto_buscar_skuAsync(SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_aumentar_stockRequest", ReplyAction="CyberiaWS/ProductoWS/producto_aumentar_stockResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.producto_aumentar_stockResponse producto_aumentar_stock(SoftCyberiaBaseBO.CyberiaWS.producto_aumentar_stockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProductoWS/producto_aumentar_stockRequest", ReplyAction="CyberiaWS/ProductoWS/producto_aumentar_stockResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_aumentar_stockResponse> producto_aumentar_stockAsync(SoftCyberiaBaseBO.CyberiaWS.producto_aumentar_stockRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2277,34 +2365,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class producto_listarRequest {
-        
-        public producto_listarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class producto_listarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.producto[] @return;
-        
-        public producto_listarResponse() {
-        }
-        
-        public producto_listarResponse(SoftCyberiaBaseBO.CyberiaWS.producto[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="producto_insertar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
     public partial class producto_insertarRequest {
         
@@ -2334,6 +2394,75 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         public producto_insertarResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class producto_listarRequest {
+        
+        public producto_listarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class producto_listarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.producto[] @return;
+        
+        public producto_listarResponse() {
+        }
+        
+        public producto_listarResponse(SoftCyberiaBaseBO.CyberiaWS.producto[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_buscar_sku", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class producto_buscar_skuRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string sku;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSede;
+        
+        public producto_buscar_skuRequest() {
+        }
+        
+        public producto_buscar_skuRequest(string sku, int idSede) {
+            this.sku = sku;
+            this.idSede = idSede;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_buscar_skuResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class producto_buscar_skuResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.producto @return;
+        
+        public producto_buscar_skuResponse() {
+        }
+        
+        public producto_buscar_skuResponse(SoftCyberiaBaseBO.CyberiaWS.producto @return) {
             this.@return = @return;
         }
     }
@@ -2380,47 +2509,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         public producto_aumentar_stockResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_buscar_sku", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class producto_buscar_skuRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string sku;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSede;
-        
-        public producto_buscar_skuRequest() {
-        }
-        
-        public producto_buscar_skuRequest(string sku, int idSede) {
-            this.sku = sku;
-            this.idSede = idSede;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="producto_buscar_skuResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class producto_buscar_skuResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.producto @return;
-        
-        public producto_buscar_skuResponse() {
-        }
-        
-        public producto_buscar_skuResponse(SoftCyberiaBaseBO.CyberiaWS.producto @return) {
             this.@return = @return;
         }
     }
@@ -2476,6 +2564,29 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_insertar(SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest request) {
+            return base.Channel.producto_insertar(request);
+        }
+        
+        public int producto_insertar(SoftCyberiaBaseBO.CyberiaWS.producto producto) {
+            SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest();
+            inValue.producto = producto;
+            SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_insertar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse> SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest request) {
+            return base.Channel.producto_insertarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse> producto_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.producto producto) {
+            SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest();
+            inValue.producto = producto;
+            return ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_insertarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftCyberiaBaseBO.CyberiaWS.producto_listarResponse SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_listar(SoftCyberiaBaseBO.CyberiaWS.producto_listarRequest request) {
             return base.Channel.producto_listar(request);
         }
@@ -2497,26 +2608,28 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_insertar(SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest request) {
-            return base.Channel.producto_insertar(request);
+        SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_buscar_sku(SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest request) {
+            return base.Channel.producto_buscar_sku(request);
         }
         
-        public int producto_insertar(SoftCyberiaBaseBO.CyberiaWS.producto producto) {
-            SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest();
-            inValue.producto = producto;
-            SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_insertar(inValue);
+        public SoftCyberiaBaseBO.CyberiaWS.producto producto_buscar_sku(string sku, int idSede) {
+            SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest();
+            inValue.sku = sku;
+            inValue.idSede = idSede;
+            SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_buscar_sku(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse> SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest request) {
-            return base.Channel.producto_insertarAsync(request);
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse> SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_buscar_skuAsync(SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest request) {
+            return base.Channel.producto_buscar_skuAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse> producto_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.producto producto) {
-            SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.producto_insertarRequest();
-            inValue.producto = producto;
-            return ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_insertarAsync(inValue);
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse> producto_buscar_skuAsync(string sku, int idSede) {
+            SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest();
+            inValue.sku = sku;
+            inValue.idSede = idSede;
+            return ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_buscar_skuAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2545,45 +2658,11 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             inValue.cantidad = cantidad;
             return ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_aumentar_stockAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_buscar_sku(SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest request) {
-            return base.Channel.producto_buscar_sku(request);
-        }
-        
-        public SoftCyberiaBaseBO.CyberiaWS.producto producto_buscar_sku(string sku, int idSede) {
-            SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest();
-            inValue.sku = sku;
-            inValue.idSede = idSede;
-            SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_buscar_sku(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse> SoftCyberiaBaseBO.CyberiaWS.ProductoWS.producto_buscar_skuAsync(SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest request) {
-            return base.Channel.producto_buscar_skuAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuResponse> producto_buscar_skuAsync(string sku, int idSede) {
-            SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.producto_buscar_skuRequest();
-            inValue.sku = sku;
-            inValue.idSede = idSede;
-            return ((SoftCyberiaBaseBO.CyberiaWS.ProductoWS)(this)).producto_buscar_skuAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="CyberiaWS", ConfigurationName="CyberiaWS.ProveedorWS")]
     public interface ProveedorWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProveedorWS/proveedor_listarRequest", ReplyAction="CyberiaWS/ProveedorWS/proveedor_listarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse proveedor_listar(SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProveedorWS/proveedor_listarRequest", ReplyAction="CyberiaWS/ProveedorWS/proveedor_listarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse> proveedor_listarAsync(SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest request);
         
         // CODEGEN: El parámetro 'proveedor' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProveedorWS/proveedor_eliminarRequest", ReplyAction="CyberiaWS/ProveedorWS/proveedor_eliminarResponse")]
@@ -2603,6 +2682,15 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.proveedor_insertarResponse> proveedor_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.proveedor_insertarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProveedorWS/proveedor_listarRequest", ReplyAction="CyberiaWS/ProveedorWS/proveedor_listarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse proveedor_listar(SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProveedorWS/proveedor_listarRequest", ReplyAction="CyberiaWS/ProveedorWS/proveedor_listarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse> proveedor_listarAsync(SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProveedorWS/proveedor_modificarRequest", ReplyAction="CyberiaWS/ProveedorWS/proveedor_modificarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -2610,34 +2698,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ProveedorWS/proveedor_modificarRequest", ReplyAction="CyberiaWS/ProveedorWS/proveedor_modificarResponse")]
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.proveedor_modificarResponse> proveedor_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.proveedor_modificarRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="proveedor_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class proveedor_listarRequest {
-        
-        public proveedor_listarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="proveedor_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class proveedor_listarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.proveedor[] @return;
-        
-        public proveedor_listarResponse() {
-        }
-        
-        public proveedor_listarResponse(SoftCyberiaBaseBO.CyberiaWS.proveedor[] @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2707,6 +2767,34 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="proveedor_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class proveedor_listarRequest {
+        
+        public proveedor_listarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="proveedor_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class proveedor_listarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.proveedor[] @return;
+        
+        public proveedor_listarResponse() {
+        }
+        
+        public proveedor_listarResponse(SoftCyberiaBaseBO.CyberiaWS.proveedor[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="proveedor_modificar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
     public partial class proveedor_modificarRequest {
         
@@ -2768,27 +2856,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse SoftCyberiaBaseBO.CyberiaWS.ProveedorWS.proveedor_listar(SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest request) {
-            return base.Channel.proveedor_listar(request);
-        }
-        
-        public SoftCyberiaBaseBO.CyberiaWS.proveedor[] proveedor_listar() {
-            SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest();
-            SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ProveedorWS)(this)).proveedor_listar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse> SoftCyberiaBaseBO.CyberiaWS.ProveedorWS.proveedor_listarAsync(SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest request) {
-            return base.Channel.proveedor_listarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse> proveedor_listarAsync() {
-            SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest();
-            return ((SoftCyberiaBaseBO.CyberiaWS.ProveedorWS)(this)).proveedor_listarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftCyberiaBaseBO.CyberiaWS.proveedor_eliminarResponse SoftCyberiaBaseBO.CyberiaWS.ProveedorWS.proveedor_eliminar(SoftCyberiaBaseBO.CyberiaWS.proveedor_eliminarRequest request) {
             return base.Channel.proveedor_eliminar(request);
         }
@@ -2834,6 +2901,27 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse SoftCyberiaBaseBO.CyberiaWS.ProveedorWS.proveedor_listar(SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest request) {
+            return base.Channel.proveedor_listar(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.proveedor[] proveedor_listar() {
+            SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest();
+            SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ProveedorWS)(this)).proveedor_listar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse> SoftCyberiaBaseBO.CyberiaWS.ProveedorWS.proveedor_listarAsync(SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest request) {
+            return base.Channel.proveedor_listarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.proveedor_listarResponse> proveedor_listarAsync() {
+            SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.proveedor_listarRequest();
+            return ((SoftCyberiaBaseBO.CyberiaWS.ProveedorWS)(this)).proveedor_listarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftCyberiaBaseBO.CyberiaWS.proveedor_modificarResponse SoftCyberiaBaseBO.CyberiaWS.ProveedorWS.proveedor_modificar(SoftCyberiaBaseBO.CyberiaWS.proveedor_modificarRequest request) {
             return base.Channel.proveedor_modificar(request);
         }
@@ -2862,33 +2950,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     public interface ComprobantePagoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse comprobante_pago_insertar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse> comprobante_pago_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse comprobante_pago_listar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse> comprobante_pago_listarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse comprobante_pago_modificar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse> comprobante_pago_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listar_clienteRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_listar_clienteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -2905,106 +2966,33 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_obtener_por_idRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_obtener_por_idResponse")]
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_obtener_por_idResponse> comprobante_pago_obtener_por_idAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_obtener_por_idRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_insertar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class comprobante_pago_insertarRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago;
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse comprobante_pago_insertar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest request);
         
-        public comprobante_pago_insertarRequest() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_insertarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse> comprobante_pago_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest request);
         
-        public comprobante_pago_insertarRequest(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
-            this.comprobante_pago = comprobante_pago;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_insertarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class comprobante_pago_insertarResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse comprobante_pago_modificar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_modificarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse> comprobante_pago_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest request);
         
-        public comprobante_pago_insertarResponse() {
-        }
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse comprobante_pago_listar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest request);
         
-        public comprobante_pago_insertarResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class comprobante_pago_listarRequest {
-        
-        public comprobante_pago_listarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class comprobante_pago_listarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] @return;
-        
-        public comprobante_pago_listarResponse() {
-        }
-        
-        public comprobante_pago_listarResponse(SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_modificar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class comprobante_pago_modificarRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago;
-        
-        public comprobante_pago_modificarRequest() {
-        }
-        
-        public comprobante_pago_modificarRequest(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
-            this.comprobante_pago = comprobante_pago;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_modificarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class comprobante_pago_modificarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public comprobante_pago_modificarResponse() {
-        }
-        
-        public comprobante_pago_modificarResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarRequest", ReplyAction="CyberiaWS/ComprobantePagoWS/comprobante_pago_listarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse> comprobante_pago_listarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3079,6 +3067,106 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_insertar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class comprobante_pago_insertarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago;
+        
+        public comprobante_pago_insertarRequest() {
+        }
+        
+        public comprobante_pago_insertarRequest(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
+            this.comprobante_pago = comprobante_pago;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_insertarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class comprobante_pago_insertarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public comprobante_pago_insertarResponse() {
+        }
+        
+        public comprobante_pago_insertarResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_modificar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class comprobante_pago_modificarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago;
+        
+        public comprobante_pago_modificarRequest() {
+        }
+        
+        public comprobante_pago_modificarRequest(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
+            this.comprobante_pago = comprobante_pago;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_modificarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class comprobante_pago_modificarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public comprobante_pago_modificarResponse() {
+        }
+        
+        public comprobante_pago_modificarResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class comprobante_pago_listarRequest {
+        
+        public comprobante_pago_listarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_pago_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class comprobante_pago_listarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] @return;
+        
+        public comprobante_pago_listarResponse() {
+        }
+        
+        public comprobante_pago_listarResponse(SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ComprobantePagoWSChannel : SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS, System.ServiceModel.IClientChannel {
     }
@@ -3104,73 +3192,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         public ComprobantePagoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_insertar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest request) {
-            return base.Channel.comprobante_pago_insertar(request);
-        }
-        
-        public int comprobante_pago_insertar(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest();
-            inValue.comprobante_pago = comprobante_pago;
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_insertar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse> SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest request) {
-            return base.Channel.comprobante_pago_insertarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse> comprobante_pago_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest();
-            inValue.comprobante_pago = comprobante_pago;
-            return ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_insertarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_listar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest request) {
-            return base.Channel.comprobante_pago_listar(request);
-        }
-        
-        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] comprobante_pago_listar() {
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest();
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_listar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse> SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_listarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest request) {
-            return base.Channel.comprobante_pago_listarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse> comprobante_pago_listarAsync() {
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest();
-            return ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_listarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_modificar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest request) {
-            return base.Channel.comprobante_pago_modificar(request);
-        }
-        
-        public int comprobante_pago_modificar(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest();
-            inValue.comprobante_pago = comprobante_pago;
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_modificar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse> SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest request) {
-            return base.Channel.comprobante_pago_modificarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse> comprobante_pago_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
-            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest();
-            inValue.comprobante_pago = comprobante_pago;
-            return ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_modificarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3218,28 +3239,78 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             inValue.id_comprobante_pago = id_comprobante_pago;
             return ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_obtener_por_idAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_insertar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest request) {
+            return base.Channel.comprobante_pago_insertar(request);
+        }
+        
+        public int comprobante_pago_insertar(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest();
+            inValue.comprobante_pago = comprobante_pago;
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_insertar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse> SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest request) {
+            return base.Channel.comprobante_pago_insertarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarResponse> comprobante_pago_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_insertarRequest();
+            inValue.comprobante_pago = comprobante_pago;
+            return ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_insertarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_modificar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest request) {
+            return base.Channel.comprobante_pago_modificar(request);
+        }
+        
+        public int comprobante_pago_modificar(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest();
+            inValue.comprobante_pago = comprobante_pago;
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_modificar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse> SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest request) {
+            return base.Channel.comprobante_pago_modificarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarResponse> comprobante_pago_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobantePago comprobante_pago) {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_modificarRequest();
+            inValue.comprobante_pago = comprobante_pago;
+            return ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_modificarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_listar(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest request) {
+            return base.Channel.comprobante_pago_listar(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] comprobante_pago_listar() {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest();
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_listar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse> SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS.comprobante_pago_listarAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest request) {
+            return base.Channel.comprobante_pago_listarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarResponse> comprobante_pago_listarAsync() {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_listarRequest();
+            return ((SoftCyberiaBaseBO.CyberiaWS.ComprobantePagoWS)(this)).comprobante_pago_listarAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="CyberiaWS", ConfigurationName="CyberiaWS.TipoProductoWS")]
     public interface TipoProductoWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_listarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_listarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse tipoProducto_listar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_listarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_listarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse> tipoProducto_listarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest request);
-        
-        // CODEGEN: El parámetro 'TipoProducto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_eliminarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_eliminarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse tipoProducto_eliminar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_eliminarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_eliminarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse> tipoProducto_eliminarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_modificarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_modificarResponse")]
@@ -3258,62 +3329,23 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_insertarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_insertarResponse")]
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_insertarResponse> tipoProducto_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_insertarRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoProducto_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class tipoProducto_listarRequest {
         
-        public tipoProducto_listarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoProducto_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class tipoProducto_listarResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_listarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_listarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse tipoProducto_listar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.tipoProducto[] @return;
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_listarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_listarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse> tipoProducto_listarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest request);
         
-        public tipoProducto_listarResponse() {
-        }
+        // CODEGEN: El parámetro 'TipoProducto' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_eliminarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_eliminarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse tipoProducto_eliminar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest request);
         
-        public tipoProducto_listarResponse(SoftCyberiaBaseBO.CyberiaWS.tipoProducto[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoProducto_eliminar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class tipoProducto_eliminarRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.tipoProducto TipoProducto;
-        
-        public tipoProducto_eliminarRequest() {
-        }
-        
-        public tipoProducto_eliminarRequest(SoftCyberiaBaseBO.CyberiaWS.tipoProducto TipoProducto) {
-            this.TipoProducto = TipoProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoProducto_eliminarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class tipoProducto_eliminarResponse {
-        
-        public tipoProducto_eliminarResponse() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoProductoWS/tipoProducto_eliminarRequest", ReplyAction="CyberiaWS/TipoProductoWS/tipoProducto_eliminarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse> tipoProducto_eliminarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3388,6 +3420,62 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoProducto_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class tipoProducto_listarRequest {
+        
+        public tipoProducto_listarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoProducto_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class tipoProducto_listarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.tipoProducto[] @return;
+        
+        public tipoProducto_listarResponse() {
+        }
+        
+        public tipoProducto_listarResponse(SoftCyberiaBaseBO.CyberiaWS.tipoProducto[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoProducto_eliminar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class tipoProducto_eliminarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.tipoProducto TipoProducto;
+        
+        public tipoProducto_eliminarRequest() {
+        }
+        
+        public tipoProducto_eliminarRequest(SoftCyberiaBaseBO.CyberiaWS.tipoProducto TipoProducto) {
+            this.TipoProducto = TipoProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoProducto_eliminarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class tipoProducto_eliminarResponse {
+        
+        public tipoProducto_eliminarResponse() {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface TipoProductoWSChannel : SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS, System.ServiceModel.IClientChannel {
     }
@@ -3413,49 +3501,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         public TipoProductoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS.tipoProducto_listar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest request) {
-            return base.Channel.tipoProducto_listar(request);
-        }
-        
-        public SoftCyberiaBaseBO.CyberiaWS.tipoProducto[] tipoProducto_listar() {
-            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest();
-            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_listar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse> SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS.tipoProducto_listarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest request) {
-            return base.Channel.tipoProducto_listarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse> tipoProducto_listarAsync() {
-            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest();
-            return ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_listarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS.tipoProducto_eliminar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest request) {
-            return base.Channel.tipoProducto_eliminar(request);
-        }
-        
-        public void tipoProducto_eliminar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto TipoProducto) {
-            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest();
-            inValue.TipoProducto = TipoProducto;
-            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_eliminar(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse> SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS.tipoProducto_eliminarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest request) {
-            return base.Channel.tipoProducto_eliminarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse> tipoProducto_eliminarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto TipoProducto) {
-            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest();
-            inValue.TipoProducto = TipoProducto;
-            return ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_eliminarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3503,11 +3548,72 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             inValue.TipoProducto = TipoProducto;
             return ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_insertarAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS.tipoProducto_listar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest request) {
+            return base.Channel.tipoProducto_listar(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.tipoProducto[] tipoProducto_listar() {
+            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest();
+            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_listar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse> SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS.tipoProducto_listarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest request) {
+            return base.Channel.tipoProducto_listarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarResponse> tipoProducto_listarAsync() {
+            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipoProducto_listarRequest();
+            return ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_listarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS.tipoProducto_eliminar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest request) {
+            return base.Channel.tipoProducto_eliminar(request);
+        }
+        
+        public void tipoProducto_eliminar(SoftCyberiaBaseBO.CyberiaWS.tipoProducto TipoProducto) {
+            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest();
+            inValue.TipoProducto = TipoProducto;
+            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_eliminar(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse> SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS.tipoProducto_eliminarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest request) {
+            return base.Channel.tipoProducto_eliminarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarResponse> tipoProducto_eliminarAsync(SoftCyberiaBaseBO.CyberiaWS.tipoProducto TipoProducto) {
+            SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipoProducto_eliminarRequest();
+            inValue.TipoProducto = TipoProducto;
+            return ((SoftCyberiaBaseBO.CyberiaWS.TipoProductoWS)(this)).tipoProducto_eliminarAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="CyberiaWS", ConfigurationName="CyberiaWS.PersonaWS")]
     public interface PersonaWS {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_buscar_por_documentoRequest", ReplyAction="CyberiaWS/PersonaWS/persona_buscar_por_documentoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse persona_buscar_por_documento(SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_buscar_por_documentoRequest", ReplyAction="CyberiaWS/PersonaWS/persona_buscar_por_documentoResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse> persona_buscar_por_documentoAsync(SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionRequest", ReplyAction="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse persona_enviar_correo_verificacion(SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionRequest", ReplyAction="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse> persona_enviar_correo_verificacionAsync(SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_insertarRequest", ReplyAction="CyberiaWS/PersonaWS/persona_insertarResponse")]
@@ -3517,15 +3623,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_insertarRequest", ReplyAction="CyberiaWS/PersonaWS/persona_insertarResponse")]
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_insertarResponse> persona_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.persona_insertarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_verificar_correoRequest", ReplyAction="CyberiaWS/PersonaWS/persona_verificar_correoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse persona_verificar_correo(SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_verificar_correoRequest", ReplyAction="CyberiaWS/PersonaWS/persona_verificar_correoResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse> persona_verificar_correoAsync(SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_loguearseRequest", ReplyAction="CyberiaWS/PersonaWS/persona_loguearseResponse")]
@@ -3546,22 +3643,90 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_modificarResponse> persona_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.persona_modificarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionRequest", ReplyAction="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_verificar_correoRequest", ReplyAction="CyberiaWS/PersonaWS/persona_verificar_correoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse persona_enviar_correo_verificacion(SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest request);
+        SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse persona_verificar_correo(SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionRequest", ReplyAction="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse> persona_enviar_correo_verificacionAsync(SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_verificar_correoRequest", ReplyAction="CyberiaWS/PersonaWS/persona_verificar_correoResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse> persona_verificar_correoAsync(SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_buscar_por_documento", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class persona_buscar_por_documentoRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_buscar_por_documentoRequest", ReplyAction="CyberiaWS/PersonaWS/persona_buscar_por_documentoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse persona_buscar_por_documento(SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string documento;
         
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/PersonaWS/persona_buscar_por_documentoRequest", ReplyAction="CyberiaWS/PersonaWS/persona_buscar_por_documentoResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse> persona_buscar_por_documentoAsync(SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest request);
+        public persona_buscar_por_documentoRequest() {
+        }
+        
+        public persona_buscar_por_documentoRequest(string documento) {
+            this.documento = documento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_buscar_por_documentoResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class persona_buscar_por_documentoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.persona @return;
+        
+        public persona_buscar_por_documentoResponse() {
+        }
+        
+        public persona_buscar_por_documentoResponse(SoftCyberiaBaseBO.CyberiaWS.persona @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_enviar_correo_verificacion", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class persona_enviar_correo_verificacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string correo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string valorToken;
+        
+        public persona_enviar_correo_verificacionRequest() {
+        }
+        
+        public persona_enviar_correo_verificacionRequest(string correo, string valorToken) {
+            this.correo = correo;
+            this.valorToken = valorToken;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_enviar_correo_verificacionResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class persona_enviar_correo_verificacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public persona_enviar_correo_verificacionResponse() {
+        }
+        
+        public persona_enviar_correo_verificacionResponse(bool @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3596,42 +3761,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         public persona_insertarResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_verificar_correo", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class persona_verificar_correoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string valorToken;
-        
-        public persona_verificar_correoRequest() {
-        }
-        
-        public persona_verificar_correoRequest(string valorToken) {
-            this.valorToken = valorToken;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_verificar_correoResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class persona_verificar_correoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public persona_verificar_correoResponse() {
-        }
-        
-        public persona_verificar_correoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3716,22 +3845,17 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_enviar_correo_verificacion", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class persona_enviar_correo_verificacionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_verificar_correo", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class persona_verificar_correoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string correo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string valorToken;
         
-        public persona_enviar_correo_verificacionRequest() {
+        public persona_verificar_correoRequest() {
         }
         
-        public persona_enviar_correo_verificacionRequest(string correo, string valorToken) {
-            this.correo = correo;
+        public persona_verificar_correoRequest(string valorToken) {
             this.valorToken = valorToken;
         }
     }
@@ -3739,53 +3863,17 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_enviar_correo_verificacionResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class persona_enviar_correo_verificacionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_verificar_correoResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class persona_verificar_correoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
+        public int @return;
         
-        public persona_enviar_correo_verificacionResponse() {
+        public persona_verificar_correoResponse() {
         }
         
-        public persona_enviar_correo_verificacionResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_buscar_por_documento", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class persona_buscar_por_documentoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string documento;
-        
-        public persona_buscar_por_documentoRequest() {
-        }
-        
-        public persona_buscar_por_documentoRequest(string documento) {
-            this.documento = documento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="persona_buscar_por_documentoResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class persona_buscar_por_documentoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.persona @return;
-        
-        public persona_buscar_por_documentoResponse() {
-        }
-        
-        public persona_buscar_por_documentoResponse(SoftCyberiaBaseBO.CyberiaWS.persona @return) {
+        public persona_verificar_correoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3818,6 +3906,54 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_buscar_por_documento(SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest request) {
+            return base.Channel.persona_buscar_por_documento(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.persona persona_buscar_por_documento(string documento) {
+            SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest();
+            inValue.documento = documento;
+            SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_buscar_por_documento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse> SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_buscar_por_documentoAsync(SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest request) {
+            return base.Channel.persona_buscar_por_documentoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse> persona_buscar_por_documentoAsync(string documento) {
+            SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest();
+            inValue.documento = documento;
+            return ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_buscar_por_documentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_enviar_correo_verificacion(SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest request) {
+            return base.Channel.persona_enviar_correo_verificacion(request);
+        }
+        
+        public bool persona_enviar_correo_verificacion(string correo, string valorToken) {
+            SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest();
+            inValue.correo = correo;
+            inValue.valorToken = valorToken;
+            SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_enviar_correo_verificacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse> SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_enviar_correo_verificacionAsync(SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest request) {
+            return base.Channel.persona_enviar_correo_verificacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse> persona_enviar_correo_verificacionAsync(string correo, string valorToken) {
+            SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest();
+            inValue.correo = correo;
+            inValue.valorToken = valorToken;
+            return ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_enviar_correo_verificacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftCyberiaBaseBO.CyberiaWS.persona_insertarResponse SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_insertar(SoftCyberiaBaseBO.CyberiaWS.persona_insertarRequest request) {
             return base.Channel.persona_insertar(request);
         }
@@ -3838,29 +3974,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             SoftCyberiaBaseBO.CyberiaWS.persona_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_insertarRequest();
             inValue.persona = persona;
             return ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_insertarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_verificar_correo(SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest request) {
-            return base.Channel.persona_verificar_correo(request);
-        }
-        
-        public int persona_verificar_correo(string valorToken) {
-            SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest();
-            inValue.valorToken = valorToken;
-            SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_verificar_correo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse> SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_verificar_correoAsync(SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest request) {
-            return base.Channel.persona_verificar_correoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse> persona_verificar_correoAsync(string valorToken) {
-            SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest();
-            inValue.valorToken = valorToken;
-            return ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_verificar_correoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3912,51 +4025,26 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_enviar_correo_verificacion(SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest request) {
-            return base.Channel.persona_enviar_correo_verificacion(request);
+        SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_verificar_correo(SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest request) {
+            return base.Channel.persona_verificar_correo(request);
         }
         
-        public bool persona_enviar_correo_verificacion(string correo, string valorToken) {
-            SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest();
-            inValue.correo = correo;
+        public int persona_verificar_correo(string valorToken) {
+            SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest();
             inValue.valorToken = valorToken;
-            SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_enviar_correo_verificacion(inValue);
+            SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_verificar_correo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse> SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_enviar_correo_verificacionAsync(SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest request) {
-            return base.Channel.persona_enviar_correo_verificacionAsync(request);
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse> SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_verificar_correoAsync(SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest request) {
+            return base.Channel.persona_verificar_correoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionResponse> persona_enviar_correo_verificacionAsync(string correo, string valorToken) {
-            SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_enviar_correo_verificacionRequest();
-            inValue.correo = correo;
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse> persona_verificar_correoAsync(string valorToken) {
+            SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoRequest();
             inValue.valorToken = valorToken;
-            return ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_enviar_correo_verificacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_buscar_por_documento(SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest request) {
-            return base.Channel.persona_buscar_por_documento(request);
-        }
-        
-        public SoftCyberiaBaseBO.CyberiaWS.persona persona_buscar_por_documento(string documento) {
-            SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest();
-            inValue.documento = documento;
-            SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_buscar_por_documento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse> SoftCyberiaBaseBO.CyberiaWS.PersonaWS.persona_buscar_por_documentoAsync(SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest request) {
-            return base.Channel.persona_buscar_por_documentoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoResponse> persona_buscar_por_documentoAsync(string documento) {
-            SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_buscar_por_documentoRequest();
-            inValue.documento = documento;
-            return ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_buscar_por_documentoAsync(inValue);
+            return ((SoftCyberiaBaseBO.CyberiaWS.PersonaWS)(this)).persona_verificar_correoAsync(inValue);
         }
     }
     
@@ -3965,39 +4053,84 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     public interface TipoPersonaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoPersonaWS/tipopersona_listarRequest", ReplyAction="CyberiaWS/TipoPersonaWS/tipopersona_listarResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_roles_trabajadoresRequest", ReplyAction="CyberiaWS/TipoPersonaWS/tipopersona_listar_roles_trabajadoresResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarResponse tipopersona_listar(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarRequest request);
+        SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresResponse tipopersona_listar_roles_trabajadores(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoPersonaWS/tipopersona_listarRequest", ReplyAction="CyberiaWS/TipoPersonaWS/tipopersona_listarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarResponse> tipopersona_listarAsync(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_roles_trabajadoresRequest", ReplyAction="CyberiaWS/TipoPersonaWS/tipopersona_listar_roles_trabajadoresResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresResponse> tipopersona_listar_roles_trabajadoresAsync(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_paginasRequest", ReplyAction="CyberiaWS/TipoPersonaWS/tipopersona_listar_paginasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasResponse tipopersona_listar_paginas(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_paginasRequest", ReplyAction="CyberiaWS/TipoPersonaWS/tipopersona_listar_paginasResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasResponse> tipopersona_listar_paginasAsync(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="tipopersona_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class tipopersona_listarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipopersona_listar_roles_trabajadores", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class tipopersona_listar_roles_trabajadoresRequest {
         
-        public tipopersona_listarRequest() {
+        public tipopersona_listar_roles_trabajadoresRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="tipopersona_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class tipopersona_listarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipopersona_listar_roles_trabajadoresResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class tipopersona_listar_roles_trabajadoresResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SoftCyberiaBaseBO.CyberiaWS.tipoPersona[] @return;
         
-        public tipopersona_listarResponse() {
+        public tipopersona_listar_roles_trabajadoresResponse() {
         }
         
-        public tipopersona_listarResponse(SoftCyberiaBaseBO.CyberiaWS.tipoPersona[] @return) {
+        public tipopersona_listar_roles_trabajadoresResponse(SoftCyberiaBaseBO.CyberiaWS.tipoPersona[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipopersona_listar_paginas", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class tipopersona_listar_paginasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string tipo_persona;
+        
+        public tipopersona_listar_paginasRequest() {
+        }
+        
+        public tipopersona_listar_paginasRequest(string tipo_persona) {
+            this.tipo_persona = tipo_persona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipopersona_listar_paginasResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class tipopersona_listar_paginasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.tipoPersona @return;
+        
+        public tipopersona_listar_paginasResponse() {
+        }
+        
+        public tipopersona_listar_paginasResponse(SoftCyberiaBaseBO.CyberiaWS.tipoPersona @return) {
             this.@return = @return;
         }
     }
@@ -4030,39 +4163,53 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarResponse SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS.tipopersona_listar(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarRequest request) {
-            return base.Channel.tipopersona_listar(request);
+        SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresResponse SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS.tipopersona_listar_roles_trabajadores(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest request) {
+            return base.Channel.tipopersona_listar_roles_trabajadores(request);
         }
         
-        public SoftCyberiaBaseBO.CyberiaWS.tipoPersona[] tipopersona_listar() {
-            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarRequest();
-            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS)(this)).tipopersona_listar(inValue);
+        public SoftCyberiaBaseBO.CyberiaWS.tipoPersona[] tipopersona_listar_roles_trabajadores() {
+            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest();
+            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS)(this)).tipopersona_listar_roles_trabajadores(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarResponse> SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS.tipopersona_listarAsync(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarRequest request) {
-            return base.Channel.tipopersona_listarAsync(request);
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresResponse> SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS.tipopersona_listar_roles_trabajadoresAsync(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest request) {
+            return base.Channel.tipopersona_listar_roles_trabajadoresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarResponse> tipopersona_listarAsync() {
-            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipopersona_listarRequest();
-            return ((SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS)(this)).tipopersona_listarAsync(inValue);
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresResponse> tipopersona_listar_roles_trabajadoresAsync() {
+            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest();
+            return ((SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS)(this)).tipopersona_listar_roles_trabajadoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasResponse SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS.tipopersona_listar_paginas(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasRequest request) {
+            return base.Channel.tipopersona_listar_paginas(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.tipoPersona tipopersona_listar_paginas(string tipo_persona) {
+            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasRequest();
+            inValue.tipo_persona = tipo_persona;
+            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS)(this)).tipopersona_listar_paginas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasResponse> SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS.tipopersona_listar_paginasAsync(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasRequest request) {
+            return base.Channel.tipopersona_listar_paginasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasResponse> tipopersona_listar_paginasAsync(string tipo_persona) {
+            SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_paginasRequest();
+            inValue.tipo_persona = tipo_persona;
+            return ((SoftCyberiaBaseBO.CyberiaWS.TipoPersonaWS)(this)).tipopersona_listar_paginasAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="CyberiaWS", ConfigurationName="CyberiaWS.SedeWS")]
     public interface SedeWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/SedeWS/sede_listarRequest", ReplyAction="CyberiaWS/SedeWS/sede_listarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse sede_listar(SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/SedeWS/sede_listarRequest", ReplyAction="CyberiaWS/SedeWS/sede_listarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse> sede_listarAsync(SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/SedeWS/sede_insertarRequest", ReplyAction="CyberiaWS/SedeWS/sede_insertarResponse")]
@@ -4081,34 +4228,15 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/SedeWS/sede_modificarRequest", ReplyAction="CyberiaWS/SedeWS/sede_modificarResponse")]
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.sede_modificarResponse> sede_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.sede_modificarRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="sede_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class sede_listarRequest {
         
-        public sede_listarRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="sede_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class sede_listarResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/SedeWS/sede_listarRequest", ReplyAction="CyberiaWS/SedeWS/sede_listarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse sede_listar(SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.sede[] @return;
-        
-        public sede_listarResponse() {
-        }
-        
-        public sede_listarResponse(SoftCyberiaBaseBO.CyberiaWS.sede[] @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/SedeWS/sede_listarRequest", ReplyAction="CyberiaWS/SedeWS/sede_listarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse> sede_listarAsync(SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4183,6 +4311,34 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="sede_listar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class sede_listarRequest {
+        
+        public sede_listarRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="sede_listarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class sede_listarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.sede[] @return;
+        
+        public sede_listarResponse() {
+        }
+        
+        public sede_listarResponse(SoftCyberiaBaseBO.CyberiaWS.sede[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SedeWSChannel : SoftCyberiaBaseBO.CyberiaWS.SedeWS, System.ServiceModel.IClientChannel {
     }
@@ -4208,27 +4364,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         public SedeWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse SoftCyberiaBaseBO.CyberiaWS.SedeWS.sede_listar(SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest request) {
-            return base.Channel.sede_listar(request);
-        }
-        
-        public SoftCyberiaBaseBO.CyberiaWS.sede[] sede_listar() {
-            SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest();
-            SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.SedeWS)(this)).sede_listar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse> SoftCyberiaBaseBO.CyberiaWS.SedeWS.sede_listarAsync(SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest request) {
-            return base.Channel.sede_listarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse> sede_listarAsync() {
-            SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest();
-            return ((SoftCyberiaBaseBO.CyberiaWS.SedeWS)(this)).sede_listarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4275,6 +4410,27 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             SoftCyberiaBaseBO.CyberiaWS.sede_modificarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.sede_modificarRequest();
             inValue.sede = sede;
             return ((SoftCyberiaBaseBO.CyberiaWS.SedeWS)(this)).sede_modificarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse SoftCyberiaBaseBO.CyberiaWS.SedeWS.sede_listar(SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest request) {
+            return base.Channel.sede_listar(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.sede[] sede_listar() {
+            SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest();
+            SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.SedeWS)(this)).sede_listar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse> SoftCyberiaBaseBO.CyberiaWS.SedeWS.sede_listarAsync(SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest request) {
+            return base.Channel.sede_listarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.sede_listarResponse> sede_listarAsync() {
+            SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.sede_listarRequest();
+            return ((SoftCyberiaBaseBO.CyberiaWS.SedeWS)(this)).sede_listarAsync(inValue);
         }
     }
     
@@ -4374,15 +4530,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     public interface OfertaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/OfertaWS/oferta_insertarRequest", ReplyAction="CyberiaWS/OfertaWS/oferta_insertarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse oferta_insertar(SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/OfertaWS/oferta_insertarRequest", ReplyAction="CyberiaWS/OfertaWS/oferta_insertarResponse")]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse> oferta_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/OfertaWS/oferta_modificarRequest", ReplyAction="CyberiaWS/OfertaWS/oferta_modificarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -4392,6 +4539,15 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.oferta_modificarResponse> oferta_modificarAsync(SoftCyberiaBaseBO.CyberiaWS.oferta_modificarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/OfertaWS/oferta_insertarRequest", ReplyAction="CyberiaWS/OfertaWS/oferta_insertarResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse oferta_insertar(SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/OfertaWS/oferta_insertarRequest", ReplyAction="CyberiaWS/OfertaWS/oferta_insertarResponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse> oferta_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/OfertaWS/oferta_listarRequest", ReplyAction="CyberiaWS/OfertaWS/oferta_listarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -4399,42 +4555,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="CyberiaWS/OfertaWS/oferta_listarRequest", ReplyAction="CyberiaWS/OfertaWS/oferta_listarResponse")]
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.oferta_listarResponse> oferta_listarAsync(SoftCyberiaBaseBO.CyberiaWS.oferta_listarRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="oferta_insertar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class oferta_insertarRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftCyberiaBaseBO.CyberiaWS.oferta oferta;
-        
-        public oferta_insertarRequest() {
-        }
-        
-        public oferta_insertarRequest(SoftCyberiaBaseBO.CyberiaWS.oferta oferta) {
-            this.oferta = oferta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="oferta_insertarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
-    public partial class oferta_insertarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public oferta_insertarResponse() {
-        }
-        
-        public oferta_insertarResponse(int @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4469,6 +4589,42 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         public oferta_modificarResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="oferta_insertar", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class oferta_insertarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.oferta oferta;
+        
+        public oferta_insertarRequest() {
+        }
+        
+        public oferta_insertarRequest(SoftCyberiaBaseBO.CyberiaWS.oferta oferta) {
+            this.oferta = oferta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="oferta_insertarResponse", WrapperNamespace="CyberiaWS", IsWrapped=true)]
+    public partial class oferta_insertarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public oferta_insertarResponse() {
+        }
+        
+        public oferta_insertarResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -4529,29 +4685,6 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse SoftCyberiaBaseBO.CyberiaWS.OfertaWS.oferta_insertar(SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest request) {
-            return base.Channel.oferta_insertar(request);
-        }
-        
-        public int oferta_insertar(SoftCyberiaBaseBO.CyberiaWS.oferta oferta) {
-            SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest();
-            inValue.oferta = oferta;
-            SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.OfertaWS)(this)).oferta_insertar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse> SoftCyberiaBaseBO.CyberiaWS.OfertaWS.oferta_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest request) {
-            return base.Channel.oferta_insertarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse> oferta_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.oferta oferta) {
-            SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest();
-            inValue.oferta = oferta;
-            return ((SoftCyberiaBaseBO.CyberiaWS.OfertaWS)(this)).oferta_insertarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftCyberiaBaseBO.CyberiaWS.oferta_modificarResponse SoftCyberiaBaseBO.CyberiaWS.OfertaWS.oferta_modificar(SoftCyberiaBaseBO.CyberiaWS.oferta_modificarRequest request) {
             return base.Channel.oferta_modificar(request);
         }
@@ -4572,6 +4705,29 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             SoftCyberiaBaseBO.CyberiaWS.oferta_modificarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.oferta_modificarRequest();
             inValue.oferta = oferta;
             return ((SoftCyberiaBaseBO.CyberiaWS.OfertaWS)(this)).oferta_modificarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse SoftCyberiaBaseBO.CyberiaWS.OfertaWS.oferta_insertar(SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest request) {
+            return base.Channel.oferta_insertar(request);
+        }
+        
+        public int oferta_insertar(SoftCyberiaBaseBO.CyberiaWS.oferta oferta) {
+            SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest();
+            inValue.oferta = oferta;
+            SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.OfertaWS)(this)).oferta_insertar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse> SoftCyberiaBaseBO.CyberiaWS.OfertaWS.oferta_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest request) {
+            return base.Channel.oferta_insertarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.oferta_insertarResponse> oferta_insertarAsync(SoftCyberiaBaseBO.CyberiaWS.oferta oferta) {
+            SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.oferta_insertarRequest();
+            inValue.oferta = oferta;
+            return ((SoftCyberiaBaseBO.CyberiaWS.OfertaWS)(this)).oferta_insertarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InicioSesion/InicioSesion.Master" AutoEventWireup="true" CodeBehind="indexInicioSesion.aspx.cs" Inherits="SoftCyberiaWA.InicioSesion.indexInicioSesion" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Iniciar Sesión
 </asp:Content>
@@ -19,17 +20,15 @@
             <div class="mb-3">
                 <label for="personaCorreo">Ingrese su correo electrónico:</label>
                 <asp:TextBox ID="personaCorreo" runat="server" CssClass="form-control"></asp:TextBox>
-
-
-                <small id="emailError" style="color: red;"></small>
+                <small id="emailError" runat="server" style="color: red;"></small>
                 <!-- Espacio para el mensaje de error del email -->
             </div>
 
             <!-- Campo Password -->
             <div class="mb-3">
                 <label for="personaContrasena">Ingrese su contraseña:</label>
-                <asp:TextBox ID="personaContrasena" runat="server" CssClass="form-control"></asp:TextBox>
-                <small id="passwordError" style="color: red;"></small>
+                <asp:TextBox ID="personaContrasena" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <small id="passwordError" runat="server" style="color: red;"></small>
                 <!-- Espacio para el mensaje de error de la contraseña -->
             </div>
 
@@ -45,9 +44,4 @@
 
         </div>
     </div>
-
-    <!--
-    <script src="../Scripts/validar_inicio_sesion.js"></script>
-        -->
-
 </asp:Content>
