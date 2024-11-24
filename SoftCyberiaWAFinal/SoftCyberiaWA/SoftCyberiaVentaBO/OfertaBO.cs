@@ -11,9 +11,9 @@ namespace SoftCyberiaVentaBO
 {
     public class OfertaBO : BaseBO
     {
-        public int oferta_insertar(oferta _oferta)
+        public int oferta_insertar(oferta _oferta, producto[] productosOferta)
         {
-            return this.WsOferta.oferta_insertar(_oferta);
+            return this.WsOferta.oferta_insertar(_oferta, productosOferta);
         }
 
         public int oferta_modificar(oferta _oferta)

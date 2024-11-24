@@ -11,6 +11,9 @@ using System.Data.SqlTypes;
 using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaVentaBO;
 using SoftCyberiaInventarioBO;
+using System.Net;
+using System.Web.UI.HtmlControls;
+using System.ComponentModel;
 
 
 namespace SoftCyberiaWA.Administrador
@@ -19,11 +22,20 @@ namespace SoftCyberiaWA.Administrador
     {
         private OfertaBO ofertaBO;
         private ProductoBO productoBO;
+
+        public asignar_oferta()
+        {
+            ofertaBO = new OfertaBO();
+            productoBO = new ProductoBO();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 productoSKU.Text = "";
+                gridProductosOferta.DataSource = Session["datosProductosOferta"] as DataTable; // Asigna tu origen de datos
+                gridProductosOferta.DataBind();
             }
         }
 
@@ -169,14 +181,14 @@ namespace SoftCyberiaWA.Administrador
                     imagenBytes = binaryReader.ReadBytes(fileUploadProductImage.PostedFile.ContentLength);
                 }
 
-                _oferta.fechaDeInicio = DateTime.Parse(fechaInicio.Text.Trim()); ;
+                _oferta.fechaDeInicio = DateTime.Parse(fechaInicio.Text.Trim());
                 _oferta.fechaDeInicioSpecified = true;
-                _oferta.fechaDeFin = DateTime.Parse(fechaFin.Text.Trim()); ;
+                _oferta.fechaDeFin = DateTime.Parse(fechaFin.Text.Trim());
                 _oferta.fechaDeFinSpecified = true;
                 _oferta.imagen = imagenBytes;
-                _oferta.productos = ObtenerProductosOferta();
-
-                this.ofertaBO.oferta_insertar(_oferta);
+                producto[] productosOferta = ObtenerProductosOferta();
+                
+                this.ofertaBO.oferta_insertar(_oferta,productosOferta);
 
                 successMessage.Text = "Oferta asignada correctamente.";
                 successMessage.Visible = true;
@@ -185,61 +197,106 @@ namespace SoftCyberiaWA.Administrador
 
         protected producto[] ObtenerProductosOferta()
         {
-            producto[] _productos = new producto[100];
-            producto _productoOferta = new producto();
+            DataTable datos = Session["datosProductosOferta"] as DataTable;
+            producto[] productosOferta = new producto[datos.Rows.Count];
+            producto productoOferta;
             int cont = 0;
-            foreach(GridViewRow fila in gridProductosOferta.Rows)
+            
+            String id, descuento;
+            for (int i = 0; i < datos.Rows.Count; i++)
             {
-                _productoOferta = new producto();
-                _productoOferta.idProducto = Convert.ToInt32(fila.Cells[0].Text);
-                //_productoOferta.oferta = Convert.ToInt32(fila.Cells[3].Text);
-                _productos[cont] = _productoOferta;
+                productoOferta = new producto();
+                id = datos.Rows[i]["ID"].ToString();
+                descuento = datos.Rows[i]["DESCUENTO"].ToString();
+                productoOferta.idProducto = Convert.ToInt32(id);
+                productoOferta.idProductoSpecified = true;
+                productoOferta.oferta = Convert.ToInt32(descuento);
+                productoOferta.ofertaSpecified = true;
+                productosOferta[cont] = productoOferta;
                 cont++;
             }
 
-            return null;
+            return productosOferta;
         }
 
         protected Boolean Validar()
         {
-            Boolean valido = true;
+            Boolean validarFechaInicio = ValidarCampo(fechaInicio, fechaInicioMensaje, "Por favor seleccione una fecha de inicio.");
+            Boolean validarFechaFin = ValidarCampo(fechaFin, fechaFinMensaje, "Por favor seleccione una fecha de fin.");
 
-            if (fechaInicio.Text == "")
+            Boolean validarFecha = true;
+
+            if(validarFechaInicio && validarFechaFin)
             {
-                fechaInicioMensaje.InnerText = "Ingrese una fecha de Inicio";
-                valido = false;
-            }
-            else
-                fechaInicioMensaje.Visible = false;
-
-            if (fechaFin.Text == "")
-            {
-                fechaFinMensaje.InnerText = "Ingrese una fecha de Fin";
-                valido = false;
-            }
-            else
-                fechaFinMensaje.Visible = false;
-
-            if (fechaInicio.Text.Trim() != "" && fechaFin.Text.Trim() != "")
-            {
-                DateTime fechaDeInicio = DateTime.Parse(fechaInicio.Text.Trim());
-                DateTime fechaDeFin = DateTime.Parse(fechaFin.Text.Trim());
-
-                if (fechaDeInicio > fechaDeFin)
+                if(DateTime.Parse(fechaFin.Text.Trim()) < DateTime.Parse(fechaInicio.Text.Trim()))
                 {
-                    fechaFinMensaje.InnerText = "La fecha fin no puede ser menor a la fecha de inicio";
+                    validarFecha = false;
+                    fechaFinMensaje.InnerText = "La fecha de fin no puede ser menor a la fecha de inicio.";
+                    fechaFin.Visible = true;
+                }
+
+                if (DateTime.Parse(fechaInicio.Text.Trim()) < DateTime.Today)
+                {
+                    validarFecha = false;
+                    fechaInicioMensaje.InnerText = "La fecha de inicio no puede ser menor a la fecha actual.";
+                    fechaInicioMensaje.Visible = true;
+                }
+
+                if (DateTime.Parse(fechaFin.Text.Trim()) < DateTime.Today)
+                {
+                    validarFecha = false;
+                    fechaFinMensaje.InnerText = "La fecha de fin  no puede ser menor a la fecha actual.";
                     fechaFinMensaje.Visible = true;
+                }
+            }
+
+            Boolean validarProductos = true;
+            
+            if(gridProductosOferta.Rows.Count <= 0)
+            {
+                validarProductos = false;
+                productoSKUMensaje.InnerText = "Ingrese al menos un producto.";
+                productoSKUMensaje.Visible = true;
+            }
+            else
+            {
+                productoSKUMensaje.Visible=false;
+            }
+
+            return validarFechaFin && validarFechaInicio && validarProductos;
+        }
+
+        private Boolean ValidarCampo(TextBox campo, HtmlGenericControl mensaje, string textoError, bool esCombo = false, DropDownList combo = null)
+        {
+            Boolean valido;
+            if (esCombo)
+            {
+                if (combo.SelectedIndex == 0)
+                {
                     valido = false;
+                    mensaje.InnerText = textoError;
+                    mensaje.Visible = true;
                 }
                 else
-                    fechaFinMensaje.Visible = false;
+                {
+                    valido = true;
+                    mensaje.Visible = false;
+                }
             }
-
-            if (gridProductosOferta.Rows.Count == 0)
+            else
             {
-                valido = false;
+                if (string.IsNullOrWhiteSpace(campo.Text))
+                {
+                    valido = false;
+                    mensaje.InnerText = textoError;
+                    mensaje.Visible = true;
+                }
+                else
+                {
+                    valido = true;
+                    mensaje.Visible = false;
+                }
             }
-
             return valido;
         }
     }

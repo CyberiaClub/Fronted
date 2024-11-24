@@ -18,12 +18,22 @@ namespace SoftCyberiaWA.Administrador
         private ProductoBO productoBO;
         private TipoProductoBO tipoProductoBO;
         private MarcaBO marcaBO;
-        private producto _producto = new producto();
-        private producto _productoCompuesto = new producto();
+        private producto _producto;
+        private producto _productoCompuesto;
         private BindingList<producto> _productosCompuestos;
 
 
         int cont = 0;
+
+        public registrar_produtco_compuesto()
+        {
+            productoBO = new ProductoBO();
+            tipoProductoBO = new TipoProductoBO();
+            marcaBO = new MarcaBO();
+            _producto = new producto();
+            _productoCompuesto = new producto();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
@@ -39,6 +49,8 @@ namespace SoftCyberiaWA.Administrador
             productoTipoProducto.DataTextField = "tipo";
             productoTipoProducto.DataValueField = "idTipoProducto";
             productoTipoProducto.DataBind(); // Llenar el DropDownList
+
+            productoTipoProducto.Items.Insert(0, new ListItem("Seleccione un Tipo de Producto", "0"));
         }
 
         private void CargarMarcas()
@@ -47,6 +59,7 @@ namespace SoftCyberiaWA.Administrador
             productoMarca.DataTextField = "nombre";
             productoMarca.DataValueField = "idMarca";
             productoMarca.DataBind(); // Llenar el DropDownList
+            productoMarca.Items.Insert(0, new ListItem("Seleccione una Marca", "0"));
         }
 
         protected void sku_TextChange(object sender, EventArgs e)
@@ -195,44 +208,70 @@ namespace SoftCyberiaWA.Administrador
                 _producto.nombre = productoNombre.Text;
                 _producto.sku = productoSku.Text;
                 _producto.precio = Convert.ToDouble(productoPrecio.Text);
-                _producto.marca.idMarca = Convert.ToInt32(productoMarca.SelectedValue);
-                _producto.marca.idMarcaSpecified = true;
-                _producto.tipoProducto.idTipoProducto = Convert.ToInt32(productoTipoProducto.SelectedValue);
-                _producto.tipoProducto.idTipoProductoSpecified = true;
-                _producto.descripcion = productoDescripcion.Text;
+                _producto.precioSpecified = true;
+                _producto.precioProveedor = 0;
+                _producto.precioProveedorSpecified = true;
+                marca _marca = new marca();
+                _marca.idMarca = Convert.ToInt32(productoMarca.SelectedIndex);
+                _marca.idMarcaSpecified = true;
+                tipoProducto _tipoProd = new tipoProducto();
+                _tipoProd.idTipoProducto = Convert.ToInt32(productoTipoProducto.SelectedIndex);
+                _tipoProd.idTipoProductoSpecified = true;
 
+                _producto.marca = _marca;
+                _producto.tipoProducto = _tipoProd;
+                
+                _producto.descripcion = productoDescripcion.Text;
+                _producto.imagen = imagenBytes;
+                _producto.productosMiembros = ObtenerProductosComposicion();
+
+                productoBO.producto_insertar(_producto);
 
                 successMessage.Text = "Producto compuesto asignada correctamente.";
                 successMessage.Visible = true;
             }
         }
 
-        protected producto[] ObtenerProductosOferta()
+        protected producto[] ObtenerProductosComposicion()
         {
-            producto[] _productos = new producto[100];
-            producto _productoOferta = new producto();
+            DataTable datos = Session["datosProductosKit"] as DataTable;
+            producto[] productosKit = new producto[datos.Rows.Count];
+            producto productoKit;
             int cont = 0;
-            foreach (GridViewRow fila in gridProductosKit.Rows)
+
+            String id, cantidad;
+            for (int i = 0; i < datos.Rows.Count; i++)
             {
-                _productoOferta = new producto();
-                _productoOferta.idProducto = Convert.ToInt32(fila.Cells[0].Text);
-                _productoOferta.cantidad = Convert.ToInt32(fila.Cells[3].Text);
-                _productos[cont] = _productoOferta;
+                productoKit = new producto();
+                id = datos.Rows[i]["ID"].ToString();
+                cantidad = datos.Rows[i]["CANTIDAD"].ToString();
+                productoKit.idProducto = Convert.ToInt32(id);
+                productoKit.idProductoSpecified = true;
+                productoKit.cantidad = Convert.ToInt32(cantidad);
+                productoKit.cantidadSpecified = true;
+                productosKit[cont] = productoKit;
                 cont++;
             }
 
-            return null;
+            return productosKit;
         }
 
         protected Boolean Validar()
         {
-            
+            productoSkuMensaje.Visible = true;
             Boolean validarNombre = ValidarCampo(productoNombre, productoNombreMensaje, "Por favor ingrese un nombre para el producto.");
             Boolean validarSku = ValidarCampo(productoSku, productoSkuMensaje, "Por favor ingrese un sku.");
             Boolean validarPrecio = ValidarCampo(productoPrecio, ProductoPrecioMensaje, "Por favor ingrese un precio.");
             Boolean validarMarca = ValidarCampo(null, productoMarcaMensaje, "Por favor seleccione una marca.", true, productoMarca);
             Boolean validarTipoProducto = ValidarCampo(null, ProductoTipoProductoMensaje, "Por favor seleccione un tipo de producto.", true, productoTipoProducto);
             Boolean validarDescripcion = ValidarCampo(productoDescripcion, productoDescripcionMensaje, "Por favor ingrese una descripción.");
+
+            if (validarSku && productoSku.Text.Length > 8)
+            {
+                validarSku = false;
+                productoSkuMensaje.InnerText = "Por favor ingrese un sku de 8 digitos.";
+                productoSkuMensaje.Visible = true;
+            }
 
             Boolean validarImagen = true;
             if (!imagenProducto.HasFile)
@@ -248,7 +287,7 @@ namespace SoftCyberiaWA.Administrador
 
             Boolean validarComposicion = true;
             
-            if(gridProductosKit.Rows.Count < 2)
+            if(gridProductosKit.Rows.Count == 0)
             {
                 validarComposicion = false;
                 productoKitSKUMensaje.InnerText = "Por favor ingrese al menos dos productos al kit";
