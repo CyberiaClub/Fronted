@@ -14,6 +14,13 @@ namespace SoftCyberiaWA.Cliente
     {
         private MarcaBO marcaBO;
         private TipoProductoBO tipoProductoBO;
+
+        public IndexCliente()
+        {
+            this.marcaBO = new MarcaBO();
+            this.tipoProductoBO = new TipoProductoBO(); 
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

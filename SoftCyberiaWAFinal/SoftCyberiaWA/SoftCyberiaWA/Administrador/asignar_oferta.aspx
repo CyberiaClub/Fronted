@@ -59,7 +59,7 @@
                 <div class="col-12 col-md-5" >
                     <asp:Label ID="lblproductoSku" runat="server" Text="Buscar Producto por SKU:" CssClass="col-form-label fw-bold"></asp:Label>
                     <asp:TextBox ID="productoSKU" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="sku_TextChange" Width="80%"/>
-                    <small id="productoSKUMensaje" class="form-text text-bg-danger" runat="server"></small>
+                    <small id="productoSKUMensaje" class="form-text text-danger" runat="server"></small>
                 </div>
                 <!-- Botón de agregar producto-->
                 <div class="col-12 col-md-6 d-flex" style="margin-top:4vh; max-height:5.9vh;">
@@ -96,7 +96,8 @@
                                     <asp:Label ID="lblDescuento" runat="server" Text='<%# Bind("DESCUENTO") %>' CssClass="form-control align-items-center" />
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="txtDescuento" runat="server" Text='<%# Bind("DESCUENTO") %>' CssClass="form-control align-items-center" />
+                                    <asp:TextBox ID="txtDescuento" runat="server" Text='<%# Bind("DESCUENTO") %>' CssClass="form-control align-items-center" 
+                                        TextMode="Number" min="0"/>
                                 </EditItemTemplate>
                             </asp:TemplateField>
                             <asp:CommandField ShowEditButton="true" />

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="CyberiaWS" targetNamespace="CyberiaWS" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tipopersona_listar_paginas" type="tns:tipopersona_listar_paginas" />
+  <xs:element name="tipopersona_listar_paginasResponse" type="tns:tipopersona_listar_paginasResponse" />
+  <xs:element name="tipopersona_listar_roles_trabajadores" type="tns:tipopersona_listar_roles_trabajadores" />
+  <xs:element name="tipopersona_listar_roles_trabajadoresResponse" type="tns:tipopersona_listar_roles_trabajadoresResponse" />
+  <xs:complexType name="tipopersona_listar_roles_trabajadores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="tipopersona_listar_roles_trabajadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoPersona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTipoPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="paginas" nillable="true" type="tns:pagina" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pagina">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idPagina" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="referencia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipopersona_listar_paginas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipo_persona" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipopersona_listar_paginasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tipoPersona" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

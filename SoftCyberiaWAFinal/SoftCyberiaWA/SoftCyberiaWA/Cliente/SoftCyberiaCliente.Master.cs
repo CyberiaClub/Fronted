@@ -11,7 +11,10 @@ namespace SoftCyberiaWA.Cliente
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["RolUsuario"] == null)
+            {
+                Response.Redirect("~/InicioSesion/indexInicioSesion.aspx");
+            }
         }
     }
 }

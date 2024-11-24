@@ -19,6 +19,13 @@ namespace SoftCyberiaWA
         private ProductoBO productoBO;
         private TipoProductoBO tipoProductoBO;
         private SedeBO sedeBO;
+
+        public listado_productos()
+        {
+            this.productoBO = new ProductoBO();
+            this.tipoProductoBO = new TipoProductoBO();
+            this.sedeBO = new SedeBO();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarSedes();

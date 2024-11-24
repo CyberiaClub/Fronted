@@ -14,6 +14,10 @@ namespace SoftCyberiaWA
     {
         private SedeBO sedeBO;
 
+        public listado_sedes()
+        {
+            this.sedeBO = new SedeBO();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

@@ -1,140 +1,122 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaPersonaBO;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
+using System.Net;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Text;
 
 namespace SoftCyberiaWA.InicioSesion
 {
     public partial class registro_usuario : System.Web.UI.Page
     {
         private PersonaBO personaBO;
+        // Clase para deserializar la respuesta de la API
+        public class Country
+        {
+            [JsonPropertyName("name")]
+            public Name Name { get; set; }
+        }
+
+
+        public class Name
+        {
+            [JsonPropertyName("common")]
+            public string Common { get; set; }
+        }
+
+        public registro_usuario()
+        {
+            this.personaBO = new PersonaBO();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                CargarNacionalidades();
+            }
+            else
+            {
+                RegistrarScriptAutocompletado(); // Asegura que el script esté disponible en un postback
+                nacionalidad.Text = Request.Form[nacionalidad.UniqueID] ?? string.Empty; // Restaura el valor ingresado
+            }
+        }
 
+        private void CargarNacionalidades()
+        {
+            try
+            {
+                // Comprueba si las nacionalidades ya están en la variable global
+                if (Application["nacionalidades"] == null)
+                {
+                    using (var client = new WebClient())
+                    {
+                        string json = client.DownloadString("https://restcountries.com/v3.1/all");
+
+                        var paises = JsonSerializer.Deserialize<List<Country>>(json, new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        });
+
+                        var nombresComunes = paises
+                            .Where(c => c.Name != null && !string.IsNullOrEmpty(c.Name.Common))
+                            .Select(c => c.Name.Common)
+                            .Distinct()
+                            .OrderBy(n => n)
+                            .ToList();
+
+                        // Guarda las nacionalidades en una variable global
+                        Application["nacionalidades"] = nombresComunes;
+                    }
+                }
+
+                RegistrarScriptAutocompletado();
+            }
+            catch (Exception ex)
+            {
+                nacionalidadMensaje.InnerText = "Error al cargar las nacionalidades.";
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+        private void RegistrarScriptAutocompletado()
+        {
+            var nombresComunes = (List<string>)Application["nacionalidades"]; // Obtiene las nacionalidades de la variable global
+            if (nombresComunes != null)
+            {
+                var nacionalidadesJson = JsonSerializer.Serialize(nombresComunes);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "nacionalidadesScript",
+                    $"var nacionalidades = {nacionalidadesJson};", true);
+            }
         }
 
         protected void onClickRegistrarPersona(object sender, EventArgs e)
         {
             persona _persona = new persona();
             bool valido = true;
-
-            if (personaTipoDocumento.SelectedIndex == 0)
-            {
-                tipoDocumentoMensaje.InnerText = $"Seleccione un tipo de documento.";
-                valido = false;
-            }
-            else
-            {
-                tipoDocumentoMensaje.InnerText = "";
-            }
-            if (personaDocumento.Text.Trim() == "")
-            {
-                documentoMensaje.InnerText = $"Ingrese su documento de identidad.";
-                valido = false;
-            }
-            else
-            {
-                documentoMensaje.InnerText = "";
-            }
-            if (personaTelefono.Text.Trim() == "")
-            {
-                telefonoMensaje.InnerText = $"Ingrese su telefono.";
-                valido = false;
-            }
-            else
-            {
-                telefonoMensaje.InnerText = "";
-            }
-            if (personaNombre.Text.Trim() == "")
-            {
-                nombreMensaje.InnerText = $"Ingrese su nombre.";
-                valido = false;
-            }
-            else
-            {
-                nombreMensaje.InnerText = "";
-            }
-            if(personaPrimerAp.Text.Trim()== "")
-            {
-                primerApMensaje.InnerText = $"Ingrese su primer apellido.";
-                valido = false;
-            }
-            else
-            {
-                primerApMensaje.InnerText = "";
-            }
-            if (personaSexo.SelectedIndex== 0)
-            {
-                sexoMensaje.InnerText = $"Ingrese su sexo.";
-                valido = false;
-            }
-            else
-            {
-                sexoMensaje.InnerText = "";
-            }
-            if (personaFechaNac.Value == "")
-            {
-                fechaNacMensaje.InnerText = $"Ingrese su fecha de nacimiento.";
-                valido = false;
-            }
-            else
-            {
-                fechaNacMensaje.InnerText = "";
-            }
-            if (personaDireccion.Text.Trim()== "")
-            {
-                direccionMensaje.InnerText = $"Ingrese su direccion.";
-                valido = false;
-            }
-            else
-            {
-                direccionMensaje.InnerText = "";
-            }
-            if (personaNacionalidad.Text.Trim()== "")
-            {
-                nacionalidadMensaje.InnerText = $"Ingrese su nacionalidad.";
-                valido = false;
-            }
-            else
-            {
-                nacionalidadMensaje.InnerText = "";
-            }
-            if (personaCorreo.Value.Trim() == "")
-            {
-                correoMensaje.InnerText = $"Ingrese su correo.";
-                valido = false;
-            }
-            else
-            {
-                correoMensaje.InnerText = "";
-            }
-            if (personaContraseña.Value.Trim() == "" || personaContraseña.Value.Length <= 5)
-            {
-                contraseñaMensaje.InnerText = $"Ingrese una contraseña valida.";
-                valido = false;
-            }
-            else
-            {
-                contraseñaMensaje.InnerText = "";
-            }
-            if (personaConfirmarContraseña.Value.Trim() == "" && personaContraseña.Value.Trim() != "")
-            {
-                confirmarContraseñaMensaje.InnerText = $"Ingrese su contraseña nuevamente.";
-            }
-            else if (personaContraseña.Value.Trim() != personaConfirmarContraseña.Value.Trim())
-            {
-                confirmarContraseñaMensaje.InnerText = $"Las contraseñas no coinciden";
-            }
-            else
-            {
-                tipoDocumentoMensaje.InnerText = "";
-            }
-            
+            valido &= ValidarTipoDocument();
+            valido &= ValidarDocument();
+            valido &= ValidarTelefono();
+            valido &= ValidarNombre();
+            valido &= ValidarPrimerApellido();
+            valido &= ValidarSegundoApellido();
+            valido &= ValidarFecha();
+            valido &= ValidarSexo();
+            valido &= ValidarDireccion();
+            valido &= ValidarNacionalidad();
+            valido &= ValidarCorreo();
+            valido &= ValidarContrasena();
+            valido &= ValidarSegundaContrasena();
             if (valido)
             {
                 _persona.documento = personaDocumento.Text.Trim();
@@ -148,10 +130,10 @@ namespace SoftCyberiaWA.InicioSesion
                 _persona.correo = personaCorreo.Value.Trim();
                 _persona.contrasena = personaContraseña.Value;
                 _persona.direccion = personaDireccion.Text.Trim();
-                _persona.nacionalidad = personaNacionalidad.Text.Trim();
+                _persona.nacionalidad = nacionalidad.Text.Trim();
                 _persona.tipoDeDocumentoSpecified = true;
                 _persona.idTipoPersona = 1;
-                _persona.idTipoPersonaSpecified = true; 
+                _persona.idTipoPersonaSpecified = true;
 
                 switch (Convert.ToInt32(personaTipoDocumento.SelectedValue))
                 {
@@ -170,10 +152,225 @@ namespace SoftCyberiaWA.InicioSesion
                         break;
 
                 }
-                personaBO.persona_insertar(_persona);
+                this.personaBO.persona_insertar(_persona);
+            }
+        }
+
+        private bool ValidarTipoDocument()
+        {
+            tipoDocumentoMensaje.InnerText = ""; // Limpia cualquier mensaje previo
+            tipoDocumentoMensaje.Visible = false;
+            // Verifica si el valor seleccionado es "0" (opción por defecto)
+            if (personaTipoDocumento.SelectedValue == "0")
+            {
+                tipoDocumentoMensaje.InnerText = "Por favor, seleccione un tipo de documento válido.";
+                tipoDocumentoMensaje.Visible = true;
+                return false; // Retorna falso porque no es válido
             }
 
+            return true; // Retorna verdadero si se seleccionó un valor válido
         }
-    
+        private bool ValidarDocument()
+        {
+            string documento = personaDocumento.Text.Trim();
+            string pattern = @"^\d+$";
+            bool isNumeric = Regex.IsMatch(documento, pattern);
+            documentoMensaje.InnerText = "";
+            documentoMensaje.Visible = false;
+            if (!isNumeric)
+            {
+                documentoMensaje.InnerText = "Por favor, el documento solo puede contener números.";
+                documentoMensaje.Visible = true;
+            }
+            return isNumeric;
+        }
+        private bool ValidarTelefono()
+        {
+            string telefono = personaTelefono.Text.Trim();
+            string pattern = @"^\d{9}$";
+            bool isNumeric = Regex.IsMatch(telefono, pattern);
+            telefonoMensaje.InnerText = "";
+            telefonoMensaje.Visible = false;
+            if (!isNumeric)
+            {
+                telefonoMensaje.InnerText = "Por favor, ingrese un número de telefono valido";
+                telefonoMensaje.Visible = true;
+            }
+            return isNumeric;
+        }
+        private bool ValidarNombre()
+        {
+            string nombre = personaNombre.Text.Trim();
+            string pattern = @"^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$";
+            bool isNumeric = Regex.IsMatch(nombre, pattern);
+            nombreMensaje.InnerText = "";
+            nombreMensaje.Visible = false;
+            if (!isNumeric || string.IsNullOrWhiteSpace(nombre))
+            {
+                nombreMensaje.InnerText = "Por favor, ingrese un nombre válido sin números ni símbolos especiales.";
+                nombreMensaje.Visible = true;
+            }
+            return isNumeric;
+        }
+        private bool ValidarPrimerApellido()
+        {
+            string primerApellido = personaPrimerAp.Text.Trim();
+            string pattern = @"^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$";
+            bool isNumeric = Regex.IsMatch(primerApellido, pattern);
+            primerApMensaje.InnerText = "";
+            primerApMensaje.Visible = false;
+            if (!isNumeric || string.IsNullOrWhiteSpace(primerApellido))
+            {
+                primerApMensaje.InnerText = "Por favor, ingrese un apellido válido sin números ni símbolos especiales.";
+                primerApMensaje.Visible = true;
+            }
+            return isNumeric;
+        }
+        private bool ValidarSegundoApellido()
+        {
+            string segundoApellido = personaSegundoAp.Text.Trim();
+            string pattern = @"^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$";
+            bool isNumeric = Regex.IsMatch(segundoApellido, pattern);
+            segundoApMensaje.InnerText = "";
+            segundoApMensaje.Visible = false;
+            if (!isNumeric)
+            {
+                segundoApMensaje.InnerText = "Por favor, ingrese un apellido válido sin números ni símbolos especiales.";
+                segundoApMensaje.Visible = true;
+            }
+            return isNumeric;
+        }
+        private bool ValidarFecha()
+        {
+            fechaNacMensaje.InnerText = "";
+            fechaNacMensaje.Visible = false;
+            if (string.IsNullOrWhiteSpace(personaFechaNac.Value) || !DateTime.TryParse(personaFechaNac.Value, out DateTime fecha))
+            {
+                fechaNacMensaje.InnerText = "Por favor, ingrese una fecha válida.";
+                fechaNacMensaje.Visible = true;
+                return false;
+            }
+
+            //DateTime fecha = DateTime.Parse(personaFechaNac.Value);
+            bool valido = false;
+            if (personaFechaNac != null)
+            {
+                int edad = DateTime.Now.Year - fecha.Year;
+                if (fecha > DateTime.Now.AddYears(-edad))
+                {
+                    edad--;
+                }
+
+                // Validar si la persona tiene al menos 15 años
+                if (edad < 15)
+                {
+                    fechaNacMensaje.InnerText = "Tiene que ser mayor de 15 años.";
+                    fechaNacMensaje.Visible = true;
+                    return valido;
+                }
+                valido = true;
+            }
+            else
+            {
+                fechaNacMensaje.InnerText = "Tiene que ser mayor de 15 años.";
+                fechaNacMensaje.Visible = true;
+            }
+
+            return valido;
+        }
+        private bool ValidarSexo()
+        {
+            sexoMensaje.InnerText = "";
+            sexoMensaje.Visible = false;
+            if (personaSexo.SelectedValue == "0")
+            {
+                sexoMensaje.InnerText = "Por favor, seleccione un sexo válido.";
+                sexoMensaje.Visible = true;
+                return false;
+            }
+            return true;
+        }
+        private bool ValidarDireccion()
+        {
+            direccionMensaje.InnerText = "";
+            direccionMensaje.Visible = false;
+            if (string.IsNullOrEmpty(personaDireccion.Text.Trim()))
+            {
+                direccionMensaje.InnerText = "Por favor, ingrese su direccion";
+                direccionMensaje.Visible = true;
+                return false;
+            }
+            return true;
+        }
+        private bool ValidarNacionalidad()
+        {
+            nacionalidadMensaje.InnerText = "";
+            nacionalidadMensaje.Visible = false;
+            if (string.IsNullOrWhiteSpace(nacionalidad.Text.Trim()) || string.IsNullOrEmpty(nacionalidad.Text))
+            {
+                nacionalidadMensaje.InnerText = "Por favor, seleccione o escriba una nacionalidad válida.";
+                nacionalidadMensaje.Visible = true;
+                return false;
+            }
+            return true;
+        }
+        private bool ValidarCorreo()
+        {
+            correoMensaje.InnerText = "";
+            correoMensaje.Visible = false;
+            if (string.IsNullOrWhiteSpace(personaCorreo.Value.Trim()))
+            {
+                correoMensaje.InnerText = "Por favor, ingresar un correo valido";
+                correoMensaje.Visible = true;
+            }
+            return true;
+        }
+        private bool ValidarContrasena()
+        {
+            contraseñaMensaje.InnerText = "";
+            contraseñaMensaje.Visible = false;
+            if (string.IsNullOrWhiteSpace(personaContraseña.Value.Trim()))
+            {
+                contraseñaMensaje.InnerText = "La contraseñan no puede estar vacia";
+                contraseñaMensaje.Visible = true;
+                return false;
+            }
+            if (personaContraseña.Value.Length < 8)
+            {
+                contraseñaMensaje.InnerText = "La contraseña debe tener mínimo 8 caracteres";
+                contraseñaMensaje.Visible = true;
+                return false;
+            }
+            string pattern = @"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$";
+            if (!Regex.IsMatch(personaContraseña.Value.Trim(), pattern))
+            {
+                contraseñaMensaje.InnerText = "El texto debe contener al menos una letra mayúscula, un carácter especial y un número.";
+                contraseñaMensaje.Visible = true;
+                return false;
+            }
+            return true;
+        }
+
+        private bool ValidarSegundaContrasena()
+        {
+            string contrasena = personaContraseña.Value; // Primera contraseña
+            string confirmarContrasena = personaConfirmarContraseña.Value;// Segunda contraseña
+            confirmarContraseñaMensaje.InnerText = "";
+            confirmarContraseñaMensaje.Visible = false;
+            if (string.IsNullOrWhiteSpace(contrasena) || string.IsNullOrWhiteSpace(confirmarContrasena))
+            {
+                confirmarContraseñaMensaje.InnerText = "Ambos campos de contraseña son obligatorios.";
+                confirmarContraseñaMensaje.Visible = true;
+                return false; // Detener ejecución si faltan contraseñas
+            }
+            if (contrasena != confirmarContrasena)
+            {
+                confirmarContraseñaMensaje.InnerText = "Las contraseñas no coinciden. Por favor, inténtelo nuevamente.";
+                confirmarContraseñaMensaje.Visible = true;
+                return false; // Detener ejecución si no coinciden
+            }
+            return true;
+        }
+
     }
 }

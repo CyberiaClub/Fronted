@@ -32,7 +32,7 @@ namespace SoftCyberiaPersonaBO
         {
             return this.WsPersona.persona_verificar_correo(token);
         }
-        public string persona_loguearse(string correo, string contrasena)
+        public persona persona_loguearse(string correo, string contrasena)
         {
             return this.WsPersona.persona_loguearse(correo, contrasena);
         }

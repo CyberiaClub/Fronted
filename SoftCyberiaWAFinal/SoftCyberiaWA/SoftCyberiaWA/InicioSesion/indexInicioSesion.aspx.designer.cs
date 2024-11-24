@@ -24,6 +24,15 @@ namespace SoftCyberiaWA.InicioSesion
         protected global::System.Web.UI.WebControls.TextBox personaCorreo;
 
         /// <summary>
+        /// Control emailError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailError;
+
+        /// <summary>
         /// Control personaContrasena.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,24 @@ namespace SoftCyberiaWA.InicioSesion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox personaContrasena;
+
+        /// <summary>
+        /// Control passwordError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl passwordError;
+
+        /// <summary>
+        /// Control lblErrorMessage.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
 
         /// <summary>
         /// Control loginButton.

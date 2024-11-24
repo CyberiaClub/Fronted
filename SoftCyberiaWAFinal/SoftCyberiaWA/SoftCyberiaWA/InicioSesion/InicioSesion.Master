@@ -10,11 +10,10 @@
     <link href="/Content/bootstrap.css" rel="stylesheet" />
     <link href="/Content/Fonts/css/all.css" rel="stylesheet" />
     <link href="/Content/site.css" rel="stylesheet" />
-
+    <link href="/Content/inicioSession.css" rel="stylesheet" />
     <script src="/Scripts/jquery-3.7.1.js"></script>
     <script src="/Scripts/bootstrap.bundle.js"></script>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>
         <asp:ContentPlaceHolder ID="head" runat="server">
         </asp:ContentPlaceHolder>
@@ -52,41 +51,22 @@
 
                 <!-- Menú de usuario a la derecha -->
                 <ul class="navbar-nav ms-auto">
-          
-
                 </ul>
             </div>
         </div>
     </nav>
-
-
-
-
-
     <!--Contenido web-->
-
     <div>
-
-        <form runat="server">
+        <form runat="server" class="min-vh-100 d-flex flex-column">
             <asp:ContentPlaceHolder ID="cphContenido" runat="server">
             </asp:ContentPlaceHolder>
         </form>
     </div>
-
-
     <!-- Footer -->
     <footer class="footer p-4 text-white text-center">
         <p class="mb-0 font-light">© 2024 Cyberiastore. Todos los derechos reservados.</p>
         <p class="font-light">
         </p>
     </footer>
-
-
-
-
-
-
-
-
 </body>
 </html>
