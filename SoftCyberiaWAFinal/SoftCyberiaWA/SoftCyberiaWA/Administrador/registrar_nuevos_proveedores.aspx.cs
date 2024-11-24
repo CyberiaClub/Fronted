@@ -13,6 +13,11 @@ namespace SoftCyberiaWA.Administrador
     public partial class registrar_nuevos_proveedores : System.Web.UI.Page
     {
         private ProveedorBO proveedorBO;
+
+        public registrar_nuevos_proveedores()
+        {
+            this.proveedorBO = new ProveedorBO();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 

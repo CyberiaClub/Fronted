@@ -22,9 +22,6 @@ namespace SoftCyberiaWA.Administrador
         private producto _productoCompuesto;
         private BindingList<producto> _productosCompuestos;
 
-
-        int cont = 0;
-
         public registrar_produtco_compuesto()
         {
             productoBO = new ProductoBO();

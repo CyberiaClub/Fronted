@@ -14,6 +14,12 @@ namespace SoftCyberiaWA.Administrador
     public partial class listado_pedidos_vendedor : System.Web.UI.Page
     {
         private ComprobantePagoBO comprobantePagoBO;
+
+        public listado_pedidos_vendedor()
+        {
+            this.comprobantePagoBO = new ComprobantePagoBO();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

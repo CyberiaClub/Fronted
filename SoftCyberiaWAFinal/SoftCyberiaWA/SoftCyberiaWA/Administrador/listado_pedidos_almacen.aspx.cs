@@ -15,6 +15,11 @@ namespace SoftCyberiaWA.Administrador
     public partial class listado_pedidos_almacen : System.Web.UI.Page
     {
         private ComprobantePagoBO comprobantePagoBO;
+
+        public listado_pedidos_almacen()
+        {
+            this.comprobantePagoBO = new ComprobantePagoBO();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

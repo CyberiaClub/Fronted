@@ -23,8 +23,6 @@
     </title>
 
 </head>
-
-
 <body>
 
     <!--Por si necesitan script o estilo-->
@@ -33,7 +31,7 @@
     </asp:ContentPlaceHolder>
 
 
-    <div class="container-fluid d-flex p-0 h-100">
+    <div class="container-fluid d-flex h-100">
 
         <!-- Contorno exterior - Negros sin sombra -->
         <div class="sidebar navbar-expand-lg navbar-dark bg-dark flex-column d-flex flex-column flex-shrink-0 offcanvas-md offcanvas-start">
@@ -47,7 +45,6 @@
             <div class="text-center mt-4 text-white text-center">
                 <img src="/Imagenes/admin-user.png" alt="Foto de usuario" style="width: 160px; height: auto;">
                 <h4>Matias Sulca</h4>
-               
             </div>
 
             <hr>

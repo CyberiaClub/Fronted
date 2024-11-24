@@ -13,6 +13,11 @@ namespace SoftCyberiaWA.Administrador
     {
         ProductoBO productoBO = new ProductoBO();
         producto _producto = new producto();
+        public actualizar_stock()
+        {
+            this.productoBO = new ProductoBO();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -54,8 +59,6 @@ namespace SoftCyberiaWA.Administrador
         {
             try
             {
-
-
                 productoBO.producto_aumentar_stock(Convert.ToInt32(this._producto.idProducto), 1, Convert.ToInt32(cantidadProducto.Text));
                 this.buscarProducto();
 

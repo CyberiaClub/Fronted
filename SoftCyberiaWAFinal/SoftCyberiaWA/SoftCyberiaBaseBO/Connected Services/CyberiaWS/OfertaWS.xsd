@@ -74,6 +74,7 @@
   <xs:complexType name="oferta_insertar">
     <xs:sequence>
       <xs:element minOccurs="0" name="oferta" type="tns:oferta" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="productosOferta" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="oferta_insertarResponse">

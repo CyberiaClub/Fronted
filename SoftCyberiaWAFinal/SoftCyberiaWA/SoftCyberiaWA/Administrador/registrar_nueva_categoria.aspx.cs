@@ -13,6 +13,12 @@ namespace SoftCyberiaWA.Administrador
     public partial class registrar_nueva_categoria : System.Web.UI.Page
     {
         private TipoProductoBO tipoProductoBO;
+
+        public registrar_nueva_categoria()
+        {
+            this.tipoProductoBO = new TipoProductoBO();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

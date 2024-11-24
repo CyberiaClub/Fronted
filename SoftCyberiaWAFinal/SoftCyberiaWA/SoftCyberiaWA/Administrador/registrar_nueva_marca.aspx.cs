@@ -13,11 +13,15 @@ namespace SoftCyberiaWA.Administrador
     {
         private MarcaBO marcaBO;
         private ProveedorBO proveedorBO;
+
+        public registrar_nueva_marca()
+        {
+            this.marcaBO = new MarcaBO();
+            this.proveedorBO = new ProveedorBO();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarProveedores();
-
-
         }
 
         private void CargarProveedores()

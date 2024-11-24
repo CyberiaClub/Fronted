@@ -16,7 +16,14 @@ namespace SoftCyberiaWA.Administrador
     {
         private ComprobantePagoBO comprobantePagoBO;
         private ProductoBO productoBO;
-        private BindingList<comprobantePago> comprobantes;
+        private BindingList<comprobantePago> comprobantes; // la propia funciona le retonrn aun bindign list con memeoria
+
+        public listado_pedidos()
+        {
+            this.comprobantePagoBO = new ComprobantePagoBO();
+            this.productoBO = new ProductoBO();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

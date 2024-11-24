@@ -15,6 +15,13 @@ namespace SoftCyberiaWA.Administrador
     {
         private ProductoBO productoBO;
         private SedeBO sedeBO;
+
+        public listado_stock()
+        {
+            this.productoBO = new ProductoBO();
+            this.sedeBO = new SedeBO();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

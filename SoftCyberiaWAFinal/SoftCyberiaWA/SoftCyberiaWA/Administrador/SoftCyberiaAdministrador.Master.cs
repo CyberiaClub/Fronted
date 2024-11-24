@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace SoftCyberiaWA.Administrador
 {
@@ -17,9 +18,14 @@ namespace SoftCyberiaWA.Administrador
             {
                 Response.Redirect("~/InicioSesion/indexInicioSesion.aspx");
             }
+            // Obtener la ruta completa
             string currentPage = Request.Url.AbsolutePath;
+
+            // Extraer solo el archivo
+            string fileName = Path.GetFileName(currentPage);
+
             // Verificar si la página actual está permitida
-            if (!(Session["AllowedPages"] is BindingList<pagina> allowedPages) || !allowedPages.Any(page => page.referencia.Equals(currentPage, StringComparison.OrdinalIgnoreCase)))
+            if (!(Session["paginas"] is BindingList<pagina> allowedPages) || !allowedPages.Any(page => page.referencia.Equals(fileName, StringComparison.OrdinalIgnoreCase)))
             {
                 // Redirigir a la página 403 si no tiene acceso
                 Response.Redirect("~/InicioSesion/403.aspx");
