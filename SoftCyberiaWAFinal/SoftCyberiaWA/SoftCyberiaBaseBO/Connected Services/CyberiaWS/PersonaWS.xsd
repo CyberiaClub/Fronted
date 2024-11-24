@@ -20,23 +20,7 @@
   </xs:complexType>
   <xs:complexType name="persona_loguearseResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="persona_enviar_correo_verificacion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="valorToken" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="persona_enviar_correo_verificacionResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="persona_insertar">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="persona" type="tns:persona" />
+      <xs:element minOccurs="0" name="return" type="tns:persona" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="persona">
@@ -60,6 +44,23 @@
       <xs:element minOccurs="0" name="sueldo" type="xs:double" />
       <xs:element minOccurs="0" name="telefono" type="xs:string" />
       <xs:element minOccurs="0" name="tipoDeDocumento" type="tns:tipoDocumento" />
+      <xs:element minOccurs="0" name="tipoUsuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona_enviar_correo_verificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="valorToken" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona_enviar_correo_verificacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona_insertar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="persona" type="tns:persona" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="persona_insertarResponse">

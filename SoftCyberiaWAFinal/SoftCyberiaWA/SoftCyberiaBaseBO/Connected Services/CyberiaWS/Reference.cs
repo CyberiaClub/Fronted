@@ -1336,6 +1336,8 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         private bool tipoDeDocumentoFieldSpecified;
         
+        private string tipoUsuarioField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public bool activo {
@@ -1669,6 +1671,18 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             set {
                 this.tipoDeDocumentoFieldSpecified = value;
                 this.RaisePropertyChanged("tipoDeDocumentoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
+        public string tipoUsuario {
+            get {
+                return this.tipoUsuarioField;
+            }
+            set {
+                this.tipoUsuarioField = value;
+                this.RaisePropertyChanged("tipoUsuario");
             }
         }
         
@@ -3796,12 +3810,12 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="CyberiaWS", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
+        public SoftCyberiaBaseBO.CyberiaWS.persona @return;
         
         public persona_loguearseResponse() {
         }
         
-        public persona_loguearseResponse(string @return) {
+        public persona_loguearseResponse(SoftCyberiaBaseBO.CyberiaWS.persona @return) {
             this.@return = @return;
         }
     }
@@ -3981,7 +3995,7 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
             return base.Channel.persona_loguearse(request);
         }
         
-        public string persona_loguearse(string persona, string contrasena) {
+        public SoftCyberiaBaseBO.CyberiaWS.persona persona_loguearse(string persona, string contrasena) {
             SoftCyberiaBaseBO.CyberiaWS.persona_loguearseRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.persona_loguearseRequest();
             inValue.persona = persona;
             inValue.contrasena = contrasena;

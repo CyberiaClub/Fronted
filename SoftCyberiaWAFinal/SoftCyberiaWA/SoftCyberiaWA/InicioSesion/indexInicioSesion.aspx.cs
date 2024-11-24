@@ -28,7 +28,6 @@ namespace SoftCyberiaWA.InicioSesion
 
         protected void loginButton_Click(object sender, EventArgs e)
         {
-
             string correo = personaCorreo.Text.Trim();
             string contrasena = personaContrasena.Text.Trim();
             bool valido = true;
@@ -51,35 +50,28 @@ namespace SoftCyberiaWA.InicioSesion
             }
 
             Session["RolUsuario"] = personaBO.persona_loguearse(correo, contrasena);
-            string usuario = Session["RolUsuario"] as string;
-            if (usuario == "")
+            persona usuario = Session["RolUsuario"] as persona;
+            if (usuario.idPersona == 0)
             {
-                Response.Write("<script>alert('Registra tu Cuenta')</script>");
+                lblErrorMessage.Text = "Usuario o contraseña incorrectos. Por favor, inténtalo nuevamente o regístrate.";
+                lblErrorMessage.Visible = true;
                 return;
             }
-            Session["Persona"] = PersonaBO.persona_datos(correo,contrasena);
-            
-            if (usuario == "CLIENTE")
+            if (usuario.tipoUsuario == "CLIENTE")
             {
                 Response.Redirect("~/Cliente/indexCliente.aspx");
             }
             else
             {
-                Response.Redirect("~/Administrador/indexAdministrador.aspx");
                 //metodo de back
-                tipoPersona paginasPersona = this.tipoPersonaBO.tipopersona_listar_paginas(usuario);
+                tipoPersona paginasPersona = this.tipoPersonaBO.tipopersona_listar_paginas(usuario.tipoUsuario);
                 // Suponiendo que paginasPersona.paginas es un arreglo (pagina[])
                 pagina[] paginasArray = paginasPersona.paginas;
                 // Convertir el arreglo en una BindingList<pagina>
                 BindingList<pagina> paginasBindingList = new BindingList<pagina>(paginasArray.ToList());
                 // Guardar la BindingList en la sesión
                 Session["Paginas"] = paginasBindingList;
-                //foreach (pagina _pagina in paginasPersona.paginas)
-                //{
-                //    Literal menuHtml = new Literal();
-                //    menuHtml.Text = $@"< a href = '{_pagina.referencia}' >< i class=""fa-solid fa-calendar-days pe-2""></i>'{_pagina.nombre}'</a>";
-                //    menuContainer.Controls.Add(menuHtml);
-                //}
+                Response.Redirect("~/Administrador/indexAdministrador.aspx");
             }
         }
 

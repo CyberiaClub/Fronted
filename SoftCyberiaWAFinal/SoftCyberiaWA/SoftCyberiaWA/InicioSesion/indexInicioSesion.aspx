@@ -32,6 +32,9 @@
                 <!-- Espacio para el mensaje de error de la contraseña -->
             </div>
 
+            <div class="text-center text-danger mb-3">
+                <asp:Label ID="lblErrorMessage" runat="server" CssClass="error-message" Visible="false"></asp:Label>
+            </div>
 
 
             <!-- Botón de inicio de sesión -->

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,10 +17,9 @@ namespace SoftCyberiaWA.Administrador
             {
                 Response.Redirect("~/InicioSesion/indexInicioSesion.aspx");
             }
-            BindingList<string> allowedPages = (BindingList<string>)Session["AllowedPages"];
             string currentPage = Request.Url.AbsolutePath;
             // Verificar si la página actual está permitida
-            if (!allowedPages.Contains(currentPage))
+            if (!(Session["AllowedPages"] is BindingList<pagina> allowedPages) || !allowedPages.Any(page => page.referencia.Equals(currentPage, StringComparison.OrdinalIgnoreCase)))
             {
                 // Redirigir a la página 403 si no tiene acceso
                 Response.Redirect("~/InicioSesion/403.aspx");
