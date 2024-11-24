@@ -33,6 +33,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.DropDownList tipo_documento;
 
         /// <summary>
+        /// Control tipoDocumentoMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tipoDocumentoMensaje;
+
+        /// <summary>
         /// Control lblDocumento.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace SoftCyberiaWA.Administrador
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox dni;
+
+        /// <summary>
+        /// Control dniMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dniMensaje;
 
         /// <summary>
         /// Control lblNombre.
@@ -141,6 +159,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.DropDownList rol;
 
         /// <summary>
+        /// Control rolMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rolMensaje;
+
+        /// <summary>
         /// Control lblSueldo.
         /// </summary>
         /// <remarks>
@@ -159,6 +186,15 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.TextBox sueldo;
 
         /// <summary>
+        /// Control sueldoMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sueldoMensaje;
+
+        /// <summary>
         /// Control lblSede.
         /// </summary>
         /// <remarks>
@@ -175,6 +211,15 @@ namespace SoftCyberiaWA.Administrador
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList sede;
+
+        /// <summary>
+        /// Control sedeMensaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sedeMensaje;
 
         /// <summary>
         /// Control btnAsignar.

@@ -26,12 +26,14 @@
                                 <asp:ListItem Value="2">Passaporte</asp:ListItem>
                                 <asp:ListItem Value="3">Carnet de Extranjeria</asp:ListItem>
                             </asp:DropDownList>
+                            <small id="tipoDocumentoMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblDocumento" runat="server" Text="Número de documento de identidad:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <div class="d-flex">
-                                <asp:TextBox ID="dni" runat="server" CssClass="form-control mr-2" AutoPostBack="True" OnTextChanged="dni_Ingresado"></asp:TextBox>
-                            </div>
+
+                            <asp:TextBox ID="dni" runat="server" CssClass="form-control mr-2"
+                                AutoPostBack="True" OnTextChanged="dni_Ingresado"></asp:TextBox>
+                            <small id="dniMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
 
                         <div class="pb-3">
@@ -40,12 +42,12 @@
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblCorreo" runat="server" Text="Correo Electrónico:" CssClass="col-form-label fw-bold "></asp:Label>
-                            <asp:TextBox ID="correo" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                            <asp:TextBox ID="correo" runat="server" CssClass="form-control" ReadOnly="true" TextMode="Email"></asp:TextBox>
                         </div>
 
                         <div class="pb-3">
                             <asp:Label ID="lblTelefono" runat="server" Text="Teléfono:" CssClass="col-form-label fw-bold "></asp:Label>
-                            <asp:TextBox ID="telefono" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                            <asp:TextBox ID="telefono" runat="server" CssClass="form-control" ReadOnly="true" TextMode="Phone"></asp:TextBox>
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblDireccion" runat="server" Text="Dirección:" CssClass="col-form-label fw-bold "></asp:Label>
@@ -59,15 +61,21 @@
                                 <asp:ListItem Value="1">Vendedor</asp:ListItem>
                                 <asp:ListItem Value="2">Almacén</asp:ListItem>
                             </asp:DropDownList>
+                            <small id="rolMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
                         <div class="pb-3">
                             <asp:Label ID="lblSueldo" runat="server" Text="Sueldo:" CssClass="col-form-label fw-bold "></asp:Label>
-                            <asp:TextBox ID="sueldo" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="sueldo" runat="server" CssClass="form-control numeric-input" TextMode="Number" min="0"></asp:TextBox>
+                            <small id="sueldoMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
+
+
                         <div class="pb-3">
                             <asp:Label ID="lblSede" runat="server" Text="Sede:" CssClass="col-form-label fw-bold"></asp:Label>
                             <asp:DropDownList ID="sede" runat="server" CssClass="form-control"></asp:DropDownList>
+                            <small id="sedeMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
+
 
                     </div>
 
@@ -83,5 +91,4 @@
             </div>
         </div>
     </div>
-
 </asp:Content>
