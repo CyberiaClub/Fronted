@@ -2,43 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
-using System.Xml.Linq;
 using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaPersonaBO;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
 using System.Net;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using System.Text;
+using Newtonsoft.Json;
 
 namespace SoftCyberiaWA.InicioSesion
 {
-    public partial class registro_usuario : System.Web.UI.Page
+    public partial class registro_usuario : Page
     {
-        private PersonaBO personaBO;
+        private readonly PersonaBO personaBO;
         // Clase para deserializar la respuesta de la API
         public class Country
         {
             [JsonPropertyName("name")]
+            [JsonProperty("name")]
             public Name Name { get; set; }
         }
 
 
         public class Name
         {
+            [JsonProperty("common")]
             [JsonPropertyName("common")]
             public string Common { get; set; }
         }
 
         public registro_usuario()
         {
-            this.personaBO = new PersonaBO();
+            personaBO = new PersonaBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -60,16 +56,16 @@ namespace SoftCyberiaWA.InicioSesion
                 // Comprueba si las nacionalidades ya están en la variable global
                 if (Application["nacionalidades"] == null)
                 {
-                    using (var client = new WebClient())
+                    using (WebClient client = new WebClient())
                     {
                         string json = client.DownloadString("https://restcountries.com/v3.1/all");
 
-                        var paises = JsonSerializer.Deserialize<List<Country>>(json, new JsonSerializerOptions
+                        List<Country> paises = System.Text.Json.JsonSerializer.Deserialize<List<Country>>(json, new JsonSerializerOptions
                         {
                             PropertyNameCaseInsensitive = true
                         });
 
-                        var nombresComunes = paises
+                        List<string> nombresComunes = paises
                             .Where(c => c.Name != null && !string.IsNullOrEmpty(c.Name.Common))
                             .Select(c => c.Name.Common)
                             .Distinct()
@@ -91,16 +87,16 @@ namespace SoftCyberiaWA.InicioSesion
         }
         private void RegistrarScriptAutocompletado()
         {
-            var nombresComunes = (List<string>)Application["nacionalidades"]; // Obtiene las nacionalidades de la variable global
+            List<string> nombresComunes = (List<string>)Application["nacionalidades"]; // Obtiene las nacionalidades de la variable global
             if (nombresComunes != null)
             {
-                var nacionalidadesJson = JsonSerializer.Serialize(nombresComunes);
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "nacionalidadesScript",
+                string nacionalidadesJson = System.Text.Json.JsonSerializer.Serialize(nombresComunes);
+                Page.ClientScript.RegisterStartupScript(GetType(), "nacionalidadesScript",
                     $"var nacionalidades = {nacionalidadesJson};", true);
             }
         }
 
-        protected void onClickRegistrarPersona(object sender, EventArgs e)
+        protected void OnClickRegistrarPersona(object sender, EventArgs e)
         {
             try
             {
@@ -155,7 +151,7 @@ namespace SoftCyberiaWA.InicioSesion
                             break;
 
                     }
-                    this.personaBO.persona_insertar(_persona);
+                    _ = personaBO.Persona_insertar(_persona);
                     successMessage.InnerText = "Se registró la persona con éxito. Revise su correo para validar su cuenta";
                     successMessage.Visible = true;
                 }
@@ -167,7 +163,7 @@ namespace SoftCyberiaWA.InicioSesion
                 //successMessage. = "text-danger";
                 successMessage.Visible = true;
             }
-}
+        }
 
         private bool ValidarTipoDocument()
         {

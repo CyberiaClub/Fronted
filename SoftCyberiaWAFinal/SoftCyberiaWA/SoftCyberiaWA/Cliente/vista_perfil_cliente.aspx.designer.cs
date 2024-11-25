@@ -11,7 +11,7 @@ namespace SoftCyberiaWA
 {
 
 
-    public partial class vista_perfil_cliente_aspx
+    public partial class Vista_perfil_cliente_aspx
     {
 
         /// <summary>

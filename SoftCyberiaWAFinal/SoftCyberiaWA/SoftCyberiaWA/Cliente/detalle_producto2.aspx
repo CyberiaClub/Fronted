@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="detalle_producto2.aspx.cs" Inherits="SoftCyberiaWA.detalle_producto2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="detalle_producto2.aspx.cs" Inherits="SoftCyberiaWA.Detalle_producto2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Detalle - Lápiz grafito Staedtler x 24
 </asp:Content>

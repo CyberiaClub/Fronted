@@ -11,7 +11,7 @@ namespace SoftCyberiaWA.Vendedor
 {
 
 
-    public partial class listado_pedidos
+    public partial class Listado_pedidos
     {
 
         /// <summary>

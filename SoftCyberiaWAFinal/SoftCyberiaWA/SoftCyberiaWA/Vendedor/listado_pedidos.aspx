@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vendedor/SoftCyberiaVendedor.Master" AutoEventWireup="true" CodeBehind="listado_pedidos.aspx.cs" Inherits="SoftCyberiaWA.Vendedor.listado_pedidos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vendedor/SoftCyberiaVendedor.Master" AutoEventWireup="true" CodeBehind="listado_pedidos.aspx.cs" Inherits="SoftCyberiaWA.Vendedor.Listado_pedidos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Pedidos
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_produtco_compuesto.aspx.cs" Inherits="SoftCyberiaWA.Administrador.registrar_produtco_compuesto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_produtco_compuesto.aspx.cs" Inherits="SoftCyberiaWA.Administrador.Registrar_produtco_compuesto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Producto Compuesto

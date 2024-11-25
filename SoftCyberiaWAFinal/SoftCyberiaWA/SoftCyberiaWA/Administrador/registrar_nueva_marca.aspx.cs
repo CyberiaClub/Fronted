@@ -1,23 +1,19 @@
 ﻿using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaInventarioBO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Administrador
 {
-    public partial class registrar_nueva_marca : System.Web.UI.Page
+    public partial class registrar_nueva_marca : Page
     {
-        private MarcaBO marcaBO;
-        private ProveedorBO proveedorBO;
+        private readonly MarcaBO marcaBO;
+        private readonly ProveedorBO proveedorBO;
 
         public registrar_nueva_marca()
         {
-            this.marcaBO = new MarcaBO();
-            this.proveedorBO = new ProveedorBO();
+            marcaBO = new MarcaBO();
+            proveedorBO = new ProveedorBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,24 +22,26 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarProveedores()
         {
-            providerName.DataSource = proveedorBO.proveedor_listar();
+            providerName.DataSource = proveedorBO.Proveedor_listar();
             providerName.DataTextField = "razonSocial";
             providerName.DataValueField = "idProveedor";
             providerName.DataBind(); // Llenar el DropDownList
         }
 
-        protected void registerButton_Click(object sender, EventArgs e)
+        protected void RegisterButton_Click(object sender, EventArgs e)
         {
             try
             {
 
                 //metodo para registrar una nueva marca
-                marca _marca = new marca();
-                _marca.nombre = marcaName.Text.Trim();
+                marca _marca = new marca
+                {
+                    nombre = marcaName.Text.Trim()
+                };
 
-                    
+
                 byte[] imagenBytes;
-                using (var binaryReader = new System.IO.BinaryReader(fileUploadNuevaMarca.PostedFile.InputStream))
+                using (System.IO.BinaryReader binaryReader = new System.IO.BinaryReader(fileUploadNuevaMarca.PostedFile.InputStream))
                 {
                     imagenBytes = binaryReader.ReadBytes(fileUploadNuevaMarca.PostedFile.ContentLength);
                 }
@@ -53,11 +51,11 @@ namespace SoftCyberiaWA.Administrador
 
                 if (!string.IsNullOrEmpty(providerName.SelectedValue))
                 {
-                    _proveedor_marca.idProveedor = Int32.Parse(providerName.SelectedValue);
+                    _proveedor_marca.idProveedor = int.Parse(providerName.SelectedValue);
                     _proveedor_marca.idProveedorSpecified = true;
                     _marca.proveedor = _proveedor_marca;
 
-                    this.marcaBO.marca_insertar(_marca);
+                    _ = marcaBO.Marca_insertar(_marca);
                 }
                 else
                 {

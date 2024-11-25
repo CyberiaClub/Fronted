@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
-    public partial class vista_perfil_cliente_aspx : System.Web.UI.Page
+    public partial class Vista_perfil_cliente_aspx : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +14,7 @@ namespace SoftCyberiaWA
             ////Carga los datos del perfil sin verificar `IsPostBack`
             //CargarDatosPerfil();
         }
-       
+
 
         private void LoadUserProfile()
         {
@@ -29,7 +25,7 @@ namespace SoftCyberiaWA
             txtEmail.Text = email;
             txtPhone.Text = phone;
         }
-       
+
         protected void SaveChanges(object sender, EventArgs e)
         {
             string newEmail = txtEmail.Text;
@@ -45,7 +41,7 @@ namespace SoftCyberiaWA
             // Guardar los cambios en la base de datos aquí
 
             // Mostrar mensaje de confirmación
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Perfil actualizado con éxito');", true);
+            ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Perfil actualizado con éxito');", true);
 
             // Deshabilitar los campos y alternar los botones
             txtEmail.Enabled = false;
@@ -74,10 +70,10 @@ namespace SoftCyberiaWA
         //    // Manejo de error si no se pudo actualizar
         //    ClientScript.RegisterStartupScript(this.GetType(), "Error", "alert('No se pudo actualizar el perfil.');", true);
         //}
-    //}
+        //}
 
-        
-        protected void btnCancel_Click(object sender, EventArgs e)
+
+        protected void BtnCancel_Click(object sender, EventArgs e)
         {
             // Volver a deshabilitar los campos
             txtEmail.Enabled = false;
@@ -88,7 +84,7 @@ namespace SoftCyberiaWA
             saveButtons.Style["display"] = "none";
         }
 
-        protected void btnEditProfile_Click(object sender, EventArgs e)
+        protected void BtnEditProfile_Click(object sender, EventArgs e)
         {
             // Hacer los campos editables
             txtEmail.Enabled = true;
@@ -99,12 +95,12 @@ namespace SoftCyberiaWA
             saveButtons.Style["display"] = "block";
         }
 
-        protected void btnLogout_Click(object sender, EventArgs e)
+        protected void BtnLogout_Click(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnBack_Click(object sender, EventArgs e)
+        protected void BtnBack_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Almacenero/Almacenero.Master" AutoEventWireup="true" CodeBehind="listado_stock.aspx.cs" Inherits="SoftCyberiaWA.Almacenero.listado_stock" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Almacenero/Almacenero.Master" AutoEventWireup="true" CodeBehind="listado_stock.aspx.cs" Inherits="SoftCyberiaWA.Almacenero.Listado_stock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Stock Producto por Sede
 </asp:Content>

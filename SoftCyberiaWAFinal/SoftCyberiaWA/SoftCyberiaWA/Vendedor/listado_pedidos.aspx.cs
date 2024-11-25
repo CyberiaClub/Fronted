@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Vendedor
 {
-    public partial class listado_pedidos : System.Web.UI.Page
+    public partial class Listado_pedidos : Page
     {
         //private PedidoWSClient daoPedido = new PedidoWSClient();
         protected void Page_Load(object sender, EventArgs e)

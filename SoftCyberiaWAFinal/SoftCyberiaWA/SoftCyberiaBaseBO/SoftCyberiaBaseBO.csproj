@@ -63,33 +63,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Connected Services\CyberiaWS\ComprobantePagoWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\ComprobantePagoWS.xsd">
+    <None Include="Connected Services\CyberiaWS\Reportes.wsdl" />
+    <None Include="Connected Services\CyberiaWS\Reportes.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CyberiaWS\MarcaWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\MarcaWS.xsd">
+    <None Include="Connected Services\CyberiaWS\ServicioWeb.wsdl" />
+    <None Include="Connected Services\CyberiaWS\ServicioWeb.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CyberiaWS\OfertaWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\OfertaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CyberiaWS\PersonaWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\PersonaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CyberiaWS\ProductoWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\ProductoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CyberiaWS\ProveedorWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\ProveedorWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CyberiaWS\SedeWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\SedeWS.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.boletaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.comprobantePago.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -107,6 +90,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.comprobante_pago_obtener_por_idResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.facturaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.marca.datasource">
@@ -166,6 +152,9 @@
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.producto_insertarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.producto_lineas_pedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.producto_listarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -185,6 +174,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.proveedor_modificarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.retornaNombreDelServicioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.sede.datasource">
@@ -228,18 +220,6 @@
     </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.tipo_comprobante_listarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CyberiaWS\TipoComprobanteWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\TipoComprobanteWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CyberiaWS\TipoPersonaWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\TipoPersonaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CyberiaWS\TipoProductoWS.wsdl" />
-    <None Include="Connected Services\CyberiaWS\TipoProductoWS.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

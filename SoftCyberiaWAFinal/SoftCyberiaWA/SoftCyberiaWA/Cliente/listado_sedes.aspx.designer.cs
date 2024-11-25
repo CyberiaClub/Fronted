@@ -11,7 +11,7 @@ namespace SoftCyberiaWA
 {
 
 
-    public partial class listado_sedes
+    public partial class Listado_sedes
     {
 
         /// <summary>

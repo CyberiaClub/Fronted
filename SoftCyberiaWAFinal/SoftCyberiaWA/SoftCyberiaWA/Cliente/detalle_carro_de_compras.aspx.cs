@@ -3,9 +3,7 @@ using SoftCyberiaVentaBO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
@@ -28,13 +26,13 @@ namespace SoftCyberiaWA
     //    }
     //}
 
-    public partial class detalle_carro_de_compras : Page
+    public partial class Detalle_carro_de_compras : Page
     {
-        private ComprobantePagoBO comprobantePagoBO;
+        private readonly ComprobantePagoBO comprobantePagoBO;
 
-        public detalle_carro_de_compras()
+        public Detalle_carro_de_compras()
         {
-            this.comprobantePagoBO = new ComprobantePagoBO();
+            comprobantePagoBO = new ComprobantePagoBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,7 +44,7 @@ namespace SoftCyberiaWA
 
         private void CargarCarrito()
         {
-            var carrito = (List<producto>)Session["Carrito"];
+            List<producto> carrito = (List<producto>)Session["Carrito"];
             if (carrito != null && carrito.Count > 0)
             {
                 rptCarrito.DataSource = carrito;
@@ -89,10 +87,10 @@ namespace SoftCyberiaWA
         //    Session["Carrito"] = null;
         //    lblMensajeCarrito.Text = "Compra realizada con éxito. ¡Gracias por tu compra!";
         //}
-        protected void btnFinalizarCompra_Click(object sender, EventArgs e)
+        protected void BtnFinalizarCompra_Click(object sender, EventArgs e)
         {
             // Obtiene el carrito desde la sesión
-            var carrito = (List<producto>)Session["Carrito"];
+            List<producto> carrito = (List<producto>)Session["Carrito"];
             if (carrito == null || carrito.Count == 0)
             {
                 lblMensajeCarrito.Text = "El carrito está vacío.";
@@ -113,7 +111,7 @@ namespace SoftCyberiaWA
             try
             {
                 // Llama al método del servicio web para insertar el comprobante
-                int idComprobante = comprobantePagoBO.comprobante_pago_insertar(comprobante);
+                int idComprobante = comprobantePagoBO.Comprobante_pago_insertar(comprobante);
 
                 // Limpiar el carrito después de la compra
                 Session["Carrito"] = null;

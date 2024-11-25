@@ -11,7 +11,7 @@ namespace SoftCyberiaWA.Administrador
 {
 
 
-    public partial class registrar_nuevos_proveedores
+    public partial class Registrar_nuevos_proveedores
     {
 
         /// <summary>

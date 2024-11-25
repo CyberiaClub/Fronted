@@ -11,7 +11,7 @@ namespace SoftCyberiaWA
 {
 
 
-    public partial class listado_productos
+    public partial class Listado_productos
     {
 
         /// <summary>

@@ -1,32 +1,29 @@
 ﻿using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaPersonaBO;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.InicioSesion
 {
-    public partial class indexInicioSesion : System.Web.UI.Page
+    public partial class indexInicioSesion : Page
     {
-        private PersonaBO personaBO;
-        private TipoPersonaBO tipoPersonaBO;
+        private readonly PersonaBO personaBO;
+        private readonly TipoPersonaBO tipoPersonaBO;
 
         public indexInicioSesion()
         {
-            this.personaBO = new PersonaBO();
-            this.tipoPersonaBO = new TipoPersonaBO();
+            personaBO = new PersonaBO();
+            tipoPersonaBO = new TipoPersonaBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void loginButton_Click(object sender, EventArgs e)
+        protected void LoginButton_Click(object sender, EventArgs e)
         {
             string correo = personaCorreo.Text.Trim();
             string contrasena = personaContrasena.Text.Trim();
@@ -49,7 +46,7 @@ namespace SoftCyberiaWA.InicioSesion
                 return;
             }
 
-            Session["RolUsuario"] = personaBO.persona_loguearse(correo, contrasena);
+            Session["RolUsuario"] = personaBO.Persona_loguearse(correo, contrasena);
             persona usuario = Session["RolUsuario"] as persona;
             if (usuario.idPersona == 0)
             {
@@ -64,7 +61,7 @@ namespace SoftCyberiaWA.InicioSesion
             else
             {
                 //metodo de back
-                tipoPersona paginasPersona = this.tipoPersonaBO.tipopersona_listar_paginas(usuario.tipoUsuario);
+                tipoPersona paginasPersona = tipoPersonaBO.Tipopersona_listar_paginas(usuario.tipoUsuario);
                 // Suponiendo que paginasPersona.paginas es un arreglo (pagina[])
                 pagina[] paginasArray = paginasPersona.paginas;
                 // Convertir el arreglo en una BindingList<pagina>

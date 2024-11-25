@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Diagnostics;
 using System.Data;
 using System.Web.UI.HtmlControls;
 using SoftCyberiaBaseBO.CyberiaWS;
@@ -13,16 +9,16 @@ using System.ComponentModel;
 
 namespace SoftCyberiaWA.Administrador
 {
-    public partial class registrar_produtco_compuesto : System.Web.UI.Page
+    public partial class Registrar_produtco_compuesto : System.Web.UI.Page
     {
-        private ProductoBO productoBO;
-        private TipoProductoBO tipoProductoBO;
-        private MarcaBO marcaBO;
-        private producto _producto;
-        private producto _productoCompuesto;
-        private BindingList<producto> _productosCompuestos;
+        private readonly ProductoBO productoBO;
+        private readonly TipoProductoBO tipoProductoBO;
+        private readonly MarcaBO marcaBO;
+        private readonly producto _producto;
+        private readonly producto _productoCompuesto;
+        private readonly BindingList<producto> _productosCompuestos;
 
-        public registrar_produtco_compuesto()
+        public Registrar_produtco_compuesto()
         {
             productoBO = new ProductoBO();
             tipoProductoBO = new TipoProductoBO();
@@ -33,7 +29,7 @@ namespace SoftCyberiaWA.Administrador
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 CargarMarcas();
                 CargarCategoria();
@@ -42,7 +38,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarCategoria()
         {
-            productoTipoProducto.DataSource = tipoProductoBO.tipoProducto_listar();
+            productoTipoProducto.DataSource = tipoProductoBO.TipoProducto_listar();
             productoTipoProducto.DataTextField = "tipo";
             productoTipoProducto.DataValueField = "idTipoProducto";
             productoTipoProducto.DataBind(); // Llenar el DropDownList
@@ -52,21 +48,21 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarMarcas()
         {
-            productoMarca.DataSource = marcaBO.marca_listar();
+            productoMarca.DataSource = marcaBO.Marca_listar();
             productoMarca.DataTextField = "nombre";
             productoMarca.DataValueField = "idMarca";
             productoMarca.DataBind(); // Llenar el DropDownList
             productoMarca.Items.Insert(0, new ListItem("Seleccione una Marca", "0"));
         }
 
-        protected void sku_TextChange(object sender, EventArgs e)
+        protected void Sku_TextChange(object sender, EventArgs e)
         {
             if (productoKitSKU.Text.Trim() != "")
             {
                 gridViewProdBuscado.DataSource = null;
                 gridViewProdBuscado.DataBind();
 
-                producto _producto = productoBO.producto_buscar_sku(productoKitSKU.Text.Trim(), 1);
+                producto _producto = productoBO.Producto_buscar_sku(productoKitSKU.Text.Trim(), 1);
                 if (_producto != null)
                 {
                     productoKitSKUMensaje.Visible = false;
@@ -74,7 +70,7 @@ namespace SoftCyberiaWA.Administrador
 
                     DataTable datos = new DataTable();
                     datos.Columns.AddRange(new DataColumn[2] { new DataColumn("NOMBRE"), new DataColumn("DESCRIPCION") });
-                    datos.Rows.Add(_producto.nombre, _producto.descripcion);
+                    _ = datos.Rows.Add(_producto.nombre, _producto.descripcion);
                     gridViewProdBuscado.DataSource = datos;
                     gridViewProdBuscado.DataBind();
                 }
@@ -94,24 +90,29 @@ namespace SoftCyberiaWA.Administrador
 
         protected void AgregarProducto_Click(object sender, EventArgs e)
         {
-            producto _producto = Session["producto"] as producto;
             DataTable datos = new DataTable();
-            Boolean duplicado = false;
-            if (_producto != null)
+            bool duplicado = false;
+            if (Session["producto"] is producto _producto)
             {
                 if (gridProductosKit.Rows.Count != 0)
+                {
                     datos = Session["datosProductosKit"] as DataTable;
+                }
                 else
+                {
                     datos.Columns.AddRange(new DataColumn[4] { new DataColumn("ID"), new DataColumn("SKU"), new DataColumn("NOMBRE"), new DataColumn("CANTIDAD") });
+                }
 
                 if (datos.Rows.Count > 0)
+                {
                     duplicado = ComprobarDuplicidad(_producto.idProducto.ToString());
+                }
 
                 if (!duplicado)
                 {
 
                     productoKitSKUMensaje.Visible = false;
-                    datos.Rows.Add(_producto.idProducto, _producto.sku, _producto.nombre, 0);
+                    _ = datos.Rows.Add(_producto.idProducto, _producto.sku, _producto.nombre, 0);
                     Session["datosProductosKit"] = datos;
                     gridProductosKit.DataSource = Session["datosProductosKit"] as DataTable;
                     gridProductosKit.DataBind();
@@ -130,28 +131,30 @@ namespace SoftCyberiaWA.Administrador
             }
         }
 
-        protected Boolean ComprobarDuplicidad(String idProductoNuevo)
+        protected bool ComprobarDuplicidad(string idProductoNuevo)
         {
+            if (idProductoNuevo is null)
+            {
+                throw new ArgumentNullException(nameof(idProductoNuevo));
+            }
+
             DataTable dt = Session["datosProductosKit"] as DataTable;
             string columna = "ID";
             string valorBuscado = idProductoNuevo;
 
-            var indice = dt.AsEnumerable().ToDictionary(row => row.Field<string>(columna));
+            System.Collections.Generic.Dictionary<string, DataRow> indice = dt.AsEnumerable().ToDictionary(row => row.Field<string>(columna));
 
-            if (indice.TryGetValue(valorBuscado, out DataRow fila))
-                return true;
-            else
-                return false;
+            return indice.TryGetValue(valorBuscado, out DataRow fila);
         }
 
-        protected void gridProductosKit_RowEditing(object sender, GridViewEditEventArgs e)
+        protected void GridProductosKit_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gridProductosKit.EditIndex = e.NewEditIndex;
             gridProductosKit.DataSource = Session["datosProductosKit"] as DataTable;
             gridProductosKit.DataBind();
         }
 
-        protected void gridProductosKit_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        protected void GridProductosKit_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             int rowIndex = e.RowIndex;
             DataTable datos = Session["datosProductosKit"] as DataTable;
@@ -165,14 +168,14 @@ namespace SoftCyberiaWA.Administrador
             gridProductosKit.DataBind();
         }
 
-        protected void gridProductosKit_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        protected void GridProductosKit_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             gridProductosKit.EditIndex = -1;
             gridProductosKit.DataSource = Session["datosProductosKit"] as DataTable;
             gridProductosKit.DataBind();
         }
 
-        protected void gridViewProductosKit_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void GridViewProductosKit_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "EliminarProducto")
             {
@@ -197,7 +200,7 @@ namespace SoftCyberiaWA.Administrador
             if (Validar())
             {
                 byte[] imagenBytes;
-                using (var binaryReader = new System.IO.BinaryReader(imagenProducto.PostedFile.InputStream))
+                using (System.IO.BinaryReader binaryReader = new System.IO.BinaryReader(imagenProducto.PostedFile.InputStream))
                 {
                     imagenBytes = binaryReader.ReadBytes(imagenProducto.PostedFile.ContentLength);
                 }
@@ -208,21 +211,25 @@ namespace SoftCyberiaWA.Administrador
                 _producto.precioSpecified = true;
                 _producto.precioProveedor = 0;
                 _producto.precioProveedorSpecified = true;
-                marca _marca = new marca();
-                _marca.idMarca = Convert.ToInt32(productoMarca.SelectedIndex);
-                _marca.idMarcaSpecified = true;
-                tipoProducto _tipoProd = new tipoProducto();
-                _tipoProd.idTipoProducto = Convert.ToInt32(productoTipoProducto.SelectedIndex);
-                _tipoProd.idTipoProductoSpecified = true;
+                marca _marca = new marca
+                {
+                    idMarca = Convert.ToInt32(productoMarca.SelectedIndex),
+                    idMarcaSpecified = true
+                };
+                tipoProducto _tipoProd = new tipoProducto
+                {
+                    idTipoProducto = Convert.ToInt32(productoTipoProducto.SelectedIndex),
+                    idTipoProductoSpecified = true
+                };
 
                 _producto.marca = _marca;
                 _producto.tipoProducto = _tipoProd;
-                
+
                 _producto.descripcion = productoDescripcion.Text;
                 _producto.imagen = imagenBytes;
                 _producto.productosMiembros = ObtenerProductosComposicion();
 
-                productoBO.producto_insertar(_producto);
+                _ = productoBO.Producto_insertar(_producto);
 
                 successMessage.Text = "Producto compuesto asignada correctamente.";
                 successMessage.Visible = true;
@@ -236,7 +243,7 @@ namespace SoftCyberiaWA.Administrador
             producto productoKit;
             int cont = 0;
 
-            String id, cantidad;
+            string id, cantidad;
             for (int i = 0; i < datos.Rows.Count; i++)
             {
                 productoKit = new producto();
@@ -253,15 +260,15 @@ namespace SoftCyberiaWA.Administrador
             return productosKit;
         }
 
-        protected Boolean Validar()
+        protected bool Validar()
         {
             productoSkuMensaje.Visible = true;
-            Boolean validarNombre = ValidarCampo(productoNombre, productoNombreMensaje, "Por favor ingrese un nombre para el producto.");
-            Boolean validarSku = ValidarCampo(productoSku, productoSkuMensaje, "Por favor ingrese un sku.");
-            Boolean validarPrecio = ValidarCampo(productoPrecio, ProductoPrecioMensaje, "Por favor ingrese un precio.");
-            Boolean validarMarca = ValidarCampo(null, productoMarcaMensaje, "Por favor seleccione una marca.", true, productoMarca);
-            Boolean validarTipoProducto = ValidarCampo(null, ProductoTipoProductoMensaje, "Por favor seleccione un tipo de producto.", true, productoTipoProducto);
-            Boolean validarDescripcion = ValidarCampo(productoDescripcion, productoDescripcionMensaje, "Por favor ingrese una descripción.");
+            bool validarNombre = ValidarCampo(productoNombre, productoNombreMensaje, "Por favor ingrese un nombre para el producto.");
+            bool validarSku = ValidarCampo(productoSku, productoSkuMensaje, "Por favor ingrese un sku.");
+            bool validarPrecio = ValidarCampo(productoPrecio, ProductoPrecioMensaje, "Por favor ingrese un precio.");
+            bool validarMarca = ValidarCampo(null, productoMarcaMensaje, "Por favor seleccione una marca.", true, productoMarca);
+            bool validarTipoProducto = ValidarCampo(null, ProductoTipoProductoMensaje, "Por favor seleccione un tipo de producto.", true, productoTipoProducto);
+            bool validarDescripcion = ValidarCampo(productoDescripcion, productoDescripcionMensaje, "Por favor ingrese una descripción.");
 
             if (validarSku && productoSku.Text.Length > 8)
             {
@@ -270,7 +277,7 @@ namespace SoftCyberiaWA.Administrador
                 productoSkuMensaje.Visible = true;
             }
 
-            Boolean validarImagen = true;
+            bool validarImagen = true;
             if (!imagenProducto.HasFile)
             {
                 validarImagen = false;
@@ -282,9 +289,9 @@ namespace SoftCyberiaWA.Administrador
                 productoImagenMensaje.Visible = false;
             }
 
-            Boolean validarComposicion = true;
-            
-            if(gridProductosKit.Rows.Count == 0)
+            bool validarComposicion = true;
+
+            if (gridProductosKit.Rows.Count == 0)
             {
                 validarComposicion = false;
                 productoKitSKUMensaje.InnerText = "Por favor ingrese al menos dos productos al kit";
@@ -299,9 +306,9 @@ namespace SoftCyberiaWA.Administrador
             return validarNombre && validarSku && validarPrecio && validarMarca && validarTipoProducto && validarDescripcion && validarImagen && validarComposicion;
         }
 
-        private Boolean ValidarCampo(TextBox campo, HtmlGenericControl mensaje, string textoError, bool esCombo = false, DropDownList combo = null)
+        private bool ValidarCampo(TextBox campo, HtmlGenericControl mensaje, string textoError, bool esCombo = false, DropDownList combo = null)
         {
-            Boolean valido;
+            bool valido;
             if (esCombo)
             {
                 if (combo.SelectedIndex == 0)

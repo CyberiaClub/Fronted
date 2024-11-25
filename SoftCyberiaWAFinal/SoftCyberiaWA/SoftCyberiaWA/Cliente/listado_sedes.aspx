@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="listado_sedes.aspx.cs" Inherits="SoftCyberiaWA.listado_sedes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="listado_sedes.aspx.cs" Inherits="SoftCyberiaWA.Listado_sedes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Sedes -
 </asp:Content>

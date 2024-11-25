@@ -1,25 +1,22 @@
 ﻿using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaInventarioBO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Administrador
 {
-    public partial class registrar_nuevos_productos : System.Web.UI.Page
+    public partial class Registrar_nuevos_productos : Page
     {
 
-        private SedeBO sedeBO;
-        private ProveedorBO proveedorBO;
-        private TipoProductoBO tipoProductoBO;
-        private MarcaBO marcaBO;
-        private ProductoBO productoBO;
+        private readonly SedeBO sedeBO;
+        private readonly ProveedorBO proveedorBO;
+        private readonly TipoProductoBO tipoProductoBO;
+        private readonly MarcaBO marcaBO;
+        private readonly ProductoBO productoBO;
 
-        public registrar_nuevos_productos()
+        public Registrar_nuevos_productos()
         {
             sedeBO = new SedeBO();
             proveedorBO = new ProveedorBO();
@@ -27,7 +24,7 @@ namespace SoftCyberiaWA.Administrador
             marcaBO = new MarcaBO();
             productoBO = new ProductoBO();
         }
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -40,7 +37,7 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarCategoria()
         {
-            productoCategoria.DataSource = tipoProductoBO.tipoProducto_listar();
+            productoCategoria.DataSource = tipoProductoBO.TipoProducto_listar();
             productoCategoria.DataTextField = "tipo";
             productoCategoria.DataValueField = "idTipoProducto";
             productoCategoria.DataBind(); // Llenar el DropDownList
@@ -48,13 +45,13 @@ namespace SoftCyberiaWA.Administrador
 
         private void CargarMarcas()
         {
-            productoMarca.DataSource = marcaBO.marca_listar();
+            productoMarca.DataSource = marcaBO.Marca_listar();
             productoMarca.DataTextField = "nombre";
             productoMarca.DataValueField = "idMarca";
             productoMarca.DataBind(); // Llenar el DropDownList
         }
 
-        protected void registerButton_Click(object sender, EventArgs e)
+        protected void RegisterButton_Click(object sender, EventArgs e)
         {
             producto _producto = new producto();
             if (Validar())
@@ -63,7 +60,7 @@ namespace SoftCyberiaWA.Administrador
                 using (System.IO.Stream imageStream = imagenProducto.PostedFile.InputStream)
                 {
                     byte[] imageBytes = new byte[imageStream.Length];
-                    imageStream.Read(imageBytes, 0, (int)imageStream.Length);
+                    _ = imageStream.Read(imageBytes, 0, (int)imageStream.Length);
                     _producto.imagen = imageBytes; // Convertir a base64
                 }
 
@@ -76,34 +73,38 @@ namespace SoftCyberiaWA.Administrador
                 _producto.descripcion = productoDescripcion.Text;
                 _producto.idSede = 1;
                 _producto.idSedeSpecified = true;
-                marca _marca = new marca();
-                _marca.idMarca = productoMarca.SelectedIndex + 1;
-                _marca.idMarcaSpecified = true;
-                tipoProducto _tipoProducto = new tipoProducto();
-                _tipoProducto.idTipoProducto = productoCategoria.SelectedIndex + 1;
-                _tipoProducto.idTipoProductoSpecified = true;
+                marca _marca = new marca
+                {
+                    idMarca = productoMarca.SelectedIndex + 1,
+                    idMarcaSpecified = true
+                };
+                tipoProducto _tipoProducto = new tipoProducto
+                {
+                    idTipoProducto = productoCategoria.SelectedIndex + 1,
+                    idTipoProductoSpecified = true
+                };
                 _producto.marca = _marca;
                 _producto.tipoProducto = _tipoProducto;
                 _producto.tipoProducto.idTipoProductoSpecified = true;
                 _producto.cantidad = 0;
                 _producto.cantidadSpecified = true;
 
-                this.productoBO.producto_insertar(_producto);
+                _ = productoBO.Producto_insertar(_producto);
             }
             // Mostrar el mensaje de éxito
             //successMessage.Text = "Producto registrado correctamente.";
             //successMessage.Visible = true;
         }
 
-        protected Boolean Validar()
+        protected bool Validar()
         {
-            Boolean validarNombre = ValidarCampo(productoNombre, productonombreMensaje, "Por favor ingrese un nombre para el producto.");
-            Boolean validarSku = ValidarCampo(productoSku, productoSkuMensaje, "Por favor ingrese un sku.");
-            Boolean validarPrecioVenta = ValidarCampo(productoPrecioVenta, productoPrecioVentaMensaje, "Por favor ingrese un precio.");
-            Boolean validarPrecioCompra = ValidarCampo(productoPrecioCompra, productoPrecioCompraMensaje, "Por favor ingrese un precio.");
-            Boolean validarMarca = ValidarCampo(null, productoMarcaMensaje, "Por favor seleccione una marca.", true, productoMarca);
-            Boolean validarTipoProducto = ValidarCampo(null, productoCategoriaMensaje, "Por favor seleccione un tipo de producto.", true, productoCategoria);
-            Boolean validarDescripcion = ValidarCampo(productoDescripcion, productoDescripcionMensaje, "Por favor ingrese una descripción.");
+            bool validarNombre = ValidarCampo(productoNombre, productonombreMensaje, "Por favor ingrese un nombre para el producto.");
+            bool validarSku = ValidarCampo(productoSku, productoSkuMensaje, "Por favor ingrese un sku.");
+            bool validarPrecioVenta = ValidarCampo(productoPrecioVenta, productoPrecioVentaMensaje, "Por favor ingrese un precio.");
+            _ = ValidarCampo(productoPrecioCompra, productoPrecioCompraMensaje, "Por favor ingrese un precio.");
+            bool validarMarca = ValidarCampo(null, productoMarcaMensaje, "Por favor seleccione una marca.", true, productoMarca);
+            bool validarTipoProducto = ValidarCampo(null, productoCategoriaMensaje, "Por favor seleccione un tipo de producto.", true, productoCategoria);
+            bool validarDescripcion = ValidarCampo(productoDescripcion, productoDescripcionMensaje, "Por favor ingrese una descripción.");
 
             if (validarSku && productoSku.Text.Length > 8)
             {
@@ -112,7 +113,7 @@ namespace SoftCyberiaWA.Administrador
                 productoSkuMensaje.Visible = true;
             }
 
-            Boolean validarImagen = true;
+            bool validarImagen = true;
             if (!imagenProducto.HasFile)
             {
                 validarImagen = false;
@@ -127,9 +128,9 @@ namespace SoftCyberiaWA.Administrador
             return validarNombre && validarSku && validarPrecioVenta && validarMarca && validarTipoProducto && validarDescripcion && validarImagen;
         }
 
-        private Boolean ValidarCampo(TextBox campo, HtmlGenericControl mensaje, string textoError, bool esCombo = false, DropDownList combo = null)
+        private bool ValidarCampo(TextBox campo, HtmlGenericControl mensaje, string textoError, bool esCombo = false, DropDownList combo = null)
         {
-            Boolean valido;
+            bool valido;
             if (esCombo)
             {
                 if (combo.SelectedIndex == 0)

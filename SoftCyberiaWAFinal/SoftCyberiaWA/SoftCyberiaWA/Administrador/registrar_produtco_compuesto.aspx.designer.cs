@@ -11,7 +11,7 @@ namespace SoftCyberiaWA.Administrador
 {
 
 
-    public partial class registrar_produtco_compuesto
+    public partial class Registrar_produtco_compuesto
     {
 
         /// <summary>

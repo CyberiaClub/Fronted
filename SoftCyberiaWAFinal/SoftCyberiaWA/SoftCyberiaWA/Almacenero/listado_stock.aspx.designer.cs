@@ -11,7 +11,7 @@ namespace SoftCyberiaWA.Almacenero
 {
 
 
-    public partial class listado_stock
+    public partial class Listado_stock
     {
 
         /// <summary>

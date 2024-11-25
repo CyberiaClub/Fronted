@@ -1,25 +1,21 @@
 ﻿using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaInventarioBO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Administrador
 {
-    public partial class listado_stock : System.Web.UI.Page
+    public partial class listado_stock : Page
     {
-        private ProductoBO productoBO;
-        private SedeBO sedeBO;
+        private readonly ProductoBO productoBO;
+        private readonly SedeBO sedeBO;
 
         public listado_stock()
         {
-            this.productoBO = new ProductoBO();
-            this.sedeBO = new SedeBO();
+            productoBO = new ProductoBO();
+            sedeBO = new SedeBO();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -30,17 +26,17 @@ namespace SoftCyberiaWA.Administrador
             }
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
+        protected void BtnBuscar_Click(object sender, EventArgs e)
         {
             if (Validar())
             {
-                producto _producto = productoBO.producto_buscar_sku(productoSku.Text.Trim(), sedeNombre.SelectedIndex);
-                if(_producto != null)
+                producto _producto = productoBO.Producto_buscar_sku(productoSku.Text.Trim(), sedeNombre.SelectedIndex);
+                if (_producto != null)
                 {
                     productoSkuMensaje.Visible = false;
                     DataTable datos = new DataTable();
                     datos.Columns.AddRange(new DataColumn[5] { new DataColumn("ID"), new DataColumn("SKU"), new DataColumn("NOMBRE"), new DataColumn("DESCRIPCION"), new DataColumn("STOCK") });
-                    datos.Rows.Add(_producto.idProducto, _producto.sku, _producto.nombre, _producto.descripcion, _producto.cantidad);
+                    _ = datos.Rows.Add(_producto.idProducto, _producto.sku, _producto.nombre, _producto.descripcion, _producto.cantidad);
                     gridStockProducto.DataSource = datos;
                     gridStockProducto.DataBind();
                 }
@@ -52,9 +48,9 @@ namespace SoftCyberiaWA.Administrador
             }
         }
 
-        protected Boolean Validar()
+        protected bool Validar()
         {
-            Boolean valido = true;
+            bool valido = true;
             if (string.IsNullOrWhiteSpace(productoSku.Text.Trim()))
             {
                 valido = false;
@@ -70,7 +66,7 @@ namespace SoftCyberiaWA.Administrador
         }
         private void CargarSedes()
         {
-            sedeNombre.DataSource = sedeBO.sede_listar();
+            sedeNombre.DataSource = sedeBO.Sede_listar();
             sedeNombre.DataTextField = "nombre";
             sedeNombre.DataValueField = "idSede";
             sedeNombre.DataBind();

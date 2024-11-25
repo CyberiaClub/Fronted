@@ -38,7 +38,7 @@
 
 
             <!-- Botón de inicio de sesión -->
-            <asp:Button ID="loginButton" runat="server" Text="Iniciar sesión" CssClass="btn btn-dark w-100" OnClick="loginButton_Click" />
+            <asp:Button ID="loginButton" runat="server" Text="Iniciar sesión" CssClass="btn btn-dark w-100" OnClick="LoginButton_Click" />
 
             <!-- Registro -->
             <div class="text-center mt-3">

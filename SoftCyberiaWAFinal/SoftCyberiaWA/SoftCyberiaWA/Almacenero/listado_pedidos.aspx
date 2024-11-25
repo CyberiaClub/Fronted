@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Almacenero/Almacenero.Master" AutoEventWireup="true" CodeBehind="listado_pedidos.aspx.cs" Inherits="SoftCyberiaWA.Almacenero.listado_pedidos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Almacenero/Almacenero.Master" AutoEventWireup="true" CodeBehind="listado_pedidos.aspx.cs" Inherits="SoftCyberiaWA.Almacenero.Listado_pedidos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Pedidos
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="detalle_historial_de_compras.aspx.cs" Inherits="SoftCyberiaWA.detalle_historial_de_compras" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="detalle_historial_de_compras.aspx.cs" Inherits="SoftCyberiaWA.Detalle_historial_de_compras" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Historial de compras
 </asp:Content>
