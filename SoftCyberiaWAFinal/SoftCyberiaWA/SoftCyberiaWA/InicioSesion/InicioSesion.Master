@@ -28,8 +28,8 @@
         <div class="container-fluid">
             <!-- Logo -->
 
-            <a href="#" class="navbar-brand">
-                <img src="/Imagenes/pucp-inicio.png" alt="CYBERIA Logo" style="height: 50px;">
+            <a href="indexInicioSesion.aspx" class="navbar-brand">
+                <img src="/Imagenes/cyberia-logo.png" alt="CYBERIA Logo" style="height: 50px;">
             </a>
 
             <!-- Botón de colapso para móviles -->

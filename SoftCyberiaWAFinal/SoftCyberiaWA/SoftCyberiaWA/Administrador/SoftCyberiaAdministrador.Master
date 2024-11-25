@@ -32,7 +32,7 @@
     </asp:ContentPlaceHolder>
 
 
-    <%--<div class="container-fluid d-flex p-0 h-100">
+    <div class="container-fluid d-flex p-0 h-100">
 
         <!-- Contorno exterior - Negros sin sombra -->
         <div class="sidebar navbar-expand-lg navbar-dark bg-dark flex-column d-flex flex-column flex-shrink-0 offcanvas-md offcanvas-start">
@@ -98,9 +98,9 @@
                 </asp:ContentPlaceHolder>
             </form>
         </div>
-    </div>--%>
+    </div>
 
-    <h1 class="visually-hidden">Sidebars examples</h1>
+   <%-- <h1 class="visually-hidden">Sidebars examples</h1>
 
     <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -176,7 +176,7 @@
                 </asp:ContentPlaceHolder>
             </form>
         </div>
-    </div>
+    </div>--%>
 
 
 

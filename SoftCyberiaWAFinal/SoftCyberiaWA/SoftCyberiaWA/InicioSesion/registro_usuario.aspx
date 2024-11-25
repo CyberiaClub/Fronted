@@ -105,6 +105,8 @@
                 <!-- Botón de Registro -->
                 <div class="text-center">
                     <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-100" Style="background-color: midnightblue;" OnClick="onClickRegistrarPersona" />
+                    <small id="successMessage" class="form-text" runat="server" style="font-size:medium; color:green"></small>
+
                 </div>
                 <!-- Iniciar Sesión -->
                 <div class="text-center mt-3">

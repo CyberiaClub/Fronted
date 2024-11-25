@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/TipoPersonaWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
-  <message name="tipopersona_listar_roles_trabajadores">
-    <part name="parameters" element="tns:tipopersona_listar_roles_trabajadores" />
-  </message>
-  <message name="tipopersona_listar_roles_trabajadoresResponse">
-    <part name="parameters" element="tns:tipopersona_listar_roles_trabajadoresResponse" />
-  </message>
   <message name="tipopersona_listar_paginas">
     <part name="parameters" element="tns:tipopersona_listar_paginas" />
   </message>
   <message name="tipopersona_listar_paginasResponse">
     <part name="parameters" element="tns:tipopersona_listar_paginasResponse" />
   </message>
+  <message name="tipopersona_listar_roles_trabajadores">
+    <part name="parameters" element="tns:tipopersona_listar_roles_trabajadores" />
+  </message>
+  <message name="tipopersona_listar_roles_trabajadoresResponse">
+    <part name="parameters" element="tns:tipopersona_listar_roles_trabajadoresResponse" />
+  </message>
   <portType name="TipoPersonaWS">
-    <operation name="tipopersona_listar_roles_trabajadores">
-      <input wsam:Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_roles_trabajadoresRequest" message="tns:tipopersona_listar_roles_trabajadores" />
-      <output wsam:Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_roles_trabajadoresResponse" message="tns:tipopersona_listar_roles_trabajadoresResponse" />
-    </operation>
     <operation name="tipopersona_listar_paginas">
       <input wsam:Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_paginasRequest" message="tns:tipopersona_listar_paginas" />
       <output wsam:Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_paginasResponse" message="tns:tipopersona_listar_paginasResponse" />
     </operation>
+    <operation name="tipopersona_listar_roles_trabajadores">
+      <input wsam:Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_roles_trabajadoresRequest" message="tns:tipopersona_listar_roles_trabajadores" />
+      <output wsam:Action="CyberiaWS/TipoPersonaWS/tipopersona_listar_roles_trabajadoresResponse" message="tns:tipopersona_listar_roles_trabajadoresResponse" />
+    </operation>
   </portType>
   <binding name="TipoPersonaWSPortBinding" type="tns:TipoPersonaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="tipopersona_listar_roles_trabajadores">
+    <operation name="tipopersona_listar_paginas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="tipopersona_listar_paginas">
+    <operation name="tipopersona_listar_roles_trabajadores">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -11,6 +11,7 @@
         <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
             <div class="card" style="width: 18rem; max-width: 400px;">
                 <div class="card-body">
+
                     <p class="card-text" id="verificacionMensaje" runat="server"></p>
                 </div>
             </div>

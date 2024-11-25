@@ -102,59 +102,72 @@ namespace SoftCyberiaWA.InicioSesion
 
         protected void onClickRegistrarPersona(object sender, EventArgs e)
         {
-            persona _persona = new persona();
-            bool valido = true;
-            valido &= ValidarTipoDocument();
-            valido &= ValidarDocument();
-            valido &= ValidarTelefono();
-            valido &= ValidarNombre();
-            valido &= ValidarPrimerApellido();
-            valido &= ValidarSegundoApellido();
-            valido &= ValidarFecha();
-            valido &= ValidarSexo();
-            valido &= ValidarDireccion();
-            valido &= ValidarNacionalidad();
-            valido &= ValidarCorreo();
-            valido &= ValidarContrasena();
-            valido &= ValidarSegundaContrasena();
-            if (valido)
+            try
             {
-                _persona.documento = personaDocumento.Text.Trim();
-                _persona.telefono = personaTelefono.Text.Trim();
-                _persona.nombre = personaNombre.Text.Trim();
-                _persona.primerApellido = personaPrimerAp.Text.Trim();
-                _persona.segundoApellido = personaSegundoAp.Text.Trim();
-                _persona.fechaDeNacimiento = DateTime.Parse(personaFechaNac.Value);
-                _persona.fechaDeNacimientoSpecified = true;
-                _persona.sexo = personaSexo.Text;
-                _persona.correo = personaCorreo.Value.Trim();
-                _persona.contrasena = personaContraseña.Value;
-                _persona.direccion = personaDireccion.Text.Trim();
-                _persona.nacionalidad = nacionalidad.Text.Trim();
-                _persona.tipoDeDocumentoSpecified = true;
-                _persona.idTipoPersona = 1;
-                _persona.idTipoPersonaSpecified = true;
 
-                switch (Convert.ToInt32(personaTipoDocumento.SelectedValue))
+                persona _persona = new persona();
+                bool valido = true;
+                valido &= ValidarTipoDocument();
+                valido &= ValidarDocument();
+                valido &= ValidarTelefono();
+                valido &= ValidarNombre();
+                valido &= ValidarPrimerApellido();
+                valido &= ValidarSegundoApellido();
+                valido &= ValidarFecha();
+                valido &= ValidarSexo();
+                valido &= ValidarDireccion();
+                valido &= ValidarNacionalidad();
+                valido &= ValidarCorreo();
+                valido &= ValidarContrasena();
+                valido &= ValidarSegundaContrasena();
+                if (valido)
                 {
-                    case 1:
-                        _persona.tipoDeDocumento = tipoDocumento.DNI;
-                        break;
-                    case 2:
-                        _persona.tipoDeDocumento = tipoDocumento.PASAPORTE;
-                        break;
-                    case 3:
-                        _persona.tipoDeDocumento = tipoDocumento.CARNET_DE_EXTRANJERIA;
-                        break;
+                    _persona.documento = personaDocumento.Text.Trim();
+                    _persona.telefono = personaTelefono.Text.Trim();
+                    _persona.nombre = personaNombre.Text.Trim();
+                    _persona.primerApellido = personaPrimerAp.Text.Trim();
+                    _persona.segundoApellido = personaSegundoAp.Text.Trim();
+                    _persona.fechaDeNacimiento = DateTime.Parse(personaFechaNac.Value);
+                    _persona.fechaDeNacimientoSpecified = true;
+                    _persona.sexo = personaSexo.Text;
+                    _persona.correo = personaCorreo.Value.Trim();
+                    _persona.contrasena = personaContraseña.Value;
+                    _persona.direccion = personaDireccion.Text.Trim();
+                    _persona.nacionalidad = nacionalidad.Text.Trim();
+                    _persona.tipoDeDocumentoSpecified = true;
+                    _persona.idTipoPersona = 1;
+                    _persona.idTipoPersonaSpecified = true;
 
-                    default:
+                    switch (Convert.ToInt32(personaTipoDocumento.SelectedValue))
+                    {
+                        case 1:
+                            _persona.tipoDeDocumento = tipoDocumento.DNI;
+                            break;
+                        case 2:
+                            _persona.tipoDeDocumento = tipoDocumento.PASAPORTE;
+                            break;
+                        case 3:
+                            _persona.tipoDeDocumento = tipoDocumento.CARNET_DE_EXTRANJERIA;
+                            break;
 
-                        break;
+                        default:
 
+                            break;
+
+                    }
+                    this.personaBO.persona_insertar(_persona);
+                    successMessage.InnerText = "Se registró la persona con éxito. Revise su correo para validar su cuenta";
+                    successMessage.Visible = true;
                 }
-                this.personaBO.persona_insertar(_persona);
+
             }
-        }
+            catch (Exception ex)
+            {
+                successMessage.InnerText = $"Error: No se pudo registrar la cuenta {ex.Message}";
+                //successMessage. = "text-danger";
+                successMessage.Visible = true;
+            }
+}
 
         private bool ValidarTipoDocument()
         {

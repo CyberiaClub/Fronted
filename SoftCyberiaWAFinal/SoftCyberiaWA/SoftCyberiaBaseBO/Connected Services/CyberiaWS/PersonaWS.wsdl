@@ -5,6 +5,30 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/PersonaWS?xsd=1" namespace="CyberiaWS" />
     </xsd:schema>
   </types>
+  <message name="persona_insertar">
+    <part name="parameters" element="tns:persona_insertar" />
+  </message>
+  <message name="persona_insertarResponse">
+    <part name="parameters" element="tns:persona_insertarResponse" />
+  </message>
+  <message name="persona_modificar">
+    <part name="parameters" element="tns:persona_modificar" />
+  </message>
+  <message name="persona_modificarResponse">
+    <part name="parameters" element="tns:persona_modificarResponse" />
+  </message>
+  <message name="persona_loguearse">
+    <part name="parameters" element="tns:persona_loguearse" />
+  </message>
+  <message name="persona_loguearseResponse">
+    <part name="parameters" element="tns:persona_loguearseResponse" />
+  </message>
+  <message name="persona_verificar_correo">
+    <part name="parameters" element="tns:persona_verificar_correo" />
+  </message>
+  <message name="persona_verificar_correoResponse">
+    <part name="parameters" element="tns:persona_verificar_correoResponse" />
+  </message>
   <message name="persona_buscar_por_documento">
     <part name="parameters" element="tns:persona_buscar_por_documento" />
   </message>
@@ -17,31 +41,23 @@
   <message name="persona_enviar_correo_verificacionResponse">
     <part name="parameters" element="tns:persona_enviar_correo_verificacionResponse" />
   </message>
-  <message name="persona_insertar">
-    <part name="parameters" element="tns:persona_insertar" />
-  </message>
-  <message name="persona_insertarResponse">
-    <part name="parameters" element="tns:persona_insertarResponse" />
-  </message>
-  <message name="persona_loguearse">
-    <part name="parameters" element="tns:persona_loguearse" />
-  </message>
-  <message name="persona_loguearseResponse">
-    <part name="parameters" element="tns:persona_loguearseResponse" />
-  </message>
-  <message name="persona_modificar">
-    <part name="parameters" element="tns:persona_modificar" />
-  </message>
-  <message name="persona_modificarResponse">
-    <part name="parameters" element="tns:persona_modificarResponse" />
-  </message>
-  <message name="persona_verificar_correo">
-    <part name="parameters" element="tns:persona_verificar_correo" />
-  </message>
-  <message name="persona_verificar_correoResponse">
-    <part name="parameters" element="tns:persona_verificar_correoResponse" />
-  </message>
   <portType name="PersonaWS">
+    <operation name="persona_insertar">
+      <input wsam:Action="CyberiaWS/PersonaWS/persona_insertarRequest" message="tns:persona_insertar" />
+      <output wsam:Action="CyberiaWS/PersonaWS/persona_insertarResponse" message="tns:persona_insertarResponse" />
+    </operation>
+    <operation name="persona_modificar">
+      <input wsam:Action="CyberiaWS/PersonaWS/persona_modificarRequest" message="tns:persona_modificar" />
+      <output wsam:Action="CyberiaWS/PersonaWS/persona_modificarResponse" message="tns:persona_modificarResponse" />
+    </operation>
+    <operation name="persona_loguearse">
+      <input wsam:Action="CyberiaWS/PersonaWS/persona_loguearseRequest" message="tns:persona_loguearse" />
+      <output wsam:Action="CyberiaWS/PersonaWS/persona_loguearseResponse" message="tns:persona_loguearseResponse" />
+    </operation>
+    <operation name="persona_verificar_correo">
+      <input wsam:Action="CyberiaWS/PersonaWS/persona_verificar_correoRequest" message="tns:persona_verificar_correo" />
+      <output wsam:Action="CyberiaWS/PersonaWS/persona_verificar_correoResponse" message="tns:persona_verificar_correoResponse" />
+    </operation>
     <operation name="persona_buscar_por_documento">
       <input wsam:Action="CyberiaWS/PersonaWS/persona_buscar_por_documentoRequest" message="tns:persona_buscar_por_documento" />
       <output wsam:Action="CyberiaWS/PersonaWS/persona_buscar_por_documentoResponse" message="tns:persona_buscar_por_documentoResponse" />
@@ -50,25 +66,45 @@
       <input wsam:Action="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionRequest" message="tns:persona_enviar_correo_verificacion" />
       <output wsam:Action="CyberiaWS/PersonaWS/persona_enviar_correo_verificacionResponse" message="tns:persona_enviar_correo_verificacionResponse" />
     </operation>
-    <operation name="persona_insertar">
-      <input wsam:Action="CyberiaWS/PersonaWS/persona_insertarRequest" message="tns:persona_insertar" />
-      <output wsam:Action="CyberiaWS/PersonaWS/persona_insertarResponse" message="tns:persona_insertarResponse" />
-    </operation>
-    <operation name="persona_loguearse">
-      <input wsam:Action="CyberiaWS/PersonaWS/persona_loguearseRequest" message="tns:persona_loguearse" />
-      <output wsam:Action="CyberiaWS/PersonaWS/persona_loguearseResponse" message="tns:persona_loguearseResponse" />
-    </operation>
-    <operation name="persona_modificar">
-      <input wsam:Action="CyberiaWS/PersonaWS/persona_modificarRequest" message="tns:persona_modificar" />
-      <output wsam:Action="CyberiaWS/PersonaWS/persona_modificarResponse" message="tns:persona_modificarResponse" />
-    </operation>
-    <operation name="persona_verificar_correo">
-      <input wsam:Action="CyberiaWS/PersonaWS/persona_verificar_correoRequest" message="tns:persona_verificar_correo" />
-      <output wsam:Action="CyberiaWS/PersonaWS/persona_verificar_correoResponse" message="tns:persona_verificar_correoResponse" />
-    </operation>
   </portType>
   <binding name="PersonaWSPortBinding" type="tns:PersonaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="persona_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="persona_modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="persona_loguearse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="persona_verificar_correo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="persona_buscar_por_documento">
       <soap:operation soapAction="" />
       <input>
@@ -79,42 +115,6 @@
       </output>
     </operation>
     <operation name="persona_enviar_correo_verificacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="persona_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="persona_loguearse">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="persona_modificar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="persona_verificar_correo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
