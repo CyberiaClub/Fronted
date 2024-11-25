@@ -32,10 +32,10 @@
     </asp:ContentPlaceHolder>
 
 
-    <div class="container-fluid d-flex p-0 h-100">
+  <div class="container-fluid d-flex p-0 h-100">
 
         <!-- Contorno exterior - Negros sin sombra -->
-        <div class="sidebar navbar-expand-lg navbar-dark bg-dark flex-column d-flex flex-column flex-shrink-0 offcanvas-md offcanvas-start">
+        <div class="sidebar navbar-expand-lg navbar-dark bg-dark flex-column d-flex flex-column flex-shrink-0 offcanvas-md offcanvas-start" style="width: 280px;">
 
             <!-- Logo CYBERIA -->
             <div class="text-center">
@@ -45,7 +45,7 @@
             <!-- Foto del usuario y nombre -->
             <div class="text-center mt-4 text-white text-center">
                 <img src="/Imagenes/admin-user.png" alt="Foto de usuario" style="width: 160px; height: auto;">
-                <h4>Matias Sulca</h4>
+<%--                <h4>Matias Sulca</h4>--%>
             </div>
 
             <hr>
@@ -65,15 +65,20 @@
                         <a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>
                         <a href="asignar_roles.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Asignar Rol</a>
                         <a href="detalle_reporte.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Generar reporte</a>
-                        <a href="listado_pedidos.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a> 
+                        <a href="listado_pedidos.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a>
+                        <a href="IndexCliente.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Comprar en Tienda</a>
+
+
 
                         <p class="p-1 font-bold">Vendedor</p>
                         <a href="listado_pedidos_vendedor.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a>
                         <a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a>
+                        <a href="IndexCliente.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Comprar en Tienda</a>
 
                         <p class="p-1 font-bold">Almacén</p>
                         <a href="listado_pedidos_almacen.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Pedidos</a>
                         <a href="listado_stock.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Ver Stock de Productos</a> 
+                        <a href="IndexCliente.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Comprar en Tienda</a>
 
                     </div>
 

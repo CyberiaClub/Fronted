@@ -51,6 +51,24 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.DropDownList providerName;
 
         /// <summary>
+        /// registerButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button registerButton;
+
+        /// <summary>
+        /// successMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label successMessage;
+
+        /// <summary>
         /// lbnuevaMarca control.
         /// </summary>
         /// <remarks>
@@ -76,23 +94,5 @@ namespace SoftCyberiaWA.Administrador
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload fileUploadNuevaMarca;
-
-        /// <summary>
-        /// registerButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerButton;
-
-        /// <summary>
-        /// successMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label successMessage;
     }
 }

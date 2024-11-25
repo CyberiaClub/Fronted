@@ -50,65 +50,6 @@
         </div>
 
 
-       <%-- <!-- Categories Section -->
-        <section class="categories text-center my-5 ">
-            <div class="container">
-                <h3 class="font-bold category-title bg-primary bg-opacity-50" style="font-size: 3em;">Categorías destacadas</h3>
-                <div class="row mt-4">
-                    <asp:Panel ID="categoriaPanelEstatico" runat="server" CssClass="row">
-                        <!-- Categoría: Arte -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0">
-                                <a href="../Cliente/listado_productos.aspx?categoria=Arte" class="text-decoration-none">
-                                    <img src="../Imagenes/arte.png" class="card-img-top rounded-img mx-auto" alt="Arte">
-                                    <div class="card-body">
-                                        <h5 class="card-title category-title font-regular">Arte</h5>
-                                    </div>
-
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Categoría: Arquitectura -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0">
-                                <a href="/Cliente/listado_productos.aspx?categoria=Arquitectura" class="text-decoration-none">
-                                    <img src="../Imagenes/arquitectura.png" class="card-img-top rounded-img mx-auto" alt="Arquitectura">
-                                    <div class="card-body">
-                                        <h5 class="card-title  category-title font-regular">Arquitectura</h5>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Categoría: Educación -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0">
-                                <a href="../Cliente/listado_productos.aspx?categoria=Educación" class="text-decoration-none">
-                                    <img src="../Imagenes/educacion.jpg" class="card-img-top rounded-img mx-auto" alt="Educación">
-                                    <div class="card-body">
-                                        <h5 class="card-title  category-title font-regular">Educación</h5>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Categoría: Oficina -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-0">
-                                <a href="../Cliente/listado_productos.aspx?categoria=Oficina" class="text-decoration-none">
-                                    <img src="../Imagenes/oficina.jpg" class="card-img-top rounded-img mx-auto" alt="Oficina">
-                                    <div class="card-body">
-                                        <h5 class="card-title  category-title font-regular">Oficina</h5>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </asp:Panel>
-                </div>
-            </div>
-        </section>--%>
-
         <!-- Categorias Dinanmicas-->
 
         <section class="categories text-center my-5">

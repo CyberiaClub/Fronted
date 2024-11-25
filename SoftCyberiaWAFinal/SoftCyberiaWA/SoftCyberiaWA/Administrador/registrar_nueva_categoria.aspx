@@ -7,23 +7,24 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="d-flex justify-content-center align-items-center vh-200" style="color: slategrey">
-        <div class="card" style="width: 100%; max-width: 800px; color: midnightblue">
-            <div class="card-header text-center" style="width: 800px">
+        <div class="card" style="width: 80%;  color: midnightblue">
+            <div class="card-header text-center">
                 <h2>
                     <asp:Label ID="lblTitulo" runat="server" Text="Registrar Nueva Categoría"></asp:Label>
                 </h2>
             </div>
 
             <!-- Sección de formulario e imagen dentro de la tarjeta -->
-            <div class="card-body align-content-xxl-center align-content-center" style="font: medium">
-                <div class="row">
+            <div class="card-body align-content-xxl-center align-content-center h-100" style="font: medium">
+
+
+                <div class="d-flex">
                     <!-- Columna de información del proveedor -->
                     <div class="col-md-20 align-content-center">
                         <div class="mb-3">
                             <label for="categoriaName">Nombre de la Categoría:</label>
                             <asp:TextBox ID="categoriaName" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
-
                     </div>
 
                     <!-- Columna de imagen y botón -->
@@ -35,8 +36,9 @@
                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
 
-
                 </div>
+
+
             </div>
         </div>
     </div>

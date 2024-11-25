@@ -9,9 +9,10 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div class="d-flex justify-content-center align-items-center vh-200">
-        <div class="card" style="width: 100%; max-width: 800px; color: midnightblue">
-            <div class="card-header text-center" style="width: 800px">
+        <div class="card" style="width: 60vw;height:130vh;  color: midnightblue">
+            <div class="card-header text-center" >
                 <h2>Asignar Rol</h2>
             </div>
             <div class="card-body pb-2">
@@ -80,10 +81,10 @@
                     </div>
 
                     <!-- Columna de imagen y botón de asignación -->
-                    <div class="col-md-4 d-flex flex-column align-items-center justify-content-center bg-light" style="border-radius: 0 15px 15px 0;">
+                    <div class="col-md-4 d-flex flex-column align-items-center justify-content-center bg-light" style="border-radius: 0 1% 1% 0; margin-top:5%">
                         <h4 class="font-weight-bold mb-4" style="color: #004EA8;">Asignar Rol</h4>
-                        <img src="/Imagenes/rol.png" alt="Icono de seguridad" class="img-fluid img-thumbnail mb-3" style="width: 160px;">
-                        <asp:Button ID="btnAsignar" runat="server" Text="Asignar" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnAsignar_Click" />
+                        <img src="/Imagenes/rol.png" alt="Icono de seguridad" class="img-fluid img-thumbnail mb-3" style="width: 40%;">
+                        <asp:Button ID="btnAsignar" runat="server" Text="Asignar" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8; width:80%" OnClick="btnAsignar_Click" />
                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
 
                     </div>

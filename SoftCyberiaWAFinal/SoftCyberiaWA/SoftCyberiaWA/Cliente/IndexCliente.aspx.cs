@@ -173,7 +173,6 @@ namespace SoftCyberiaWA.Cliente
                         <img src='{imageSrc}' class='card-img-top rounded-circle mx-auto d-block' alt='{tp.tipo}' style='width:150px; height:150px; object-fit:cover;'>
                         <div class='card-body'>
                             <h5 class='card-title category-title font-regular'>{tp.tipo}</h5>
-                            <h5 class='card-title category-title font-regular'>{tp.idTipoProducto}</h5>
                         </div>
                     </a>
                 </div>
