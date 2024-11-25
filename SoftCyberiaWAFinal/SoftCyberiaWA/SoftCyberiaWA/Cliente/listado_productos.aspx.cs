@@ -19,17 +19,21 @@ namespace SoftCyberiaWA
         private ProductoBO productoBO;
         private TipoProductoBO tipoProductoBO;
         private SedeBO sedeBO;
+        private MarcaBO marcaBO;
 
         public listado_productos()
         {
             this.productoBO = new ProductoBO();
             this.tipoProductoBO = new TipoProductoBO();
             this.sedeBO = new SedeBO();
+            this.marcaBO = new MarcaBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarSedes();
             CargarTiposDeProductos();
+            CargarMarcas();
+
             if (!IsPostBack)
             {
                 // Obtiene el parámetro de la sede desde la URL
@@ -60,6 +64,12 @@ namespace SoftCyberiaWA
             }
 
         }
+
+        private void CargarMarcas()
+        {
+            throw new NotImplementedException();
+        }
+
         private void CargarSedes()
         {
             // Llama al método para obtener los tipos de productos desde el backend
