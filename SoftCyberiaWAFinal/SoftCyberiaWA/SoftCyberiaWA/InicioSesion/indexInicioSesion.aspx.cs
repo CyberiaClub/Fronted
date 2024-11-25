@@ -31,6 +31,12 @@ namespace SoftCyberiaWA.InicioSesion
             string correo = personaCorreo.Text.Trim();
             string contrasena = personaContrasena.Text.Trim();
             bool valido = true;
+            lblErrorMessage.Text = "";
+            lblErrorMessage.Visible = false;
+            emailError.InnerText = "";
+            emailError.Visible = false;
+            passwordError.InnerText = "";
+            passwordError.Visible = false;
             if (string.IsNullOrEmpty(correo))
             {
                 emailError.InnerText = "Ingrese su correo";
@@ -49,8 +55,15 @@ namespace SoftCyberiaWA.InicioSesion
                 return;
             }
 
-            Session["RolUsuario"] = personaBO.persona_loguearse(correo, contrasena);
-            persona usuario = Session["RolUsuario"] as persona;
+            Session["Usuario"] = personaBO.persona_loguearse(correo, contrasena);
+
+            if (!(Session["Usuario"] is persona usuario))
+            {
+                lblErrorMessage.Text = "Usuario o contraseña incorrectos. Por favor, inténtalo nuevamente o regístrate.";
+                lblErrorMessage.Visible = true;
+                return;
+            }
+
             if (usuario.idPersona == 0)
             {
                 lblErrorMessage.Text = "Usuario o contraseña incorrectos. Por favor, inténtalo nuevamente o regístrate.";
@@ -72,7 +85,7 @@ namespace SoftCyberiaWA.InicioSesion
                 // Guardar la BindingList en la sesión
                 Session["Paginas"] = paginasBindingList;
                 //Response.Redirect("~/Administrador/indexAdministrador.aspx");
-                Response.Redirect("~/Administrador/actualizar_stock.aspx");
+                Response.Redirect("~/Administrador/registrar_nuevos_proveedores.aspx");
             }
         }
 

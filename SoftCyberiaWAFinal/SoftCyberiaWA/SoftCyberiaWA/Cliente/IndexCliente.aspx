@@ -51,40 +51,38 @@
 
 
         <!-- Categorias Dinanmicas-->
+            <section class="categories text-center my-5">
+                <div class="container">
+                    <h3 class="font-bold category-title bg-primary bg-opacity-50" style="font-size: 3em;">Categorías destacadas</h3>
+                    <div id="carouselCategorias" class="carousel slide" data-bs-ride="carousel">
+                        <asp:Panel ID="categoriaPanel" runat="server" CssClass="carousel-inner"></asp:Panel>
 
-        <section class="categories text-center my-5">
-            <div class="container">
-                <h3 class="font-bold category-title bg-primary bg-opacity-50" style="font-size: 3em;">Categorías destacadas</h3>
-                <div id="carouselCategorias" class="carousel slide" data-bs-ride="carousel">
-                    <asp:Panel ID="categoriaPanel" runat="server" CssClass="carousel-inner"></asp:Panel>
+                        <!-- Botón para deslizar hacia la izquierda -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCategorias" data-bs-slide="prev" style="background-color: rgba(0,0,0,0.3); width: 5%;">
+                            <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 30px; height: 30px;"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
 
-                    <!-- Botón para deslizar hacia la izquierda -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCategorias" data-bs-slide="prev" style="background-color: rgba(0,0,0,0.3); width: 5%;">
-                        <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 30px; height: 30px;"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-
-                    <!-- Botón para deslizar hacia la derecha -->
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCategorias" data-bs-slide="next" style="background-color: rgba(0,0,0,0.3); width: 5%;">
-                        <span class="carousel-control-next-icon" aria-hidden="true" style="width: 30px; height: 30px;"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
+                        <!-- Botón para deslizar hacia la derecha -->
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCategorias" data-bs-slide="next" style="background-color: rgba(0,0,0,0.3); width: 5%;">
+                            <span class="carousel-control-next-icon" aria-hidden="true" style="width: 30px; height: 30px;"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Brands Section -->
-        <section class="brands text-center my-4">
-            <h3 class="font-bold bg-primary bg-opacity-50" style="font-size: 3em;">Marcas</h3>
-            <div class="container">
-                <div class="row justify-content-center mt-4">
-                    <asp:Panel ID="marcaContainer" runat="server" CssClass="row"> </asp:Panel>
-                    <!-- Puedes añadir más imágenes siguiendo la misma estructura -->
+            <!-- Brands Section -->
+            <section class="brands text-center my-4">
+                <h3 class="font-bold bg-primary bg-opacity-50" style="font-size: 3em;">Marcas</h3>
+                <div class="container">
+                    <div class="row justify-content-center mt-4">
+                        <asp:Panel ID="marcaContainer" runat="server" CssClass="row"></asp:Panel>
+                        <!-- Puedes añadir más imágenes siguiendo la misma estructura -->
+                    </div>
                 </div>
-            </div>
-        </section>
-
-    </div>
+            </section>
+        </div>
     <script> 
         let currentOffset = 0;
 

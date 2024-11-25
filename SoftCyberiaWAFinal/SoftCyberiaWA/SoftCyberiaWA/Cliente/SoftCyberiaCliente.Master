@@ -30,12 +30,12 @@
 
     <asp:ContentPlaceHolder ID="cphStyle" runat="server">
     </asp:ContentPlaceHolder>
-    
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <!-- Logo -->
-            
-            <a href="IndexCliente.aspx" class="navbar-brand" >
+
+            <a href="IndexCliente.aspx" class="navbar-brand">
                 <img src="/Imagenes/cyberia-logo.png" alt="CYBERIA Logo" style="height: 100px;">
             </a>
 
@@ -49,10 +49,10 @@
                 <!-- Enlaces de navegación a la izquierda -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white " href="../Cliente/listado_productos.aspx"  style="font-size: 1.5em;">Productos</a>
+                        <a class="nav-link text-white " href="../Cliente/listado_productos.aspx" style="font-size: 1.5em;">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white " href="../Cliente/listado_sedes.aspx"  style="font-size: 1.5em;">Sedes</a>
+                        <a class="nav-link text-white " href="../Cliente/listado_sedes.aspx" style="font-size: 1.5em;">Sedes</a>
                     </li>
                 </ul>
 
@@ -102,12 +102,11 @@
 
 
     <!-- Footer -->
-    <footer class="footer p-4 text-white text-center">
-        <p class="mb-0 font-light">© 2024 Cyberiastore. Todos los derechos reservados.</p>
-        <p class="font-light">
-
-        </p>
+    <footer id="footerMaster"class="footer p-4 text-white text-center">
+        <asp:ContentPlaceHolder ID="footerContent" runat="server">
+            <p class="mb-0 font-light">© 2024 Cyberiastore. Todos los derechos reservados.</p>
+        </asp:ContentPlaceHolder>
     </footer>
-    
+
 </body>
 </html>

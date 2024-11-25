@@ -3,6 +3,7 @@ using SoftCyberiaBaseBO.CyberiaWS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,7 +35,19 @@ namespace SoftCyberiaPersonaBO
         }
         public persona persona_loguearse(string correo, string contrasena)
         {
-            return this.WsPersona.persona_loguearse(correo, contrasena);
+            try
+            {
+                persona _persona = this.WsPersona.persona_loguearse(correo, contrasena);
+                return _persona ?? null;
+            }
+            catch (FaultException ex)
+            {
+                return null;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

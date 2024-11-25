@@ -1,21 +1,15 @@
 ﻿using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaInventarioBO;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Reflection.Emit;
-//using System.Text.Json;
-using System.Web;
-using System.Web.UI;
+using System.Security.Cryptography;
 using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
     public partial class listado_productos : System.Web.UI.Page
     {
+        
         private ProductoBO productoBO;
         private TipoProductoBO tipoProductoBO;
         private SedeBO sedeBO;
@@ -30,12 +24,11 @@ namespace SoftCyberiaWA
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarSedes();
-            CargarTiposDeProductos();
-            CargarMarcas();
-
             if (!IsPostBack)
             {
+                CargarSedes();
+                CargarTiposDeProductos();
+                CargarMarcas();
                 // Obtiene el parámetro de la sede desde la URL
                 string sedeSeleccionada = Request.QueryString["sede"];
 
@@ -52,14 +45,9 @@ namespace SoftCyberiaWA
                         $"    if (sedeCheckbox) sedeCheckbox.checked = true;" +
                         $"}});", true);
                     //_idsede = int.Parse(Request.QueryString["idSede"]);
-                    _idsede = int.Parse(Request.QueryString["idsede"] ?? "0");
+                    _idsede = int.Parse(Request.QueryString["idsede"] ?? "1");
                     idsede2 = _idsede ?? 1;
                 }
-                // Cargar tipos de productos en los filtros
-
-                //del metodo 2 borrador no funciona, 1 sin pasar filtro de sede, 3 pasa el filtro
-                //CargarProductos2(_idsede);
-                //CargarProductos();
                 CargarProductos0(idsede2);
             }
 
@@ -67,27 +55,68 @@ namespace SoftCyberiaWA
 
         private void CargarMarcas()
         {
-            throw new NotImplementedException();
+            BindingList<marca> marcas = this.marcaBO.marca_listar();
+            if(marcas ==null || marcas.Count == 0)
+            {
+                Literal mensaje = new Literal
+                {
+                    Text = "<p class='text-muted'>No hay marcas disponibles.</p>"
+                };
+                listadoMarca.Controls.Add(mensaje);
+                return;
+            }
+
+            foreach (marca _marca in marcas)
+            {
+                // Reemplazar espacios con guiones bajos en el nombre del tipo de producto para el valor del filtro
+                string _marcaValue = _marca.nombre.Replace(" ", "_");
+
+                // Crear el contenedor HTML del filtro de tipo de producto
+                Literal marcaHtml = new Literal();
+                marcaHtml.Text = $@"
+                <div class='form-check'>
+                    <input class='form-check-input' type='checkbox' name='categoria' value='{_marcaValue}' id='tipo{_marca.idMarca}' onchange='applyFilters()' data-categoria='{_marcaValue}'>
+                    <label class='form-check-label' for='tipo{_marca.idMarca}'>{_marca.nombre}</label>
+                </div>";
+                // Agregar el HTML generado al contenedor de filtros en la página
+                listadoMarca.Controls.Add(marcaHtml);
+            }
         }
 
         private void CargarSedes()
         {
-            // Llama al método para obtener los tipos de productos desde el backend
-            BindingList<sede> sedes = this.sedeBO.sede_listar();
-            
+            if (!(Cache["sedes"] is BindingList<sede> sedes))
+            {
+                // Si no están en el caché, cargarlas desde la base de datos
+                sedes = this.sedeBO.sede_listar();
+                // Guardar las sedes en el caché por 1 horas
+                Cache.Insert("sedes", sedes, null, DateTime.Now.AddHours(1), System.Web.Caching.Cache.NoSlidingExpiration);
+            }
+
+            if (sedes == null || sedes.Count == 0)
+            {
+                Literal mensaje = new Literal
+                {
+                    Text = "<p class='text-muted'>No hay sedes disponibles.</p>"
+                };
+                filtrosSedes.Controls.Add(mensaje);
+                return;
+            }
+            bool isFirst = true; // Bandera para identificar la primera sede
+
             foreach (sede _sede in sedes)
             {
                 // Reemplazar espacios con guiones bajos en el nombre del tipo de producto para el valor del filtro
                 string sedeValue = _sede.nombre.Replace(" ", "_");
-
-                // Crear el contenedor HTML del filtro de tipo de producto
+                string isChecked = isFirst ? "checked" : "";
+                isFirst = false; // Después de la primera iteración, esto será falso
+                                 // Crear el contenedor HTML del filtro de tipo de producto
                 Literal tipoHtml = new Literal();
                 tipoHtml.Text = $@"
-        <div class='form-check'>
-            <input class='form-check-input' type='checkbox' name='sede' value='{sedeValue}' id='sede{sedeValue}' onclick='selectOnlyOne(this)' data-sede='{sedeValue}'>
-            <label class='form-check-label' for='sede{sedeValue}'>{_sede.nombre}</label>
-        </div>";
-
+                <div class='form-check'>
+                    <input class='form-check-input' type='radio' name='sede' value='{sedeValue}' id='sede{sedeValue}' {isChecked} data-sede='{sedeValue}'>
+                    <label class='form-check-label' for='sede{sedeValue}'>{_sede.nombre}</label>
+                </div>";
 
                 // Agregar el HTML generado al contenedor de filtros en la página    <label class='form-check-label' for='sede{sedeValue}'>{_sede.nombre} {_sede.idSede}</label>
                 filtrosSedes.Controls.Add(tipoHtml);
@@ -96,8 +125,11 @@ namespace SoftCyberiaWA
 
         private void CargarTiposDeProductos()
         {
-            // Llama al método para obtener los tipos de productos desde el backend
-            BindingList<tipoProducto> tiposDeProductos = this.tipoProductoBO.tipoProducto_listar();
+            if (!(Cache["TipoProductos"] is BindingList<tipoProducto> tiposDeProductos))
+            {
+                tiposDeProductos = this.tipoProductoBO.tipoProducto_listar();
+                Cache.Insert("TipoProductos", tiposDeProductos, null, DateTime.Now.AddHours(1), System.Web.Caching.Cache.NoSlidingExpiration);
+            }
 
 
             foreach (tipoProducto tipo in tiposDeProductos)
@@ -154,7 +186,7 @@ namespace SoftCyberiaWA
                 productContainer.Controls.Add(productHtml);
             }
         }
-        private void CargarProductos0(int _idSede )
+        private void CargarProductos0(int _idSede)
         {
             // Llama al método para obtener los productos desde el backend
             BindingList<producto> productos = this.productoBO.producto_listar();
@@ -168,24 +200,34 @@ namespace SoftCyberiaWA
 
                 // Crea el contenedor HTML del producto
                 Literal productHtml = new Literal();
+                //productHtml.Text = $@"
+                //    <div class='col-md-4 mb-4' data-sede='{prod.idSede}' data-category='{prod.tipoProducto.tipo}' data-price='{prod.precio}'>
+                //        <a href='detalle_producto.aspx?sku={prod.sku}&sede={_idSede}' class='text-decoration-none'>
+                //            <div class='card'>
+                //                <div class='card-img-container'>
+                //                    <img src='{imageSrc}' class='card-img-top' alt='{prod.nombre}'>
+                //                </div>
+                //                <div class='card-body'>
+                //                    <h6 class='card-title'>{prod.nombre}</h6>
+                //                    <p class='card-text'>S/{prod.precio:F2}</p>
+                //                </div>
+                //            </div>
+                //        </a>
+                //    </div>";
                 productHtml.Text = $@"
-                    <div class='col-md-4 mb-4' data-sede='{prod.idSede}' data-category='{prod.tipoProducto.tipo}' data-price='{prod.precio}'>
-                        <a href='detalle_producto.aspx?sku={prod.sku}&sede={_idSede}' class='text-decoration-none'>
-                            <div class='card'>
-                                <div class='card-img-container'>
-                                    <img src='{imageSrc}' class='card-img-top' alt='{prod.nombre}'>
-                                </div>
-                                <div class='card-body'>
-                                    <h6 class='card-title'>{prod.nombre}</h6>
-                                    <h6 class='card-title'>stock : {productoSedeSeleccionada.cantidad}</h6>
-                                    <h6 class='card-title'>idprod: {prod.idProducto}</h6>
-                                    <h6 class='card-title'>idsede: {_idSede}</h6>
-                                    <h6 class='card-title'>sku: {prod.sku}</h6>
-                                    <p class='card-text'>S/{prod.precio:F2}</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>";
+    <div class='col-md-4 mb-4'>
+        <div class='card h-100'>
+            <div class='card-img-container' style='height: 200px; overflow: hidden;'>
+                <img src='{imageSrc}' class='card-img-top img-fluid' alt='{prod.nombre}' style='object-fit: cover; height: 100%;'>
+            </div>
+            <div class='card-body'>
+                <h5 class='card-title'>{prod.nombre}</h5>
+                <p class='card-text text-muted'>Stock: {productoSedeSeleccionada.cantidad}</p>
+                <p class='card-text text-muted'>Precio: S/{prod.precio:F2}</p>
+                <a href='detalle_producto.aspx?sku={prod.sku}&sede={_idSede}' class='btn btn-primary'>Ver Detalles</a>
+            </div>
+        </div>
+    </div>";
 
                 // Agrega el HTML generado al contenedor en la página
                 productContainer.Controls.Add(productHtml);
@@ -271,30 +313,6 @@ namespace SoftCyberiaWA
         //public string convertirBindingListAJSON(BindingList<producto> bindingList)
         //{
         //    return JsonSerializer.Serialize(bindingList);
-        //}
-
-
-        //public static List<string> ObtenerMarcas()
-        //{
-        //    List<string> marcas = new List<string>();
-
-        //    string connectionString = ConfigurationManager.ConnectionStrings["YourConnectionStringName"].ConnectionString;
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-
-        //        //????????????????????????????????????????????????????????????
-        //        string query = "SELECT DISTINCT Marca FROM Productos";
-        //        SqlCommand command = new SqlCommand(query, connection);
-        //        connection.Open();
-        //        SqlDataReader reader = command.ExecuteReader();
-
-        //        while (reader.Read())
-        //        {
-        //            marcas.Add(reader["Marca"].ToString());
-        //        }
-        //    }
-
-        //    return marcas;
         //}
     }
 
