@@ -18,7 +18,7 @@ namespace SoftCyberiaWA.Cliente
         public IndexCliente()
         {
             this.marcaBO = new MarcaBO();
-            this.tipoProductoBO = new TipoProductoBO(); 
+            this.tipoProductoBO = new TipoProductoBO();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -38,37 +38,18 @@ namespace SoftCyberiaWA.Cliente
             // Recorre la lista de marcas y genera el HTML para cada una
             foreach (marca m in marcas)
             {
-                if (m.imagen != null && m.imagen.Length > 0)
-                {
-                    // Convertimos el arreglo de bytes de la imagen a Base64
-                    string base64Image = Convert.ToBase64String(m.imagen);
-                    // Ajusta el tipo MIME según el formato de las imágenes en tu base de datos (ej. image/png o image/jpeg)
-                    string imageSrc = $"data:image/jpeg;base64,{base64Image}";
+                string imageSrc = m.imagen != null && m.imagen.Length > 0
+                    ? $"data:image/jpeg;base64,{Convert.ToBase64String(m.imagen)}"
+                    : "/Imagenes/canva.jpg"; // Imagen por defecto
 
-                    // Crea el contenedor HTML de la marca
-                    Literal marcaHtml = new Literal();
-                    marcaHtml.Text = $@"
-                <div class='col-6 col-md-3 mb-3'>
-                    <img src='{imageSrc}' alt='{m.nombre}' class='brand-img precisa-img'>
-                    <p class='text-center'>{m.nombre}</p>
-                </div>";
+                Literal marcaHtml = new Literal();
+                marcaHtml.Text = $@"
+                    <div class='col-6 col-md-3 mb-3'>
+                        <img src='{imageSrc}' alt='{m.nombre}' class='brand-img precisa-img'>
+                        <p class='text-center'>{m.nombre}</p>
+                    </div>";
+                marcaContainer.Controls.Add(marcaHtml);
 
-                    // Agrega el HTML generado al contenedor en la página
-                    marcaContainer.Controls.Add(marcaHtml);
-
-                   
-                }
-                else
-                {
-                    // En caso de que no haya imagen, muestra un placeholder o solo el nombre de la marca
-                    Literal marcaHtml = new Literal();
-                    marcaHtml.Text = $@"
-                <div class='col-6 col-md-3 mb-3'>
-                    <img src='/Imagenes/canva.jpg' alt='Sin imagen' class='brand-img precisa-img'>
-                    <p class='text-center'>{m.nombre}</p>
-                </div>";
-                    marcaContainer.Controls.Add(marcaHtml);
-                }
             }
         }
 

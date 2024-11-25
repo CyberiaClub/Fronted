@@ -1,21 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Xml.Linq;
 using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaPersonaBO;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
-using System.Net;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Text;
+
 
 namespace SoftCyberiaWA.InicioSesion
 {
@@ -23,88 +10,20 @@ namespace SoftCyberiaWA.InicioSesion
     {
         private PersonaBO personaBO;
         // Clase para deserializar la respuesta de la API
-        public class Country
-        {
-            [JsonPropertyName("name")]
-            public Name Name { get; set; }
-        }
-
-
-        public class Name
-        {
-            [JsonPropertyName("common")]
-            public string Common { get; set; }
-        }
-
+        
         public registro_usuario()
         {
             this.personaBO = new PersonaBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                CargarNacionalidades();
-            }
-            else
-            {
-                RegistrarScriptAutocompletado(); // Asegura que el script esté disponible en un postback
-                nacionalidad.Text = Request.Form[nacionalidad.UniqueID] ?? string.Empty; // Restaura el valor ingresado
-            }
-        }
-
-        private void CargarNacionalidades()
-        {
-            try
-            {
-                // Comprueba si las nacionalidades ya están en la variable global
-                if (Application["nacionalidades"] == null)
-                {
-                    using (var client = new WebClient())
-                    {
-                        string json = client.DownloadString("https://restcountries.com/v3.1/all");
-
-                        var paises = JsonSerializer.Deserialize<List<Country>>(json, new JsonSerializerOptions
-                        {
-                            PropertyNameCaseInsensitive = true
-                        });
-
-                        var nombresComunes = paises
-                            .Where(c => c.Name != null && !string.IsNullOrEmpty(c.Name.Common))
-                            .Select(c => c.Name.Common)
-                            .Distinct()
-                            .OrderBy(n => n)
-                            .ToList();
-
-                        // Guarda las nacionalidades en una variable global
-                        Application["nacionalidades"] = nombresComunes;
-                    }
-                }
-
-                RegistrarScriptAutocompletado();
-            }
-            catch (Exception ex)
-            {
-                nacionalidadMensaje.InnerText = "Error al cargar las nacionalidades.";
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-        }
-        private void RegistrarScriptAutocompletado()
-        {
-            var nombresComunes = (List<string>)Application["nacionalidades"]; // Obtiene las nacionalidades de la variable global
-            if (nombresComunes != null)
-            {
-                var nacionalidadesJson = JsonSerializer.Serialize(nombresComunes);
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "nacionalidadesScript",
-                    $"var nacionalidades = {nacionalidadesJson};", true);
-            }
+            
         }
 
         protected void onClickRegistrarPersona(object sender, EventArgs e)
         {
             try
             {
-
                 persona _persona = new persona();
                 bool valido = true;
                 valido &= ValidarTipoDocument();

@@ -228,7 +228,7 @@ hr {
         background-color: #aaa;
     }
 
-    /*diseño cateogria del index 2x2*/
+/*diseño cateogria del index 2x2*/
 /* Carrusel de categorías estilo 2x2 */
 .carousel-categories-wrapper {
     display: flex;
@@ -288,4 +288,34 @@ hr {
     .carousel-control-prev:hover,
     .carousel-control-next:hover {
         color: #0056b3; /* Cambia a un azul más oscuro al pasar el cursor */
+    }
+
+body > .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que ocupe toda la pantalla */
+}
+
+footer {
+    margin-top: auto; /* Empuja el footer al fondo */
+}
+
+.brands {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Asegura que el contenido se alinee al principio */
+    min-height: calc(100vh - 150px); /* Asegura que ocupe al menos el espacio visible menos el footer y header */
+    padding-bottom: 50px; /* Espaciado para evitar solapamiento con el footer */
+}
+
+    .brands .row {
+        flex-wrap: wrap; /* Asegura que las marcas se ajusten en filas */
+        justify-content: center;
+        gap: 20px; /* Espaciado entre elementos */
+    }
+
+    .brands img {
+        max-height: 120px; /* Ajusta el tamaño máximo de las imágenes */
+        object-fit: contain; /* Asegura que las imágenes se ajusten sin recortarse */
     }

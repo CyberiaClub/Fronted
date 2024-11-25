@@ -11,7 +11,7 @@ namespace SoftCyberiaWA.Vendedor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["RolUsuario"] == null || Session["paginas"] == null)
+            if (Session["Usuario"] == null || Session["paginas"] == null)
             {
                 Response.Redirect("~/InicioSesion/indexInicioSesion.aspx");
             }

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="listado_productos.aspx.cs" Inherits="SoftCyberiaWA.listado_productos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Productos
 </asp:Content>
@@ -38,21 +39,19 @@
 
             <!-- Listado de Productos -->
             <div class="col-md-9">
-
-                <div class="row" id="product-list">
-                    <div class="col-md-9">
-                        <asp:Panel ID="productContainer" runat="server" CssClass="row">
-                        </asp:Panel>
-                    </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
+                    <asp:Panel ID="productContainer" runat="server" CssClass="row">
+                    </asp:Panel>
                 </div>
-
             </div>
+
+
 
         </div>
         <script src="/Scripts/filtrar_listado_productos.js"></script>
     </div>
 
-    
+
 
 
 </asp:Content>

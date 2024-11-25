@@ -115,16 +115,5 @@
             </div>
         </div>
     </div>
-    <script>
-        $(function () {
-            if (typeof nacionalidades !== "undefined" && Array.isArray(nacionalidades)) {
-                $("#<%= nacionalidad.ClientID %>").autocomplete({
-                    source: nacionalidades
-                });
-            } else {
-                console.warn("La variable 'nacionalidades' no está definida o no es válida.");
-            }
-        });
-    </script>
 </asp:Content>
 
