@@ -21,6 +21,7 @@
                         <asp:TextBox ID="productoSku" runat="server" CssClass="form-control" aria-describedby="basic-addon3"></asp:TextBox>
                         <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="onClickBuscar" />
                     </div>
+                    <small id="successMessage" runat="server" style="color: red;"></small>
                 </div>
 
                 <label for="basic-url" class="form-label">Nombre del producto</label>

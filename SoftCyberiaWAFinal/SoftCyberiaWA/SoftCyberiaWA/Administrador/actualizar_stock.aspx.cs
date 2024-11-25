@@ -11,11 +11,12 @@ namespace SoftCyberiaWA.Administrador
 {
     public partial class actualizar_stock : System.Web.UI.Page
     {
-        ProductoBO productoBO = new ProductoBO();
-        producto _producto = new producto();
+        private ProductoBO productoBO;
+        private producto _producto;
         public actualizar_stock()
         {
             this.productoBO = new ProductoBO();
+            this._producto = new producto();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -43,23 +44,23 @@ namespace SoftCyberiaWA.Administrador
             try
             {
                 this.buscarProducto();
-                successMessage.Text = "Detalle del Producto buscado.";
+                successMessage.InnerText = "Detalle del Producto buscado.";
                 successMessage.Visible = true;
             }
             catch (Exception ex)
             {
-                successMessage.Text = $"Error al buscar producto: {ex.Message}";
-                successMessage.CssClass = "text-danger";
+                successMessage.InnerText = $"Error al buscar producto: {ex.Message}";
+                //successMessage. = "text-danger";
                 successMessage.Visible = true;
             }
-            
+
         }
 
         protected void onClickActualizarStock(object sender, EventArgs e)
         {
             try
             {
-                productoBO.producto_aumentar_stock(Convert.ToInt32(this._producto.idProducto), 1, Convert.ToInt32(cantidadProducto.Text));
+                _ = productoBO.producto_aumentar_stock(Convert.ToInt32(_producto.idProducto), 1, Convert.ToInt32(cantidadAgregar.Text));
                 this.buscarProducto();
 
 
@@ -72,6 +73,6 @@ namespace SoftCyberiaWA.Administrador
                 successActualizado.CssClass = "text-danger";
                 successActualizado.Visible = true;
             }
-}
+        }
     }
 }

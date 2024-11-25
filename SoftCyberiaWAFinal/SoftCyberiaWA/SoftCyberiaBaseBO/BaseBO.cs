@@ -7,7 +7,6 @@ using SoftCyberiaBaseBO.CyberiaWS;
 
 namespace SoftCyberiaBaseBO
 {
-    
     public class BaseBO
     {
     // Servicios web de inventario
