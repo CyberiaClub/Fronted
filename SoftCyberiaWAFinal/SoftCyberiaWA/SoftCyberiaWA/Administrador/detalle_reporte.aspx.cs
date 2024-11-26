@@ -1,4 +1,4 @@
-﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaInventarioBO;
 using SoftCyberiaReporteBO;
 using System;
@@ -45,8 +45,6 @@ namespace SoftCyberiaWA.Administrador
             byte[] reporte = reporteBO.ReporteClientes(sedeNombre.SelectedIndex);
             reporteBO.AbrirReporte(Response, "ReporteTopClientes", reporte);
         }
-
-
-
     }
+    */
 }

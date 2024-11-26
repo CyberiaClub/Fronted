@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
@@ -41,10 +42,8 @@ namespace SoftCyberiaWA
                 {
                     Nombre = sede.nombre,
                     Descripcion = sede.descripcion,
-                    HorarioApertura = sede.horarioApertura,
-                    //HorarioApertura = sede.horarioApertura.ToString("HH:mm"), // Asegúrate de que horarioApertura sea DateTime
-                    HorarioCierre = sede.horarioCierre,     // Asegúrate de que horarioCierre sea DateTime
-
+                    HorarioApertura = "08:00 am",
+                    HorarioCierre = "20:00 pm",
                     Telefono = sede.telefono,
                     LinkUrl = $"../Cliente/listado_productos.aspx?sede={sede.nombre.Replace(" ", "_")}&idSede={sede.idSede}"
                 }); // Aquí cerramos el paréntesis
@@ -54,7 +53,6 @@ namespace SoftCyberiaWA
             repeaterSedes.DataSource = listaSedes;
             repeaterSedes.DataBind();
         }
-
         // Clase auxiliar para pasar la información al Repeater
         public class SedeInfo
         {
@@ -66,10 +64,10 @@ namespace SoftCyberiaWA
             public string Descripcion { get; set; }
             [JsonProperty("horarioApertura")]
             [JsonPropertyName("horarioApertura")]
-            public localTime HorarioApertura { get; set; }
+            public string HorarioApertura { get; set; }
             [JsonProperty("horarioCierre")]
             [JsonPropertyName("horarioCierre")]
-            public localTime HorarioCierre { get; set; }
+            public string HorarioCierre { get; set; }
             [JsonProperty("telefono")]
             [JsonPropertyName("telefono")]
             public string Telefono { get; set; }

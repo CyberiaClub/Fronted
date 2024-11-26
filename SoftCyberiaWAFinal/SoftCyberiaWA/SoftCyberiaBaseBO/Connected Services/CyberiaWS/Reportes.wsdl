@@ -17,17 +17,17 @@
   <message name="facturaResponse">
     <part name="parameters" element="tns:facturaResponse" />
   </message>
-  <message name="reporteClientes">
-    <part name="parameters" element="tns:reporteClientes" />
-  </message>
-  <message name="reporteClientesResponse">
-    <part name="parameters" element="tns:reporteClientesResponse" />
-  </message>
   <message name="reporteStock">
     <part name="parameters" element="tns:reporteStock" />
   </message>
   <message name="reporteStockResponse">
     <part name="parameters" element="tns:reporteStockResponse" />
+  </message>
+  <message name="reporteClientes">
+    <part name="parameters" element="tns:reporteClientes" />
+  </message>
+  <message name="reporteClientesResponse">
+    <part name="parameters" element="tns:reporteClientesResponse" />
   </message>
   <portType name="Reportes">
     <operation name="boleta">
@@ -38,13 +38,13 @@
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/facturaRequest" message="tns:factura" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/facturaResponse" message="tns:facturaResponse" />
     </operation>
-    <operation name="reporteClientes">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteClientesRequest" message="tns:reporteClientes" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteClientesResponse" message="tns:reporteClientesResponse" />
-    </operation>
     <operation name="reporteStock">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteStockRequest" message="tns:reporteStock" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteStockResponse" message="tns:reporteStockResponse" />
+    </operation>
+    <operation name="reporteClientes">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteClientesRequest" message="tns:reporteClientes" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteClientesResponse" message="tns:reporteClientesResponse" />
     </operation>
   </portType>
   <binding name="ReportesPortBinding" type="tns:Reportes">
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="reporteClientes">
+    <operation name="reporteStock">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="reporteStock">
+    <operation name="reporteClientes">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

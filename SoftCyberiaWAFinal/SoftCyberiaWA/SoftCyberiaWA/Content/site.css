@@ -35,9 +35,9 @@ body {
     background-color: var(--secondary-color1);
 }
 
-    .highlight-banner h2, .monthly-offers h3 {
-        color: var(--secondary-color2);
-    }
+.highlight-banner h2, .monthly-offers h3 {
+    color: var(--secondary-color2);
+}
 
 .category-icon, .featured-products-icon {
     color: var(--secondary-color3);

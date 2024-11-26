@@ -149,6 +149,18 @@
   <message name="tipo_comprobante_listarResponse">
     <part name="parameters" element="tns:tipo_comprobante_listarResponse" />
   </message>
+  <message name="tipoProducto_insertar">
+    <part name="parameters" element="tns:tipoProducto_insertar" />
+  </message>
+  <message name="tipoProducto_insertarResponse">
+    <part name="parameters" element="tns:tipoProducto_insertarResponse" />
+  </message>
+  <message name="tipoProducto_eliminar">
+    <part name="parameters" element="tns:tipoProducto_eliminar" />
+  </message>
+  <message name="tipoProducto_eliminarResponse">
+    <part name="parameters" element="tns:tipoProducto_eliminarResponse" />
+  </message>
   <message name="tipopersona_listar_paginas">
     <part name="parameters" element="tns:tipopersona_listar_paginas" />
   </message>
@@ -167,11 +179,11 @@
   <message name="comprobante_pago_modificarResponse">
     <part name="parameters" element="tns:comprobante_pago_modificarResponse" />
   </message>
-  <message name="producto_lineas_pedido">
-    <part name="parameters" element="tns:producto_lineas_pedido" />
+  <message name="producto_modificar">
+    <part name="parameters" element="tns:producto_modificar" />
   </message>
-  <message name="producto_lineas_pedidoResponse">
-    <part name="parameters" element="tns:producto_lineas_pedidoResponse" />
+  <message name="producto_modificarResponse">
+    <part name="parameters" element="tns:producto_modificarResponse" />
   </message>
   <message name="persona_verificar_correo">
     <part name="parameters" element="tns:persona_verificar_correo" />
@@ -342,6 +354,14 @@
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipo_comprobante_listarRequest" message="tns:tipo_comprobante_listar" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipo_comprobante_listarResponse" message="tns:tipo_comprobante_listarResponse" />
     </operation>
+    <operation name="tipoProducto_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_insertarRequest" message="tns:tipoProducto_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_insertarResponse" message="tns:tipoProducto_insertarResponse" />
+    </operation>
+    <operation name="tipoProducto_eliminar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_eliminarRequest" message="tns:tipoProducto_eliminar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_eliminarResponse" message="tns:tipoProducto_eliminarResponse" />
+    </operation>
     <operation name="tipopersona_listar_paginas">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_paginasRequest" message="tns:tipopersona_listar_paginas" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_paginasResponse" message="tns:tipopersona_listar_paginasResponse" />
@@ -354,9 +374,9 @@
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_modificarRequest" message="tns:comprobante_pago_modificar" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_modificarResponse" message="tns:comprobante_pago_modificarResponse" />
     </operation>
-    <operation name="producto_lineas_pedido">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_lineas_pedidoRequest" message="tns:producto_lineas_pedido" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_lineas_pedidoResponse" message="tns:producto_lineas_pedidoResponse" />
+    <operation name="producto_modificar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_modificarRequest" message="tns:producto_modificar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_modificarResponse" message="tns:producto_modificarResponse" />
     </operation>
     <operation name="persona_verificar_correo">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_verificar_correoRequest" message="tns:persona_verificar_correo" />

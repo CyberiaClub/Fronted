@@ -73,10 +73,10 @@
             </section>
 
             <!-- Brands Section -->
-            <section class="brands text-center my-4">
-                <h3 class="font-bold bg-primary bg-opacity-50" style="font-size: 3em;">Marcas</h3>
+            <section  class="brands text-center my-4" style="min-height: 400px; height:auto; max-height: auto">
                 <div class="container">
-                    <div class="row justify-content-center mt-4">
+                <h3 class="font-bold category-title bg-primary bg-opacity-50" style="font-size: 3em;">Marcas</h3>
+                    <div class="row justify-content-center" id="marcaDivContainer">
                         <asp:Panel ID="marcaContainer" runat="server" CssClass="row"></asp:Panel>
                         <!-- Puedes añadir más imágenes siguiendo la misma estructura -->
                     </div>

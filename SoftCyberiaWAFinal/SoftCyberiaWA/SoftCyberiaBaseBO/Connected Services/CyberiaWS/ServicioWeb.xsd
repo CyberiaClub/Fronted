@@ -190,17 +190,17 @@
   <xs:complexType name="oferta_listar">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="oferta_listarResponse">
+  <xs:complexType name="tipo_comprobante_listarResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:oferta" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoComprobante" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="producto_listar">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="producto_listarResponse">
+  <xs:complexType name="tipoComprobante">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+      <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="idTipoComprobante" type="xs:int" />
+      <xs:element minOccurs="0" name="secuencial" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoComprobante" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="tipopersona_listar_roles_trabajadores">
@@ -223,6 +223,22 @@
       <xs:element minOccurs="0" name="idPagina" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="referencia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="oferta_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="oferta_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:oferta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="producto_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="persona_loguearse">
