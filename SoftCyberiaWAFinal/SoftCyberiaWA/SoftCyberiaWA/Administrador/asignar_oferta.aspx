@@ -84,8 +84,8 @@
                 <h4 class="ms-2 mb-3" style="width:56.8vw">Listado de Productos en la Oferta</h4>
                 <div class="table-responsive">
                     <asp:GridView ID="gridProductosOferta" runat="server" AutoGenerateColumns="False" CssClass="table table-striped"
-                        OnRowEditing="gridProductosOferta_RowEditing" OnRowUpdating="gridProductosOferta_RowUpdating"
-                        OnRowCancelingEdit="gridProductosOferta_RowCancelingEdit" OnRowCommand="gridViewProductos_RowCommand"
+                        OnRowEditing="GridProductosOferta_RowEditing" OnRowUpdating="GridProductosOferta_RowUpdating"
+                        OnRowCancelingEdit="GridProductosOferta_RowCancelingEdit" OnRowCommand="GridViewProductos_RowCommand"
                         Width="100%" Style="table-layout: fixed;">
                         <Columns>
                             <asp:BoundField DataField="ID" HeaderText="Nro." ReadOnly="true" HeaderStyle-Width="7%" ItemStyle-Width="7%" FooterStyle-Width="7%" />

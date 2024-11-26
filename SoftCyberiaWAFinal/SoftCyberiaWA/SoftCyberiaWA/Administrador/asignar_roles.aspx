@@ -32,7 +32,7 @@
                             <asp:Label ID="lblDocumento" runat="server" Text="Número de documento de identidad:" CssClass="col-form-label fw-bold"></asp:Label>
 
                             <asp:TextBox ID="dni" runat="server" CssClass="form-control mr-2"
-                                AutoPostBack="True" OnTextChanged="dni_Ingresado"></asp:TextBox>
+                                AutoPostBack="True" OnTextChanged="Dni_Ingresado"></asp:TextBox>
                             <small id="dniMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
 
