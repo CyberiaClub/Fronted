@@ -280,7 +280,6 @@
     </Compile>
     <Compile Include="Administrador\detalle_reporte.aspx.cs">
       <DependentUpon>detalle_reporte.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Administrador\detalle_reporte.aspx.designer.cs">
       <DependentUpon>detalle_reporte.aspx</DependentUpon>

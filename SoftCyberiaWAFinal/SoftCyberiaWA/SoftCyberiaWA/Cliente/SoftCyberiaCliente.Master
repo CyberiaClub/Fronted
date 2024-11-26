@@ -20,10 +20,6 @@
         <asp:ContentPlaceHolder ID="head" runat="server">
         </asp:ContentPlaceHolder>
     </title>
-
-
-
-
 </head>
 <body>
     <!--Por si necesitan script o estilo-->
@@ -85,28 +81,26 @@
         </div>
     </nav>
 
-
-
-
-
     <!--Contenido web-->
-    <div>
-        <form runat="server">
+    <div class="d-flex flex-column" style="height: auto; min-height: 100%;">
+        <form runat="server" >
             <asp:ContentPlaceHolder ID="cphContenido" runat="server">
             </asp:ContentPlaceHolder>
         </form>
     </div>
 
-
-
-
-
     <!-- Footer -->
-    <footer id="footerMaster"class="footer p-4 text-white text-center">
+    <%--<footer id="footerMaster"class="footer p-4 text-white text-center" runat="server">
         <asp:ContentPlaceHolder ID="footerContent" runat="server">
             <p class="mb-0 font-light">© 2024 Cyberiastore. Todos los derechos reservados.</p>
         </asp:ContentPlaceHolder>
-    </footer>
+    </footer>--%>
+
+    <div id="footerMaster" class="footer p-4 text-white text-center" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <p class="mb-0 font-light">© 2024 Cyberiastore. Todos los derechos reservados.</p>
+    </asp:ContentPlaceHolder>
+</div>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="c2cc4b55-9706-4876-b8ef-b889b44239f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="a90f5e03-2641-4f9c-98d3-d854507c46c8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8080/CyberiaStoreWS_Servidor/archivo.disco" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServicioWeb.wsdl" MetadataType="Wsdl" ID="9dee8252-cf91-4fcd-87ab-3d0538df283d" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ServicioWeb?wsdl" />
-    <MetadataFile FileName="Reportes.wsdl" MetadataType="Wsdl" ID="622dfd30-a9ba-495a-ba40-c2d6e07a0f37" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/Reportes?wsdl" />
-    <MetadataFile FileName="ServicioWeb.xsd" MetadataType="Schema" ID="fa9e93ac-e990-4a2b-8c16-ee2fde101e68" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ServicioWeb?xsd=1" />
-    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="e4468986-854f-486c-b138-94c90ae7af3a" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/archivo.disco" />
-    <MetadataFile FileName="Reportes.xsd" MetadataType="Schema" ID="cd2984e1-61f2-4196-99f2-15ab9d3a6ba8" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/Reportes?xsd=1" />
+    <MetadataFile FileName="ServicioWeb.wsdl" MetadataType="Wsdl" ID="c901744f-05ca-4ff1-95a7-ae36129e3bee" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ServicioWeb?wsdl" />
+    <MetadataFile FileName="Reportes.wsdl" MetadataType="Wsdl" ID="6b7765e2-d176-460a-b72d-bbe880ca2024" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/Reportes?wsdl" />
+    <MetadataFile FileName="ServicioWeb.xsd" MetadataType="Schema" ID="8e5e6918-ad41-4015-9686-d45c004cdb00" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/ServicioWeb?xsd=1" />
+    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="93967d6b-a3e5-4e06-9b73-c08356ebc762" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/archivo.disco" />
+    <MetadataFile FileName="Reportes.xsd" MetadataType="Schema" ID="cb2839de-6db9-4832-a100-779269fc3f3a" SourceId="1" SourceUrl="http://localhost:8080/CyberiaStoreWS_Servidor/Reportes?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

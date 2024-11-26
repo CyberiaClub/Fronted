@@ -81,8 +81,7 @@ namespace SoftCyberiaWA.InicioSesion
                 BindingList<pagina> paginasBindingList = new BindingList<pagina>(paginasArray.ToList());
                 // Guardar la BindingList en la sesión
                 Session["Paginas"] = paginasBindingList;
-                //Response.Redirect("~/Administrador/indexAdministrador.aspx");
-                Response.Redirect("~/Administrador/registrar_nuevos_proveedores.aspx");
+                Response.Redirect("~/Administrador/IndexAdministrador.aspx");
             }
         }
 
