@@ -11,6 +11,18 @@
   <message name="tipopersona_listar_roles_trabajadoresResponse">
     <part name="parameters" element="tns:tipopersona_listar_roles_trabajadoresResponse" />
   </message>
+  <message name="comprobante_buscar_usuario">
+    <part name="parameters" element="tns:comprobante_buscar_usuario" />
+  </message>
+  <message name="comprobante_buscar_usuarioResponse">
+    <part name="parameters" element="tns:comprobante_buscar_usuarioResponse" />
+  </message>
+  <message name="comprobante_buscar_sede">
+    <part name="parameters" element="tns:comprobante_buscar_sede" />
+  </message>
+  <message name="comprobante_buscar_sedeResponse">
+    <part name="parameters" element="tns:comprobante_buscar_sedeResponse" />
+  </message>
   <message name="oferta_modificar">
     <part name="parameters" element="tns:oferta_modificar" />
   </message>
@@ -238,6 +250,14 @@
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_roles_trabajadoresRequest" message="tns:tipopersona_listar_roles_trabajadores" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_roles_trabajadoresResponse" message="tns:tipopersona_listar_roles_trabajadoresResponse" />
     </operation>
+    <operation name="comprobante_buscar_usuario">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_usuarioRequest" message="tns:comprobante_buscar_usuario" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_usuarioResponse" message="tns:comprobante_buscar_usuarioResponse" />
+    </operation>
+    <operation name="comprobante_buscar_sede">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_sedeRequest" message="tns:comprobante_buscar_sede" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_sedeResponse" message="tns:comprobante_buscar_sedeResponse" />
+    </operation>
     <operation name="oferta_modificar">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_modificarRequest" message="tns:oferta_modificar" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_modificarResponse" message="tns:oferta_modificarResponse" />
@@ -390,6 +410,24 @@
   <binding name="ServicioWebPortBinding" type="tns:ServicioWeb">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="tipopersona_listar_roles_trabajadores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="comprobante_buscar_usuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="comprobante_buscar_sede">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

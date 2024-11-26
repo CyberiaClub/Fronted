@@ -29,6 +29,32 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresResponse> tipopersona_listar_roles_trabajadoresAsync(SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_usuarioR" +
+            "equest", ReplyAction="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_usuarioR" +
+            "esponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioResponse comprobante_buscar_usuario(SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_usuarioR" +
+            "equest", ReplyAction="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_usuarioR" +
+            "esponse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioResponse> comprobante_buscar_usuarioAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_sedeRequ" +
+            "est", ReplyAction="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_sedeResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeResponse comprobante_buscar_sede(SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_sedeRequ" +
+            "est", ReplyAction="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_buscar_sedeResp" +
+            "onse")]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeResponse> comprobante_buscar_sedeAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_modificarRequest", ReplyAction="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_modificarResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -586,302 +612,7 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
-    public partial class comprobantePago : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private bool activoFieldSpecified;
-        
-        private string direccionField;
-        
-        private estadoPedido estadoPedidoField;
-        
-        private bool estadoPedidoFieldSpecified;
-        
-        private System.DateTime fechaField;
-        
-        private bool fechaFieldSpecified;
-        
-        private int idComprobantePagoField;
-        
-        private bool idComprobantePagoFieldSpecified;
-        
-        private double igvField;
-        
-        private bool igvFieldSpecified;
-        
-        private comprobantePagoEntry[] lineaPedidoField;
-        
-        private string numeroField;
-        
-        private persona personaField;
-        
-        private string razonSocialField;
-        
-        private string rucField;
-        
-        private double subtotalField;
-        
-        private bool subtotalFieldSpecified;
-        
-        private tipoComprobante tipoComprobanteField;
-        
-        private double totalField;
-        
-        private bool totalFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool activoSpecified {
-            get {
-                return this.activoFieldSpecified;
-            }
-            set {
-                this.activoFieldSpecified = value;
-                this.RaisePropertyChanged("activoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string direccion {
-            get {
-                return this.direccionField;
-            }
-            set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public estadoPedido estadoPedido {
-            get {
-                return this.estadoPedidoField;
-            }
-            set {
-                this.estadoPedidoField = value;
-                this.RaisePropertyChanged("estadoPedido");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool estadoPedidoSpecified {
-            get {
-                return this.estadoPedidoFieldSpecified;
-            }
-            set {
-                this.estadoPedidoFieldSpecified = value;
-                this.RaisePropertyChanged("estadoPedidoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime fecha {
-            get {
-                return this.fechaField;
-            }
-            set {
-                this.fechaField = value;
-                this.RaisePropertyChanged("fecha");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaSpecified {
-            get {
-                return this.fechaFieldSpecified;
-            }
-            set {
-                this.fechaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int idComprobantePago {
-            get {
-                return this.idComprobantePagoField;
-            }
-            set {
-                this.idComprobantePagoField = value;
-                this.RaisePropertyChanged("idComprobantePago");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idComprobantePagoSpecified {
-            get {
-                return this.idComprobantePagoFieldSpecified;
-            }
-            set {
-                this.idComprobantePagoFieldSpecified = value;
-                this.RaisePropertyChanged("idComprobantePagoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public double igv {
-            get {
-                return this.igvField;
-            }
-            set {
-                this.igvField = value;
-                this.RaisePropertyChanged("igv");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool igvSpecified {
-            get {
-                return this.igvFieldSpecified;
-            }
-            set {
-                this.igvFieldSpecified = value;
-                this.RaisePropertyChanged("igvSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("entry", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-        public comprobantePagoEntry[] lineaPedido {
-            get {
-                return this.lineaPedidoField;
-            }
-            set {
-                this.lineaPedidoField = value;
-                this.RaisePropertyChanged("lineaPedido");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string numero {
-            get {
-                return this.numeroField;
-            }
-            set {
-                this.numeroField = value;
-                this.RaisePropertyChanged("numero");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public persona persona {
-            get {
-                return this.personaField;
-            }
-            set {
-                this.personaField = value;
-                this.RaisePropertyChanged("persona");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string razonSocial {
-            get {
-                return this.razonSocialField;
-            }
-            set {
-                this.razonSocialField = value;
-                this.RaisePropertyChanged("razonSocial");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string ruc {
-            get {
-                return this.rucField;
-            }
-            set {
-                this.rucField = value;
-                this.RaisePropertyChanged("ruc");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public double subtotal {
-            get {
-                return this.subtotalField;
-            }
-            set {
-                this.subtotalField = value;
-                this.RaisePropertyChanged("subtotal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool subtotalSpecified {
-            get {
-                return this.subtotalFieldSpecified;
-            }
-            set {
-                this.subtotalFieldSpecified = value;
-                this.RaisePropertyChanged("subtotalSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public tipoComprobante tipoComprobante {
-            get {
-                return this.tipoComprobanteField;
-            }
-            set {
-                this.tipoComprobanteField = value;
-                this.RaisePropertyChanged("tipoComprobante");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        public double total {
-            get {
-                return this.totalField;
-            }
-            set {
-                this.totalField = value;
-                this.RaisePropertyChanged("total");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool totalSpecified {
-            get {
-                return this.totalFieldSpecified;
-            }
-            set {
-                this.totalFieldSpecified = value;
-                this.RaisePropertyChanged("totalSpecified");
-            }
-        }
+    public partial class localTime : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -896,69 +627,120 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
-    public enum estadoPedido {
-        
-        /// <remarks/>
-        EN_PREPARACION,
-        
-        /// <remarks/>
-        LISTO_PARA_RECOGER,
-        
-        /// <remarks/>
-        ENTREGADO,
-        
-        /// <remarks/>
-        CANCELADO,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
-    public partial class comprobantePagoEntry : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
+    public partial class sede : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private producto keyField;
+        private string descripcionField;
         
-        private int valueField;
+        private localTime horarioAperturaField;
         
-        private bool valueFieldSpecified;
+        private localTime horarioCierreField;
+        
+        private int idSedeField;
+        
+        private bool idSedeFieldSpecified;
+        
+        private string nombreField;
+        
+        private producto productoField;
+        
+        private string telefonoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public producto key {
+        public string descripcion {
             get {
-                return this.keyField;
+                return this.descripcionField;
             }
             set {
-                this.keyField = value;
-                this.RaisePropertyChanged("key");
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int value {
+        public localTime horarioApertura {
             get {
-                return this.valueField;
+                return this.horarioAperturaField;
             }
             set {
-                this.valueField = value;
-                this.RaisePropertyChanged("value");
+                this.horarioAperturaField = value;
+                this.RaisePropertyChanged("horarioApertura");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public localTime horarioCierre {
+            get {
+                return this.horarioCierreField;
+            }
+            set {
+                this.horarioCierreField = value;
+                this.RaisePropertyChanged("horarioCierre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idSede {
+            get {
+                return this.idSedeField;
+            }
+            set {
+                this.idSedeField = value;
+                this.RaisePropertyChanged("idSede");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool valueSpecified {
+        public bool idSedeSpecified {
             get {
-                return this.valueFieldSpecified;
+                return this.idSedeFieldSpecified;
             }
             set {
-                this.valueFieldSpecified = value;
-                this.RaisePropertyChanged("valueSpecified");
+                this.idSedeFieldSpecified = value;
+                this.RaisePropertyChanged("idSedeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public producto producto {
+            get {
+                return this.productoField;
+            }
+            set {
+                this.productoField = value;
+                this.RaisePropertyChanged("producto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
             }
         }
         
@@ -1680,6 +1462,266 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
+    public partial class oferta : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private System.DateTime fechaDeFinField;
+        
+        private bool fechaDeFinFieldSpecified;
+        
+        private System.DateTime fechaDeInicioField;
+        
+        private bool fechaDeInicioFieldSpecified;
+        
+        private int idOfertaField;
+        
+        private bool idOfertaFieldSpecified;
+        
+        private byte[] imagenField;
+        
+        private int porcentajeField;
+        
+        private bool porcentajeFieldSpecified;
+        
+        private producto[] productosField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public System.DateTime fechaDeFin {
+            get {
+                return this.fechaDeFinField;
+            }
+            set {
+                this.fechaDeFinField = value;
+                this.RaisePropertyChanged("fechaDeFin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaDeFinSpecified {
+            get {
+                return this.fechaDeFinFieldSpecified;
+            }
+            set {
+                this.fechaDeFinFieldSpecified = value;
+                this.RaisePropertyChanged("fechaDeFinSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fechaDeInicio {
+            get {
+                return this.fechaDeInicioField;
+            }
+            set {
+                this.fechaDeInicioField = value;
+                this.RaisePropertyChanged("fechaDeInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaDeInicioSpecified {
+            get {
+                return this.fechaDeInicioFieldSpecified;
+            }
+            set {
+                this.fechaDeInicioFieldSpecified = value;
+                this.RaisePropertyChanged("fechaDeInicioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idOferta {
+            get {
+                return this.idOfertaField;
+            }
+            set {
+                this.idOfertaField = value;
+                this.RaisePropertyChanged("idOferta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idOfertaSpecified {
+            get {
+                return this.idOfertaFieldSpecified;
+            }
+            set {
+                this.idOfertaFieldSpecified = value;
+                this.RaisePropertyChanged("idOfertaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=3)]
+        public byte[] imagen {
+            get {
+                return this.imagenField;
+            }
+            set {
+                this.imagenField = value;
+                this.RaisePropertyChanged("imagen");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int porcentaje {
+            get {
+                return this.porcentajeField;
+            }
+            set {
+                this.porcentajeField = value;
+                this.RaisePropertyChanged("porcentaje");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool porcentajeSpecified {
+            get {
+                return this.porcentajeFieldSpecified;
+            }
+            set {
+                this.porcentajeFieldSpecified = value;
+                this.RaisePropertyChanged("porcentajeSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("productos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+        public producto[] productos {
+            get {
+                return this.productosField;
+            }
+            set {
+                this.productosField = value;
+                this.RaisePropertyChanged("productos");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
+    public partial class tipoComprobante : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private bool activoFieldSpecified;
+        
+        private int idTipoComprobanteField;
+        
+        private bool idTipoComprobanteFieldSpecified;
+        
+        private string secuencialField;
+        
+        private string tipoComprobante1Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool activoSpecified {
+            get {
+                return this.activoFieldSpecified;
+            }
+            set {
+                this.activoFieldSpecified = value;
+                this.RaisePropertyChanged("activoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int idTipoComprobante {
+            get {
+                return this.idTipoComprobanteField;
+            }
+            set {
+                this.idTipoComprobanteField = value;
+                this.RaisePropertyChanged("idTipoComprobante");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idTipoComprobanteSpecified {
+            get {
+                return this.idTipoComprobanteFieldSpecified;
+            }
+            set {
+                this.idTipoComprobanteFieldSpecified = value;
+                this.RaisePropertyChanged("idTipoComprobanteSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string secuencial {
+            get {
+                return this.secuencialField;
+            }
+            set {
+                this.secuencialField = value;
+                this.RaisePropertyChanged("secuencial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("tipoComprobante", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string tipoComprobante1 {
+            get {
+                return this.tipoComprobante1Field;
+            }
+            set {
+                this.tipoComprobante1Field = value;
+                this.RaisePropertyChanged("tipoComprobante1");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
     public partial class persona : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
@@ -2120,19 +2162,53 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
-    public partial class tipoComprobante : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class comprobantePago : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
         
         private bool activoFieldSpecified;
         
-        private int idTipoComprobanteField;
+        private string direccionField;
         
-        private bool idTipoComprobanteFieldSpecified;
+        private estadoPedido estadoPedidoField;
         
-        private string secuencialField;
+        private bool estadoPedidoFieldSpecified;
         
-        private string tipoComprobante1Field;
+        private System.DateTime fechaField;
+        
+        private bool fechaFieldSpecified;
+        
+        private int idComprobantePagoField;
+        
+        private bool idComprobantePagoFieldSpecified;
+        
+        private int idSedeField;
+        
+        private bool idSedeFieldSpecified;
+        
+        private double igvField;
+        
+        private bool igvFieldSpecified;
+        
+        private comprobantePagoEntry[] lineaPedidoField;
+        
+        private string numeroField;
+        
+        private persona personaField;
+        
+        private string razonSocialField;
+        
+        private string rucField;
+        
+        private double subtotalField;
+        
+        private bool subtotalFieldSpecified;
+        
+        private tipoComprobante tipoComprobanteField;
+        
+        private double totalField;
+        
+        private bool totalFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -2160,142 +2236,90 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int idTipoComprobante {
+        public string direccion {
             get {
-                return this.idTipoComprobanteField;
+                return this.direccionField;
             }
             set {
-                this.idTipoComprobanteField = value;
-                this.RaisePropertyChanged("idTipoComprobante");
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public estadoPedido estadoPedido {
+            get {
+                return this.estadoPedidoField;
+            }
+            set {
+                this.estadoPedidoField = value;
+                this.RaisePropertyChanged("estadoPedido");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idTipoComprobanteSpecified {
+        public bool estadoPedidoSpecified {
             get {
-                return this.idTipoComprobanteFieldSpecified;
+                return this.estadoPedidoFieldSpecified;
             }
             set {
-                this.idTipoComprobanteFieldSpecified = value;
-                this.RaisePropertyChanged("idTipoComprobanteSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string secuencial {
-            get {
-                return this.secuencialField;
-            }
-            set {
-                this.secuencialField = value;
-                this.RaisePropertyChanged("secuencial");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("tipoComprobante", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string tipoComprobante1 {
-            get {
-                return this.tipoComprobante1Field;
-            }
-            set {
-                this.tipoComprobante1Field = value;
-                this.RaisePropertyChanged("tipoComprobante1");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
-    public partial class localTime : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
-    public partial class sede : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string descripcionField;
-        
-        private localTime horarioAperturaField;
-        
-        private localTime horarioCierreField;
-        
-        private int idSedeField;
-        
-        private bool idSedeFieldSpecified;
-        
-        private string nombreField;
-        
-        private producto productoField;
-        
-        private string telefonoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public localTime horarioApertura {
-            get {
-                return this.horarioAperturaField;
-            }
-            set {
-                this.horarioAperturaField = value;
-                this.RaisePropertyChanged("horarioApertura");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public localTime horarioCierre {
-            get {
-                return this.horarioCierreField;
-            }
-            set {
-                this.horarioCierreField = value;
-                this.RaisePropertyChanged("horarioCierre");
+                this.estadoPedidoFieldSpecified = value;
+                this.RaisePropertyChanged("estadoPedidoSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaSpecified {
+            get {
+                return this.fechaFieldSpecified;
+            }
+            set {
+                this.fechaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int idComprobantePago {
+            get {
+                return this.idComprobantePagoField;
+            }
+            set {
+                this.idComprobantePagoField = value;
+                this.RaisePropertyChanged("idComprobantePago");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idComprobantePagoSpecified {
+            get {
+                return this.idComprobantePagoFieldSpecified;
+            }
+            set {
+                this.idComprobantePagoFieldSpecified = value;
+                this.RaisePropertyChanged("idComprobantePagoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public int idSede {
             get {
                 return this.idSedeField;
@@ -2319,38 +2343,147 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public producto producto {
-            get {
-                return this.productoField;
-            }
-            set {
-                this.productoField = value;
-                this.RaisePropertyChanged("producto");
-            }
-        }
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string telefono {
+        public double igv {
             get {
-                return this.telefonoField;
+                return this.igvField;
             }
             set {
-                this.telefonoField = value;
-                this.RaisePropertyChanged("telefono");
+                this.igvField = value;
+                this.RaisePropertyChanged("igv");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool igvSpecified {
+            get {
+                return this.igvFieldSpecified;
+            }
+            set {
+                this.igvFieldSpecified = value;
+                this.RaisePropertyChanged("igvSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("entry", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
+        public comprobantePagoEntry[] lineaPedido {
+            get {
+                return this.lineaPedidoField;
+            }
+            set {
+                this.lineaPedidoField = value;
+                this.RaisePropertyChanged("lineaPedido");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string numero {
+            get {
+                return this.numeroField;
+            }
+            set {
+                this.numeroField = value;
+                this.RaisePropertyChanged("numero");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public persona persona {
+            get {
+                return this.personaField;
+            }
+            set {
+                this.personaField = value;
+                this.RaisePropertyChanged("persona");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        public string razonSocial {
+            get {
+                return this.razonSocialField;
+            }
+            set {
+                this.razonSocialField = value;
+                this.RaisePropertyChanged("razonSocial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public string ruc {
+            get {
+                return this.rucField;
+            }
+            set {
+                this.rucField = value;
+                this.RaisePropertyChanged("ruc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public double subtotal {
+            get {
+                return this.subtotalField;
+            }
+            set {
+                this.subtotalField = value;
+                this.RaisePropertyChanged("subtotal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool subtotalSpecified {
+            get {
+                return this.subtotalFieldSpecified;
+            }
+            set {
+                this.subtotalFieldSpecified = value;
+                this.RaisePropertyChanged("subtotalSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        public tipoComprobante tipoComprobante {
+            get {
+                return this.tipoComprobanteField;
+            }
+            set {
+                this.tipoComprobanteField = value;
+                this.RaisePropertyChanged("tipoComprobante");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
+        public double total {
+            get {
+                return this.totalField;
+            }
+            set {
+                this.totalField = value;
+                this.RaisePropertyChanged("total");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool totalSpecified {
+            get {
+                return this.totalFieldSpecified;
+            }
+            set {
+                this.totalFieldSpecified = value;
+                this.RaisePropertyChanged("totalSpecified");
             }
         }
         
@@ -2367,148 +2500,69 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
     [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
+    public enum estadoPedido {
+        
+        /// <remarks/>
+        EN_PREPARACION,
+        
+        /// <remarks/>
+        LISTO_PARA_RECOGER,
+        
+        /// <remarks/>
+        ENTREGADO,
+        
+        /// <remarks/>
+        CANCELADO,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9037.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
-    public partial class oferta : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://servicios.cyberiastore.pucp.edu.pe/")]
+    public partial class comprobantePagoEntry : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.DateTime fechaDeFinField;
+        private producto keyField;
         
-        private bool fechaDeFinFieldSpecified;
+        private int valueField;
         
-        private System.DateTime fechaDeInicioField;
-        
-        private bool fechaDeInicioFieldSpecified;
-        
-        private int idOfertaField;
-        
-        private bool idOfertaFieldSpecified;
-        
-        private byte[] imagenField;
-        
-        private int porcentajeField;
-        
-        private bool porcentajeFieldSpecified;
-        
-        private producto[] productosField;
+        private bool valueFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime fechaDeFin {
+        public producto key {
             get {
-                return this.fechaDeFinField;
+                return this.keyField;
             }
             set {
-                this.fechaDeFinField = value;
-                this.RaisePropertyChanged("fechaDeFin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaDeFinSpecified {
-            get {
-                return this.fechaDeFinFieldSpecified;
-            }
-            set {
-                this.fechaDeFinFieldSpecified = value;
-                this.RaisePropertyChanged("fechaDeFinSpecified");
+                this.keyField = value;
+                this.RaisePropertyChanged("key");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fechaDeInicio {
+        public int value {
             get {
-                return this.fechaDeInicioField;
+                return this.valueField;
             }
             set {
-                this.fechaDeInicioField = value;
-                this.RaisePropertyChanged("fechaDeInicio");
+                this.valueField = value;
+                this.RaisePropertyChanged("value");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaDeInicioSpecified {
+        public bool valueSpecified {
             get {
-                return this.fechaDeInicioFieldSpecified;
+                return this.valueFieldSpecified;
             }
             set {
-                this.fechaDeInicioFieldSpecified = value;
-                this.RaisePropertyChanged("fechaDeInicioSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idOferta {
-            get {
-                return this.idOfertaField;
-            }
-            set {
-                this.idOfertaField = value;
-                this.RaisePropertyChanged("idOferta");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idOfertaSpecified {
-            get {
-                return this.idOfertaFieldSpecified;
-            }
-            set {
-                this.idOfertaFieldSpecified = value;
-                this.RaisePropertyChanged("idOfertaSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=3)]
-        public byte[] imagen {
-            get {
-                return this.imagenField;
-            }
-            set {
-                this.imagenField = value;
-                this.RaisePropertyChanged("imagen");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int porcentaje {
-            get {
-                return this.porcentajeField;
-            }
-            set {
-                this.porcentajeField = value;
-                this.RaisePropertyChanged("porcentaje");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool porcentajeSpecified {
-            get {
-                return this.porcentajeFieldSpecified;
-            }
-            set {
-                this.porcentajeFieldSpecified = value;
-                this.RaisePropertyChanged("porcentajeSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("productos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
-        public producto[] productos {
-            get {
-                return this.productosField;
-            }
-            set {
-                this.productosField = value;
-                this.RaisePropertyChanged("productos");
+                this.valueFieldSpecified = value;
+                this.RaisePropertyChanged("valueSpecified");
             }
         }
         
@@ -2546,6 +2600,78 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         }
         
         public tipopersona_listar_roles_trabajadoresResponse(SoftCyberiaBaseBO.CyberiaWS.tipoPersona[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_buscar_usuario", WrapperNamespace="http://servicios.cyberiastore.pucp.edu.pe/", IsWrapped=true)]
+    public partial class comprobante_buscar_usuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_persona;
+        
+        public comprobante_buscar_usuarioRequest() {
+        }
+        
+        public comprobante_buscar_usuarioRequest(int id_persona) {
+            this.id_persona = id_persona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_buscar_usuarioResponse", WrapperNamespace="http://servicios.cyberiastore.pucp.edu.pe/", IsWrapped=true)]
+    public partial class comprobante_buscar_usuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] @return;
+        
+        public comprobante_buscar_usuarioResponse() {
+        }
+        
+        public comprobante_buscar_usuarioResponse(SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_buscar_sede", WrapperNamespace="http://servicios.cyberiastore.pucp.edu.pe/", IsWrapped=true)]
+    public partial class comprobante_buscar_sedeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_sede;
+        
+        public comprobante_buscar_sedeRequest() {
+        }
+        
+        public comprobante_buscar_sedeRequest(int id_sede) {
+            this.id_sede = id_sede;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="comprobante_buscar_sedeResponse", WrapperNamespace="http://servicios.cyberiastore.pucp.edu.pe/", IsWrapped=true)]
+    public partial class comprobante_buscar_sedeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://servicios.cyberiastore.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] @return;
+        
+        public comprobante_buscar_sedeResponse() {
+        }
+        
+        public comprobante_buscar_sedeResponse(SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] @return) {
             this.@return = @return;
         }
     }
@@ -3894,6 +4020,52 @@ namespace SoftCyberiaBaseBO.CyberiaWS {
         public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresResponse> tipopersona_listar_roles_trabajadoresAsync() {
             SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.tipopersona_listar_roles_trabajadoresRequest();
             return ((SoftCyberiaBaseBO.CyberiaWS.ServicioWeb)(this)).tipopersona_listar_roles_trabajadoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioResponse SoftCyberiaBaseBO.CyberiaWS.ServicioWeb.comprobante_buscar_usuario(SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioRequest request) {
+            return base.Channel.comprobante_buscar_usuario(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] comprobante_buscar_usuario(int id_persona) {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioRequest();
+            inValue.id_persona = id_persona;
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ServicioWeb)(this)).comprobante_buscar_usuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioResponse> SoftCyberiaBaseBO.CyberiaWS.ServicioWeb.comprobante_buscar_usuarioAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioRequest request) {
+            return base.Channel.comprobante_buscar_usuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioResponse> comprobante_buscar_usuarioAsync(int id_persona) {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_usuarioRequest();
+            inValue.id_persona = id_persona;
+            return ((SoftCyberiaBaseBO.CyberiaWS.ServicioWeb)(this)).comprobante_buscar_usuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeResponse SoftCyberiaBaseBO.CyberiaWS.ServicioWeb.comprobante_buscar_sede(SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeRequest request) {
+            return base.Channel.comprobante_buscar_sede(request);
+        }
+        
+        public SoftCyberiaBaseBO.CyberiaWS.comprobantePago[] comprobante_buscar_sede(int id_sede) {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeRequest();
+            inValue.id_sede = id_sede;
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeResponse retVal = ((SoftCyberiaBaseBO.CyberiaWS.ServicioWeb)(this)).comprobante_buscar_sede(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeResponse> SoftCyberiaBaseBO.CyberiaWS.ServicioWeb.comprobante_buscar_sedeAsync(SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeRequest request) {
+            return base.Channel.comprobante_buscar_sedeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeResponse> comprobante_buscar_sedeAsync(int id_sede) {
+            SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeRequest inValue = new SoftCyberiaBaseBO.CyberiaWS.comprobante_buscar_sedeRequest();
+            inValue.id_sede = id_sede;
+            return ((SoftCyberiaBaseBO.CyberiaWS.ServicioWeb)(this)).comprobante_buscar_sedeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

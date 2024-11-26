@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://servicios.cyberiastore.pucp.edu.pe/" targetNamespace="http://servicios.cyberiastore.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="comprobante_buscar_sede" type="tns:comprobante_buscar_sede" />
+  <xs:element name="comprobante_buscar_sedeResponse" type="tns:comprobante_buscar_sedeResponse" />
+  <xs:element name="comprobante_buscar_usuario" type="tns:comprobante_buscar_usuario" />
+  <xs:element name="comprobante_buscar_usuarioResponse" type="tns:comprobante_buscar_usuarioResponse" />
   <xs:element name="comprobante_pago_insertar" type="tns:comprobante_pago_insertar" />
   <xs:element name="comprobante_pago_insertarResponse" type="tns:comprobante_pago_insertarResponse" />
   <xs:element name="comprobante_pago_listar" type="tns:comprobante_pago_listar" />
@@ -321,6 +325,7 @@
       <xs:element minOccurs="0" name="estadoPedido" type="tns:estadoPedido" />
       <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
       <xs:element minOccurs="0" name="idComprobantePago" type="xs:int" />
+      <xs:element minOccurs="0" name="idSede" type="xs:int" />
       <xs:element minOccurs="0" name="igv" type="xs:double" />
       <xs:element name="lineaPedido">
         <xs:complexType>
@@ -373,6 +378,16 @@
   <xs:complexType name="tipoProducto_insertarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante_buscar_sede">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id_sede" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante_buscar_sedeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comprobantePago" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="sede_modificar">
@@ -532,6 +547,16 @@
   <xs:complexType name="sede_listarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sede" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante_buscar_usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id_persona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante_buscar_usuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comprobantePago" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="proveedor_modificar">
