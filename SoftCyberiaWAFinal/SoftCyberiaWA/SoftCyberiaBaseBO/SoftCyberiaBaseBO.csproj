@@ -208,6 +208,9 @@
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.persona_modificarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.persona_modificar_usuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.persona_verificar_correoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

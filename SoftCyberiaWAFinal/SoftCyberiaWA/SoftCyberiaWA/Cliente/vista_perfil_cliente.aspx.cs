@@ -16,9 +16,15 @@ namespace SoftCyberiaWA
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("~/InicioSesion/indexInicioSesion.aspx");
+            }
             if (!IsPostBack)
             {
                 LoadUserProfile();
+                persona p = Session["Usuario"] as persona;
+                UserNameLiteral.Text = $"<h1>{p.primerApellido}, {p.nombre}</h1>";
             }
             ////Carga los datos del perfil sin verificar `IsPostBack`
             //CargarDatosPerfil();
@@ -45,7 +51,8 @@ namespace SoftCyberiaWA
                 usuario.telefono = txtPhone.Text.Trim();
                 usuario.direccion = txtDireccion.Text.Trim();
                 usuario.correo = txtEmail.Text.Trim();
-                _ = personaBO.Persona_modificar(usuario);
+
+                _ = personaBO.Persona_modficar_usuario(usuario);
                 // Mostrar mensaje de confirmación
                 ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Perfil actualizado con éxito');", true);
 

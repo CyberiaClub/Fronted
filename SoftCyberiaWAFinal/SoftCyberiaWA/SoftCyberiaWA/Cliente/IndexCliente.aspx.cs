@@ -25,6 +25,10 @@ namespace SoftCyberiaWA.Cliente
                 CargarMarcas();
                 CargarTipoProductos();
             }
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("~/InicioSesion/indexInicioSesion.aspx");
+            }
         }
 
         private void CargarMarcas()
