@@ -79,7 +79,7 @@
                 </div>
 
                 <!-- Botón para añadir al carrito -->
-                <asp:Button ID="btnAgregarCarrito" runat="server" CssClass="btn btn-dark btn-lg" Text="Añadir a la cesta" OnClick="btnAgregarCarrito_Click" />
+                <asp:Button ID="btnAgregarCarrito" runat="server" CssClass="btn btn-dark btn-lg" Text="Añadir a la cesta" OnClick="BtnAgregarCarrito_Click" />
 
                 <!-- Mensaje de error si no se encuentra el producto -->
                 <asp:Label ID="lblMensajeError" runat="server" CssClass="text-danger mt-3" Visible="false"></asp:Label>

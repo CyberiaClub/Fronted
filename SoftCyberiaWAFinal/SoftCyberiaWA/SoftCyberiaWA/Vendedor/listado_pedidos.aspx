@@ -9,13 +9,13 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 
     <asp:Panel ID="panelPedidos" runat="server">
-        <asp:GridView ID="gvPedidos" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="gvPedidos_SelectedIndexChanged">
+        <asp:GridView ID="gvPedidos" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="GvPedidos_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="NumeroPedido" HeaderText="Número de Pedido" />
                 <asp:BoundField DataField="FechaCreacion" HeaderText="Fecha de Creación" DataFormatString="{0:dd/MM/yyyy}" />
                 <asp:TemplateField HeaderText="Estado">
                     <ItemTemplate>
-                        <asp:DropDownList ID="ddlEstado" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlEstado_SelectedIndexChanged">
+                        <asp:DropDownList ID="ddlEstado" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DdlEstado_SelectedIndexChanged">
                             <asp:ListItem Value="Listo para Recoger" Text="Listo para Recoger" />
                             <asp:ListItem Value="Entregado" Text="Entregado" />
                         </asp:DropDownList>

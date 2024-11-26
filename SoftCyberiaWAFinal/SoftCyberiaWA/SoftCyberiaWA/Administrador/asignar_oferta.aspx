@@ -58,7 +58,7 @@
                 <!-- Caja de texto para el sku -->
                 <div class="col-12 col-md-5" >
                     <asp:Label ID="lblproductoSku" runat="server" Text="Buscar Producto por SKU:" CssClass="col-form-label fw-bold"></asp:Label>
-                    <asp:TextBox ID="productoSKU" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="sku_TextChange" Width="80%"/>
+                    <asp:TextBox ID="productoSKU" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="Sku_TextChange" Width="80%"/>
                     <small id="productoSKUMensaje" class="form-text text-danger" runat="server"></small>
                 </div>
                 <!-- Botón de agregar producto-->
@@ -116,7 +116,7 @@
 
             <div class="text-center mt-4">
                 <asp:Button ID="btnAsignarOferta" runat="server" Text="Asignar Oferta" CssClass="btn btn-primary"
-                    OnClick="btnAsignarOferta_Click" Width="20%" />
+                    OnClick="BtnAsignarOferta_Click" Width="20%" />
                 <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
             </div>
         </div>

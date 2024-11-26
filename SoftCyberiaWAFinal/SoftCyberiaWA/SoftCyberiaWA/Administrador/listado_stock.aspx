@@ -30,7 +30,7 @@
                             <small id="sedeNombreMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
 
-                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnBuscar_Click" />
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="BtnBuscar_Click" />
                         <asp:Label ID="buscarMensaje" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
                 </div>

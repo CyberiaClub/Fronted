@@ -17,7 +17,7 @@
 
         <!-- Botón para volver -->
         <div class="text-center mt-5">
-            <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-outline-return" OnClick="btnVolver_Click"/>
+            <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-outline-return" OnClick="BtnVolver_Click"/>
         </div>
     </div>
 </asp:Content>

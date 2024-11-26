@@ -83,7 +83,7 @@
                     <div class="col-md-4 d-flex flex-column align-items-center justify-content-center bg-light" style="border-radius: 0 15px 15px 0;">
                         <h4 class="font-weight-bold mb-4" style="color: #004EA8;">Asignar Rol</h4>
                         <img src="/Imagenes/rol.png" alt="Icono de seguridad" class="img-fluid img-thumbnail mb-3" style="width: 160px;">
-                        <asp:Button ID="btnAsignar" runat="server" Text="Asignar" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnAsignar_Click" />
+                        <asp:Button ID="btnAsignar" runat="server" Text="Asignar" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="BtnAsignar_Click" />
                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
 
                     </div>

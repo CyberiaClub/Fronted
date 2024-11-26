@@ -126,7 +126,7 @@
 
         <asp:Label ID="lblMensajeCarrito" runat="server" CssClass="text-muted mt-4 d-block text-center" />
         <div class="text-center mt-4">
-            <asp:Button ID="btnFinalizarCompra" runat="server" Text="Finalizar Compra" CssClass="btn btn-primary btn-lg" OnClick="btnFinalizarCompra_Click" />
+            <asp:Button ID="btnFinalizarCompra" runat="server" Text="Finalizar Compra" CssClass="btn btn-primary btn-lg" OnClick="BtnFinalizarCompra_Click" />
         </div>
 
     </div>

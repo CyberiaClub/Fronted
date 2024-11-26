@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="card-footer text-center">
-                <asp:Button ID="Button1" runat="server" Text="Registrar" CssClass="btn btn-primary btn-lg w-100" OnClick="registerButton_Click" />
+                <asp:Button ID="Button1" runat="server" Text="Registrar" CssClass="btn btn-primary btn-lg w-100" OnClick="RegisterButton_Click" />
                 <asp:Label ID="Label1" runat="server" CssClass="text-success mt-2 d-block" Visible="false"></asp:Label>
             </div>
         </div>
