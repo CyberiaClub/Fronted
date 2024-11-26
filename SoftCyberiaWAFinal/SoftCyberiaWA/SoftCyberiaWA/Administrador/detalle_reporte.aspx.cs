@@ -1,25 +1,28 @@
-﻿using System;
+﻿using SoftCyberiaInventarioBO;
+using System;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Administrador
 {
     public partial class detalle_reporte : Page
     {
-        private ProductoBO productoBO;
-        private PersonaBo personaBO;
-        public reporte_producto()
+        //private ProductoBO productoBO;
+        //private PersonaBo personaBO;
+        private SedeBO sedeBO;
+        public detalle_reporte()
         {
-            this.productoBO = new ProductoBO();
-            this.personaBO = new PersonaBo();
+            //this.productoBO = new ProductoBO();
+            //this.personaBO = new PersonaBo();
+            this.sedeBO = new SedeBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarSedes();
-           
         }
         private void CargarSedes()
         {
-            sedeNombre.DataSource = sedeBO.sede_listar();
+            sedeNombre.DataSource = sedeBO.Sede_listar();
             sedeNombre.DataTextField = "nombre";
             sedeNombre.DataValueField = "idSede";
             sedeNombre.DataBind();
@@ -28,23 +31,23 @@ namespace SoftCyberiaWA.Administrador
             sedeNombre.SelectedIndex = 0;
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
+        protected void BtnBuscar_Click(object sender, EventArgs e)
         {
-            byte[] reporte = this.productoBO.reporteProducto(sedeNombre.SelectedIndex);
-            Reposnse.Clear();
-            Response.ContenType = "application/pdf";
-            Response.AddHeader("Content-Disposition", "inline;filename=ReporteStockProductos.pdf");
-            Response.BinaryWrite(reporte);
-            Response.End();
+            //byte[] reporte = this.productoBO.reporteStock(sedeNombre.SelectedIndex);
+            //Response.Clear();
+            //Response.ContentType = "application/pdf";
+            //Response.AddHeader("Content-Disposition", "inline;filename=ReporteStockProductos.pdf");
+            //Response.BinaryWrite(reporte);
+            //Response.End();
         }
-        protected void btnTop_Click(object sender, EventArgs e)
+        protected void BtnTop_Click(object sender, EventArgs e)
         {
-            byte[] reporte = this.personaBO.reporteTopClientes();
-            Reposnse.Clear();
-            Response.ContenType = "application/pdf";
-            Response.AddHeader("Content-Disposition", "inline;filename=ReporteTopClientes.pdf");
-            Response.BinaryWrite(reporte);
-            Response.End();
+            //byte[] reporte = this.personaBO.reporteClientes(sedeNombre.SelectedIndex);
+            //Response.Clear();
+            //Response.ContentType = "application/pdf";
+            //Response.AddHeader("Content-Disposition", "inline;filename=ReporteTopClientes.pdf");
+            //Response.BinaryWrite(reporte);
+            //Response.End();
         }
 
 

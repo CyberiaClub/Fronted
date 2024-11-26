@@ -1,17 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
 using SoftCyberiaBaseBO.CyberiaWS;
 
 namespace SoftCyberiaBaseBO
 {
     public class BaseBO
     {
-        protected ServicioWebClient wsBase;
-        protected ReportesClient wsReportes;
 
-
-        public BaseBO()
-        {
-            wsBase = new ServicioWebClient();
-            wsReportes = new ReportesClient();
-        }
     }
 }
