@@ -1,50 +1,49 @@
-﻿using System;
+﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaInventarioBO;
+using SoftCyberiaReporteBO;
+using System;
+using System.Diagnostics;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Administrador
 {
-    public partial class detalle_reporte : Page
+    public partial class Detalle_reporte : Page
     {
-        private ProductoBO productoBO;
-        private PersonaBo personaBO;
-        public reporte_producto()
+        private readonly SedeBO sedeBO;
+        private readonly ReporteBO reporteBO;
+        public Detalle_reporte()
         {
-            this.productoBO = new ProductoBO();
-            this.personaBO = new PersonaBo();
+            sedeBO = new SedeBO();
+            reporteBO = new ReporteBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarSedes();
-           
+            if (!IsPostBack)
+            {
+                CargarSedes();
+            }
         }
         private void CargarSedes()
         {
-            sedeNombre.DataSource = sedeBO.sede_listar();
+            sedeNombre.DataSource = sedeBO.Sede_listar();
             sedeNombre.DataTextField = "nombre";
             sedeNombre.DataValueField = "idSede";
             sedeNombre.DataBind();
 
             sedeNombre.Items.Insert(0, new ListItem("Seleccione una Sede", "0"));
-            sedeNombre.SelectedIndex = 0;
         }
 
-        protected void btnBuscar_Click(object sender, EventArgs e)
+        protected void BtnBuscar_Click(object sender, EventArgs e)
         {
-            byte[] reporte = this.productoBO.reporteProducto(sedeNombre.SelectedIndex);
-            Reposnse.Clear();
-            Response.ContenType = "application/pdf";
-            Response.AddHeader("Content-Disposition", "inline;filename=ReporteStockProductos.pdf");
-            Response.BinaryWrite(reporte);
-            Response.End();
+            Debug.WriteLine(sedeNombre.SelectedIndex);
+            byte[] reporte = reporteBO.ReporteStock(sedeNombre.SelectedIndex);
+            reporteBO.AbrirReporte(Response, "ReporteStockProductos", reporte);
         }
-        protected void btnTop_Click(object sender, EventArgs e)
+        protected void BtnTop_Click(object sender, EventArgs e)
         {
-            byte[] reporte = this.personaBO.reporteTopClientes();
-            Reposnse.Clear();
-            Response.ContenType = "application/pdf";
-            Response.AddHeader("Content-Disposition", "inline;filename=ReporteTopClientes.pdf");
-            Response.BinaryWrite(reporte);
-            Response.End();
+            byte[] reporte = reporteBO.ReporteClientes(sedeNombre.SelectedIndex);
+            reporteBO.AbrirReporte(Response, "ReporteTopClientes", reporte);
         }
 
 

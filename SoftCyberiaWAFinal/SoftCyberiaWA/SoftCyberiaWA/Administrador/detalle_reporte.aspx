@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="detalle_reporte.aspx.cs" Inherits="SoftCyberiaWA.Administrador.detalle_reporte" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="detalle_reporte.aspx.cs" Inherits="SoftCyberiaWA.Administrador.Detalle_reporte" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Reporte
 </asp:Content>
@@ -28,7 +28,7 @@
                     </div>
 
                     <div>
-                        <asp:Button ID="btnBuscar" target="_blank" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnBuscar_Click" />
+                        <asp:Button ID="btnBuscar" target="_blank" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="BtnBuscar_Click" />
                         <asp:Label ID="reporteStock" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="card-body">
                     <div>Reporte de Top Clientes</div>
                     <div>
-                        <asp:Button ID="btnTop" target="_blank" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnTop_Click" />
+                        <asp:Button ID="btnTop" target="_blank" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="BtnTop_Click" />
                         <asp:Label ID="Label1" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
                 </div>
