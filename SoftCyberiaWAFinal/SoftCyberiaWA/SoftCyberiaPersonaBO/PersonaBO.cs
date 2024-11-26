@@ -1,5 +1,7 @@
 using SoftCyberiaBaseBO;
 using SoftCyberiaBaseBO.CyberiaWS;
+using System;
+using System.ServiceModel;
 
 namespace SoftCyberiaPersonaBO
 {
@@ -31,7 +33,7 @@ namespace SoftCyberiaPersonaBO
         {
             try
             {
-                persona _persona = this.WsPersona.persona_loguearse(correo, contrasena);
+                persona _persona = wsBase.persona_loguearse(correo, contrasena);
                 return _persona ?? null;
             }
             catch (FaultException ex)

@@ -240,6 +240,12 @@
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.proveedor_modificarResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.reporteClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.reporteStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CyberiaWS\SoftCyberiaBaseBO.CyberiaWS.retornaNombreDelServicioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -13,12 +13,14 @@ namespace SoftCyberiaWA
         private readonly ProductoBO productoBO;
         private readonly TipoProductoBO tipoProductoBO;
         private readonly SedeBO sedeBO;
+        private readonly MarcaBO marcaBO;
 
         public Listado_productos()
         {
             productoBO = new ProductoBO();
             tipoProductoBO = new TipoProductoBO();
             sedeBO = new SedeBO();
+            marcaBO = new MarcaBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -53,7 +55,7 @@ namespace SoftCyberiaWA
 
         private void CargarMarcas()
         {
-            BindingList<marca> marcas = this.marcaBO.marca_listar();
+            BindingList<marca> marcas = marcaBO.Marca_listar();
             if(marcas ==null || marcas.Count == 0)
             {
                 Literal mensaje = new Literal
@@ -86,7 +88,7 @@ namespace SoftCyberiaWA
             if (!(Cache["sedes"] is BindingList<sede> sedes))
             {
                 // Si no están en el caché, cargarlas desde la base de datos
-                sedes = this.sedeBO.sede_listar();
+                sedes = this.sedeBO.Sede_listar();
                 // Guardar las sedes en el caché por 1 horas
                 Cache.Insert("sedes", sedes, null, DateTime.Now.AddHours(1), System.Web.Caching.Cache.NoSlidingExpiration);
             }
@@ -125,7 +127,7 @@ namespace SoftCyberiaWA
         {
             if (!(Cache["TipoProductos"] is BindingList<tipoProducto> tiposDeProductos))
             {
-                tiposDeProductos = this.tipoProductoBO.tipoProducto_listar();
+                tiposDeProductos = this.tipoProductoBO.TipoProducto_listar();
                 Cache.Insert("TipoProductos", tiposDeProductos, null, DateTime.Now.AddHours(1), System.Web.Caching.Cache.NoSlidingExpiration);
             }
 

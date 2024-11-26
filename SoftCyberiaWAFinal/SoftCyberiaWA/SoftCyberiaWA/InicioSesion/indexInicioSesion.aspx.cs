@@ -52,7 +52,7 @@ namespace SoftCyberiaWA.InicioSesion
                 return;
             }
 
-            Session["Usuario"] = personaBO.persona_loguearse(correo, contrasena);
+            Session["Usuario"] = personaBO.Persona_loguearse(correo, contrasena);
 
             if (!(Session["Usuario"] is persona usuario))
             {

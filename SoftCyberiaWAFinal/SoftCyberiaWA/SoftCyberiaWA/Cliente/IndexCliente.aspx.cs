@@ -53,20 +53,19 @@ namespace SoftCyberiaWA.Cliente
                     marcaContainer.Controls.Add(marcaHtml);
 
                 }
-                else
-                {
-                    // En caso de que no haya imagen, muestra un placeholder o solo el nombre de la marca
-                    Literal marcaHtml = new Literal
-                    {
-                        Text = $@"
-                <div class='col-6 col-md-3 mb-3'>
-                    <img src='/Imagenes/canva.jpg' alt='Sin imagen' class='brand-img precisa-img'>
-                    <p class='text-center'>{m.nombre}</p>
-                </div>"
-                    };
-                    marcaContainer.Controls.Add(marcaHtml);
-                }
-            }
+            //else
+            //{
+            //    // En caso de que no haya imagen, muestra un placeholder o solo el nombre de la marca
+            //    Literal marcaHtml = new Literal
+            //    {
+            //        Text = $@"
+            //<div class='col-6 col-md-3 mb-3'>
+            //    <img src='/Imagenes/canva.jpg' alt='Sin imagen' class='brand-img precisa-img'>
+            //    <p class='text-center'>{m.nombre}</p>
+            //</div>"
+            //    };
+            //    marcaContainer.Controls.Add(marcaHtml);
+            //}
         }
 
         //private void CargarTipoProductos()

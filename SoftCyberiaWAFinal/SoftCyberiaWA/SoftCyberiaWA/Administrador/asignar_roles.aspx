@@ -59,8 +59,8 @@
                             <asp:Label ID="lblRol" runat="server" Text="Asignar Rol:" CssClass="col-form-label fw-bold "></asp:Label>
                             <asp:DropDownList ID="rol" runat="server" CssClass="form-control">
                                 <asp:ListItem Value="0">Seleccione un rol</asp:ListItem>
-                                <asp:ListItem Value="1">Vendedor</asp:ListItem>
-                                <asp:ListItem Value="2">Almacén</asp:ListItem>
+                                <asp:ListItem Value="3">Vendedor</asp:ListItem>
+                                <asp:ListItem Value="4">Almacén</asp:ListItem>
                             </asp:DropDownList>
                             <small id="rolMensaje" class="form-text text-danger" runat="server"></small>
                         </div>

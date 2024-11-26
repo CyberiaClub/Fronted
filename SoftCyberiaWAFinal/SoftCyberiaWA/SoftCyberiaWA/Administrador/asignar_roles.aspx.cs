@@ -88,13 +88,13 @@ namespace SoftCyberiaWA.Administrador
         {
 
             persona _persona = new persona();
-
+            successMessage.Visible = false;
+            successMessage.Text = "";
             if (Validar())
             {
                 string rolSeleccionado = rol.SelectedValue.ToString();
-
                 _persona.idTipoPersona = rolSeleccionado == "Almacén" ? 4 : 3;
-
+                _persona.idTipoPersonaSpecified = true;
                 _persona.sueldo = Convert.ToDouble(sueldo.Text);
                 _persona.sueldoSpecified = true;
                 _persona.idSede = Convert.ToInt32(sede.SelectedValue);
@@ -108,7 +108,6 @@ namespace SoftCyberiaWA.Administrador
                 _persona.tipoDeDocumentoSpecified = true;
 
                 _ = personaBO.Persona_insertar(_persona);
-
                 successMessage.Visible = true;
                 successMessage.Text = "Rol asignado exitosamente.";
             }
