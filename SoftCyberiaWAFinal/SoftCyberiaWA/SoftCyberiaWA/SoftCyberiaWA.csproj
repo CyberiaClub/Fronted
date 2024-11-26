@@ -226,6 +226,7 @@
     <Content Include="Cliente\metodo_pago.aspx" />
     <Content Include="Cliente\listado_productos.aspx" />
     <Content Include="InicioSesion\403.aspx" />
+    <Content Include="InicioSesion\CerrarSession.aspx" />
     <Content Include="InicioSesion\indexInicioSesion.aspx" />
     <Content Include="InicioSesion\registro_usuario.aspx" />
     <Content Include="InicioSesion\verificacion_usuario.aspx" />
@@ -286,6 +287,7 @@
     </Compile>
     <Compile Include="Administrador\detalle_reporte.aspx.cs">
       <DependentUpon>detalle_reporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Administrador\detalle_reporte.aspx.designer.cs">
       <DependentUpon>detalle_reporte.aspx</DependentUpon>
@@ -474,6 +476,13 @@
     </Compile>
     <Compile Include="InicioSesion\403.aspx.designer.cs">
       <DependentUpon>403.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicioSesion\CerrarSession.aspx.cs">
+      <DependentUpon>CerrarSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioSesion\CerrarSession.aspx.designer.cs">
+      <DependentUpon>CerrarSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="InicioSesion\indexInicioSesion.aspx.cs">
       <DependentUpon>indexInicioSesion.aspx</DependentUpon>

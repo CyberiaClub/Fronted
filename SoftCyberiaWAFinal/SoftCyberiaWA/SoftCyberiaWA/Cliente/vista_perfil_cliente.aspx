@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="container d-flex flex-column align-items-center mt-5">
-        <h1>Mario Sulca Valverde</h1>
+        <asp:Literal ID="UserNameLiteral" runat="server"></asp:Literal>
         <hr class="w-100 mb-4">
 
         <div class="profile-picture mb-4">
@@ -37,7 +37,7 @@
             <!-- Botones de edición y guardado -->
             <div id="editButtons" runat="server">
                 <asp:Button ID="btnEditProfile" CssClass="btn btn-primary w-100 mb-3" Text="Editar Perfil" OnClick="BtnEditProfile_Click" runat="server" />
-                <asp:Button ID="btnLogout" CssClass="btn btn-dark w-100 mb-3" Text="Cerrar Sesión" OnClick="BtnLogout_Click" runat="server" />
+               
             </div>
 
             <div id="saveButtons" runat="server" style="display: none;">
