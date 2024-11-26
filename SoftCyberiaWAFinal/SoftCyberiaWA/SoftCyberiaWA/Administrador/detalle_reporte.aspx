@@ -20,12 +20,13 @@
             <div class="card-body align-content-xxl-center align-content-center" style="font: medium">
 
                 <div class="row">
-                    <div>Reporte de Stock de Productos por sede</div>
                     <div class="card-body">
                         <asp:Label ID="lblsedeNombre" runat="server" Text="Seleccionar Sede:" CssClass="col-form-label fw-bold "></asp:Label>
                         <asp:DropDownList ID="sedeNombre" runat="server" CssClass="form-control h-75" Width="696px"></asp:DropDownList>
                         <small id="sedeNombreMensaje" class="form-text text-danger" runat="server"></small>
                     </div>
+
+                    <div>Reporte de Stock de Productos por sede</div>
 
                     <div>
                         <asp:Button ID="btnBuscar" target="_blank" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="BtnBuscar_Click" />
