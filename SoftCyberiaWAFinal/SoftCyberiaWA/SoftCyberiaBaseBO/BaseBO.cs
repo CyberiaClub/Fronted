@@ -1,4 +1,4 @@
-﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaBaseBO.CyberiaWS;
 
 namespace SoftCyberiaBaseBO
 {
@@ -6,6 +6,7 @@ namespace SoftCyberiaBaseBO
     {
         protected ServicioWebClient wsBase;
         protected ReportesClient wsReportes;
+
 
         public BaseBO()
         {

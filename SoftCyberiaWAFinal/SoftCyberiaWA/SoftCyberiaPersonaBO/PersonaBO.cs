@@ -45,5 +45,9 @@ namespace SoftCyberiaPersonaBO
                 throw;
             }
         }
+        //public byte[] reporteTopClientes()
+        //{
+        //    return this.WsProducto.reporteTopClientes();
+        //}
     }
 }

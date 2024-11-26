@@ -6,6 +6,7 @@
     <link href="../Content/siteadmi.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
     <div class="d-flex justify-content-center align-items-center vh-200" style="color: slategrey">
         <div class="card" style="width: 100%; max-width: 900px; color: midnightblue">
             <div class="card-header text-center" style="width: 900px">
@@ -17,34 +18,33 @@
 
 
             <div class="card-body align-content-xxl-center align-content-center" style="font: medium">
+
                 <div class="row">
-
-                    <%--                    <div class="col-md-6 ">
-                     <div class="col-md-10">
-                         <label for="categoriaName">Buscar por SKU:</label>
-                         <input type="text" id="sku" name="sku" placeholder="Ingresa SKU">
-                     </div>
-                 </div>
-
-                 <div class="col-md-6 ">
-                     <div class="col-md-10">
-                         <label for="categoriaName">Buscar por Nombre:</label>
-                         <input type="text" id="nombre" name="nombre" placeholder="Ingresa Nombre">
-                     </div>
-
-                 </div>--%>
-
-                    <div>
-                        <p></p>
-                        <asp:Button ID="Button2" runat="server" Text="Generar Reporte" CssClass="btn btn-primary w-75 align-content-sm-center" />
-
+                    <div>Reporte de Stock de Productos por sede</div>
+                    <div class="card-body">
+                        <asp:Label ID="lblsedeNombre" runat="server" Text="Seleccionar Sede:" CssClass="col-form-label fw-bold "></asp:Label>
+                        <asp:DropDownList ID="sedeNombre" runat="server" CssClass="form-control h-75" Width="696px"></asp:DropDownList>
+                        <small id="sedeNombreMensaje" class="form-text text-danger" runat="server"></small>
                     </div>
 
                     <div>
-                        aaaaaaa
+                        <asp:Button ID="btnBuscar" target="_blank" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnBuscar_Click" />
+                        <asp:Label ID="reporteStock" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
-
                 </div>
+
+                <div class="card-body">
+                    <div>Reporte de Top Clientes</div>
+                    <div>
+                        <asp:Button ID="btnTop" target="_blank" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnTop_Click" />
+                        <asp:Label ID="Label1" runat="server" CssClass="text-success" Visible="false"></asp:Label>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
         </div>
     </div>
