@@ -5,120 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/ServicioWeb?xsd=1" namespace="http://servicios.cyberiastore.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="tipopersona_listar_roles_trabajadores">
-    <part name="parameters" element="tns:tipopersona_listar_roles_trabajadores" />
-  </message>
-  <message name="tipopersona_listar_roles_trabajadoresResponse">
-    <part name="parameters" element="tns:tipopersona_listar_roles_trabajadoresResponse" />
-  </message>
-  <message name="oferta_modificar">
-    <part name="parameters" element="tns:oferta_modificar" />
-  </message>
-  <message name="oferta_modificarResponse">
-    <part name="parameters" element="tns:oferta_modificarResponse" />
-  </message>
-  <message name="persona_modificar">
-    <part name="parameters" element="tns:persona_modificar" />
-  </message>
-  <message name="persona_modificarResponse">
-    <part name="parameters" element="tns:persona_modificarResponse" />
-  </message>
-  <message name="proveedor_eliminar">
-    <part name="parameters" element="tns:proveedor_eliminar" />
-  </message>
-  <message name="proveedor_eliminarResponse">
-    <part name="parameters" element="tns:proveedor_eliminarResponse" />
-  </message>
-  <message name="persona_insertar">
-    <part name="parameters" element="tns:persona_insertar" />
-  </message>
-  <message name="persona_insertarResponse">
-    <part name="parameters" element="tns:persona_insertarResponse" />
-  </message>
-  <message name="oferta_listar">
-    <part name="parameters" element="tns:oferta_listar" />
-  </message>
-  <message name="oferta_listarResponse">
-    <part name="parameters" element="tns:oferta_listarResponse" />
-  </message>
-  <message name="marca_listar">
-    <part name="parameters" element="tns:marca_listar" />
-  </message>
-  <message name="marca_listarResponse">
-    <part name="parameters" element="tns:marca_listarResponse" />
-  </message>
-  <message name="marca_eliminar">
-    <part name="parameters" element="tns:marca_eliminar" />
-  </message>
-  <message name="marca_eliminarResponse">
-    <part name="parameters" element="tns:marca_eliminarResponse" />
-  </message>
-  <message name="proveedor_insertar">
-    <part name="parameters" element="tns:proveedor_insertar" />
-  </message>
-  <message name="proveedor_insertarResponse">
-    <part name="parameters" element="tns:proveedor_insertarResponse" />
-  </message>
-  <message name="oferta_insertar">
-    <part name="parameters" element="tns:oferta_insertar" />
-  </message>
-  <message name="oferta_insertarResponse">
-    <part name="parameters" element="tns:oferta_insertarResponse" />
-  </message>
-  <message name="producto_insertar">
-    <part name="parameters" element="tns:producto_insertar" />
-  </message>
-  <message name="producto_insertarResponse">
-    <part name="parameters" element="tns:producto_insertarResponse" />
-  </message>
-  <message name="producto_modificar">
-    <part name="parameters" element="tns:producto_modificar" />
-  </message>
-  <message name="producto_modificarResponse">
-    <part name="parameters" element="tns:producto_modificarResponse" />
-  </message>
-  <message name="sede_insertar">
-    <part name="parameters" element="tns:sede_insertar" />
-  </message>
-  <message name="sede_insertarResponse">
-    <part name="parameters" element="tns:sede_insertarResponse" />
-  </message>
-  <message name="sede_modificar">
-    <part name="parameters" element="tns:sede_modificar" />
-  </message>
-  <message name="sede_modificarResponse">
-    <part name="parameters" element="tns:sede_modificarResponse" />
-  </message>
-  <message name="persona_loguearse">
-    <part name="parameters" element="tns:persona_loguearse" />
-  </message>
-  <message name="persona_loguearseResponse">
-    <part name="parameters" element="tns:persona_loguearseResponse" />
-  </message>
-  <message name="marca_insertar">
-    <part name="parameters" element="tns:marca_insertar" />
-  </message>
-  <message name="marca_insertarResponse">
-    <part name="parameters" element="tns:marca_insertarResponse" />
-  </message>
-  <message name="proveedor_listar">
-    <part name="parameters" element="tns:proveedor_listar" />
-  </message>
-  <message name="proveedor_listarResponse">
-    <part name="parameters" element="tns:proveedor_listarResponse" />
-  </message>
-  <message name="sede_listar">
-    <part name="parameters" element="tns:sede_listar" />
-  </message>
-  <message name="sede_listarResponse">
-    <part name="parameters" element="tns:sede_listarResponse" />
-  </message>
-  <message name="producto_listar">
-    <part name="parameters" element="tns:producto_listar" />
-  </message>
-  <message name="producto_listarResponse">
-    <part name="parameters" element="tns:producto_listarResponse" />
-  </message>
   <message name="retornaNombreDelServicio">
     <part name="parameters" element="tns:retornaNombreDelServicio" />
   </message>
@@ -131,35 +17,11 @@
   <message name="producto_buscar_skuResponse">
     <part name="parameters" element="tns:producto_buscar_skuResponse" />
   </message>
-  <message name="tipo_comprobante_listar">
-    <part name="parameters" element="tns:tipo_comprobante_listar" />
+  <message name="tipoProducto_insertar">
+    <part name="parameters" element="tns:tipoProducto_insertar" />
   </message>
-  <message name="tipo_comprobante_listarResponse">
-    <part name="parameters" element="tns:tipo_comprobante_listarResponse" />
-  </message>
-  <message name="tipopersona_listar_paginas">
-    <part name="parameters" element="tns:tipopersona_listar_paginas" />
-  </message>
-  <message name="tipopersona_listar_paginasResponse">
-    <part name="parameters" element="tns:tipopersona_listar_paginasResponse" />
-  </message>
-  <message name="comprobante_pago_insertar">
-    <part name="parameters" element="tns:comprobante_pago_insertar" />
-  </message>
-  <message name="comprobante_pago_insertarResponse">
-    <part name="parameters" element="tns:comprobante_pago_insertarResponse" />
-  </message>
-  <message name="comprobante_pago_modificar">
-    <part name="parameters" element="tns:comprobante_pago_modificar" />
-  </message>
-  <message name="comprobante_pago_modificarResponse">
-    <part name="parameters" element="tns:comprobante_pago_modificarResponse" />
-  </message>
-  <message name="producto_lineas_pedido">
-    <part name="parameters" element="tns:producto_lineas_pedido" />
-  </message>
-  <message name="producto_lineas_pedidoResponse">
-    <part name="parameters" element="tns:producto_lineas_pedidoResponse" />
+  <message name="tipoProducto_insertarResponse">
+    <part name="parameters" element="tns:tipoProducto_insertarResponse" />
   </message>
   <message name="persona_verificar_correo">
     <part name="parameters" element="tns:persona_verificar_correo" />
@@ -167,23 +29,23 @@
   <message name="persona_verificar_correoResponse">
     <part name="parameters" element="tns:persona_verificar_correoResponse" />
   </message>
-  <message name="tipoProducto_insertar">
-    <part name="parameters" element="tns:tipoProducto_insertar" />
+  <message name="comprobante_pago_listar">
+    <part name="parameters" element="tns:comprobante_pago_listar" />
   </message>
-  <message name="tipoProducto_insertarResponse">
-    <part name="parameters" element="tns:tipoProducto_insertarResponse" />
+  <message name="comprobante_pago_listarResponse">
+    <part name="parameters" element="tns:comprobante_pago_listarResponse" />
+  </message>
+  <message name="comprobante_pago_modificar">
+    <part name="parameters" element="tns:comprobante_pago_modificar" />
+  </message>
+  <message name="comprobante_pago_modificarResponse">
+    <part name="parameters" element="tns:comprobante_pago_modificarResponse" />
   </message>
   <message name="producto_aumentar_stock">
     <part name="parameters" element="tns:producto_aumentar_stock" />
   </message>
   <message name="producto_aumentar_stockResponse">
     <part name="parameters" element="tns:producto_aumentar_stockResponse" />
-  </message>
-  <message name="tipoProducto_modificar">
-    <part name="parameters" element="tns:tipoProducto_modificar" />
-  </message>
-  <message name="tipoProducto_modificarResponse">
-    <part name="parameters" element="tns:tipoProducto_modificarResponse" />
   </message>
   <message name="proveedor_modificar">
     <part name="parameters" element="tns:proveedor_modificar" />
@@ -197,17 +59,155 @@
   <message name="tipoProducto_listarResponse">
     <part name="parameters" element="tns:tipoProducto_listarResponse" />
   </message>
-  <message name="comprobante_pago_listar">
-    <part name="parameters" element="tns:comprobante_pago_listar" />
-  </message>
-  <message name="comprobante_pago_listarResponse">
-    <part name="parameters" element="tns:comprobante_pago_listarResponse" />
-  </message>
   <message name="tipoProducto_eliminar">
     <part name="parameters" element="tns:tipoProducto_eliminar" />
   </message>
   <message name="tipoProducto_eliminarResponse">
     <part name="parameters" element="tns:tipoProducto_eliminarResponse" />
+  </message>
+  <message name="tipopersona_listar_paginas">
+    <part name="parameters" element="tns:tipopersona_listar_paginas" />
+  </message>
+  <message name="tipopersona_listar_paginasResponse">
+    <part name="parameters" element="tns:tipopersona_listar_paginasResponse" />
+  </message>
+  <message name="producto_lineas_pedido">
+    <part name="parameters" element="tns:producto_lineas_pedido" />
+  </message>
+  <message name="producto_lineas_pedidoResponse">
+    <part name="parameters" element="tns:producto_lineas_pedidoResponse" />
+  </message>
+  <message name="tipoProducto_modificar">
+    <part name="parameters" element="tns:tipoProducto_modificar" />
+  </message>
+  <message name="tipoProducto_modificarResponse">
+    <part name="parameters" element="tns:tipoProducto_modificarResponse" />
+  </message>
+  <message name="tipo_comprobante_listar">
+    <part name="parameters" element="tns:tipo_comprobante_listar" />
+  </message>
+  <message name="tipo_comprobante_listarResponse">
+    <part name="parameters" element="tns:tipo_comprobante_listarResponse" />
+  </message>
+  <message name="comprobante_pago_insertar">
+    <part name="parameters" element="tns:comprobante_pago_insertar" />
+  </message>
+  <message name="comprobante_pago_insertarResponse">
+    <part name="parameters" element="tns:comprobante_pago_insertarResponse" />
+  </message>
+  <message name="proveedor_insertar">
+    <part name="parameters" element="tns:proveedor_insertar" />
+  </message>
+  <message name="proveedor_insertarResponse">
+    <part name="parameters" element="tns:proveedor_insertarResponse" />
+  </message>
+  <message name="sede_modificar">
+    <part name="parameters" element="tns:sede_modificar" />
+  </message>
+  <message name="sede_modificarResponse">
+    <part name="parameters" element="tns:sede_modificarResponse" />
+  </message>
+  <message name="sede_insertar">
+    <part name="parameters" element="tns:sede_insertar" />
+  </message>
+  <message name="sede_insertarResponse">
+    <part name="parameters" element="tns:sede_insertarResponse" />
+  </message>
+  <message name="oferta_listar">
+    <part name="parameters" element="tns:oferta_listar" />
+  </message>
+  <message name="oferta_listarResponse">
+    <part name="parameters" element="tns:oferta_listarResponse" />
+  </message>
+  <message name="oferta_modificar">
+    <part name="parameters" element="tns:oferta_modificar" />
+  </message>
+  <message name="oferta_modificarResponse">
+    <part name="parameters" element="tns:oferta_modificarResponse" />
+  </message>
+  <message name="marca_eliminar">
+    <part name="parameters" element="tns:marca_eliminar" />
+  </message>
+  <message name="marca_eliminarResponse">
+    <part name="parameters" element="tns:marca_eliminarResponse" />
+  </message>
+  <message name="marca_insertar">
+    <part name="parameters" element="tns:marca_insertar" />
+  </message>
+  <message name="marca_insertarResponse">
+    <part name="parameters" element="tns:marca_insertarResponse" />
+  </message>
+  <message name="marca_listar">
+    <part name="parameters" element="tns:marca_listar" />
+  </message>
+  <message name="marca_listarResponse">
+    <part name="parameters" element="tns:marca_listarResponse" />
+  </message>
+  <message name="producto_modificar">
+    <part name="parameters" element="tns:producto_modificar" />
+  </message>
+  <message name="producto_modificarResponse">
+    <part name="parameters" element="tns:producto_modificarResponse" />
+  </message>
+  <message name="producto_listar">
+    <part name="parameters" element="tns:producto_listar" />
+  </message>
+  <message name="producto_listarResponse">
+    <part name="parameters" element="tns:producto_listarResponse" />
+  </message>
+  <message name="producto_insertar">
+    <part name="parameters" element="tns:producto_insertar" />
+  </message>
+  <message name="producto_insertarResponse">
+    <part name="parameters" element="tns:producto_insertarResponse" />
+  </message>
+  <message name="persona_insertar">
+    <part name="parameters" element="tns:persona_insertar" />
+  </message>
+  <message name="persona_insertarResponse">
+    <part name="parameters" element="tns:persona_insertarResponse" />
+  </message>
+  <message name="sede_listar">
+    <part name="parameters" element="tns:sede_listar" />
+  </message>
+  <message name="sede_listarResponse">
+    <part name="parameters" element="tns:sede_listarResponse" />
+  </message>
+  <message name="oferta_insertar">
+    <part name="parameters" element="tns:oferta_insertar" />
+  </message>
+  <message name="oferta_insertarResponse">
+    <part name="parameters" element="tns:oferta_insertarResponse" />
+  </message>
+  <message name="proveedor_eliminar">
+    <part name="parameters" element="tns:proveedor_eliminar" />
+  </message>
+  <message name="proveedor_eliminarResponse">
+    <part name="parameters" element="tns:proveedor_eliminarResponse" />
+  </message>
+  <message name="proveedor_listar">
+    <part name="parameters" element="tns:proveedor_listar" />
+  </message>
+  <message name="proveedor_listarResponse">
+    <part name="parameters" element="tns:proveedor_listarResponse" />
+  </message>
+  <message name="persona_modificar">
+    <part name="parameters" element="tns:persona_modificar" />
+  </message>
+  <message name="persona_modificarResponse">
+    <part name="parameters" element="tns:persona_modificarResponse" />
+  </message>
+  <message name="persona_loguearse">
+    <part name="parameters" element="tns:persona_loguearse" />
+  </message>
+  <message name="persona_loguearseResponse">
+    <part name="parameters" element="tns:persona_loguearseResponse" />
+  </message>
+  <message name="tipopersona_listar_roles_trabajadores">
+    <part name="parameters" element="tns:tipopersona_listar_roles_trabajadores" />
+  </message>
+  <message name="tipopersona_listar_roles_trabajadoresResponse">
+    <part name="parameters" element="tns:tipopersona_listar_roles_trabajadoresResponse" />
   </message>
   <message name="comprobante_pago_obtener_por_id">
     <part name="parameters" element="tns:comprobante_pago_obtener_por_id" />
@@ -234,82 +234,6 @@
     <part name="parameters" element="tns:persona_buscar_por_documentoResponse" />
   </message>
   <portType name="ServicioWeb">
-    <operation name="tipopersona_listar_roles_trabajadores">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_roles_trabajadoresRequest" message="tns:tipopersona_listar_roles_trabajadores" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_roles_trabajadoresResponse" message="tns:tipopersona_listar_roles_trabajadoresResponse" />
-    </operation>
-    <operation name="oferta_modificar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_modificarRequest" message="tns:oferta_modificar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_modificarResponse" message="tns:oferta_modificarResponse" />
-    </operation>
-    <operation name="persona_modificar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_modificarRequest" message="tns:persona_modificar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_modificarResponse" message="tns:persona_modificarResponse" />
-    </operation>
-    <operation name="proveedor_eliminar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_eliminarRequest" message="tns:proveedor_eliminar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_eliminarResponse" message="tns:proveedor_eliminarResponse" />
-    </operation>
-    <operation name="persona_insertar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_insertarRequest" message="tns:persona_insertar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_insertarResponse" message="tns:persona_insertarResponse" />
-    </operation>
-    <operation name="oferta_listar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_listarRequest" message="tns:oferta_listar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_listarResponse" message="tns:oferta_listarResponse" />
-    </operation>
-    <operation name="marca_listar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_listarRequest" message="tns:marca_listar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_listarResponse" message="tns:marca_listarResponse" />
-    </operation>
-    <operation name="marca_eliminar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_eliminarRequest" message="tns:marca_eliminar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_eliminarResponse" message="tns:marca_eliminarResponse" />
-    </operation>
-    <operation name="proveedor_insertar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_insertarRequest" message="tns:proveedor_insertar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_insertarResponse" message="tns:proveedor_insertarResponse" />
-    </operation>
-    <operation name="oferta_insertar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_insertarRequest" message="tns:oferta_insertar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_insertarResponse" message="tns:oferta_insertarResponse" />
-    </operation>
-    <operation name="producto_insertar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_insertarRequest" message="tns:producto_insertar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_insertarResponse" message="tns:producto_insertarResponse" />
-    </operation>
-    <operation name="producto_modificar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_modificarRequest" message="tns:producto_modificar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_modificarResponse" message="tns:producto_modificarResponse" />
-    </operation>
-    <operation name="sede_insertar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_insertarRequest" message="tns:sede_insertar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_insertarResponse" message="tns:sede_insertarResponse" />
-    </operation>
-    <operation name="sede_modificar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_modificarRequest" message="tns:sede_modificar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_modificarResponse" message="tns:sede_modificarResponse" />
-    </operation>
-    <operation name="persona_loguearse">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_loguearseRequest" message="tns:persona_loguearse" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_loguearseResponse" message="tns:persona_loguearseResponse" />
-    </operation>
-    <operation name="marca_insertar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_insertarRequest" message="tns:marca_insertar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_insertarResponse" message="tns:marca_insertarResponse" />
-    </operation>
-    <operation name="proveedor_listar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_listarRequest" message="tns:proveedor_listar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_listarResponse" message="tns:proveedor_listarResponse" />
-    </operation>
-    <operation name="sede_listar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_listarRequest" message="tns:sede_listar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_listarResponse" message="tns:sede_listarResponse" />
-    </operation>
-    <operation name="producto_listar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_listarRequest" message="tns:producto_listar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_listarResponse" message="tns:producto_listarResponse" />
-    </operation>
     <operation name="retornaNombreDelServicio">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/retornaNombreDelServicioRequest" message="tns:retornaNombreDelServicio" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/retornaNombreDelServicioResponse" message="tns:retornaNombreDelServicioResponse" />
@@ -318,41 +242,25 @@
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_buscar_skuRequest" message="tns:producto_buscar_sku" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_buscar_skuResponse" message="tns:producto_buscar_skuResponse" />
     </operation>
-    <operation name="tipo_comprobante_listar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipo_comprobante_listarRequest" message="tns:tipo_comprobante_listar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipo_comprobante_listarResponse" message="tns:tipo_comprobante_listarResponse" />
-    </operation>
-    <operation name="tipopersona_listar_paginas">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_paginasRequest" message="tns:tipopersona_listar_paginas" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_paginasResponse" message="tns:tipopersona_listar_paginasResponse" />
-    </operation>
-    <operation name="comprobante_pago_insertar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_insertarRequest" message="tns:comprobante_pago_insertar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_insertarResponse" message="tns:comprobante_pago_insertarResponse" />
-    </operation>
-    <operation name="comprobante_pago_modificar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_modificarRequest" message="tns:comprobante_pago_modificar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_modificarResponse" message="tns:comprobante_pago_modificarResponse" />
-    </operation>
-    <operation name="producto_lineas_pedido">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_lineas_pedidoRequest" message="tns:producto_lineas_pedido" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_lineas_pedidoResponse" message="tns:producto_lineas_pedidoResponse" />
+    <operation name="tipoProducto_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_insertarRequest" message="tns:tipoProducto_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_insertarResponse" message="tns:tipoProducto_insertarResponse" />
     </operation>
     <operation name="persona_verificar_correo">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_verificar_correoRequest" message="tns:persona_verificar_correo" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_verificar_correoResponse" message="tns:persona_verificar_correoResponse" />
     </operation>
-    <operation name="tipoProducto_insertar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_insertarRequest" message="tns:tipoProducto_insertar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_insertarResponse" message="tns:tipoProducto_insertarResponse" />
+    <operation name="comprobante_pago_listar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_listarRequest" message="tns:comprobante_pago_listar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_listarResponse" message="tns:comprobante_pago_listarResponse" />
+    </operation>
+    <operation name="comprobante_pago_modificar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_modificarRequest" message="tns:comprobante_pago_modificar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_modificarResponse" message="tns:comprobante_pago_modificarResponse" />
     </operation>
     <operation name="producto_aumentar_stock">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_aumentar_stockRequest" message="tns:producto_aumentar_stock" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_aumentar_stockResponse" message="tns:producto_aumentar_stockResponse" />
-    </operation>
-    <operation name="tipoProducto_modificar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_modificarRequest" message="tns:tipoProducto_modificar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_modificarResponse" message="tns:tipoProducto_modificarResponse" />
     </operation>
     <operation name="proveedor_modificar">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_modificarRequest" message="tns:proveedor_modificar" />
@@ -362,13 +270,105 @@
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_listarRequest" message="tns:tipoProducto_listar" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_listarResponse" message="tns:tipoProducto_listarResponse" />
     </operation>
-    <operation name="comprobante_pago_listar">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_listarRequest" message="tns:comprobante_pago_listar" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_listarResponse" message="tns:comprobante_pago_listarResponse" />
-    </operation>
     <operation name="tipoProducto_eliminar">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_eliminarRequest" message="tns:tipoProducto_eliminar" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_eliminarResponse" message="tns:tipoProducto_eliminarResponse" />
+    </operation>
+    <operation name="tipopersona_listar_paginas">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_paginasRequest" message="tns:tipopersona_listar_paginas" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_paginasResponse" message="tns:tipopersona_listar_paginasResponse" />
+    </operation>
+    <operation name="producto_lineas_pedido">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_lineas_pedidoRequest" message="tns:producto_lineas_pedido" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_lineas_pedidoResponse" message="tns:producto_lineas_pedidoResponse" />
+    </operation>
+    <operation name="tipoProducto_modificar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_modificarRequest" message="tns:tipoProducto_modificar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipoProducto_modificarResponse" message="tns:tipoProducto_modificarResponse" />
+    </operation>
+    <operation name="tipo_comprobante_listar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipo_comprobante_listarRequest" message="tns:tipo_comprobante_listar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipo_comprobante_listarResponse" message="tns:tipo_comprobante_listarResponse" />
+    </operation>
+    <operation name="comprobante_pago_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_insertarRequest" message="tns:comprobante_pago_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_insertarResponse" message="tns:comprobante_pago_insertarResponse" />
+    </operation>
+    <operation name="proveedor_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_insertarRequest" message="tns:proveedor_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_insertarResponse" message="tns:proveedor_insertarResponse" />
+    </operation>
+    <operation name="sede_modificar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_modificarRequest" message="tns:sede_modificar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_modificarResponse" message="tns:sede_modificarResponse" />
+    </operation>
+    <operation name="sede_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_insertarRequest" message="tns:sede_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_insertarResponse" message="tns:sede_insertarResponse" />
+    </operation>
+    <operation name="oferta_listar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_listarRequest" message="tns:oferta_listar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_listarResponse" message="tns:oferta_listarResponse" />
+    </operation>
+    <operation name="oferta_modificar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_modificarRequest" message="tns:oferta_modificar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_modificarResponse" message="tns:oferta_modificarResponse" />
+    </operation>
+    <operation name="marca_eliminar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_eliminarRequest" message="tns:marca_eliminar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_eliminarResponse" message="tns:marca_eliminarResponse" />
+    </operation>
+    <operation name="marca_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_insertarRequest" message="tns:marca_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_insertarResponse" message="tns:marca_insertarResponse" />
+    </operation>
+    <operation name="marca_listar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_listarRequest" message="tns:marca_listar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/marca_listarResponse" message="tns:marca_listarResponse" />
+    </operation>
+    <operation name="producto_modificar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_modificarRequest" message="tns:producto_modificar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_modificarResponse" message="tns:producto_modificarResponse" />
+    </operation>
+    <operation name="producto_listar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_listarRequest" message="tns:producto_listar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_listarResponse" message="tns:producto_listarResponse" />
+    </operation>
+    <operation name="producto_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_insertarRequest" message="tns:producto_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/producto_insertarResponse" message="tns:producto_insertarResponse" />
+    </operation>
+    <operation name="persona_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_insertarRequest" message="tns:persona_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_insertarResponse" message="tns:persona_insertarResponse" />
+    </operation>
+    <operation name="sede_listar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_listarRequest" message="tns:sede_listar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/sede_listarResponse" message="tns:sede_listarResponse" />
+    </operation>
+    <operation name="oferta_insertar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_insertarRequest" message="tns:oferta_insertar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/oferta_insertarResponse" message="tns:oferta_insertarResponse" />
+    </operation>
+    <operation name="proveedor_eliminar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_eliminarRequest" message="tns:proveedor_eliminar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_eliminarResponse" message="tns:proveedor_eliminarResponse" />
+    </operation>
+    <operation name="proveedor_listar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_listarRequest" message="tns:proveedor_listar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/proveedor_listarResponse" message="tns:proveedor_listarResponse" />
+    </operation>
+    <operation name="persona_modificar">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_modificarRequest" message="tns:persona_modificar" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_modificarResponse" message="tns:persona_modificarResponse" />
+    </operation>
+    <operation name="persona_loguearse">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_loguearseRequest" message="tns:persona_loguearse" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/persona_loguearseResponse" message="tns:persona_loguearseResponse" />
+    </operation>
+    <operation name="tipopersona_listar_roles_trabajadores">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_roles_trabajadoresRequest" message="tns:tipopersona_listar_roles_trabajadores" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/tipopersona_listar_roles_trabajadoresResponse" message="tns:tipopersona_listar_roles_trabajadoresResponse" />
     </operation>
     <operation name="comprobante_pago_obtener_por_id">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/ServicioWeb/comprobante_pago_obtener_por_idRequest" message="tns:comprobante_pago_obtener_por_id" />
@@ -389,177 +389,6 @@
   </portType>
   <binding name="ServicioWebPortBinding" type="tns:ServicioWeb">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="tipopersona_listar_roles_trabajadores">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="oferta_modificar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="persona_modificar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="proveedor_eliminar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="persona_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="oferta_listar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="marca_listar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="marca_eliminar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="proveedor_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="oferta_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="producto_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="producto_modificar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="sede_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="sede_modificar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="persona_loguearse">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="marca_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="proveedor_listar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="sede_listar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="producto_listar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="retornaNombreDelServicio">
       <soap:operation soapAction="" />
       <input>
@@ -578,43 +407,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="tipo_comprobante_listar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="tipopersona_listar_paginas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="comprobante_pago_insertar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="comprobante_pago_modificar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="producto_lineas_pedido">
+    <operation name="tipoProducto_insertar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -632,7 +425,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="tipoProducto_insertar">
+    <operation name="comprobante_pago_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="comprobante_pago_modificar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -642,15 +444,6 @@
       </output>
     </operation>
     <operation name="producto_aumentar_stock">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="tipoProducto_modificar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -677,7 +470,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="comprobante_pago_listar">
+    <operation name="tipoProducto_eliminar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -686,7 +479,214 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="tipoProducto_eliminar">
+    <operation name="tipopersona_listar_paginas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="producto_lineas_pedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="tipoProducto_modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="tipo_comprobante_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="comprobante_pago_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="proveedor_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sede_modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sede_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="oferta_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="oferta_modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="marca_eliminar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="marca_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="marca_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="producto_modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="producto_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="producto_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="persona_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="sede_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="oferta_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="proveedor_eliminar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="proveedor_listar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="persona_modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="persona_loguearse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="tipopersona_listar_roles_trabajadores">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
