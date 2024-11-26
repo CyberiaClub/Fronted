@@ -32,5 +32,11 @@ namespace SoftCyberiaInventarioBO
         {
             return this.WsProducto.producto_aumentar_stock(idProducto, idSede, Cantidad);
         }
+
+        //public byte[] reporteProducto(int idSede)
+        //{
+        //    return this.WsProducto.reporteProducto(idSede);
+        //}
+
     }
 }

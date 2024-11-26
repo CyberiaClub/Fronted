@@ -22,6 +22,9 @@ namespace SoftCyberiaBaseBO
     private CyberiaWS.ComprobantePagoWSClient wsComprobantePago;
     private CyberiaWS.OfertaWSClient wsOferta;
     private CyberiaWS.TipoComprobanteWSClient wsTipoComprobante;
+    
+    //private CyberiaWS.ReportesWSClient wsReportes;
+
 
         public BaseBO()
         {
@@ -35,6 +38,7 @@ namespace SoftCyberiaBaseBO
             this.WsComprobantePago = new CyberiaWS.ComprobantePagoWSClient();
             this.WsOferta = new CyberiaWS.OfertaWSClient();
             this.WsTipoComprobante = new CyberiaWS.TipoComprobanteWSClient();
+            this.WsReportes = new CyberiaWS.ReportesWSClient();
         }
 
         public MarcaWSClient WsMarca { get => wsMarca; set => wsMarca = value; }
@@ -47,5 +51,6 @@ namespace SoftCyberiaBaseBO
         public ComprobantePagoWSClient WsComprobantePago { get => wsComprobantePago; set => wsComprobantePago = value; }
         public OfertaWSClient WsOferta { get => wsOferta; set => wsOferta = value; }
         public TipoComprobanteWSClient WsTipoComprobante { get => wsTipoComprobante; set => wsTipoComprobante = value; }
+        //public ReportesWSClient WsReportes { get => wsReportes; set => wsReportes = value; }
     }
 }
