@@ -30,7 +30,7 @@
                <span>PagoEfectivo</span>
            </div>
            <!-- Botón Volver en la esquina inferior izquierda -->
-           <asp:Button ID="btnVolver" runat="server" CssClass="btn btn-secondary" Text="Volver" OnClick="btnVolver_Click" />
+           <asp:Button ID="btnVolver" runat="server" CssClass="btn btn-secondary" Text="Volver" OnClick="BtnVolver_Click" />
        </div>
 
        

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="detalle_carro_de_compras.aspx.cs" Inherits="SoftCyberiaWA.detalle_carro_de_compras" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="detalle_carro_de_compras.aspx.cs" Inherits="SoftCyberiaWA.Detalle_carro_de_compras" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Carro de compras
@@ -126,7 +126,7 @@
 
         <asp:Label ID="lblMensajeCarrito" runat="server" CssClass="text-muted mt-4 d-block text-center" />
         <div class="text-center mt-4">
-            <asp:Button ID="btnFinalizarCompra" runat="server" Text="Finalizar Compra" CssClass="btn btn-primary btn-lg" OnClick="btnFinalizarCompra_Click" />
+            <asp:Button ID="btnFinalizarCompra" runat="server" Text="Finalizar Compra" CssClass="btn btn-primary btn-lg" OnClick="BtnFinalizarCompra_Click" />
         </div>
 
     </div>

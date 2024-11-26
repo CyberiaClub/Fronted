@@ -11,7 +11,7 @@ namespace SoftCyberiaWA.Administrador
 {
 
 
-    public partial class actualizar_stock
+    public partial class Actualizar_stock
     {
 
         /// <summary>

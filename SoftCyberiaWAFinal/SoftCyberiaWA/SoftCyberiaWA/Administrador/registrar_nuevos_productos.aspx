@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_nuevos_productos.aspx.cs" Inherits="SoftCyberiaWA.Administrador.registrar_nuevos_productos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_nuevos_productos.aspx.cs" Inherits="SoftCyberiaWA.Administrador.Registrar_nuevos_productos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Registrar Producto
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="card-footer text-center">
-                <asp:Button ID="Button1" runat="server" Text="Registrar" CssClass="btn btn-primary btn-lg w-100" OnClick="registerButton_Click" />
+                <asp:Button ID="Button1" runat="server" Text="Registrar" CssClass="btn btn-primary btn-lg w-100" OnClick="RegisterButton_Click" />
                 <asp:Label ID="Label1" runat="server" CssClass="text-success mt-2 d-block" Visible="false"></asp:Label>
             </div>
         </div>

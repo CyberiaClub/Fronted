@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="asignar_roles.aspx.cs" Inherits="SoftCyberiaWA.Administrador.asignar_roles" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="asignar_roles.aspx.cs" Inherits="SoftCyberiaWA.Administrador.Asignar_roles" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Asignar Rol
@@ -33,7 +33,7 @@
                             <asp:Label ID="lblDocumento" runat="server" Text="Número de documento de identidad:" CssClass="col-form-label fw-bold"></asp:Label>
 
                             <asp:TextBox ID="dni" runat="server" CssClass="form-control mr-2"
-                                AutoPostBack="True" OnTextChanged="dni_Ingresado"></asp:TextBox>
+                                AutoPostBack="True" OnTextChanged="Dni_Ingresado"></asp:TextBox>
                             <small id="dniMensaje" class="form-text text-danger" runat="server"></small>
                         </div>
 
@@ -83,8 +83,8 @@
                     <!-- Columna de imagen y botón de asignación -->
                     <div class="col-md-4 d-flex flex-column align-items-center justify-content-center bg-light" style="border-radius: 0 1% 1% 0; margin-top:5%">
                         <h4 class="font-weight-bold mb-4" style="color: #004EA8;">Asignar Rol</h4>
-                        <img src="/Imagenes/rol.png" alt="Icono de seguridad" class="img-fluid img-thumbnail mb-3" style="width: 40%;">
-                        <asp:Button ID="btnAsignar" runat="server" Text="Asignar" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8; width:80%" OnClick="btnAsignar_Click" />
+                        <img src="/Imagenes/rol.png" alt="Icono de seguridad" class="img-fluid img-thumbnail mb-3" style="width: 160px;">
+                        <asp:Button ID="btnAsignar" runat="server" Text="Asignar" CssClass="btn btn-primary mt-4" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="BtnAsignar_Click" />
                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
 
                     </div>

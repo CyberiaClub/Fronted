@@ -1,24 +1,21 @@
-﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaInventarioBO;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Cliente
 {
-    public partial class IndexCliente : System.Web.UI.Page
+    public partial class IndexCliente : Page
     {
-        private MarcaBO marcaBO;
-        private TipoProductoBO tipoProductoBO;
+        private readonly MarcaBO marcaBO;
+        private readonly TipoProductoBO tipoProductoBO;
 
         public IndexCliente()
         {
-            this.marcaBO = new MarcaBO();
-            this.tipoProductoBO = new TipoProductoBO();
+            marcaBO = new MarcaBO();
+            tipoProductoBO = new TipoProductoBO();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -33,7 +30,7 @@ namespace SoftCyberiaWA.Cliente
         private void CargarMarcas()
         {
             // Llama al método para obtener las marcas desde el backend
-            BindingList<marca> marcas = this.marcaBO.marca_listar();
+            BindingList<marca> marcas = marcaBO.Marca_listar();
 
             // Recorre la lista de marcas y genera el HTML para cada una
             foreach (marca m in marcas)
@@ -42,14 +39,33 @@ namespace SoftCyberiaWA.Cliente
                     ? $"data:image/jpeg;base64,{Convert.ToBase64String(m.imagen)}"
                     : "/Imagenes/canva.jpg"; // Imagen por defecto
 
-                Literal marcaHtml = new Literal();
-                marcaHtml.Text = $@"
-                    <div class='col-6 col-md-3 mb-3'>
-                        <img src='{imageSrc}' alt='{m.nombre}' class='brand-img precisa-img'>
-                        <p class='text-center'>{m.nombre}</p>
-                    </div>";
-                marcaContainer.Controls.Add(marcaHtml);
+                    // Crea el contenedor HTML de la marca
+                    Literal marcaHtml = new Literal
+                    {
+                        Text = $@"
+                <div class='col-6 col-md-3 mb-3'>
+                    <img src='{imageSrc}' alt='{m.nombre}' class='brand-img precisa-img'>
+                    <p class='text-center'>{m.nombre}</p>
+                </div>"
+                    };
 
+                    // Agrega el HTML generado al contenedor en la página
+                    marcaContainer.Controls.Add(marcaHtml);
+
+                }
+                else
+                {
+                    // En caso de que no haya imagen, muestra un placeholder o solo el nombre de la marca
+                    Literal marcaHtml = new Literal
+                    {
+                        Text = $@"
+                <div class='col-6 col-md-3 mb-3'>
+                    <img src='/Imagenes/canva.jpg' alt='Sin imagen' class='brand-img precisa-img'>
+                    <p class='text-center'>{m.nombre}</p>
+                </div>"
+                    };
+                    marcaContainer.Controls.Add(marcaHtml);
+                }
             }
         }
 
@@ -134,12 +150,12 @@ namespace SoftCyberiaWA.Cliente
         //}
         private void CargarTipoProductos()
         {
-            BindingList<tipoProducto> tipoProductos = this.tipoProductoBO.tipoProducto_listar();
+            BindingList<tipoProducto> tipoProductos = tipoProductoBO.TipoProducto_listar();
             int count = 0;
-            bool isActive = true;
-
-            Literal carouselGroup = new Literal();
-            carouselGroup.Text = "<div class='carousel-item active'><div class='row justify-content-center'>";
+            Literal carouselGroup = new Literal
+            {
+                Text = "<div class='carousel-item active'><div class='row justify-content-center'>"
+            };
 
             foreach (tipoProducto tp in tipoProductos)
             {
@@ -166,10 +182,10 @@ namespace SoftCyberiaWA.Cliente
                 {
                     carouselGroup.Text += "</div></div>";
                     categoriaPanel.Controls.Add(carouselGroup);
-
-                    isActive = false;
-                    carouselGroup = new Literal();
-                    carouselGroup.Text = "<div class='carousel-item'><div class='row justify-content-center'>";
+                    carouselGroup = new Literal
+                    {
+                        Text = "<div class='carousel-item'><div class='row justify-content-center'>"
+                    };
                 }
             }
 

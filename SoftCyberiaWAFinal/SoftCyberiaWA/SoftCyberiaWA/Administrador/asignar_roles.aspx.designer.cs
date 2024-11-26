@@ -11,7 +11,7 @@ namespace SoftCyberiaWA.Administrador
 {
 
 
-    public partial class asignar_roles
+    public partial class Asignar_roles
     {
 
         /// <summary>

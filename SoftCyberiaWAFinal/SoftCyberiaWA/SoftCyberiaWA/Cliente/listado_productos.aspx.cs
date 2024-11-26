@@ -1,26 +1,24 @@
-﻿using SoftCyberiaBaseBO.CyberiaWS;
+using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaInventarioBO;
 using System;
 using System.ComponentModel;
+using System.Web.UI;
 using System.Security.Cryptography;
 using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
-    public partial class listado_productos : System.Web.UI.Page
+    public partial class Listado_productos : Page
     {
-        
-        private ProductoBO productoBO;
-        private TipoProductoBO tipoProductoBO;
-        private SedeBO sedeBO;
-        private MarcaBO marcaBO;
+        private readonly ProductoBO productoBO;
+        private readonly TipoProductoBO tipoProductoBO;
+        private readonly SedeBO sedeBO;
 
-        public listado_productos()
+        public Listado_productos()
         {
-            this.productoBO = new ProductoBO();
-            this.tipoProductoBO = new TipoProductoBO();
-            this.sedeBO = new SedeBO();
-            this.marcaBO = new MarcaBO();
+            productoBO = new ProductoBO();
+            tipoProductoBO = new TipoProductoBO();
+            sedeBO = new SedeBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -39,7 +37,7 @@ namespace SoftCyberiaWA
                 // Si hay una sede en la URL, genera un script para seleccionar el checkbox de esa sede
                 if (!string.IsNullOrEmpty(sedeSeleccionada))
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "SelectSede",
+                    ClientScript.RegisterStartupScript(GetType(), "SelectSede",
                         $"document.addEventListener('DOMContentLoaded', function() {{ " +
                         $"    var sedeCheckbox = document.getElementById('sede{sedeSeleccionada}');" +
                         $"    if (sedeCheckbox) sedeCheckbox.checked = true;" +
@@ -138,12 +136,14 @@ namespace SoftCyberiaWA
                 string tipoValue = tipo.tipo.Replace(" ", "_");
 
                 // Crear el contenedor HTML del filtro de tipo de producto
-                Literal tipoHtml = new Literal();
-                tipoHtml.Text = $@"
+                Literal tipoHtml = new Literal
+                {
+                    Text = $@"
         <div class='form-check'>
             <input class='form-check-input' type='checkbox' name='categoria' value='{tipoValue}' id='tipo{tipo.idTipoProducto}' onchange='applyFilters()' data-categoria='{tipoValue}'>
             <label class='form-check-label' for='tipo{tipo.idTipoProducto}'>{tipo.tipo}</label>
-        </div>";
+        </div>"
+                };
 
                 // Agregar el HTML generado al contenedor de filtros en la página                               
                 filtrosTipoProducto.Controls.Add(tipoHtml);
@@ -153,7 +153,7 @@ namespace SoftCyberiaWA
         private void CargarProductos()
         {
             // Llama al método para obtener los productos desde el backend
-            BindingList<producto> productos = this.productoBO.producto_listar();
+            BindingList<producto> productos = productoBO.Producto_listar();
             // Recorre la lista de productos y genera el HTML para cada uno
             foreach (producto prod in productos)
             {
@@ -162,8 +162,9 @@ namespace SoftCyberiaWA
                 string imageSrc = $"data:image/jpeg;base64,{base64Image}";
 
                 // Crea el contenedor HTML del producto
-                Literal productHtml = new Literal();
-                productHtml.Text = $@"
+                Literal productHtml = new Literal
+                {
+                    Text = $@"
                     <div class='col-md-4 mb-4' data-category='{prod.tipoProducto.idTipoProducto}' data-price='{prod.precio}'>
                         <a href='detalle_producto.aspx?sku={prod.sku}&sede={prod.idSede}' class='text-decoration-none'>
                             <div class='card'>
@@ -180,7 +181,8 @@ namespace SoftCyberiaWA
                                 </div>
                             </div>
                         </a>
-                    </div>";
+                    </div>"
+                };
 
                 // Agrega el HTML generado al contenedor en la página
                 productContainer.Controls.Add(productHtml);
@@ -189,14 +191,14 @@ namespace SoftCyberiaWA
         private void CargarProductos0(int _idSede)
         {
             // Llama al método para obtener los productos desde el backend
-            BindingList<producto> productos = this.productoBO.producto_listar();
+            BindingList<producto> productos = productoBO.Producto_listar();
             // Recorre la lista de productos y genera el HTML para cada uno
             foreach (producto prod in productos)
             {
                 // Convierte el arreglo de bytes de la imagen a una cadena en Base64
                 string base64Image = Convert.ToBase64String(prod.imagen);
                 string imageSrc = $"data:image/jpeg;base64,{base64Image}";
-                producto productoSedeSeleccionada = productoBO.producto_buscar_sku(prod.sku, _idSede);//permite acceder a la cantidad
+                producto productoSedeSeleccionada = productoBO.Producto_buscar_sku(prod.sku, _idSede);//permite acceder a la cantidad
 
                 // Crea el contenedor HTML del producto
                 Literal productHtml = new Literal();

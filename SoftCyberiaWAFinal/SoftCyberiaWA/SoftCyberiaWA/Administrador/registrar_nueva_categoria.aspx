@@ -32,7 +32,7 @@
                         <asp:Label ID="lbnuevaCategoria" runat="server" Text="Nueva Categoría:" CssClass="fw-bold d-block mb-3"></asp:Label>
                         <asp:Image ID="imgNuevCategoria" runat="server" CssClass="img-fluid img-thumbnail mb-3" ImageUrl="/Imagenes/categoria.png" Height="250px" Width="250px" />
                         <asp:FileUpload ID="fileUploadNuevaCategoria" CssClass="form-control mb-3 w-75" runat="server" />
-                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="registerButton_Click" />
+                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-75" OnClick="RegisterButton_Click" />
                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     </div>
 

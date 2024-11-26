@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_nueva_marca.aspx.cs" Inherits="SoftCyberiaWA.Administrador.registrar_nueva_marca" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_nueva_marca.aspx.cs" Inherits="SoftCyberiaWA.Administrador.registrar_nueva_marca" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Registrar Marca
@@ -49,6 +49,11 @@
                     </div>
 
 
+                    <div class="mb-3">
+                       
+                        <asp:Button ID="registerButton" runat="server" Text="Registrar" CssClass="btn btn-primary w-50 align-content-xl-center" OnClick="RegisterButton_Click" />
+                         <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
+                    </div>
 
 
 

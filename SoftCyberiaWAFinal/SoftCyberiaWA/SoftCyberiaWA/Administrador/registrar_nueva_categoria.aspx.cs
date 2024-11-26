@@ -1,22 +1,17 @@
 ﻿using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaInventarioBO;
-using SoftCyberiaPersonaBO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Administrador
 {
-    public partial class registrar_nueva_categoria : System.Web.UI.Page
+    public partial class registrar_nueva_categoria : Page
     {
-        private TipoProductoBO tipoProductoBO;
+        private readonly TipoProductoBO tipoProductoBO;
 
         public registrar_nueva_categoria()
         {
-            this.tipoProductoBO = new TipoProductoBO();
+            tipoProductoBO = new TipoProductoBO();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -24,21 +19,23 @@ namespace SoftCyberiaWA.Administrador
 
         }
 
-        protected void registerButton_Click(object sender, EventArgs e)
+        protected void RegisterButton_Click(object sender, EventArgs e)
         {
             try
             {
                 //metodo registrar categoria
-                tipoProducto _tipoProducto = new tipoProducto();
-                _tipoProducto.tipo = categoriaName.Text.Trim();
+                tipoProducto _tipoProducto = new tipoProducto
+                {
+                    tipo = categoriaName.Text.Trim()
+                };
                 byte[] imagenBytes;
-                using (var binaryReader = new System.IO.BinaryReader(fileUploadNuevaCategoria.PostedFile.InputStream))
+                using (System.IO.BinaryReader binaryReader = new System.IO.BinaryReader(fileUploadNuevaCategoria.PostedFile.InputStream))
                 {
                     imagenBytes = binaryReader.ReadBytes(fileUploadNuevaCategoria.PostedFile.ContentLength);
                 }
                 _tipoProducto.imagen = imagenBytes;
 
-                this.tipoProductoBO.tipoProducto_insertar(_tipoProducto);
+                _ = tipoProductoBO.TipoProducto_insertar(_tipoProducto);
 
 
 

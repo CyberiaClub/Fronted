@@ -11,7 +11,7 @@ namespace SoftCyberiaWA
 {
 
 
-    public partial class detalle_carro_de_compras
+    public partial class Detalle_carro_de_compras
     {
 
         /// <summary>

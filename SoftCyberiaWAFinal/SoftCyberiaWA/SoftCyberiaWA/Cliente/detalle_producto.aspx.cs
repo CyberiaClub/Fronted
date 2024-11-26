@@ -3,12 +3,7 @@ using SoftCyberiaInventarioBO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Security.Cryptography;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA
 {
@@ -90,13 +85,13 @@ namespace SoftCyberiaWA
     //    }
     //}
 
-    public partial class detalle_producto : System.Web.UI.Page
+    public partial class detalle_producto : Page
     {
-        private ProductoBO productoBO;
+        private readonly ProductoBO productoBO;
 
         public detalle_producto()
         {
-            this.productoBO = new ProductoBO();
+            productoBO = new ProductoBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -115,7 +110,7 @@ namespace SoftCyberiaWA
         private void CargarProducto(string sku, int idSede)
         {
             // Llama al método para obtener los productos desde el backend
-            BindingList<producto> productos = this.productoBO.producto_listar();
+            BindingList<producto> productos = productoBO.Producto_listar();
 
             // Variable para verificar si se encontró el producto
             bool productoEncontrado = false;
@@ -127,7 +122,7 @@ namespace SoftCyberiaWA
                 //if (_prod.idProducto == idProducto)
                 //{
                 productoEncontrado = true; // Indicamos que encontramos el producto
-                producto productoSeleccionado = productoBO.producto_buscar_sku(sku, idSede);
+                producto productoSeleccionado = productoBO.Producto_buscar_sku(sku, idSede);
                 // Asigna la imagen del producto (debe estar en formato de bytes para el control Image)
                 if (_prod.imagen != null)
                 {
@@ -143,9 +138,8 @@ namespace SoftCyberiaWA
                 lblDescripcionProducto.Text = _prod.descripcion;
 
                 // Establece el valor máximo para el campo de cantidad
-                
-                    quantity.Attributes["max"] = productoSeleccionado.cantidad.ToString();
-                
+
+                quantity.Attributes["max"] = productoSeleccionado.cantidad.ToString();
 
                 // Salimos del bucle ya que hemos encontrado el producto
                 break;
@@ -163,10 +157,9 @@ namespace SoftCyberiaWA
         }
 
 
-        
-        protected void btnAgregarCarrito_Click(object sender, EventArgs e)
+        protected void BtnAgregarCarrito_Click(object sender, EventArgs e)
         {
-            BindingList<producto> productos = this.productoBO.producto_listar();
+            BindingList<producto> productos = productoBO.Producto_listar();
             string sku = Request.QueryString["sku"];
             int idSede = int.TryParse(Request.QueryString["sede"], out int sedeId) ? sedeId : 0;
 
@@ -174,16 +167,18 @@ namespace SoftCyberiaWA
             {
                 lblMensajeError.Text = "Error al agregar el producto al carrito. SKU o ID de sede no válidos.";
                 return;
-            }   
+            }
 
             // Obtener la cantidad seleccionada por el usuario
             int cantidadSeleccionada = int.TryParse(quantity.Value, out int cantidad) ? cantidad : 1;
-           
-            
+
             foreach (producto _prod in productos)
             {
-                producto productoSeleccionado = productoBO.producto_buscar_sku(sku, idSede);
-                if (productoSeleccionado == null) return;
+                producto productoSeleccionado = productoBO.Producto_buscar_sku(sku, idSede);
+                if (productoSeleccionado == null)
+                {
+                    return;
+                }
 
                 producto productoConCantidad = new producto
                 {
@@ -195,14 +190,10 @@ namespace SoftCyberiaWA
                 };
 
                 // Obtener el carrito desde la sesión o inicializar uno nuevo si no existe
-                var carrito = (List<producto>)Session["Carrito"];
-                if (carrito == null)
-                {
-                    carrito = new List<producto>();
-                }
+                List<producto> carrito = (List<producto>)Session["Carrito"] ?? new List<producto>();
 
                 // Verificar si el producto ya está en el carrito para la misma sede
-                var itemExistente = carrito.Find(p => p.idProducto == productoConCantidad.idProducto && p.idSede == idSede);
+                producto itemExistente = carrito.Find(p => p.idProducto == productoConCantidad.idProducto && p.idSede == idSede);
                 // Crear una copia del producto con la cantidad seleccionada
 
                 if (itemExistente != null)
@@ -222,7 +213,6 @@ namespace SoftCyberiaWA
                 // Redirigir a la página del carrito de compras
                 Response.Redirect("detalle_carro_de_compras.aspx");
             }
-            
         }
 
 
@@ -230,7 +220,7 @@ namespace SoftCyberiaWA
         private void CargarProducto0(string sku, int idSede)
         {
             // Llama al método buscar_sku con el SKU y el idSede
-            producto productoSeleccionado = productoBO.producto_buscar_sku(sku, idSede);
+            producto productoSeleccionado = productoBO.Producto_buscar_sku(sku, idSede);
             if (productoSeleccionado != null)
             {
                 lblNombreProducto.Text = productoSeleccionado.nombre;
@@ -256,7 +246,7 @@ namespace SoftCyberiaWA
                 lblDescripcionProducto.Text = "Detalles no disponibles.";
             }
         }
-        protected void btnAgregarCarrito_Click0(object sender, EventArgs e)
+        protected void BtnAgregarCarrito_Click0(object sender, EventArgs e)
         {
             string sku = Request.QueryString["sku"];
             int idSede = int.TryParse(Request.QueryString["sede"], out int sedeId) ? sedeId : 0;
@@ -268,8 +258,11 @@ namespace SoftCyberiaWA
             }
 
             // Llamar al método buscar_sku para obtener el producto
-            producto productoSeleccionado = productoBO.producto_buscar_sku(sku, idSede);
-            if (productoSeleccionado == null) return;
+            producto productoSeleccionado = productoBO.Producto_buscar_sku(sku, idSede);
+            if (productoSeleccionado == null)
+            {
+                return;
+            }
 
             // Obtener la cantidad seleccionada por el usuario
             int cantidadSeleccionada = int.TryParse(quantity.Value, out int cantidad) ? cantidad : 1;
@@ -285,14 +278,10 @@ namespace SoftCyberiaWA
             };
 
             // Obtener el carrito desde la sesión o inicializar uno nuevo si no existe
-            var carrito = (List<producto>)Session["Carrito"];
-            if (carrito == null)
-            {
-                carrito = new List<producto>();
-            }
+            List<producto> carrito = (List<producto>)Session["Carrito"] ?? new List<producto>();
 
             // Verificar si el producto ya está en el carrito para la misma sede
-            var itemExistente = carrito.Find(p => p.idProducto == productoConCantidad.idProducto && p.idSede == idSede);
+            producto itemExistente = carrito.Find(p => p.idProducto == productoConCantidad.idProducto && p.idSede == idSede);
             if (itemExistente != null)
             {
                 // Si el producto ya existe en la misma sede, aumenta la cantidad

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="vista_perfil_cliente.aspx.cs" Inherits="SoftCyberiaWA.vista_perfil_cliente_aspx" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="vista_perfil_cliente.aspx.cs" Inherits="SoftCyberiaWA.Vista_perfil_cliente_aspx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Perfil

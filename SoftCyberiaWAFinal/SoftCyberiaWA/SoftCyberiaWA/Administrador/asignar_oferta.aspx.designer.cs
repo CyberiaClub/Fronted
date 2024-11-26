@@ -11,7 +11,7 @@ namespace SoftCyberiaWA.Administrador
 {
 
 
-    public partial class asignar_oferta
+    public partial class Asignar_oferta
     {
 
         /// <summary>

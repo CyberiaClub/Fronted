@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="actualizar_stock.aspx.cs" Inherits="SoftCyberiaWA.Administrador.actualizar_stock" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="actualizar_stock.aspx.cs" Inherits="SoftCyberiaWA.Administrador.Actualizar_stock" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Actualizar Stock
@@ -19,7 +19,7 @@
                     <label for="basic-url" class="form-label">SKU del producto a actualizar stock:</label>
                     <div class="input-group mb-3">
                         <asp:TextBox ID="productoSku" runat="server" CssClass="form-control" aria-describedby="basic-addon3"></asp:TextBox>
-                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="onClickBuscar" />
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="OnClickBuscar" />
                     </div>
                     <small id="successMessage" runat="server" style="color: red;"></small>
                 </div>
@@ -57,7 +57,7 @@
             <!-- Botón para actulizar el stock -->
             <div class="row mt-4">
                 <div class="col-md-12 text-center">
-                    <asp:Button ID="btnActualizarStock" runat="server" Text="Actualizar Stock" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="onClickActualizarStock" />
+                    <asp:Button ID="btnActualizarStock" runat="server" Text="Actualizar Stock" CssClass="btn btn-primary" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="OnClickActualizarStock" />
                     <asp:Label ID="successActualizado" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                     <p></p>
                 </div>

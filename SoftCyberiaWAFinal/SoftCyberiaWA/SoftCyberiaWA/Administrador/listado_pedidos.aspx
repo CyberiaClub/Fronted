@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="panelPedidos" runat="server">
-        <asp:GridView ID="gvPedidos" runat="server" AllowPaging="true" CssClass="table table-hover table-responsive table-striped" AutoGenerateColumns="false" OnRowDataBound="gvPedidos_RowDataBound" OnSelectedIndexChanged="gvPedidos_SelectedIndexChanged">
+        <asp:GridView ID="gvPedidos" runat="server" AllowPaging="true" CssClass="table table-hover table-responsive table-striped" AutoGenerateColumns="false" OnRowDataBound="GvPedidos_RowDataBound" OnSelectedIndexChanged="GvPedidos_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="NumeroPedido" HeaderText="Número de Pedido" />
                 <asp:BoundField DataField="FechaCreacion" HeaderText="Fecha de Creación" DataFormatString="{0:dd/MM/yyyy}" />

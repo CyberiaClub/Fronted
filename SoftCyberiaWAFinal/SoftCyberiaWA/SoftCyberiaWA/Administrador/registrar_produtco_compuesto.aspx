@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_produtco_compuesto.aspx.cs" Inherits="SoftCyberiaWA.Administrador.registrar_produtco_compuesto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="registrar_produtco_compuesto.aspx.cs" Inherits="SoftCyberiaWA.Administrador.Registrar_produtco_compuesto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Producto Compuesto
@@ -73,7 +73,7 @@
                     <!-- Caja de texto para el sku -->
                     <div class="d-flex flex-column mr-4 col-5" style="margin-left: 20px;">
                         <asp:Label ID="lblproductoKitSKU" runat="server" Text="Buscar Producto por SKU:" CssClass="col-form-label fw-bold"></asp:Label>
-                        <asp:TextBox ID="productoKitSKU" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="sku_TextChange" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="productoKitSKU" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="Sku_TextChange" Width="300px"></asp:TextBox>
                         <small id="productoKitSKUMensaje" class="form-text text-danger" runat="server"></small>
                     </div>
                     <div class="d-flex align-items-center col-6" style="height: 120px">
@@ -96,8 +96,8 @@
                     <h4 style="margin-left: 20px;">Listado de Productos el Kit</h4>
                     <div class="d-flex col-13" style="margin-left: 20px; margin-right: 20px;">
                         <asp:GridView ID="gridProductosKit" runat="server" AutoGenerateColumns="False" CssClass="table table-striped"
-                            OnRowEditing="gridProductosKit_RowEditing" OnRowUpdating="gridProductosKit_RowUpdating"
-                            OnRowCancelingEdit="gridProductosKit_RowCancelingEdit" OnRowCommand="gridViewProductosKit_RowCommand"
+                            OnRowEditing="GridProductosKit_RowEditing" OnRowUpdating="GridProductosKit_RowUpdating"
+                            OnRowCancelingEdit="GridProductosKit_RowCancelingEdit" OnRowCommand="GridViewProductosKit_RowCommand"
                             Width="95.3%" Style="table-layout: fixed;">
                             <Columns>
                                 <asp:BoundField DataField="ID" HeaderText="Nro." ReadOnly="true"

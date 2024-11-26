@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="asignar_oferta.aspx.cs" Inherits="SoftCyberiaWA.Administrador.asignar_oferta" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administrador/SoftCyberiaAdministrador.Master" AutoEventWireup="true" CodeBehind="asignar_oferta.aspx.cs" Inherits="SoftCyberiaWA.Administrador.Asignar_oferta" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -58,7 +58,7 @@
                 <!-- Caja de texto para el sku -->
                 <div class="col-12 col-md-5" >
                     <asp:Label ID="lblproductoSku" runat="server" Text="Buscar Producto por SKU:" CssClass="col-form-label fw-bold"></asp:Label>
-                    <asp:TextBox ID="productoSKU" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="sku_TextChange" Width="80%"/>
+                    <asp:TextBox ID="productoSKU" runat="server" CssClass="form-control" AutoPostBack="true" OnTextChanged="Sku_TextChange" Width="80%"/>
                     <small id="productoSKUMensaje" class="form-text text-danger" runat="server"></small>
                 </div>
                 <!-- Botón de agregar producto-->
@@ -84,8 +84,8 @@
                 <h4 class="ms-2 mb-3" style="width:56.8vw">Listado de Productos en la Oferta</h4>
                 <div class="table-responsive">
                     <asp:GridView ID="gridProductosOferta" runat="server" AutoGenerateColumns="False" CssClass="table table-striped"
-                        OnRowEditing="gridProductosOferta_RowEditing" OnRowUpdating="gridProductosOferta_RowUpdating"
-                        OnRowCancelingEdit="gridProductosOferta_RowCancelingEdit" OnRowCommand="gridViewProductos_RowCommand"
+                        OnRowEditing="GridProductosOferta_RowEditing" OnRowUpdating="GridProductosOferta_RowUpdating"
+                        OnRowCancelingEdit="GridProductosOferta_RowCancelingEdit" OnRowCommand="GridViewProductos_RowCommand"
                         Width="100%" Style="table-layout: fixed;">
                         <Columns>
                             <asp:BoundField DataField="ID" HeaderText="Nro." ReadOnly="true" HeaderStyle-Width="7%" ItemStyle-Width="7%" FooterStyle-Width="7%" />
@@ -116,7 +116,7 @@
 
             <div class="text-center mt-4">
                 <asp:Button ID="btnAsignarOferta" runat="server" Text="Asignar Oferta" CssClass="btn btn-primary"
-                    OnClick="btnAsignarOferta_Click" Width="20%" />
+                    OnClick="BtnAsignarOferta_Click" Width="20%" />
                 <asp:Label ID="successMessage" runat="server" CssClass="text-success" Visible="false"></asp:Label>
             </div>
         </div>

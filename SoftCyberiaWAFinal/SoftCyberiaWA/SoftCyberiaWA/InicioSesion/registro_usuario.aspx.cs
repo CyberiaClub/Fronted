@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text.RegularExpressions;
 using SoftCyberiaBaseBO.CyberiaWS;
 using SoftCyberiaPersonaBO;
@@ -6,14 +6,14 @@ using SoftCyberiaPersonaBO;
 
 namespace SoftCyberiaWA.InicioSesion
 {
-    public partial class registro_usuario : System.Web.UI.Page
+    public partial class registro_usuario : Page
     {
-        private PersonaBO personaBO;
+        private readonly PersonaBO personaBO;
         // Clase para deserializar la respuesta de la API
         
         public registro_usuario()
         {
-            this.personaBO = new PersonaBO();
+            personaBO = new PersonaBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -74,7 +74,7 @@ namespace SoftCyberiaWA.InicioSesion
                             break;
 
                     }
-                    this.personaBO.persona_insertar(_persona);
+                    _ = personaBO.Persona_insertar(_persona);
                     successMessage.InnerText = "Se registró la persona con éxito. Revise su correo para validar su cuenta";
                     successMessage.Visible = true;
                 }
@@ -86,7 +86,7 @@ namespace SoftCyberiaWA.InicioSesion
                 //successMessage. = "text-danger";
                 successMessage.Visible = true;
             }
-}
+        }
 
         private bool ValidarTipoDocument()
         {

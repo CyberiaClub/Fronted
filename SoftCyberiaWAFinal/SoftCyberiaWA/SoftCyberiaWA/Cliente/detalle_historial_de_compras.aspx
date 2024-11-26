@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="detalle_historial_de_compras.aspx.cs" Inherits="SoftCyberiaWA.detalle_historial_de_compras" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Cliente/SoftCyberiaCliente.Master" AutoEventWireup="true" CodeBehind="detalle_historial_de_compras.aspx.cs" Inherits="SoftCyberiaWA.Detalle_historial_de_compras" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Historial de compras
 </asp:Content>
@@ -17,7 +17,7 @@
 
         <!-- Botón para volver -->
         <div class="text-center mt-5">
-            <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-outline-return" OnClick="btnVolver_Click"/>
+            <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-outline-return" OnClick="BtnVolver_Click"/>
         </div>
     </div>
 </asp:Content>

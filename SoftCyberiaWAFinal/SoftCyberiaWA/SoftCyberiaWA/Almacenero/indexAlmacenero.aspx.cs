@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SoftCyberiaWA.Almacenero
 {
-    public partial class indexAlmacenero : System.Web.UI.Page
+    public partial class indexAlmacenero : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
