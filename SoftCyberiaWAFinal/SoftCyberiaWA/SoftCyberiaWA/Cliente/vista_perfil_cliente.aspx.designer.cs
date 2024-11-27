@@ -15,6 +15,15 @@ namespace SoftCyberiaWA
     {
 
         /// <summary>
+        /// Control UserNameLiteral.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal UserNameLiteral;
+
+        /// <summary>
         /// Control txtEmail.
         /// </summary>
         /// <remarks>
@@ -24,6 +33,15 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
+        /// Control errorEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorEmail;
+
+        /// <summary>
         /// Control txtPhone.
         /// </summary>
         /// <remarks>
@@ -31,6 +49,33 @@ namespace SoftCyberiaWA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
+
+        /// <summary>
+        /// Control errorPhone.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorPhone;
+
+        /// <summary>
+        /// Control txtDireccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
+
+        /// <summary>
+        /// Control errorDireccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorDireccion;
 
         /// <summary>
         /// Control editButtons.
@@ -49,15 +94,6 @@ namespace SoftCyberiaWA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEditProfile;
-
-        /// <summary>
-        /// Control btnLogout.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
         /// Control saveButtons.

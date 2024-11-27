@@ -11,14 +11,12 @@ namespace SoftCyberiaWA.InicioSesion
     {
         private readonly PersonaBO personaBO;
         // Clase para deserializar la respuesta de la API
-        
         public registro_usuario()
         {
             personaBO = new PersonaBO();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            
         }
 
         protected void OnClickRegistrarPersona(object sender, EventArgs e)
@@ -124,7 +122,7 @@ namespace SoftCyberiaWA.InicioSesion
             bool isNumeric = Regex.IsMatch(telefono, pattern);
             telefonoMensaje.InnerText = "";
             telefonoMensaje.Visible = false;
-            if (!isNumeric)
+            if (!isNumeric && telefono.Length == 9)
             {
                 telefonoMensaje.InnerText = "Por favor, ingrese un número de telefono valido";
                 telefonoMensaje.Visible = true;
@@ -163,15 +161,21 @@ namespace SoftCyberiaWA.InicioSesion
         {
             string segundoApellido = personaSegundoAp.Text.Trim();
             string pattern = @"^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$";
-            bool isNumeric = Regex.IsMatch(segundoApellido, pattern);
+            bool apellidoValido = Regex.IsMatch(segundoApellido, pattern);
             segundoApMensaje.InnerText = "";
             segundoApMensaje.Visible = false;
-            if (!isNumeric)
+
+            if (string.IsNullOrEmpty(segundoApellido))
+            {
+                return true;
+            }
+
+            if (!apellidoValido)
             {
                 segundoApMensaje.InnerText = "Por favor, ingrese un apellido válido sin números ni símbolos especiales.";
                 segundoApMensaje.Visible = true;
             }
-            return isNumeric;
+            return apellidoValido;
         }
         private bool ValidarFecha()
         {

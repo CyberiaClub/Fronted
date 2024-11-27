@@ -45,6 +45,24 @@ namespace SoftCyberiaPersonaBO
                 throw;
             }
         }
+
+        public int Persona_modficar_usuario(persona _persona)
+        {
+            try
+            {
+                int modificacion = wsBase.persona_modificar_usuario(_persona);
+                return modificacion;
+            }
+            catch (FaultException ex)
+            {
+                return 0;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         //public byte[] reporteTopClientes()
         //{
         //    return this.WsProducto.reporteTopClientes();

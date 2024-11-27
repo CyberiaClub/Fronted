@@ -94,6 +94,10 @@ namespace SoftCyberiaWA
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("~/InicioSesion/indexInicioSesion.aspx");
+            }
             if (!IsPostBack)
             {
                 // Obtén el SKU del producto y el ID de sede desde la URL

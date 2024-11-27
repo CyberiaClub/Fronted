@@ -7,7 +7,10 @@ namespace SoftCyberiaWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Usuario"] == null)
+            {
+                Response.Redirect("~/InicioSesion/indexInicioSesion.aspx");
+            }
         }
 
         protected void BtnVolver_Click(object sender, EventArgs e)

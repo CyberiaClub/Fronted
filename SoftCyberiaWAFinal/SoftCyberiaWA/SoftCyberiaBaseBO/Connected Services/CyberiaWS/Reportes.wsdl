@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/CyberiaStoreWS_Servidor/Reportes?xsd=1" namespace="http://servicios.cyberiastore.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="factura">
-    <part name="parameters" element="tns:factura" />
+  <message name="reporteClientes">
+    <part name="parameters" element="tns:reporteClientes" />
   </message>
-  <message name="facturaResponse">
-    <part name="parameters" element="tns:facturaResponse" />
-  </message>
-  <message name="boleta">
-    <part name="parameters" element="tns:boleta" />
-  </message>
-  <message name="boletaResponse">
-    <part name="parameters" element="tns:boletaResponse" />
+  <message name="reporteClientesResponse">
+    <part name="parameters" element="tns:reporteClientesResponse" />
   </message>
   <message name="reporteStock">
     <part name="parameters" element="tns:reporteStock" />
@@ -23,42 +17,39 @@
   <message name="reporteStockResponse">
     <part name="parameters" element="tns:reporteStockResponse" />
   </message>
-  <message name="reporteClientes">
-    <part name="parameters" element="tns:reporteClientes" />
+  <message name="boleta">
+    <part name="parameters" element="tns:boleta" />
   </message>
-  <message name="reporteClientesResponse">
-    <part name="parameters" element="tns:reporteClientesResponse" />
+  <message name="boletaResponse">
+    <part name="parameters" element="tns:boletaResponse" />
+  </message>
+  <message name="factura">
+    <part name="parameters" element="tns:factura" />
+  </message>
+  <message name="facturaResponse">
+    <part name="parameters" element="tns:facturaResponse" />
   </message>
   <portType name="Reportes">
-    <operation name="factura">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/facturaRequest" message="tns:factura" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/facturaResponse" message="tns:facturaResponse" />
-    </operation>
-    <operation name="boleta">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/boletaRequest" message="tns:boleta" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/boletaResponse" message="tns:boletaResponse" />
+    <operation name="reporteClientes">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteClientesRequest" message="tns:reporteClientes" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteClientesResponse" message="tns:reporteClientesResponse" />
     </operation>
     <operation name="reporteStock">
       <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteStockRequest" message="tns:reporteStock" />
       <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteStockResponse" message="tns:reporteStockResponse" />
     </operation>
-    <operation name="reporteClientes">
-      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteClientesRequest" message="tns:reporteClientes" />
-      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/reporteClientesResponse" message="tns:reporteClientesResponse" />
+    <operation name="boleta">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/boletaRequest" message="tns:boleta" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/boletaResponse" message="tns:boletaResponse" />
+    </operation>
+    <operation name="factura">
+      <input wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/facturaRequest" message="tns:factura" />
+      <output wsam:Action="http://servicios.cyberiastore.pucp.edu.pe/Reportes/facturaResponse" message="tns:facturaResponse" />
     </operation>
   </portType>
   <binding name="ReportesPortBinding" type="tns:Reportes">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="factura">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="boleta">
+    <operation name="reporteClientes">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +67,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="reporteClientes">
+    <operation name="boleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="factura">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

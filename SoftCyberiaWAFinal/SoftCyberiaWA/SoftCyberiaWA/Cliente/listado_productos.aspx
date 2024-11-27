@@ -36,9 +36,6 @@
                 <asp:Panel ID="filtrosMarcas" runat="server" CssClass="overflow-auto p-2" Style="max-height: 200px;">
                 </asp:Panel>
             </div>
-
-
-
             <!-- Listado de Productos -->
             <div class="col-md-9">
                 <div class="row row-cols-1 row-col-md-9 g-4" id="product-list">

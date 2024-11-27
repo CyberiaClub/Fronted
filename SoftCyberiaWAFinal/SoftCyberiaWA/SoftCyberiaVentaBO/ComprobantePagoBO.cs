@@ -1,6 +1,7 @@
 ﻿using SoftCyberiaBaseBO;
 using SoftCyberiaBaseBO.CyberiaWS;
 using System.ComponentModel;
+using System.Linq;
 
 namespace SoftCyberiaVentaBO
 {
@@ -21,6 +22,18 @@ namespace SoftCyberiaVentaBO
         public BindingList<comprobantePago> Comprobante_pago_listar_sede(int idSede)
         {
             comprobantePago[] arreglo = wsBase.comprobante_buscar_sede(idSede);
+            if (arreglo == null)
+            {
+                comprobantePago dummy = new comprobantePago
+                {
+                    idComprobantePago = 0
+                };
+                BindingList<comprobantePago> bindingList = new BindingList<comprobantePago>
+                {
+                    dummy
+                };
+                return bindingList;
+            }
             return new BindingList<comprobantePago>(arreglo);
         }
         public comprobantePago Comprobante_pago_obtener_por_id(int id_comprobante_pago)

@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="container d-flex flex-column align-items-center mt-5">
-        <h1>Mario Sulca Valverde</h1>
+        <asp:Literal ID="UserNameLiteral" runat="server"></asp:Literal>
         <hr class="w-100 mb-4">
 
         <div class="profile-picture mb-4">
@@ -19,25 +19,30 @@
             <!-- Campo del correo electrónico -->
             <div class="mb-3">
                 <label for="txtEmail" class="form-label">Correo electrónico</label>
-                <asp:TextBox ID="txtEmail" CssClass="form-control text-center" Text="vent1234@cyber.com" Enabled="false" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" CssClass="form-control text-center" Text="" Enabled="false" runat="server"></asp:TextBox>
+                <small id="errorEmail" class="form-text text-danger" runat="server"></small>
             </div>
-
             <!-- Campo del número de teléfono -->
             <div class="mb-3">
                 <label for="txtPhone" class="form-label">Número de Teléfono</label>
-                <asp:TextBox ID="txtPhone" CssClass="form-control text-center" Text="942921807" Enabled="false" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtPhone" CssClass="form-control text-center" Text="" Enabled="false" runat="server"></asp:TextBox>
+                <small id="errorPhone" class="form-text text-danger" runat="server"></small>
             </div>
-
+            <!-- Campo de la direccion -->
+            <div class="mb-3">
+                <label for="txtDireccion" class="form-label">Dirección</label>
+                <asp:TextBox ID="txtDireccion" CssClass="form-control text-center" Text="" Enabled="false" runat="server"></asp:TextBox>
+                <small id="errorDireccion" class="form-text text-danger" runat="server"></small>
+            </div>
             <!-- Botones de edición y guardado -->
             <div id="editButtons" runat="server">
-                <asp:Button ID="btnEditProfile" CssClass="btn btn-primary w-100 mb-3" Text="Editar Perfil" OnClick="btnEditProfile_Click" runat="server" />
-                <asp:Button ID="btnLogout" CssClass="btn btn-dark w-100 mb-3" Text="Cerrar Sesión" OnClick="btnLogout_Click" runat="server" />
-                
+                <asp:Button ID="btnEditProfile" CssClass="btn btn-primary w-100 mb-3" Text="Editar Perfil" OnClick="BtnEditProfile_Click" runat="server" />
+               
             </div>
 
             <div id="saveButtons" runat="server" style="display: none;">
                 <asp:Button ID="btnSaveChanges" CssClass="btn btn-success w-100 mb-3" Text="Guardar Cambios" OnClick="SaveChanges" runat="server" />
-                <asp:Button ID="btnCancel" CssClass="btn btn-secondary w-100" Text="Cancelar" OnClick="btnCancel_Click" runat="server" />
+                <asp:Button ID="btnCancel" CssClass="btn btn-secondary w-100" Text="Cancelar" OnClick="BtnCancel_Click" runat="server" />
             </div>
         </div>
     </div>
