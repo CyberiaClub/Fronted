@@ -35,7 +35,7 @@
                 </div>
                 <br>
                 <div class="pb-3">
-                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="btnBuscar_Click" />
+                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary mr-20 w-25" Style="background-color: #004EA8; border-color: #004EA8;" OnClick="BtnBuscar_Click" />
                     <asp:Label ID="buscarMensaje" runat="server" CssClass="text-success" Visible="false"></asp:Label>
                 </div>
                 <asp:Panel ID="panelDetallesProducto" runat="server">
@@ -53,46 +53,6 @@
                         </Columns>
                     </asp:GridView>
                 </asp:Panel>
-
-
-                <!-- Lista de productos en la oferta -->
-                <%--<asp:PlaceHolder runat="server">
-                    <h4 class="ms-2 mb-3" style="width: 56.8vw">Listado de Productos en la Oferta</h4>
-                    <div class="table-responsive">
-
-                        <asp:GridView ID="gridProductosOferta" runat="server" AutoGenerateColumns="False" CssClass="table table-striped"
-                            OnRowEditing="gridProductosOferta_RowEditing" OnRowUpdating="gridProductosOferta_RowUpdating"
-                            OnRowCancelingEdit="gridProductosOferta_RowCancelingEdit" OnRowCommand="gridViewProductos_RowCommand"
-                            Width="100%" Style="table-layout: fixed;">
-                            <Columns>
-                                <asp:BoundField DataField="ID" HeaderText="Nro." ReadOnly="true" HeaderStyle-Width="7%" ItemStyle-Width="7%" FooterStyle-Width="7%" />
-                                <asp:BoundField DataField="SKU" HeaderText="Sku." ReadOnly="true" ItemStyle-Width="50px" HeaderStyle-Width="15%" FooterStyle-Width="15%" />
-                                <asp:BoundField DataField="NOMBRE" HeaderText="Nombre del Producto" ReadOnly="true" ItemStyle-Width="150px" HeaderStyle-Width="40%" FooterStyle-Width="40%" />
-                                <asp:TemplateField HeaderText="Oferta(%)">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblDescuento" runat="server" Text='<%# Bind("DESCUENTO") %>' CssClass="form-control align-items-center" />
-                                    </ItemTemplate>
-                                    <EditItemTemplate>
-                                        <asp:TextBox ID="txtDescuento" runat="server" Text='<%# Bind("DESCUENTO") %>' CssClass="form-control align-items-center"
-                                            TextMode="Number" min="0" />
-                                    </EditItemTemplate>
-                                </asp:TemplateField>
-                                <asp:CommandField ShowEditButton="true" />
-                                <asp:TemplateField>
-                                    <ItemTemplate>
-                                        <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar" CommandName="EliminarProducto"
-                                            CommandArgument="<%# Container.DataItemIndex %>" CssClass="btn btn-danger btn-sm" Style="font-size: 20px; padding: 6px 7px;">
-                             <i class="fas fa-trash-alt"></i>
-                                        </asp:LinkButton>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                            </Columns>
-                        </asp:GridView>
-                    </div>
-                </asp:PlaceHolder>--%>
-
-
-
             </div>
         </div>
     </div>

@@ -51,7 +51,7 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.DropDownList providerName;
 
         /// <summary>
-        /// Control lbnuevaMarca.
+        /// Control registerButton.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
@@ -60,7 +60,7 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.Button registerButton;
 
         /// <summary>
-        /// Control imgNuevaMarca.
+        /// Control successMessage.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
@@ -69,7 +69,7 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.Label successMessage;
 
         /// <summary>
-        /// Control fileUploadNuevaMarca.
+        /// Control lbnuevaMarca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
@@ -78,7 +78,7 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.Label lbnuevaMarca;
 
         /// <summary>
-        /// Control registerButton.
+        /// Control imgNuevaMarca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
@@ -87,7 +87,7 @@ namespace SoftCyberiaWA.Administrador
         protected global::System.Web.UI.WebControls.Image imgNuevaMarca;
 
         /// <summary>
-        /// Control successMessage.
+        /// Control fileUploadNuevaMarca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.

@@ -80,17 +80,6 @@ namespace SoftCyberiaWA.Administrador
             }
 
             bool validarImagen = true;
-            if (!imagen.HasFile)
-            {
-                validarImagen = false;
-                imagenMensaje.InnerText = "Por favor ingrese una imagen.";
-                imagenMensaje.Visible = true;
-            }
-            else
-            {
-                imagenMensaje.Visible = false;
-            }
-
 
             return validarRUC && validarRazonSocial && validarNombre && validarTelefono && validarCorreo && validarDireccion && validarImagen;
         }

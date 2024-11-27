@@ -62,13 +62,6 @@
                                     <small id="descripcionMensaje" class="form-text text-danger" runat="server"></small>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-4 d-flex flex-column align-items-center justify-content-center bg-light"
-                                style="margin-left: 13%">
-                                <asp:Label ID="lblimagen" runat="server" Text="Nuevo Proveedor:" CssClass="fw-bold d-block mb-3"></asp:Label>
-                                <img src="/Imagenes/proveedor.png" alt="Icono de oferta" class="img-fluid img-thumbnail mb-3" style="width: 70%;">
-                                <asp:FileUpload ID="imagen" CssClass="form-control mb-2" runat="server" Width="95%" />
-                                <small id="imagenMensaje" class="form-text text-danger" runat="server"></small>
-                            </div>
                         </div>
                     </div>
                 </div>

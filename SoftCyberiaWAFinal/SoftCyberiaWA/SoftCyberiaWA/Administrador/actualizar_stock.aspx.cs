@@ -78,7 +78,9 @@ namespace SoftCyberiaWA.Administrador
         {
             try
             {
-                _ = productoBO.Producto_aumentar_stock(Convert.ToInt32(_producto.idProducto), 1, Convert.ToInt32(cantidadAgregar.Text));
+                persona usuario = Session["Usuario"] as persona;
+                producto _producto = Session["producto"] as producto;
+                _ = productoBO.Producto_aumentar_stock(Convert.ToInt32(_producto.idProducto), usuario.idSede, Convert.ToInt32(cantidadAgregar.Text));
                 BuscarProducto();
 
 
