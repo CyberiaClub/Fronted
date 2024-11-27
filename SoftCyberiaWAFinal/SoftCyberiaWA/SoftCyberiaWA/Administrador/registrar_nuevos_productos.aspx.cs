@@ -115,9 +115,6 @@ namespace SoftCyberiaWA.Administrador
 
                 _ = productoBO.Producto_insertar(_producto);
             }
-            // Mostrar el mensaje de éxito
-            //successMessage.Text = "Producto registrado correctamente.";
-            //successMessage.Visible = true;
         }
 
         protected bool Validar()
