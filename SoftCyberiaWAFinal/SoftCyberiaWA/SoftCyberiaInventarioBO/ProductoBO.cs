@@ -28,10 +28,16 @@ namespace SoftCyberiaInventarioBO
             return wsBase.producto_aumentar_stock(idProducto, idSede, Cantidad);
         }
 
-        //public byte[] reporteProducto(int idSede)
-        //{
-        //    return this.WsProducto.reporteProducto(idSede);
-        //}
+        public BindingList<producto> Producto_buscar_pedido(int idPedido)
+        {
+            producto[] arreglo = wsBase.producto_lineas_pedido(idPedido);
+            if (arreglo == null)
+            {
+                producto dummy = new producto();
+                arreglo[0] = dummy;
+            }
+            return new BindingList<producto>(arreglo);
+        }
 
     }
 }

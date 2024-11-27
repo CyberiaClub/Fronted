@@ -13,6 +13,7 @@
                 <asp:BoundField DataField="NumeroPedido" HeaderText="Número de Pedido" />
                 <asp:BoundField DataField="FechaCreacion" HeaderText="Fecha de Creación" DataFormatString="{0:dd/MM/yyyy}" />
                 <asp:BoundField DataField="Estado" HeaderText="EstadoHidden" />
+                <asp:BoundField DataField="idPedido" HeaderText="idPedidoHidden" />
                 <asp:TemplateField HeaderText="Estado">
                     <ItemTemplate>
                         <asp:DropDownList ID="ddlEstado" runat="server" AutoPostBack="true">
