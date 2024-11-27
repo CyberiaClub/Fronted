@@ -16,6 +16,7 @@ namespace SoftCyberiaWA
         private readonly TipoProductoBO tipoProductoBO;
         private readonly SedeBO sedeBO;
         private readonly MarcaBO marcaBO;
+        private bool isFirst;
 
         public Listado_productos()
         {

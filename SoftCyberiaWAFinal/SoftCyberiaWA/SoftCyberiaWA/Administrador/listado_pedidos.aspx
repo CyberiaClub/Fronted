@@ -30,7 +30,7 @@
 
     <asp:Panel ID="panelDetallePedido" runat="server" Visible="false">
         <h3>Descripción</h3>
-        <asp:GridView ID="gvDetalleProductos" runat="server" AutoGenerateColumns="false">
+        <asp:GridView ID="gvDetalleProductos" CssClass="table table-hover table-responsive table-striped" runat="server" AutoGenerateColumns="false">
             <Columns>
                 <asp:BoundField DataField="NombreProducto" HeaderText="Producto" />
                 <asp:BoundField DataField="Precio" HeaderText="Precio" DataFormatString="{0:C}" />

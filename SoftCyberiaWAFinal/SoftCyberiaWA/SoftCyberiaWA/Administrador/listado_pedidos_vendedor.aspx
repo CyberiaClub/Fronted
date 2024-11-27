@@ -7,11 +7,12 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="panelPedidos" runat="server">
-        <asp:GridView ID="gvPedidos" runat="server" AllowPaging="true" CssClass="table table-hover table-responsive table-striped" AutoGenerateColumns="false"  OnRowDataBound="GvPedidos_RowDataBound">
+        <asp:GridView ID="gvPedidos" runat="server" AllowPaging="true" CssClass="table table-hover table-responsive table-striped" AutoGenerateColumns="false" OnRowDataBound="GvPedidos_RowDataBound" OnSelectedIndexChanged="GvPedidos_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="NumeroPedido" HeaderText="Número de Pedido" />
                 <asp:BoundField DataField="FechaCreacion" HeaderText="Fecha de Creación" DataFormatString="{0:dd/MM/yyyy}" />
-                <asp:BoundField DataField="Estado" HeaderText="EstadoHidden"/>
+                <asp:BoundField DataField="Estado" HeaderText="EstadoHidden" />
+                <asp:BoundField DataField="idPedido" HeaderText="idPedidoHidden" />
                 <asp:TemplateField HeaderText="Estado">
                     <ItemTemplate>
                         <asp:DropDownList ID="ddlEstado" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DdlEstado_SelectedIndexChanged">
@@ -27,7 +28,7 @@
 
     <asp:Panel ID="panelDetallePedido" runat="server" Visible="false">
         <h3>Descripción</h3>
-        <asp:GridView ID="gvDetalleProductos" runat="server" AutoGenerateColumns="false">
+        <asp:GridView ID="gvDetalleProductos" CssClass="table table-hover table-responsive table-striped" runat="server" AutoGenerateColumns="false">
             <Columns>
                 <asp:BoundField DataField="NombreProducto" HeaderText="Producto" />
                 <asp:BoundField DataField="Precio" HeaderText="Precio" DataFormatString="{0:C}" />
