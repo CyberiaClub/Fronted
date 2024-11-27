@@ -17,7 +17,7 @@ namespace SoftCyberiaWA.Cliente
             string currentPage = HttpContext.Current.Request.Url.AbsolutePath.ToLower();
 
             // Comprobar si la página actual es "listado_productos.aspx"
-            if (currentPage.Contains("listado_productos.aspx"))
+            if (currentPage.Contains("listado_productos.aspx") || currentPage.Contains("detalle_producto.aspx"))
             {
                 footerMaster.Visible = false;
             }

@@ -33,7 +33,7 @@ namespace SoftCyberiaWA
         protected global::System.Web.UI.WebControls.Panel filtrosTipoProducto;
 
         /// <summary>
-        /// Control listadoMarca.
+        /// Control filtrosMarcas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.

@@ -20,10 +20,6 @@
                <img src="/Imagenes/card-icon.png" alt="Tarjeta Débito" />
                <span>Tarjeta de Débito</span>
            </div>
-
-           
-
-
            <h3>Otras opciones</h3>
            <div class="payment-method" onclick="showYapePlinQR()">
                <img src="/Imagenes/pagoefectivo-icon.png" alt="PagoEfectivo" />
@@ -32,9 +28,6 @@
            <!-- Botón Volver en la esquina inferior izquierda -->
            <asp:Button ID="btnVolver" runat="server" CssClass="btn btn-secondary" Text="Volver" OnClick="BtnVolver_Click" />
        </div>
-
-       
-
        <div class="payment-summary">
            <h3>Resumen de la compra</h3>
            <div class="summary-item">
@@ -94,10 +87,4 @@
             window.location.href = "boleta_pago.aspx";
         }
     </script>
-
-
-
-
-
-
 </asp:Content>

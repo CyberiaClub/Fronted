@@ -6,14 +6,12 @@
     <link href="../Content/siteCliente.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-
     <!-- QR del Pago -->
     <div class="qr-container" style="text-align: center;">
         <h3>Comprobante de Pago</h3>
         <img src="/Imagenes/qr_comprobante.png" alt="QR del Comprobante" class="img-fluid" />
         <p>Escanee este QR para recoger su compra en la tienda.</p>
     </div>
-
     <!-- Detalles del Producto -->
     <div class="product-details mt-4">
         <h3>Detalle de los Productos</h3>
@@ -25,13 +23,11 @@
         </ul>
         <p><strong>Total:</strong> S/ 102.60</p>
     </div>
-
     <!-- Información de Recogida -->
     <div class="pickup-info mt-4">
         <h3>Información de Recogida</h3>
         <p>Recuerde que tiene hasta el final del día para recoger su producto.</p>
         <p><strong>Sede de Recogida:</strong> Tienda SoftCyberia, Av. Ejemplo 123, Lima</p>
     </div>
-
 </asp:Content>
 

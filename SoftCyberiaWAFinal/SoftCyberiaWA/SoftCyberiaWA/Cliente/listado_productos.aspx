@@ -8,8 +8,6 @@
     <link href="Content/siteProductos.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-
-
     <div class="container mt-5">
 
         <!-- Filtros LATERAL IZQUIERDO-->
@@ -18,8 +16,6 @@
                 <h5>Filtros</h5>
                 <!-- Sedes -->
                 <h6 class="mt-3">Sedes</h6>
-                <%--<asp:Panel ID="filtrosSedes" runat="server">
-                </asp:Panel>--%>
                 <!-- cambio 2 -->
                <asp:Panel ID="filtrosSedes" runat="server" CssClass="filters-panel"></asp:Panel>
                 <!-- Rango de precios -->
@@ -43,14 +39,8 @@
                     </asp:Panel>
                 </div>
             </div>
-
-
-
         </div>
-        
     </div>
-    
-
 </asp:Content>
 
 
