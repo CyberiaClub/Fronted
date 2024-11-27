@@ -58,7 +58,16 @@ namespace SoftCyberiaWA.Administrador
 
         protected void DdlEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            DropDownList ddl = (DropDownList)sender;
+            GridViewRow row = (GridViewRow)ddl.NamingContainer;
+            _ = Enum.TryParse(row.Cells[2].Text, out estadoPedido estado);
+            comprobantePago comprobante = new comprobantePago
+            {
+                idComprobantePago = int.Parse(row.Cells[3].Text),
+                estadoPedido = estado,
+                estadoPedidoSpecified = true
+            };
+            _ = comprobantePagoBO.Comprobante_pago_modificar(comprobante);
         }
 
         protected void GvPedidos_RowDataBound(object sender, GridViewRowEventArgs e)

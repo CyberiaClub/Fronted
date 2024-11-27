@@ -16,7 +16,7 @@
                 <asp:BoundField DataField="idPedido" HeaderText="idPedidoHidden" />
                 <asp:TemplateField HeaderText="Estado">
                     <ItemTemplate>
-                        <asp:DropDownList ID="ddlEstado" runat="server" AutoPostBack="true">
+                        <asp:DropDownList ID="ddlEstado" runat="server" AutoPostBack="true" OnSelectedIndexChanged ="DdlEstado_SelectedIndexChanged">
                             <asp:ListItem Value="EN_PREPARACION" Text="En preparación" />
                             <asp:ListItem Value="LISTO_PARA_RECOGER" Text="Listo para Recoger" />
                             <asp:ListItem Value="ENTREGADO" Text="Entregado" />
