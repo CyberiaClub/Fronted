@@ -163,18 +163,13 @@
 
 
 // Función para obtener el valor de un parámetro desde la URL
-function getParameterByName(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-}
-
-// Función para aplicar los filtros de productos
 function applyFilters() {
     // Obtener idSede desde la URL
     const idSede = getParameterByName('idSede');
 
     // Obtener los filtros seleccionados
     const selectedCategories = getSelectedCategories();
+    const selectedBrands = getSelectedBrands(); // Obtener marcas seleccionadas
     const maxPrice = document.getElementById("priceRange").value;
 
     // Mostrar el valor actual del rango de precio
@@ -189,11 +184,13 @@ function applyFilters() {
         const productPrice = parseFloat(product.getAttribute("data-price"));
         const productSede = product.getAttribute("data-sede"); // Debe coincidir con idSede
         const productCategory = product.getAttribute("data-category");
+        const productBrand = product.getAttribute("data-brand"); // Obtener atributo de marca
 
         // Mostrar el producto solo si cumple con los filtros
         if (
             (!idSede || idSede === productSede) &&
             (selectedCategories.length === 0 || selectedCategories.includes(productCategory)) &&
+            (selectedBrands.length === 0 || selectedBrands.includes(productBrand)) && // Verificar filtro de marca
             productPrice <= maxPrice
         ) {
             product.style.display = "block";
@@ -229,6 +226,15 @@ function getSelectedCategories() {
     return categories;
 }
 
+// Función para obtener las marcas seleccionadas
+function getSelectedBrands() {
+    const brands = [];
+    document.querySelectorAll('.form-check-input[name="marca"]:checked').forEach(checkbox => {
+        brands.push(checkbox.value);
+    });
+    return brands;
+}
+
 // Permitir solo un filtro de sede seleccionado
 function selectOnlyOne(selectedCheckbox) {
     const checkboxes = document.querySelectorAll('input[name="sede"]');
@@ -245,7 +251,7 @@ window.onload = function () {
     // Aplicar filtros automáticamente
     applyFilters();
 
-    // Añadir eventos para los checkboxes de categoría y sede
+    // Añadir eventos para los checkboxes de categoría, marca y sede
     document.querySelectorAll('.form-check-input[type="checkbox"]').forEach(checkbox => {
         checkbox.addEventListener('change', applyFilters);
     });
@@ -253,7 +259,5 @@ window.onload = function () {
     // Añadir evento para el rango de precios
     document.getElementById("priceRange").addEventListener('input', applyFilters);
 };
-
-
 
 

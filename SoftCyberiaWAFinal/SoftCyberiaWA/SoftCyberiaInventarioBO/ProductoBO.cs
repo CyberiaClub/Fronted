@@ -18,6 +18,16 @@ namespace SoftCyberiaInventarioBO
         {
             producto[] arreglo = wsBase.producto_listar();
             return new BindingList<producto>(arreglo);
+
+            //// Validar si el arreglo es null
+            //if (arreglo == null)
+            //{
+            //    // Devuelve una lista vacía en caso de que no se encuentren productos
+            //    return new BindingList<producto>();
+            //}
+
+            //// Crear y devolver la BindingList
+            //return new BindingList<producto>(arreglo);
         }
         public producto Producto_buscar_sku(string sku, int idSede)
         {

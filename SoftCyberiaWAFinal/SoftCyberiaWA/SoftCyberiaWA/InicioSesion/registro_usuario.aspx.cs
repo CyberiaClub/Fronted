@@ -21,7 +21,7 @@ namespace SoftCyberiaWA.InicioSesion
             
         }
 
-        protected void onClickRegistrarPersona(object sender, EventArgs e)
+        protected void OnClickRegistrarPersona(object sender, EventArgs e)
         {
             try
             {

@@ -45,7 +45,7 @@ namespace SoftCyberiaWA.Cliente
                         Text = $@"
                 <div class='col-6 col-md-3 mb-3'>
                     <img src='{imageSrc}' alt='{m.nombre}' class='brand-img precisa-img'>
-                    <p class='text-center'>{m.nombre}</p>
+                    <p class='text-center'></p>
                 </div>"
                     };
 

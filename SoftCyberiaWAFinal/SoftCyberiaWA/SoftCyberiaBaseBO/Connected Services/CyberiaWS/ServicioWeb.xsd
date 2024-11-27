@@ -36,6 +36,8 @@
   <xs:element name="persona_loguearseResponse" type="tns:persona_loguearseResponse" />
   <xs:element name="persona_modificar" type="tns:persona_modificar" />
   <xs:element name="persona_modificarResponse" type="tns:persona_modificarResponse" />
+  <xs:element name="persona_modificar_usuario" type="tns:persona_modificar_usuario" />
+  <xs:element name="persona_modificar_usuarioResponse" type="tns:persona_modificar_usuarioResponse" />
   <xs:element name="persona_verificar_correo" type="tns:persona_verificar_correo" />
   <xs:element name="persona_verificar_correoResponse" type="tns:persona_verificar_correoResponse" />
   <xs:element name="producto_aumentar_stock" type="tns:producto_aumentar_stock" />
@@ -187,22 +189,6 @@
       <xs:element minOccurs="0" name="tipoComprobante" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="oferta_listar">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="oferta_listarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:oferta" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="producto_listar">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="producto_listarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="tipopersona_listar_roles_trabajadores">
     <xs:sequence />
   </xs:complexType>
@@ -223,6 +209,22 @@
       <xs:element minOccurs="0" name="idPagina" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="referencia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="producto_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="oferta_listar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="oferta_listarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:oferta" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="persona_loguearse">
@@ -491,16 +493,6 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="producto_insertar">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="producto" type="tns:producto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="producto_insertarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="comprobante_pago_obtener_por_id">
     <xs:sequence>
       <xs:element minOccurs="0" name="id_comprobante_pago" type="xs:int" />
@@ -509,6 +501,16 @@
   <xs:complexType name="comprobante_pago_obtener_por_idResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:comprobantePago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto_insertar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="producto" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto_insertarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="sede_insertar">
@@ -559,6 +561,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:comprobantePago" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="persona_modificar_usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="persona_modificar_usuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="proveedor_modificar">
     <xs:sequence>
       <xs:element minOccurs="0" name="proveedor" type="tns:proveedor" />
@@ -577,16 +589,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:marca" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="comprobante_pago_modificar">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="comprobante_pago" type="tns:comprobantePago" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="comprobante_pago_modificarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="tipopersona_listar_paginas">
     <xs:sequence>
       <xs:element minOccurs="0" name="tipo_persona" type="xs:string" />
@@ -595,6 +597,16 @@
   <xs:complexType name="tipopersona_listar_paginasResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:tipoPersona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante_pago_modificar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comprobante_pago" type="tns:comprobantePago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="comprobante_pago_modificarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="producto_buscar_sku">

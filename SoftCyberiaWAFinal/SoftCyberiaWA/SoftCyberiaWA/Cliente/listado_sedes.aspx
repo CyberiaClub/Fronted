@@ -27,7 +27,7 @@
                     <h5><%# Eval("Nombre") %></h5>
                     <p><%# Eval("Descripcion") %></p>
                     <p><strong>LUN - VIE</strong><br>
-                        <%# Eval("HorarioApertura", "{0:HH:mm}") %> - <%# Eval("HorarioCierre", "{0:HH:mm}") %></p>
+                        8:00 am - 8:00 </p>
                     <div class="contact-info d-flex justify-content-between align-items-center">
                         <img src="/Imagenes/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px;">
                         <span><%# Eval("Telefono") %></span>

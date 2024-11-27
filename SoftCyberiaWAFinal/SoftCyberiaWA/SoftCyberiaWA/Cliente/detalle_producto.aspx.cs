@@ -88,7 +88,6 @@ namespace SoftCyberiaWA
     public partial class detalle_producto : Page
     {
         private readonly ProductoBO productoBO;
-
         public detalle_producto()
         {
             productoBO = new ProductoBO();
@@ -110,6 +109,45 @@ namespace SoftCyberiaWA
         private void CargarProducto(string sku, int idSede)
         {
             // Llama al método para obtener los productos desde el backend
+            //BindingList<producto> productos = productoBO.Producto_listar();
+            producto productoSeleccionado = productoBO.Producto_buscar_sku(sku, idSede);
+
+            // Recorre la lista de productos y busca el producto con el id especificado
+            if (productoSeleccionado != null)
+            {
+
+                //  productoEncontrado1 = true; // Indicamos que encontramos el producto
+                // Asigna la imagen del producto (debe estar en formato de bytes para el control Image)
+                if (productoSeleccionado.imagen != null)
+                {
+                    string base64Image = Convert.ToBase64String(productoSeleccionado.imagen);
+                    imgProducto.ImageUrl = $"data:image/jpeg;base64,{base64Image}"; // Cambia MIME si usas otro formato
+                }
+
+                // Asigna otros datos del producto a los controles Label
+                lblNombreProducto.Text = productoSeleccionado.nombre;
+                lblPrecioProducto.Text = productoSeleccionado.precio.ToString("F2"); // Precio con 2 decimales
+                lblSkuProducto.Text = productoSeleccionado.sku;
+                lblStockProducto.Text = productoSeleccionado.cantidad.ToString();
+                lblDescripcionProducto.Text = productoSeleccionado.descripcion;
+
+                // Establece el valor máximo para el campo de cantidad
+
+                quantity.Attributes["max"] = productoSeleccionado.cantidad.ToString();
+
+            }
+            else
+            {
+                lblNombreProducto.Text = "Producto no encontrado sku";
+                lblPrecioProducto.Text = sku;
+                lblSkuProducto.Text = "- sede ";
+                lblDescripcionProducto.Text = idSede.ToString();
+            }
+        }
+
+        private void CargarProducto1(string sku, int idSede)
+        {
+            // Llama al método para obtener los productos desde el backend
             BindingList<producto> productos = productoBO.Producto_listar();
 
             // Variable para verificar si se encontró el producto
@@ -119,31 +157,31 @@ namespace SoftCyberiaWA
             foreach (producto _prod in productos)
             {
 
-                //if (_prod.idProducto == idProducto)
-                //{
-                productoEncontrado = true; // Indicamos que encontramos el producto
-                producto productoSeleccionado = productoBO.Producto_buscar_sku(sku, idSede);
-                // Asigna la imagen del producto (debe estar en formato de bytes para el control Image)
-                if (_prod.imagen != null)
+                if (_prod.idSede == idSede && _prod.sku == sku)
                 {
-                    string base64Image = Convert.ToBase64String(_prod.imagen);
-                    imgProducto.ImageUrl = $"data:image/jpeg;base64,{base64Image}"; // Cambia MIME si usas otro formato
+                    productoEncontrado = true; // Indicamos que encontramos el producto
+                    producto productoSeleccionado = productoBO.Producto_buscar_sku(sku, idSede);
+                    // Asigna la imagen del producto (debe estar en formato de bytes para el control Image)
+                    if (_prod.imagen != null)
+                    {
+                        string base64Image = Convert.ToBase64String(_prod.imagen);
+                        imgProducto.ImageUrl = $"data:image/jpeg;base64,{base64Image}"; // Cambia MIME si usas otro formato
+                    }
+
+                    // Asigna otros datos del producto a los controles Label
+                    lblNombreProducto.Text = _prod.nombre;
+                    lblPrecioProducto.Text = _prod.precio.ToString("F2"); // Precio con 2 decimales
+                    lblSkuProducto.Text = _prod.sku;
+                    lblStockProducto.Text = productoSeleccionado.cantidad.ToString();
+                    lblDescripcionProducto.Text = _prod.descripcion;
+
+                    // Establece el valor máximo para el campo de cantidad
+
+                    quantity.Attributes["max"] = productoSeleccionado.cantidad.ToString();
+
+                    // Salimos del bucle ya que hemos encontrado el producto
+                    break;
                 }
-
-                // Asigna otros datos del producto a los controles Label
-                lblNombreProducto.Text = _prod.nombre;
-                lblPrecioProducto.Text = _prod.precio.ToString("F2"); // Precio con 2 decimales
-                lblSkuProducto.Text = _prod.sku;
-                lblStockProducto.Text = productoSeleccionado.cantidad.ToString();
-                lblDescripcionProducto.Text = _prod.descripcion;
-
-                // Establece el valor máximo para el campo de cantidad
-
-                quantity.Attributes["max"] = productoSeleccionado.cantidad.ToString();
-
-                // Salimos del bucle ya que hemos encontrado el producto
-                break;
-                //}
             }
 
             // Si no se encontró el producto, mostramos el mensaje de "Producto no encontrado"
@@ -155,8 +193,6 @@ namespace SoftCyberiaWA
                 lblDescripcionProducto.Text = "Detalles no disponibles.";
             }
         }
-
-
         protected void BtnAgregarCarrito_Click(object sender, EventArgs e)
         {
             BindingList<producto> productos = productoBO.Producto_listar();
@@ -184,7 +220,7 @@ namespace SoftCyberiaWA
                 {
                     idProducto = productoSeleccionado.idProducto,
                     nombre = productoSeleccionado.nombre,
-                    precio = _prod.precio,
+                    precio = productoSeleccionado.precio,
                     cantidad = cantidadSeleccionada,
                     idSede = idSede
                 };
