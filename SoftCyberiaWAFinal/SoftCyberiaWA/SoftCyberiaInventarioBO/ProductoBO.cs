@@ -31,11 +31,6 @@ namespace SoftCyberiaInventarioBO
         public BindingList<producto> Producto_buscar_pedido(int idPedido)
         {
             producto[] arreglo = wsBase.producto_lineas_pedido(idPedido);
-            if (arreglo == null)
-            {
-                producto dummy = new producto();
-                arreglo[0] = dummy;
-            }
             return new BindingList<producto>(arreglo);
         }
 
